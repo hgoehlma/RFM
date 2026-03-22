@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.18` // `top_level_document` // [living]
+`v0.0.0.19` // `top_level_document` // [living]
 
 ---
 
@@ -114,6 +114,10 @@ The reasoning document is the deterministic anchor. Agentic execution is where p
 
 The top-level reasoning document should always be present in any working session. It is the map, the anchor, and the update target. Without it, module-level work proceeds without orientation, and the document map cannot be updated when changes are made.
 
+**On the name:**
+
+The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM — that is not accidental and is kept. The full name is accurate and directional; it captures the temporal discipline that is the methodology's founding constraint. It does not explicitly name the joint human/LLM design — a conscious choice. Simpler names travel better, and the joint design is carried sufficiently by the documents themselves. Naming the tool in the methodology's title would date it; the practice will outlast the current form of the collaboration. The name is considered settled.
+
 ---
 
 ## The Boundaries
@@ -161,12 +165,6 @@ A related and more immediate question is the division of labor between human and
 **4. The quality gate.**
 
 The quality gate was originally imagined as a separate LLM evaluator invoked periodically to check documents for sharpness, hidden assumptions, completeness, and internal consistency. The sweep work revealed a different answer: the quality gate is the system prompt doing its job continuously. An LLM working within the methodology, guided by the right principles, flags leakage and hidden assumptions in the moment — not in a separate review cycle. The sweep prompt is a concentrated version of this for explicit review sessions. The design of both remains open — but the architecture is clearer than it was.
-
-**5. The naming question.**
-
-This methodology does not yet have a name. A name is not vanity — it is a handle that allows a community to form around an idea. The right name will capture the spirit without reducing it. That name has not yet arrived.
-
-What the name must capture: reasoning as the primary artifact; the temporal discipline of before; the joint design for humans and LLMs simultaneously; the living nature of the document; the deterministic anchor role in a probabilistic world. Words that have felt relevant: reasoning, intent, context, signal, foundation, before, first, living, ground, anchor, source, joint, shared. The current working name — reasoning-first — is accurate and directional but may be too narrow. It captures the temporal discipline but not the joint human/LLM design, not the living nature, not the deterministic anchor role. The working abbreviation RFM has taken hold — and carries an unplanned resonance: RFM echoes RTFM, which is exactly the right implied rebuke. Read the reasoning first. The abbreviation is in use. The full name is still open.
 
 **6. The autonomy boundary.**
 
@@ -292,6 +290,6 @@ A session-born shorthand is a term that emerged between two collaborators and ca
 
 ---
 
-*v0.0.0.18 // top_level_document // [living]*
+*v0.0.0.19 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
