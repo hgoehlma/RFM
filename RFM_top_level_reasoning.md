@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.19` // `top_level_document` // [living]
+`v0.0.0.20` // `top_level_document` // [living]
 
 ---
 
@@ -100,6 +100,10 @@ Hard lessons are first-class citizens. What was tried, why it seemed right, what
 
 Every change to a derivative — code, prompt, operational document — requires a corresponding change to its source reasoning document. A derivative that has moved without its source is drift by another name.
 
+**On execution mode and the two-mode design:**
+
+The methodology operates in two modes. Reasoning mode is the default: reasoning precedes execution, the document is the source, every change begins at the appropriate level of the hierarchy. Execution mode is invoked when delivery pressure makes the full reasoning discipline locally unacceptable — a deadline, a sprint, a time-boxed commitment. Execution mode is not a degraded version of the methodology. It is the correct response to a specific condition, provided the reasoning documents are sufficiently complete before pressure hits. The reasoning documents then function as Commander's Intent: the direction, boundaries, and assumptions are established; execution adapts within that frame without stopping to re-reason. The discipline shifts from reasoning before every action to executing within established reasoning. What execution mode requires is minimal capture: a running record of deviations from established reasoning, conscious deferrals, and broken assumptions — enough to make the return to reasoning mode honest rather than reconstructed from code. This is a Chesterton's Fence log: before removing a fence under pressure, note that it was removed and why. The return to reasoning mode after pressure lifts is not optional. It is where execution mode's debts are paid.
+
 **On the question of future autonomy:**
 
 The most common objection to this approach is that increasingly capable and autonomous AI systems will eventually make it unnecessary. This misunderstands what the reasoning document is for. It is not a workaround for limited AI capability. It is the expression of human intent, human values, and human context applied to a specific problem. No level of AI autonomy removes the need for that — it only changes who executes once the intent is clear.
@@ -136,6 +140,8 @@ This methodology is explicitly not:
 
 **Designed to impose discipline on a team that won't bring it.** The deliberate return mode of curation requires a human who has a natural affinity for this kind of reflection. That is a people constraint, not a process gap. A team without such a person can follow the triggered mode but will gradually stop returning deliberately. The methodology will technically persist but quietly degrade. This is not a failure of the methodology. It is a boundary condition of its use.
 
+**Designed to maintain full discipline under acute delivery pressure.** Delivery pressure is a specific, common condition under which the methodology's full discipline is at risk — not because teams stop believing in it, but because the local cost of the reasoning step becomes unacceptable when deadlines are close. This is distinct from the people constraint above: it affects willing teams in adverse conditions. The two-mode design — reasoning mode as default, execution mode under pressure — is the methodology's working hypothesis for this condition. It is not yet a tested practice. Teams operating under sustained delivery pressure without established reasoning documents should treat this as a known risk, not a solved problem.
+
 ---
 
 ## The Open Questions
@@ -166,25 +172,29 @@ A related and more immediate question is the division of labor between human and
 
 The quality gate was originally imagined as a separate LLM evaluator invoked periodically to check documents for sharpness, hidden assumptions, completeness, and internal consistency. The sweep work revealed a different answer: the quality gate is the system prompt doing its job continuously. An LLM working within the methodology, guided by the right principles, flags leakage and hidden assumptions in the moment — not in a separate review cycle. The sweep prompt is a concentrated version of this for explicit review sessions. The design of both remains open — but the architecture is clearer than it was.
 
-**6. The autonomy boundary.**
+**5. The autonomy boundary.**
 
 As agentic systems become more capable, where exactly is the boundary between what must be human-reasoned and what can be delegated? The methodology holds that human intent cannot be delegated — but the precise location of that boundary will need to be tested and refined in practice.
 
 The work of building this methodology in collaboration with an LLM is itself evidence about the autonomy boundary. The LLM contributed landscape knowledge, structure, red teaming, and pattern recognition. The human contributed instinct, synthesis, judgment, and the courage to say "so what?" The boundary was not a line — it was a division of cognitive labor that emerged from the work itself. Formalizing that division is still open.
 
-**7. The deterministic/probabilistic design question.**
+**6. The deterministic/probabilistic design question.**
 
-At the execution level this question is largely resolved: structure and guarantees are owned by deterministic code, meaning and language by probabilistic LLM reasoning. At the reasoning document level the answer is emerging: boundaries are deterministic anchors, open questions are the legitimate home of uncertainty, assumptions hold until evidence breaks them, hard lessons are deterministic once written. What remains genuinely open is the agentic boundary — how a highly autonomous system should treat the reasoning document when acting without human oversight. That question connects directly to Open Question 6 and will likely be resolved together with it.
+At the execution level this question is largely resolved: structure and guarantees are owned by deterministic code, meaning and language by probabilistic LLM reasoning. At the reasoning document level the answer is emerging: boundaries are deterministic anchors, open questions are the legitimate home of uncertainty, assumptions hold until evidence breaks them, hard lessons are deterministic once written. What remains genuinely open is the agentic boundary — how a highly autonomous system should treat the reasoning document when acting without human oversight. That question connects directly to Open Question 5 and will likely be resolved together with it.
 
-**8. The evolutionary stage problem.**
+**7. The evolutionary stage problem.**
 
 The methodology is currently designed and validated at genesis stage — a single practitioner, early structure, everything still surprising. It is an open question how the discipline needs to change as a project matures through custom built, product, and commodity stages (borrowing Wardley's evolution axis). The Hard Lessons section is the place where this strain will show first: it only grows, it is cross-cutting, and curation becomes harder as the project ages. The hunch is that Hard Lessons eventually graduates from a document section into a separate living artifact, that lessons can be retired when they are fully absorbed into assumptions or team practice, and that the methodology itself needs to describe these transition points explicitly. This has not been designed yet. It needs to be — before the methodology is adopted at scale.
 
 The retrofit exercise added a new data point: a system past genesis stage, where reasoning documents are built from existing code, produces reconstructed reasoning rather than original reasoning. The quality difference is real but subtle — plausible rather than true. This suggests the evolutionary stage problem has a sharp early boundary: the moment code precedes reasoning, the methodology is already in recovery mode rather than prevention mode. What changes at each subsequent stage is still open — but the genesis boundary is now well-defined.
 
-**9. The lifecycle of document content.**
+**8. The lifecycle of document content.**
 
 How does content exit or transform within a reasoning document over time? Hard lessons elevate into principles, open questions resolve and close, assumptions break or prove out. The direction of travel for individual entries is implicit in the curation principle but not yet described. A methodology that only adds content will eventually become the thing it was designed to replace. The explicit lifecycle — how entries graduate, transform, and exit — needs to be designed before the methodology is adopted at scale.
+
+**9. The minimal capture discipline.**
+
+Execution mode requires minimal capture — a record of deviations, deferrals, and broken assumptions sufficient to make the return to reasoning mode honest. What this looks like in practice is undesigned. How short can it be and still serve its purpose? What is the right artifact — a section appended to the reasoning document, a separate log, something else? How does a team distinguish a deviation worth capturing from noise? And what does the return-to-reasoning-mode session actually look like — what is its protocol, its output, its quality gate? These questions are unresolved. The two-mode design is a working hypothesis, not a tested practice.
 
 ---
 
@@ -290,6 +300,6 @@ A session-born shorthand is a term that emerged between two collaborators and ca
 
 ---
 
-*v0.0.0.19 // top_level_document // [living]*
+*v0.0.0.20 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
