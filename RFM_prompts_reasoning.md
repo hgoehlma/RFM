@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.11` // `top_level_document` // [living]
+`v0.0.0.12` // `top_level_document` // [living]
 
 ---
 
@@ -193,9 +193,13 @@ Session-born shorthands carry the session context that gave them meaning. When s
 
 The traveling prompt is read by an LLM and by a human maintaining it. These are different readers with different needs. The LLM needs directness and precision — reassurance, backward-glance summaries, and redundant clauses consume tokens without adding behavior. The human needs the prompt to remain verifiable — parseable enough to confirm it still reflects the methodology. The right discipline is: compress where the LLM is the reader, preserve where the human needs to audit. When a clause exists to reassure rather than instruct, remove it. When a sentence restates what the previous sentence already said, remove it. The prompt should be as short as it can be while still activating the right behaviors reliably.
 
+**7. The document map rule has a threshold condition and a public/collaborator distinction.**
+
+The document map belongs in the top-level reasoning document when a document landscape exists to navigate — but "exists to navigate" has a threshold. A single-document system has nothing to map. Additionally, when a project is publicly hosted, the README serves a different reader than the document map: orientation without versions for newcomers, versus snapshot-with-versions for collaborators maintaining the system. These are not the same artifact serving the same purpose. Conflating them produces a map that is either too noisy for public readers or too sparse for collaborators. The traveling prompt carries the behavioral expression of this distinction. This reasoning document is its source.
+
 ---
 
-*v0.0.0.11 // top_level_document // [living]*
+*v0.0.0.12 // top_level_document // [living]*
 *the system prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*
