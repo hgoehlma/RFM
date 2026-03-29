@@ -38,6 +38,8 @@ This methodology is in active development. All documents are living artifacts, v
 
 The abbreviation RFM is not accidental. Those who recognize the older acronym will understand immediately what this methodology thinks you should do before touching anything.
 
+RFM is a vehicle, not a prescription. The reasoning comes first — everything else is yours to design for your domain, your team, and your discipline.
+
 ---
 
 ## License
