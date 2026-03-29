@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.12` // `top_level_document` // [living]
+`v0.0.0.13` // `top_level_document` // [living]
 
 ---
 
@@ -163,6 +163,10 @@ The co-author role — "the LLM is a co-author of the reasoning document, not a 
 
 Hard Lessons — and reasoning document content generally — risk being written for the session in which the insight was earned rather than for future readers encountering the methodology fresh. Session-specific references, examples that require prior context, and language that assumes shared history all degrade over time. What is the right discipline for catching this? The sweep prompt may be the natural mechanism — a concentrated review mode is well-positioned to flag content that is opaque without context. This is unresolved until the sweep prompt is designed.
 
+**8. The trigger conditions question.**
+
+The traveling prompt instructs the LLM to challenge weak reasoning, hold the co-author role, and resist compliance under pressure. But instruction is not enforcement. When a user requests code directly, skips the reasoning document, or signals urgency, the LLM faces a choice between holding the discipline and proceeding. Without explicit trigger conditions, the path of least resistance is compliance — and the co-author role collapses quietly into tool behavior. What interaction patterns and trigger conditions would make co-author behavior structurally reliable, rather than dependent on the LLM reading a situation correctly and choosing to push back?
+
 ---
 
 ## Hard Lessons
@@ -199,7 +203,7 @@ The document map belongs in the top-level reasoning document when a document lan
 
 ---
 
-*v0.0.0.12 // top_level_document // [living]*
+*v0.0.0.13 // top_level_document // [living]*
 *the system prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*

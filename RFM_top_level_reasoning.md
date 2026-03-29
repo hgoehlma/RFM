@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.20` // `top_level_document` // [living]
+`v0.0.0.21` // `top_level_document` // [living]
 
 ---
 
@@ -196,6 +196,14 @@ How does content exit or transform within a reasoning document over time? Hard l
 
 Execution mode requires minimal capture — a record of deviations, deferrals, and broken assumptions sufficient to make the return to reasoning mode honest. What this looks like in practice is undesigned. How short can it be and still serve its purpose? What is the right artifact — a section appended to the reasoning document, a separate log, something else? How does a team distinguish a deviation worth capturing from noise? And what does the return-to-reasoning-mode session actually look like — what is its protocol, its output, its quality gate? These questions are unresolved. The two-mode design is a working hypothesis, not a tested practice.
 
+**10. The structural enforcement question.**
+
+The methodology describes intended behavior for both human and LLM — reasoning before execution, co-author challenge, drift detection. But described intent is not enforced behavior. A human can fill sections mechanically and produce a document that looks correct without the thinking having improved. An LLM instructed to challenge weak reasoning will, under pressure or ambiguity, default to compliance. The gap between "the methodology says this should happen" and "the system makes it hard for this not to happen" is real and undesigned. What structural mechanisms — interaction patterns, gates, review rituals — would make the intended behaviors reliably emerge rather than depend on discipline alone? This is the point at which the methodology risks remaining a philosophy rather than becoming a method.
+
+**11. The false rigor problem.**
+
+A reasoning document that has been filled mechanically — sections completed without genuine engagement — is worse than no document. It carries the appearance of reasoning without the substance, and that appearance suppresses the challenge it should invite. The methodology has no designed mechanism for distinguishing genuine reasoning from compliant form-filling. How does the methodology make false rigor visible, and what is the right response when it is detected?
+
 ---
 
 ## Hard Lessons
@@ -300,6 +308,6 @@ A session-born shorthand is a term that emerged between two collaborators and ca
 
 ---
 
-*v0.0.0.20 // top_level_document // [living]*
+*v0.0.0.21 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
