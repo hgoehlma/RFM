@@ -16,7 +16,7 @@ A reasoning document is a structured, living artifact with eight sections: The P
 
 The same eight sections apply at every level of the hierarchy — from top-level methodology to individual module — with different scope but identical discipline. Think of a country map and a street map: different resolution, same navigational rules, and they connect. Zoom in and the practice is identical. This property — the same structure governing at every level — is what makes the hierarchy navigable rather than just large.
 
-The methodology applies to itself. These documents were built using RFM principles, in active collaboration between human and LLM as co-authors. The reasoning came before the structure. That was the right order.
+The LLM is a co-author in this practice, not a tool that executes within it — which means it is expected to red team, flag drift, and hold the discipline alongside the human, not wait to be asked. The methodology applies to itself: these documents were built in true collaboration between human and LLM using RFM principles, with the reasoning coming before the structure. That was the right order.
 
 ---
 
