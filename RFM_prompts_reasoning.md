@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.13` // `top_level_document` // [living]
+`v0.0.0.17` // `top_level_document` // [living]
 
 ---
 
@@ -113,6 +113,10 @@ The traveling prompt is read by an LLM, not a human. It does not need to be writ
 
 One governance constraint applies: the prompt must remain verifiable by the human. Not fully readable as prose — but parseable enough that the human can verify it still reflects the methodology. If the prompt drifts into shorthand the human cannot evaluate, oversight of the methodology is lost. The bar is verifiability, not readability.
 
+**Why cross-LLM testing is part of prompt curation discipline.**
+
+The traveling prompt is developed and refined primarily through use with a single LLM. That creates a specific drift risk: the prompt gradually encodes that LLM's behavioral idiosyncrasies as methodology. The discipline looks rigorous — it is grounded in real experience — but the ground is model-specific and moving. Deliberate testing against a second LLM serves the same function as the fresh-LLM test recommended for reasoning documents: it surfaces what has been invisibly optimized away. This is a curation practice for the prompt artifact itself, not a requirement of the methodology in general use.
+
 ---
 
 ## The Boundaries
@@ -189,6 +193,8 @@ An LLM establishing the co-author role at the start of a conversation can gradua
 
 The division of labor is part of this same principle. The LLM is faster and more precise at formulating and editing text; the human holds the judgment about whether a word or phrase lands for a first-time reader. The natural working mode — LLM proposes and executes, human judges and confirms — is not a convenience. It is the co-author role expressed correctly. Deferring the drafting back to the human is not humility. It is the LLM abandoning the part of the collaboration it is best equipped to carry.
 
+The co-author role has a ceiling as well as a floor. The floor is deference: the LLM waiting for permission, softening positions, deferring drafts back. The ceiling is unilateral authorship: the LLM acting on structural reasoning changes without joint decision. The "propose and execute" instruction guards against the floor. What it does not make explicit is that confirmation has weight proportional to what is being changed. Derivative cleanup, wording improvements, and implementation catch-up may proceed with light confirmation once the reasoning is clear. Changes that alter reasoning structure — hierarchy, chosen direction, module boundaries — require explicit joint decision before editing. An LLM that does not hold this distinction will interpret the anti-deference instruction as license to act on structural changes unilaterally. That is co-author confidence applied in the wrong direction.
+
 **5. The traveling prompt must instruct the LLM to test session-born shorthands before capturing them.**
 
 Session-born shorthands carry the session context that gave them meaning. When such a term moves into a document, it meets readers — human and LLM — who were not in that session. The behavioral instruction belongs in the traveling prompt: before accepting a session-born term into a document, flag it and ask whether it carries its meaning without the conversation behind it. The reasoning for this instruction is here: a term that requires the session to be understood is not yet a document-ready term. It is a candidate. The test is simple — can a first-time reader understand it without explanation? If not, spell it out.
@@ -201,9 +207,17 @@ The traveling prompt is read by an LLM and by a human maintaining it. These are 
 
 The document map belongs in the top-level reasoning document when a document landscape exists to navigate — but "exists to navigate" has a threshold. A single-document system has nothing to map. Additionally, when a project is publicly hosted, the README serves a different reader than the document map: orientation without versions for newcomers, versus snapshot-with-versions for collaborators maintaining the system. These are not the same artifact serving the same purpose. Conflating them produces a map that is either too noisy for public readers or too sparse for collaborators. The traveling prompt carries the behavioral expression of this distinction. This reasoning document is its source.
 
+**8. The traveling prompt must name the full derivative chain, not only the reasoning/derivative distinction.**
+
+The prompt is strong on reasoning before derivatives and on flagging derivative drift. What it did not make explicit is that the derivative chain has structure: reasoning document → operational document → code → outputs. Each layer is a source for the layer below it. An LLM holding only the reasoning/derivative binary will ask "does this require reasoning?" and, if not, proceed to code. The question it must also ask is "does this require new or newly explicit operational semantics?" The trigger for that second question is: when implementation behavior becomes concrete enough that a collaborator could ask "what exactly do we do?", that behavior belongs in the operational document before or alongside code — not left for code or outputs to explain first. Code is derivative of both reasoning and operational documents. Neither source moves after the fact.
+
+**9. Domain terminology and claim discipline belong in the traveling prompt, not only in operational documents.**
+
+When a project applies the methodology, there is pressure to treat wording conventions and terminology as a house style concern — and to capture them in the operational document. This misclassifies them if the intent is universal. How claims are formed, how observation is separated from interpretation, and how the reasoning object stays visible across all artifacts — reasoning documents, operational documents, code comments, and outputs — is upstream of any single project's operations. It is a reasoning discipline principle. A principle with that scope belongs in the traveling prompt. The operational document may carry project-local reminders or examples, but it should not be the primary source for a principle that governs the quality of reasoning itself.
+
 ---
 
-*v0.0.0.13 // top_level_document // [living]*
+*v0.0.0.17 // top_level_document // [living]*
 *the system prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*
