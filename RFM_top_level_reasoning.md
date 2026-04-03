@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.22` // `top_level_document` // [living]
+`v0.0.0.25` // `top_level_document` // [living]
 
 ---
 
@@ -53,7 +53,7 @@ The problem of meaning in software is not unrecognized. Several movements have a
 
 | Approach | What it does | Why it's insufficient |
 |---|---|---|
-| **Agile** | Shifted focus from documentation-heavy waterfall to working software and human collaboration | Solved delivery rigidity but traded away reasoning continuity in the process |
+| **Agile** | Shifted focus from documentation-heavy waterfall to working software and human collaboration | Solved delivery rigidity but traded away reasoning continuity in the process — in part because "working software over comprehensive documentation" was routinely misread as license to abandon reasoning capture entirely, a misreading that spread widely enough to become cultural default in many teams |
 | **Domain-Driven Design** | Made meaning an explicit design target. Gave us Ubiquitous Language and Bounded Contexts | Presupposes reasoning already exists — it structures meaning, it doesn't generate or preserve it |
 | **Clean Code / TDD** | Made quality and correctness first-class concerns | Correctness is not the same as meaning. A perfectly tested system can still be incomprehensible |
 | **Wardley Mapping** | Made situational awareness and strategic reasoning explicit, visual, and owned | Stops at the strategic level. Doesn't cascade into a connected reasoning practice at every level of execution |
@@ -156,9 +156,13 @@ How does the reasoning document stay connected to the system it describes? The m
 
 Applying the methodology from inception — reasoning before any code exists — is the only reliable prevention. Reconstructing reasoning from existing code produces plausible documents, but not necessarily true ones. There is no reliable cure for drift once it has set in. Whether the discipline holds at scale and over time remains genuinely open.
 
+The research literature has named and studied this problem extensively under two terms. Architectural knowledge vaporization describes the loss of the rationale behind design decisions — the alternatives considered, the trade-offs made, the assumptions held — which exists primarily in the minds of creators and disappears when they move on or when time passes. Architecture erosion describes the downstream consequence: the silent, cumulative divergence between the intended design and the implemented reality, documented in real systems at rates ranging from 26% to 94%. The field's proposed solutions — better tooling, automated conformance checking, architectural governance frameworks — address drift after it has begun, by detecting the gap between documentation and code. None address the root cause: the reasoning behind decisions is not captured in the first place, so there is nothing for tooling to enforce against. RFM's claim is that drift begins not when code diverges from documentation, but when reasoning disappears from the artifact that is supposed to carry it. Making reasoning the primary artifact — before any code exists — is the only prevention that operates at the right level. Whether that prevention holds at scale and over time is what remains open.
+
 **2. The minimum viable document.**
 
 How short can a reasoning document be and still work? The methodology must not become a bureaucratic burden. There is a minimum below which the document loses its value — and a maximum above which it becomes the thing it was designed to replace. Where are those boundaries in practice?
+
+In practice, the binding constraint is rarely the floor. Empirical evidence from software practice points to a different dominant failure mode: documentation is most commonly abandoned not because too little was written, but because too much was written for the wrong reason — created to satisfy a requirement, not to capture reasoning, and consequently never maintained. This pattern is well-documented across industries under the name compliance theater: the appearance of discipline without its substance. A document produced because it was required will be treated as a deliverable. A document produced because the reasoning demanded it will be treated as a living artifact. RFM's founding constraint — reasoning before execution — is the structural answer to this failure mode. A document that emerges from genuine reasoning has a reason to stay alive: every change to the system begins with a change to it. A compliance document has no such anchor. It is written once, filed, and quietly abandoned. The minimum viable document question is therefore not primarily about length. It is about origin: was this document reasoned into existence, or required into existence?
 
 **3. The onboarding question.**
 
@@ -185,6 +189,8 @@ At the execution level this question is largely resolved: structure and guarante
 The methodology is currently designed and validated at genesis stage — a single practitioner, early structure, everything still surprising. It is an open question how the discipline needs to change as a project matures through later stages of development. The Hard Lessons section is where this strain will show first: it only grows, it is cross-cutting, and curation becomes harder as the project ages. The hunch is that Hard Lessons eventually graduates from a document section into a separate living artifact, that lessons can be retired when fully absorbed into assumptions or team practice, and that the methodology itself needs to describe these transition points explicitly. This has not been designed yet. It needs to be — before the methodology is adopted at scale.
 
 One boundary is already clear: the moment code precedes reasoning, the methodology is in recovery mode rather than prevention mode. Reconstructed reasoning produces plausible documents, but not necessarily true ones. What changes at each subsequent stage beyond that boundary is still open.
+
+Research on software project lifecycles confirms the general pattern: practices and structures designed for genesis stage break in characteristic ways as teams and projects scale. What works for five engineers often fails at twenty; what holds in inception frequently requires redesign by growth stage. But that research addresses team structure, process frameworks, and tooling — none of it asks what happens to reasoning discipline specifically as a project matures, because none of it treats reasoning as the primary artifact. RFM is the first framework that makes this a distinct, nameable question. The fractal structure is the intended answer: as documents strain, new modules emerge; as modules emerge, sub-teams take them on with the top-level reasoning as anchor and adjacent module documents as context. The reasoning load is distributed by design, not concentrated. But whether this mechanism actually holds under real team growth — whether curation discipline survives handoffs, whether the fractal structure remains navigable as the hierarchy deepens, whether new contributors reason the way the methodology requires rather than drift toward execution — is precisely what has not been tested. These are open research questions that RFM surfaces and prior work has not studied, because they only become visible when reasoning is treated as the governing artifact rather than a byproduct of development.
 
 **7. The lifecycle of document content.**
 
@@ -294,6 +300,6 @@ A well-reasoned document hierarchy will not prevent all gaps from appearing duri
 
 ---
 
-*v0.0.0.22 // top_level_document // [living]*
+*v0.0.0.25 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
