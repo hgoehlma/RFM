@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.25` // `top_level_document` // [living]
+`v0.0.0.26` // `top_level_document` // [living]
 
 ---
 
@@ -14,6 +14,8 @@ Current tools address symptoms. None address the root cause: there is no discipl
 **Why now?**
 
 This problem is not new. What is new is that LLMs have made the consequences of missing reasoning suddenly visible and concrete. But the same LLMs also create the opportunity to fix it — because a well-reasoned document doesn't just help humans understand a system. It directly improves how AI executes within it. The problem and the solution have arrived together.
+
+And as AI systems become more autonomous, the stakes compound. A highly capable agent acting on vague or implicit intent doesn't fail cautiously. It fails confidently, at scale, and in ways that are difficult to trace or reverse. RFM is not primarily about documentation discipline. It is about maintaining human legibility over systems that are increasingly executing without human oversight.
 
 ---
 
@@ -300,6 +302,6 @@ A well-reasoned document hierarchy will not prevent all gaps from appearing duri
 
 ---
 
-*v0.0.0.25 // top_level_document // [living]*
+*v0.0.0.26 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*

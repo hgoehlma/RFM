@@ -23,10 +23,10 @@ The LLM is a co-author in this practice, not a tool that executes within it — 
 ## Document Map
 
 | Document | Type | What it carries |
-|---|---|---|
-| [RFM_top_level_reasoning.md](RFM_top_level_reasoning.md) | Top-level reasoning | The methodology itself — the problem, the assumptions, the landscape, the chosen direction, the hard lessons earned |
-| [RFM_prompts_reasoning.md](RFM_prompts_reasoning.md) | Prompts reasoning | The reasoning document governing all system prompt decisions — why the prompt is designed the way it is |
-| [RFM_traveling_prompt.md](RFM_traveling_prompt.md) | Traveling system prompt | The system prompt that carries the methodology into every LLM conversation — the discipline made ambient |
+| --- | --- | --- |
+| [RFM\_top\_level\_reasoning.md](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md) | Top-level reasoning | The methodology itself — the problem, the assumptions, the landscape, the chosen direction, the hard lessons earned |
+| [RFM\_prompts\_reasoning.md](https://github.com/hgoehlma/RFM/blob/main/RFM_prompts_reasoning.md) | Prompts reasoning | The reasoning document governing all system prompt decisions — why the prompt is designed the way it is |
+| [RFM\_traveling\_prompt.md](https://github.com/hgoehlma/RFM/blob/main/RFM_traveling_prompt.md) | Traveling system prompt | The system prompt that carries the methodology into every LLM conversation — the discipline made ambient |
 
 *Start with `RFM_top_level_reasoning.md`. It is the map, the anchor, and the most complete entry point into the methodology.*
 
@@ -42,15 +42,18 @@ RFM is a vehicle, not a prescription. The reasoning comes first — everything e
 
 ---
 
+## Why It Matters Now
+
+The most important argument for RFM is not that it helps teams remember why they built what they built. It is that as AI systems become more autonomous, the reasoning document becomes the mechanism by which humans stay legible to the systems they are directing — and by which those systems stay accountable to human intent. A capable agent acting on vague intent doesn't fail cautiously. It fails confidently, at scale. The reasoning document is the deterministic anchor. Everything else is derivative.
+
+---
+
 ## License
 
-[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+[![CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 
 © 2026 Hinrich W.H. Göhlmann
 
 *Developed in collaboration with Claude Sonnet 4.6 (Anthropic), acting as co-author throughout.*
-
-[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
