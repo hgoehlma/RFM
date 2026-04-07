@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.17` // `top_level_document` // [living]
+`v0.0.0.18` // `top_level_document` // [living]
 
 ---
 
@@ -215,9 +215,13 @@ The prompt is strong on reasoning before derivatives and on flagging derivative 
 
 When a project applies the methodology, there is pressure to treat wording conventions and terminology as a house style concern — and to capture them in the operational document. This misclassifies them if the intent is universal. How claims are formed, how observation is separated from interpretation, and how the reasoning object stays visible across all artifacts — reasoning documents, operational documents, code comments, and outputs — is upstream of any single project's operations. It is a reasoning discipline principle. A principle with that scope belongs in the traveling prompt. The operational document may carry project-local reminders or examples, but it should not be the primary source for a principle that governs the quality of reasoning itself.
 
+**10. The level test and research re-anchoring belong in the traveling prompt as behavioral instructions, not only in the reasoning document as lessons.**
+
+The principle — reasoning before execution — exists at the strategic level in the methodology. What was missing was its granular behavioral expression at the drafting moment. Two failure modes identified in practice: drafting additions at the wrong level of the hierarchy without testing first, and external research material pulling a reasoning session toward operational detail before the level is named. Both have the same mitigation — an explicit pause and a named test before drafting begins. Principles without behavioral expression are aspirations. The traveling prompt is where aspirations become instructions. Both belong there.
+
 ---
 
-*v0.0.0.17 // top_level_document // [living]*
+*v0.0.0.18 // top_level_document // [living]*
 *the system prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*

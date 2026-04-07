@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.26` // `top_level_document` // [living]
+`v0.0.0.22` // `top_level_document` // [living]
 
 ---
 
@@ -14,8 +14,6 @@ Current tools address symptoms. None address the root cause: there is no discipl
 **Why now?**
 
 This problem is not new. What is new is that LLMs have made the consequences of missing reasoning suddenly visible and concrete. But the same LLMs also create the opportunity to fix it — because a well-reasoned document doesn't just help humans understand a system. It directly improves how AI executes within it. The problem and the solution have arrived together.
-
-And as AI systems become more autonomous, the stakes compound. A highly capable agent acting on vague or implicit intent doesn't fail cautiously. It fails confidently, at scale, and in ways that are difficult to trace or reverse. RFM is not primarily about documentation discipline. It is about maintaining human legibility over systems that are increasingly executing without human oversight.
 
 ---
 
@@ -55,7 +53,7 @@ The problem of meaning in software is not unrecognized. Several movements have a
 
 | Approach | What it does | Why it's insufficient |
 |---|---|---|
-| **Agile** | Shifted focus from documentation-heavy waterfall to working software and human collaboration | Solved delivery rigidity but traded away reasoning continuity in the process — in part because "working software over comprehensive documentation" was routinely misread as license to abandon reasoning capture entirely, a misreading that spread widely enough to become cultural default in many teams |
+| **Agile** | Shifted focus from documentation-heavy waterfall to working software and human collaboration | Solved delivery rigidity but traded away reasoning continuity in the process |
 | **Domain-Driven Design** | Made meaning an explicit design target. Gave us Ubiquitous Language and Bounded Contexts | Presupposes reasoning already exists — it structures meaning, it doesn't generate or preserve it |
 | **Clean Code / TDD** | Made quality and correctness first-class concerns | Correctness is not the same as meaning. A perfectly tested system can still be incomprehensible |
 | **Wardley Mapping** | Made situational awareness and strategic reasoning explicit, visual, and owned | Stops at the strategic level. Doesn't cascade into a connected reasoning practice at every level of execution |
@@ -158,13 +156,9 @@ How does the reasoning document stay connected to the system it describes? The m
 
 Applying the methodology from inception — reasoning before any code exists — is the only reliable prevention. Reconstructing reasoning from existing code produces plausible documents, but not necessarily true ones. There is no reliable cure for drift once it has set in. Whether the discipline holds at scale and over time remains genuinely open.
 
-The research literature has named and studied this problem extensively under two terms. Architectural knowledge vaporization describes the loss of the rationale behind design decisions — the alternatives considered, the trade-offs made, the assumptions held — which exists primarily in the minds of creators and disappears when they move on or when time passes. Architecture erosion describes the downstream consequence: the silent, cumulative divergence between the intended design and the implemented reality, documented in real systems at rates ranging from 26% to 94%. The field's proposed solutions — better tooling, automated conformance checking, architectural governance frameworks — address drift after it has begun, by detecting the gap between documentation and code. None address the root cause: the reasoning behind decisions is not captured in the first place, so there is nothing for tooling to enforce against. RFM's claim is that drift begins not when code diverges from documentation, but when reasoning disappears from the artifact that is supposed to carry it. Making reasoning the primary artifact — before any code exists — is the only prevention that operates at the right level. Whether that prevention holds at scale and over time is what remains open.
-
 **2. The minimum viable document.**
 
 How short can a reasoning document be and still work? The methodology must not become a bureaucratic burden. There is a minimum below which the document loses its value — and a maximum above which it becomes the thing it was designed to replace. Where are those boundaries in practice?
-
-In practice, the binding constraint is rarely the floor. Empirical evidence from software practice points to a different dominant failure mode: documentation is most commonly abandoned not because too little was written, but because too much was written for the wrong reason — created to satisfy a requirement, not to capture reasoning, and consequently never maintained. This pattern is well-documented across industries under the name compliance theater: the appearance of discipline without its substance. A document produced because it was required will be treated as a deliverable. A document produced because the reasoning demanded it will be treated as a living artifact. RFM's founding constraint — reasoning before execution — is the structural answer to this failure mode. A document that emerges from genuine reasoning has a reason to stay alive: every change to the system begins with a change to it. A compliance document has no such anchor. It is written once, filed, and quietly abandoned. The minimum viable document question is therefore not primarily about length. It is about origin: was this document reasoned into existence, or required into existence?
 
 **3. The onboarding question.**
 
@@ -191,8 +185,6 @@ At the execution level this question is largely resolved: structure and guarante
 The methodology is currently designed and validated at genesis stage — a single practitioner, early structure, everything still surprising. It is an open question how the discipline needs to change as a project matures through later stages of development. The Hard Lessons section is where this strain will show first: it only grows, it is cross-cutting, and curation becomes harder as the project ages. The hunch is that Hard Lessons eventually graduates from a document section into a separate living artifact, that lessons can be retired when fully absorbed into assumptions or team practice, and that the methodology itself needs to describe these transition points explicitly. This has not been designed yet. It needs to be — before the methodology is adopted at scale.
 
 One boundary is already clear: the moment code precedes reasoning, the methodology is in recovery mode rather than prevention mode. Reconstructed reasoning produces plausible documents, but not necessarily true ones. What changes at each subsequent stage beyond that boundary is still open.
-
-Research on software project lifecycles confirms the general pattern: practices and structures designed for genesis stage break in characteristic ways as teams and projects scale. What works for five engineers often fails at twenty; what holds in inception frequently requires redesign by growth stage. But that research addresses team structure, process frameworks, and tooling — none of it asks what happens to reasoning discipline specifically as a project matures, because none of it treats reasoning as the primary artifact. RFM is the first framework that makes this a distinct, nameable question. The fractal structure is the intended answer: as documents strain, new modules emerge; as modules emerge, sub-teams take them on with the top-level reasoning as anchor and adjacent module documents as context. The reasoning load is distributed by design, not concentrated. But whether this mechanism actually holds under real team growth — whether curation discipline survives handoffs, whether the fractal structure remains navigable as the hierarchy deepens, whether new contributors reason the way the methodology requires rather than drift toward execution — is precisely what has not been tested. These are open research questions that RFM surfaces and prior work has not studied, because they only become visible when reasoning is treated as the governing artifact rather than a byproduct of development.
 
 **7. The lifecycle of document content.**
 
@@ -300,8 +292,20 @@ Theory without ground truth is hypothesis. Applying the methodology from incepti
 
 A well-reasoned document hierarchy will not prevent all gaps from appearing during execution. What it does is make gaps visible in the right place — as explicit reasoning debts, open questions, or provisional specifications — rather than letting them hide in code where they harden silently into undocumented decisions. A first application that produces no visible gaps has probably not been honest. A first application whose gaps surface at the reasoning level and are named there rather than discovered late in implementation is working correctly.
 
+**21. Before drafting any addition to a reasoning document, name the level it belongs to.**
+
+Before drafting any addition to a reasoning document, name the level the candidate belongs to. If it belongs in a derivative — operational document, code, prompt — don't draft it into the source. This test is easy to skip under execution-mode gravity, especially when concrete material is already present in the conversation. The test must be applied explicitly, before the draft exists. A draft that has already been produced exerts its own momentum. The right order is: name the level, confirm it belongs here, then draft.
+
+**22. External research creates execution-mode gravity inside a reasoning session.**
+
+When external research enters a reasoning session — concrete data, implementation detail, tool-specific findings — the material exerts gravitational pull on whatever gets drafted next. The draft follows the research rather than the methodology level. The mitigation is explicit re-anchoring: after any research step and before drafting, name the level the addition belongs to. Research is an input to reasoning, not a substitute for it. If the research is pulling toward operational detail, that is a signal to stop and identify the derivative document where the detail belongs — not to continue drafting at the reasoning level.
+
+**23. A holding artifact shapes co-author behavior in ways that weren't designed.**
+
+Introducing a designated holding artifact — a parking file, a deferred items list — lowers the threshold for parking by making it the path of least resistance. What was designed as a last resort before losing signal becomes a first resort before doing the harder work of deciding whether something is ready. The behavioral effect is conservative drift: the co-author parks rather than works, defers rather than drafts. The test before suggesting the holding artifact: is the candidate genuinely unready, or is the holding artifact simply available? If the candidate is sharp enough to describe precisely, it is probably ready to be drafted.
+
 ---
 
-*v0.0.0.26 // top_level_document // [living]*
+*v0.0.0.23 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
