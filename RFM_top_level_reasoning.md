@@ -1,5 +1,15 @@
 # Reasoning-First Methodology
-`v0.0.0.22` // `top_level_document` // [living]
+`v0.0.0.25` // `top_level_document` // [living]
+
+---
+
+## Document Map
+
+| Document | Type | Version | What it carries |
+|---|---|---|---|
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.25 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.21 | The reasoning document governing all system prompt decisions |
+| `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.0.19 | The system prompt that carries the methodology into every LLM conversation |
 
 ---
 
@@ -188,7 +198,7 @@ One boundary is already clear: the moment code precedes reasoning, the methodolo
 
 **7. The lifecycle of document content.**
 
-How does content exit or transform within a reasoning document over time? Hard lessons elevate into principles, open questions resolve and close, assumptions break or prove out. The direction of travel for individual entries is implicit in the curation principle but not yet described. A methodology that only adds content will eventually become the thing it was designed to replace. The explicit lifecycle — how entries graduate, transform, and exit — needs to be designed before the methodology is adopted at scale.
+How do entries that have outlived their relevance exit honestly? Some content describes a stage the project has passed — not wrong, not graduated, simply no longer active. The methodology affirms that such entries should be removed, but the discipline for recognizing and executing that removal is not yet described. A document that accumulates without expiring content will eventually misrepresent the project's current state. What makes an entry a candidate for expiry rather than graduation, and what does honest removal look like in practice, remains open.
 
 **8. The minimal capture discipline.**
 
@@ -250,6 +260,14 @@ The Hard Lessons section accumulates entries but has no mechanism for them to ex
 
 The methodology was designed to prevent documentation drift. But the reasoning document itself can drift from the system it describes. Naming this problem is not solving it. This lesson must stay visible until a genuine answer exists.
 
+**24. Graduated content disappears — it does not narrate its own departure.**
+
+When an open question partially resolves, the resolved part simply goes. What survives stands on its own. An entry that says "we now know X; what remains open is Y" has not been curated — it has been annotated. The annotation blurs the boundary between what is settled and what is not, and it signals to the next reader that this section requires interpretation rather than reading. The discipline is clean removal of what is resolved, leaving the surviving question to speak for itself.
+
+**25. An assumption that receives a graduated insight must carry the reasoning that earned it, not just the conclusion.**
+
+When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader or collaborator to challenge it honestly rather than inherit it silently.
+
 **LLM behavior**
 
 **12. LLMs must never summarize reasoning documents unless explicitly asked.**
@@ -304,8 +322,12 @@ When external research enters a reasoning session — concrete data, implementat
 
 Introducing a designated holding artifact — a parking file, a deferred items list — lowers the threshold for parking by making it the path of least resistance. What was designed as a last resort before losing signal becomes a first resort before doing the harder work of deciding whether something is ready. The behavioral effect is conservative drift: the co-author parks rather than works, defers rather than drafts. The test before suggesting the holding artifact: is the candidate genuinely unready, or is the holding artifact simply available? If the candidate is sharp enough to describe precisely, it is probably ready to be drafted.
 
+**26. The Landscape section drifts in two predictable directions when its structure is not held.**
+
+The first drift is toward loose prose that stops distinguishing neighboring approaches clearly — each row collapses into a general description, and the reader loses the ability to trace why each approach is insufficient for the local problem. The second drift is toward early option selection — what looks like landscape analysis is already choosing, and the work that belongs in Options Considered has been absorbed silently. Both failures share a root: the section lost its sequence. A Landscape section is strongest when it first distinguishes adjacent approaches in a structured comparison — what each does, why it is insufficient — and then closes with a short paragraph naming what the landscape collectively reveals and where the gap remains. Without that sequence, both drift modes become invisible until they have already done damage.
+
 ---
 
-*v0.0.0.23 // top_level_document // [living]*
+*v0.0.0.25 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
