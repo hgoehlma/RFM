@@ -14,9 +14,15 @@ If you've ever inherited a codebase and had no idea why anything was built the w
 
 A reasoning document is a structured, living artifact with eight sections: The Problem, The Assumptions, The Landscape, The Options Considered, The Chosen Direction and Why, The Boundaries, The Open Questions, and Hard Lessons.
 
-The same eight sections apply at every level of the hierarchy — from top-level methodology to individual module — with different scope but identical discipline. Think of a country map and a street map: different resolution, same navigational rules, and they connect. Zoom in and the practice is identical. This property — the same structure governing at every level — is what makes the hierarchy navigable rather than just large.
+The same eight sections apply at every level of the hierarchy — from top-level methodology to individual module — with different scope but identical discipline. Think of a country map and a street map: different resolution, same navigational rules, and they connect. This property — the same structure governing at every level — is what mathematicians call fractal. The term is precise: a fractal is not just a pattern that repeats, it is a pattern whose rules apply at every level. That is exactly what the reasoning document hierarchy is.
 
 The LLM is a co-author in this practice, not a tool that executes within it — which means it is expected to red team, flag drift, and hold the discipline alongside the human, not wait to be asked. The methodology applies to itself: these documents were built in true collaboration between human and LLM using RFM principles, with the reasoning coming before the structure. That was the right order.
+
+---
+
+## Two Modes
+
+The methodology operates in two modes. Reasoning mode is the default: the reasoning document precedes execution, every change begins at the appropriate level of the hierarchy. Execution mode is the correct response to delivery pressure — a deadline, a sprint, a time-boxed commitment — when reasoning documents are sufficiently established. The discipline shifts from reasoning before every action to executing within established reasoning, using those documents as Commander's Intent. What execution mode requires is minimal capture: deviations, deferrals, and broken assumptions logged as they happen, enough to make the return to reasoning mode honest rather than reconstructed from code. The return is not optional.
 
 ---
 
