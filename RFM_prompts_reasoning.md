@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.18` // `top_level_document` // [living]
+`v0.0.0.21` // `top_level_document` // [living]
 
 ---
 
@@ -90,6 +90,8 @@ The methodology is honest about what it cannot prove and what it cannot yet solv
 **Why the section type framework belongs in the traveling prompt:**
 
 The insight that the eight sections divide into deterministic anchors and probabilistic territory is one of the most operationally useful things the methodology sweep produced. An LLM that holds this framework will engage differently with a Boundaries section than with an Open Questions section — and correctly so. This belongs in the traveling prompt, not the sweep prompt, because it governs every interaction with a reasoning document.
+
+The Landscape section warrants specific guidance beyond the general section type framework. Practice revealed two predictable drift modes: loose prose that stops distinguishing neighboring approaches clearly, and early option selection that absorbs work belonging in Options Considered. Both failures share a root — the section lost its sequence. Naming these drift modes in the traveling prompt gives the LLM something specific to watch for rather than a general instruction to hold the section correctly.
 
 **Why the sweep prompt is a separate design exercise:**
 
@@ -219,9 +221,17 @@ When a project applies the methodology, there is pressure to treat wording conve
 
 The principle — reasoning before execution — exists at the strategic level in the methodology. What was missing was its granular behavioral expression at the drafting moment. Two failure modes identified in practice: drafting additions at the wrong level of the hierarchy without testing first, and external research material pulling a reasoning session toward operational detail before the level is named. Both have the same mitigation — an explicit pause and a named test before drafting begins. Principles without behavioral expression are aspirations. The traveling prompt is where aspirations become instructions. Both belong there.
 
+**11. Reasoning compression is always structural — regardless of how it presents.**
+
+Compressing articulated reasoning feels like curation. It can present as anti-deference ("propose and execute"), as cleanup ("this is wordy"), or as re-homing ("this belongs at a lower level"). None of those framings change what it is. Losing articulation in a reasoning document is a structural change. It requires joint decision weight, not light confirmation. When boundary strain is detected, the first safe move is to flag it — not to compress. If re-homing is proposed, the reasoning travels intact until a joint decision is made about what to preserve, what to move, and what to let go. Summarizing articulated reasoning into a shorter proxy is not a safe boundary-cleanup move. It is structural authorship without the joint decision that structural authorship requires.
+
+**12. Version numbers in reasoning documents appear in two places — and will drift apart without an explicit reminder.**
+
+Each reasoning document carries its version number in the header and in the footer. This was an early design decision to make the version visible at both ends of what can be a long document. The maintenance risk it creates was not named at the time: when a document is bumped, both locations must be updated in the same edit. Without an explicit behavioral instruction, one location is updated and the other is missed — and the document signals two different versions simultaneously. The traveling prompt carries the reminder. This is the reasoning behind it.
+
 ---
 
-*v0.0.0.18 // top_level_document // [living]*
+*v0.0.0.21 // top_level_document // [living]*
 *the system prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*
