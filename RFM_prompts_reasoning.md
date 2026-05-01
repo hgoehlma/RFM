@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.21` // `top_level_document` // [living]
+`v0.0.0.22` // `top_level_document` // [living]
 
 ---
 
@@ -97,6 +97,10 @@ The Landscape section warrants specific guidance beyond the general section type
 
 The sweep prompt is essentially a concentrated quality gate. Its job is to work through a document section by section, flag candidates, name patterns, identify grey zones, and propose changes without making them. This is a different cognitive mode from ambient collaboration. It should be designed separately, after the traveling prompt is stable, and treated as a tool the human picks up deliberately rather than something that runs in the background.
 
+**Why the traveling prompt and the two sweep prompts form a system.
+
+The traveling prompt prevents failures from entering — it makes the discipline ambient. The two sweep prompts correct failures that crept in despite that discipline, whether introduced by the human or the LLM co-author. Prevention and correction are different jobs and require different artifacts. A single prompt cannot hold both without collapsing into neither.
+
 **Why the document map update tax is acceptable:**
 
 The document map must use real version numbers — it is the snapshot of the system's current state, and wildcards defeat its purpose. The tax of updating the map when modules change is real but proportionate: it is bookkeeping, not re-reasoning. The mitigation is LLM discipline: when any reasoning document is edited in a session, flag that the top-level document map requires a version update before the session closes. This removes the memory burden from the human. A map that drifts is worse than no map.
@@ -151,7 +155,10 @@ The eleven principles identified in the sweep patterns document are not equally 
 
 **3. The sweep prompt design.**
 
-The sweep prompt is a separate design exercise. Its structure, its section-by-section protocol, its grey zone handling, and its output format are all undesigned. This is the next work after the traveling prompt is stable.
+The sweep prompt is not one artifact but two, each correcting a distinct class of failure that the traveling prompt works to prevent but cannot guarantee. A language and clarity sweep corrects failures of expression: session residue, insider shorthand, and terms that look shared but carry different meanings across reader contexts. A structural and hierarchy sweep corrects failures of architecture: content carried at the wrong level of the hierarchy, sections straining under content that wants to become its own module, open questions ready to graduate but not moved. These are different cognitive modes with different failure conditions if conflated. Two prompts, not one with two modes.
+The timing of each differs. The language and clarity sweep can be invoked whenever either party notices something — it does not require structural completeness. The structural and hierarchy sweep requires a coherent draft to work against; invoked earlier, it has nothing stable to review and produces noise rather than signal.
+The language and clarity sweep is the complement to the traveling prompt's capture discipline, not a repetition of it. The traveling prompt tests terms at the moment of capture. The sweep corrects what that discipline missed — terms that accumulated gradually, were never tested, or were clear in the session that produced them and opaque to every reader since.
+What remains undesigned: the section-by-section protocol, grey zone handling, and output format for each prompt.
 
 **4. The system prompt aging problem.**
 
@@ -167,7 +174,7 @@ The co-author role — "the LLM is a co-author of the reasoning document, not a 
 
 **7. The future-reader discipline question.**
 
-Hard Lessons — and reasoning document content generally — risk being written for the session in which the insight was earned rather than for future readers encountering the methodology fresh. Session-specific references, examples that require prior context, and language that assumes shared history all degrade over time. What is the right discipline for catching this? The sweep prompt may be the natural mechanism — a concentrated review mode is well-positioned to flag content that is opaque without context. This is unresolved until the sweep prompt is designed.
+Hard Lessons — and reasoning document content generally — risk being written for the session in which the insight was earned rather than for future readers encountering the methodology fresh. Session-specific references, examples that require prior context, and language that assumes shared history all degrade over time. What is the right discipline for catching this? The language and clarity sweep described in OQ3 is the natural mechanism — concentrated review with explicit attention to disambiguation failures is well-positioned to flag content that is opaque without context. The design of that mechanism remains open until the sweep prompts are built.
 
 **8. The trigger conditions question.**
 
@@ -231,7 +238,7 @@ Each reasoning document carries its version number in the header and in the foot
 
 ---
 
-*v0.0.0.21 // top_level_document // [living]*
+*v0.0.0.22 // top_level_document // [living]*
 *the system prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*
