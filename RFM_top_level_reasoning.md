@@ -8,7 +8,7 @@
 | Document | Type | Version | What it carries |
 |---|---|---|---|
 | `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.25 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.21 | The reasoning document governing all system prompt decisions |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.22 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.0.19 | The system prompt that carries the methodology into every LLM conversation |
 
 ---
