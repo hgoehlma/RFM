@@ -30,11 +30,11 @@ The methodology operates in two modes. Reasoning mode is the default: the reason
 
 | Document | Type | What it carries |
 |---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | The methodology itself — the problem, the assumptions, the landscape, the chosen direction, the hard lessons earned |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | The reasoning document governing all system prompt decisions — why the prompt is designed the way it is |
-| `RFM_traveling_prompt.md` | Traveling system prompt | The system prompt that carries the methodology into every LLM conversation — the discipline made ambient |
-| `RFM_operational.md` | Operational | File naming conventions, document map maintenance, version discipline |
-| `RFM_human_prompt_reasoning.md` | Module reasoning | Reasoning document for the human prompt — skeleton, in active design |
+| [`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md) | Top-level reasoning | The methodology itself — the problem, the assumptions, the landscape, the chosen direction, the hard lessons earned |
+| [`RFM_prompts_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_prompts_reasoning.md) | Prompts reasoning | The reasoning document governing all system prompt decisions — why the prompt is designed the way it is |
+| [`RFM_traveling_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_traveling_prompt.md) | Traveling system prompt | The system prompt that carries the methodology into every LLM conversation — the discipline made ambient |
+| [`RFM_operational.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_operational.md) | Operational | File naming conventions, document map maintenance, version discipline |
+| [`RFM_human_prompt_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_prompts_reasoning.md) | Module reasoning | Reasoning document for the human prompt — skeleton, in active design |
 
 *Start with `RFM_top_level_reasoning.md`. It is the map, the anchor, and the most complete entry point into the methodology.*
 
