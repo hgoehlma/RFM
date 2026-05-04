@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.25` // `top_level_document` // [living]
+`v0.0.0.28` // `top_level_document` // [living]
 
 ---
 
@@ -7,9 +7,14 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.25 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.22 | The reasoning document governing all system prompt decisions |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.28 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.26 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.0.19 | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.2 | The reasoning document governing traveling prompt design decisions |
+| `RFM_sweep_prompts_reasoning.md` | Module reasoning | v0.0.0.1 | The reasoning document governing sweep prompt design decisions |
+| `RFM_operational.md` | Operational | v0.0.0.1 | File naming conventions, document map maintenance, version discipline |
+| `RFM_human_prompt_reasoning.md` | Module reasoning | v0.0.0.1 | Reasoning document for the human prompt — skeleton, in active design |
+| `RFM_glossary.md` | Glossary | v0.0.0.1 | Disambiguation of terms that carry different meanings across reader contexts |
 
 ---
 
@@ -45,7 +50,7 @@ The first five assumptions describe the world as the methodology finds it. The n
 
 6. **Curation must be deliberate, not optional.** Curation has two modes and both are required. The first is triggered — something accumulates, strains, or surfaces in use, and draws you back to the document. The second is deliberate return — you come back without a specific trigger, to ask whether the document still reflects what you know. Neither mode can be replaced by a scheduled rhythm; a time-triggered cadence risks becoming performative rather than genuine. The methodology only holds if both modes are practiced as discipline, not suggestion.
 
-7. **A reasoning document designed explicitly for both humans and LLMs simultaneously outperforms one designed for either alone.** This is not a natural default. It requires conscious design. True collaboration between human and LLM is not a side benefit of the methodology — it is the mechanism by which the methodology works. The LLM holds the co-author role in the reasoning document — it is not a tool that executes within it.
+7. **A reasoning document designed explicitly for both humans and LLMs simultaneously outperforms one designed for either alone.** This is not a natural default. It requires conscious design. Co-authorship between human and LLM — where the LLM holds a genuine co-author role rather than executing as a tool — is not a side benefit of the methodology. It is the mechanism by which the methodology works.
 
 8. **Hard lessons are as valuable as successes.** What failed, and why, carries as much reasoning value as what worked. A methodology that doesn't capture failure will repeat it.
 
@@ -116,11 +121,23 @@ Hard lessons are first-class citizens. What was tried, why it seemed right, what
 
 Every change to a derivative — code, prompt, operational document — begins with a change to its source reasoning document. Derivatives don't merely stay connected to the reasoning; they are created from it. That is the right order, and maintaining it is what curation means in practice.
 
-**On execution mode and the two-mode design:**
+**On the glossary as a named document type**
 
-The methodology operates in two modes. Reasoning mode is the default: reasoning precedes execution, the document is the source, every change begins at the appropriate level of the hierarchy. Execution mode is invoked when delivery pressure makes the full reasoning discipline locally unacceptable — a deadline, a sprint, a time-boxed commitment. Execution mode is not a degraded version of the methodology. It is the correct response to a specific condition, provided the reasoning documents are sufficiently complete before pressure hits. The reasoning documents then function as Commander's Intent: the direction, boundaries, and assumptions are established; execution adapts within that frame without stopping to re-reason. The discipline shifts from reasoning before every action to executing within established reasoning. What execution mode requires is minimal capture: a running record of deviations from established reasoning, conscious deferrals, and broken assumptions — enough to make the return to reasoning mode honest rather than reconstructed from code. This is a Chesterton's Fence log: before removing a fence under pressure, note that it was removed and why. The return to reasoning mode after pressure lifts is not optional. It is where execution mode's debts are paid.
+Some domains generate terms that look shared but carry different meanings across reader contexts — words that appear in reasoning documents, operational documents, and code, but mean different things to different collaborators or to an LLM encountering them fresh. When that condition exists, a glossary is warranted. Its purpose is not to define jargon but to disambiguate: to record why a term means what it means here, and what it would be confused with if left unresolved.
 
-**On the question of future autonomy:**
+The glossary is a reasoning artifact, not a reference artifact. The disambiguation choices reflect reasoning about the problem domain — losing the reasoning behind them produces the same failure mode as losing any other reasoning. It sits between reasoning and operational documents: it carries *why* disambiguation is needed alongside *what* the agreed definitions are. It is subject to the same curation discipline as any reasoning document.
+
+The glossary is not always warranted. The threshold condition: when a term appears in multiple documents and its meaning is likely to diverge across readers or contexts, a glossary entry is needed. Below that threshold, definitions belong inline where the term is first used.
+
+**On execution mode and the two-mode design**
+
+The methodology operates in two modes. Reasoning mode is the default: reasoning precedes execution, the document is the source, every change begins at the appropriate level of the hierarchy. Execution mode is invoked when delivery pressure makes the full reasoning discipline locally unacceptable — a deadline, a sprint, a time-boxed commitment. Execution mode is not a degraded version of the methodology. It is the correct response to a specific condition, provided the reasoning documents are sufficiently complete before pressure hits.
+
+The reasoning documents then function as Commander's Intent — a military doctrine principle in which the commander's direction, boundaries, and assumptions are established in advance so that execution can adapt within that frame without stopping to re-reason at every decision point. The discipline shifts from reasoning before every action to executing within established reasoning. What execution mode requires is minimal capture: a running record of deviations from established reasoning, conscious deferrals, and broken assumptions — enough to make the return to reasoning mode honest rather than reconstructed from code.
+
+This running record is a Chesterton's Fence log. Chesterton's Fence is the principle that you should not remove a fence until you understand why it was built. Under execution pressure, fences do get removed — the log ensures that each removal is noted and why. The return to reasoning mode after pressure lifts is not optional. It is where execution mode's debts are paid.
+
+**On the question of future autonomy**
 
 The most common objection to this approach is that increasingly capable and autonomous AI systems will eventually make it unnecessary. This misunderstands what the reasoning document is for. It is not a workaround for limited AI capability. It is the expression of human intent, human values, and human context applied to a specific problem. No level of AI autonomy removes the need for that — it only changes who executes once the intent is clear.
 
@@ -128,9 +145,9 @@ In fact, the more autonomous the system, the more critical the reasoning documen
 
 Autonomy raises the stakes for clarity. It does not lower them.
 
-The reasoning document is the deterministic anchor. Agentic execution is where probabilistic reasoning is permitted — but within boundaries that have been explicitly reasoned, not assumed.
+The reasoning document is the deterministic anchor — the fixed, explicitly reasoned reference point against which agentic execution is measured. Agentic execution is where probabilistic reasoning is permitted — but within boundaries that have been explicitly reasoned, not assumed.
 
-**On the name:**
+**On the name**
 
 The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM — that is not accidental and is kept. The full name is accurate and directional; it captures the temporal discipline that is the methodology's founding constraint. It does not explicitly name the joint human/LLM design — a conscious choice. Simpler names travel better, and the joint design is carried sufficiently by the documents themselves. Naming the tool in the methodology's title would date it; the practice will outlast the current form of the collaboration. The name is considered settled.
 
@@ -176,7 +193,7 @@ How does someone encounter this methodology for the first time and understand it
 
 The document map — a lightweight navigation table at the top of every top-level reasoning document — is a partial answer. It gives a new collaborator immediate orientation without requiring them to read everything first. A more powerful component is the LLM itself — a partner with a well-designed system prompt that understands the methodology and can guide a newcomer through it actively. The LLM becomes part of the onboarding infrastructure, not just a tool within it. The deeper question — how to convey the value of the methodology quickly enough to motivate adoption — remains open.
 
-The deepest layer of the onboarding question is not about understanding the methodology — it is about developing the collaborative posture that makes the methodology's value accessible. The methodology currently assumes a human who already works in a particular way: thinking out loud rather than stating destinations, giving permission to uncertainty rather than demanding confident answers, pushing back with genuine curiosity rather than authority, asking "so what?" of their own best ideas before anyone else can. These are not personality traits — they are practices, and practices can be taught. A methodology that describes what documents to write but not how to show up to the collaboration is incomplete. This layer of the onboarding question is undesigned.
+The deepest layer of the onboarding question is not about understanding the methodology — it is about developing the collaborative posture that makes the methodology's value accessible. The methodology currently assumes a human who already works in a particular way: thinking out loud rather than stating destinations, giving permission to uncertainty rather than demanding confident answers, pushing back with genuine curiosity rather than authority, asking "so what?" of their own best ideas before anyone else can. These are not personality traits — they are practices, and practices can be taught. A methodology that describes what documents to write but not how to show up to the collaboration is incomplete. This layer of the onboarding question is the design brief for `RFM_human_prompt_reasoning.md`.
 
 A related and more immediate question is the division of labor between human and LLM in the drafting process itself. The LLM is faster and more precise at formulating and editing text. The human holds the judgment about whether a word or phrase actually lands for a first-time reader. The natural working mode — LLM proposes and executes, human judges and confirms — plays to both strengths. Whether this division should be explicitly described in the methodology, or left as an emergent practice, is unresolved.
 
@@ -206,7 +223,7 @@ Execution mode requires minimal capture — a record of deviations, deferrals, a
 
 **9. The sweep prompt design.**
 
-The sweep prompt — a concentrated version of the traveling prompt designed for explicit document review sessions — has not yet been formally designed. The practice of deliberate return with critical intent is clear; the artifact that supports it is not. This is the next design work after the traveling prompt is stable.
+Two sweep prompts are needed, each correcting a distinct class of failure. The language and clarity sweep corrects failures of expression: session residue, insider shorthand, and terms that look shared but carry different meanings across reader contexts. The structural and hierarchy sweep corrects failures of architecture: content at the wrong level, sections signaling a new module, open questions ready to graduate. These are different cognitive modes and must be designed separately. What remains undesigned: the section-by-section protocol, grey zone handling, and output format for each.
 
 ---
 
@@ -238,7 +255,7 @@ A reader or LLM encountering a project for the first time cannot orient from the
 
 **6. File naming discipline is a prerequisite for LLM orientation.**
 
-Inconsistent file names force an LLM to infer document type and scope from content rather than from the name itself. The naming convention for RFM documents is: `RFM_[type]_[descriptor]_v*.md`, where type is one of: `top_level_reasoning`, `module_reasoning`, `prompts_reasoning`, `traveling_prompt`, `sweep_prompt`, `operational`. The `RFM_` prefix signals methodology context immediately. The type is unambiguous. The version is explicit. Deviating from this convention degrades LLM orientation before a single line is read. Archive filenames carry the version suffix (`RFM_prompts_reasoning_v0.0.0.5.md`) for history. Project filenames drop it (`RFM_prompts_reasoning.md`) — the Project is always current by definition, and the version is visible in the document header.
+Inconsistent file names force an LLM to infer document type and scope from content rather than from the name itself. The naming convention and its rationale are carried in `RFM_operational.md`. The principle here: deviating from a consistent convention degrades LLM orientation before a single line is read.
 
 **7. Cross-document references use document names, never version numbers.**
 
@@ -259,14 +276,6 @@ The Hard Lessons section accumulates entries but has no mechanism for them to ex
 **11. The drift problem is not solved by the methodology — it is the methodology's greatest vulnerability.**
 
 The methodology was designed to prevent documentation drift. But the reasoning document itself can drift from the system it describes. Naming this problem is not solving it. This lesson must stay visible until a genuine answer exists.
-
-**24. Graduated content disappears — it does not narrate its own departure.**
-
-When an open question partially resolves, the resolved part simply goes. What survives stands on its own. An entry that says "we now know X; what remains open is Y" has not been curated — it has been annotated. The annotation blurs the boundary between what is settled and what is not, and it signals to the next reader that this section requires interpretation rather than reading. The discipline is clean removal of what is resolved, leaving the surviving question to speak for itself.
-
-**25. An assumption that receives a graduated insight must carry the reasoning that earned it, not just the conclusion.**
-
-When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader or collaborator to challenge it honestly rather than inherit it silently.
 
 **LLM behavior**
 
@@ -298,13 +307,13 @@ An insight that is parked rather than captured immediately degrades. What return
 
 **18. Session-born shorthands are candidates for the document, not automatic entries.**
 
-A session-born shorthand is a term that emerged between two collaborators and carries the session context that gave it meaning. When it enters a document, it meets a reader who wasn't in that session. Before capturing one, apply this test: does it carry its meaning without the conversation behind it? If not, spell it out instead. "Fractal" and "deterministic anchor" are examples of session-born shorthands that did useful work in session and were promoted into documents without that test being applied.
-
-**Execution practice**
+A session-born shorthand is a term that emerged between two collaborators and carries the session context that gave it meaning. When it enters a document, it meets a reader who wasn't in that session. Before capturing one, apply this test: does it carry its meaning without the conversation behind it? If not, spell it out instead. Terms that feel precise inside a session can be opaque to every reader since — the test must be applied at the moment of capture, not assumed to have been passed.
 
 **19. The worked example is never optional — at any stage of the methodology's development.**
 
 Theory without ground truth is hypothesis. Applying the methodology from inception — reasoning before any code exists — proves the chain in both directions: reasoning document to operational document to code, with traceability at every step and no undocumented judgment calls made during implementation. Applying it to existing systems reveals that reconstructed reasoning produces plausible documents but not necessarily true ones. Both directions of experience are necessary. The worked example is never optional — at any stage of the methodology's development.
+
+**Execution practice**
 
 **20. RFM's value is gap-legibility, not gap-elimination.**
 
@@ -322,12 +331,20 @@ When external research enters a reasoning session — concrete data, implementat
 
 Introducing a designated holding artifact — a parking file, a deferred items list — lowers the threshold for parking by making it the path of least resistance. What was designed as a last resort before losing signal becomes a first resort before doing the harder work of deciding whether something is ready. The behavioral effect is conservative drift: the co-author parks rather than works, defers rather than drafts. The test before suggesting the holding artifact: is the candidate genuinely unready, or is the holding artifact simply available? If the candidate is sharp enough to describe precisely, it is probably ready to be drafted.
 
+**24. Graduated content disappears — it does not narrate its own departure.**
+
+When an open question partially resolves, the resolved part simply goes. What survives stands on its own. An entry that says "we now know X; what remains open is Y" has not been curated — it has been annotated. The annotation blurs the boundary between what is settled and what is not. The discipline is clean removal of what is resolved, leaving the surviving question to speak for itself.
+
+**25. An assumption that receives a graduated insight must carry the reasoning that earned it, not just the conclusion.**
+
+When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader or collaborator to challenge it honestly rather than inherit it silently.
+
 **26. The Landscape section drifts in two predictable directions when its structure is not held.**
 
 The first drift is toward loose prose that stops distinguishing neighboring approaches clearly — each row collapses into a general description, and the reader loses the ability to trace why each approach is insufficient for the local problem. The second drift is toward early option selection — what looks like landscape analysis is already choosing, and the work that belongs in Options Considered has been absorbed silently. Both failures share a root: the section lost its sequence. A Landscape section is strongest when it first distinguishes adjacent approaches in a structured comparison — what each does, why it is insufficient — and then closes with a short paragraph naming what the landscape collectively reveals and where the gap remains. Without that sequence, both drift modes become invisible until they have already done damage.
 
 ---
 
-*v0.0.0.25 // top_level_document // [living]*
+*v0.0.0.28 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
