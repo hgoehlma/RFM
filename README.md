@@ -36,7 +36,7 @@ The methodology operates in two modes. Reasoning mode is the default: the reason
 | [`RFM_traveling_prompt_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_traveling_prompt_reasoning.md) | Module reasoning | The reasoning document governing traveling prompt design decisions |
 | [`RFM_sweep_prompts_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_sweep_prompts_reasoning.md) | Module reasoning | The reasoning document governing sweep prompt design decisions |
 | [`RFM_operational.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_operational.md) | Operational | File naming conventions, document map maintenance, version discipline |
-| [`RFM_human_prompt_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_prompts_reasoning.md) | Module reasoning | Reasoning document for the human prompt — skeleton, in active design |
+| [`RFM_human_prompt_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_human_prompt_reasoning.md) | Module reasoning | Reasoning document for the human prompt — skeleton, in active design |
 | [`RFM_glossary.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_glossary.md) | Glossary | Disambiguation of terms that carry different meanings across reader contexts |
 
 *Start with `RFM_top_level_reasoning.md`. It is the map, the anchor, and the most complete entry point into the methodology.*
