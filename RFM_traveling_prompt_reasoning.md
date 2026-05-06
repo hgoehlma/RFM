@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Traveling Prompt Reasoning Document
-`v0.0.0.2` // `module_reasoning` // [living]
+`v0.0.0.4` // `module_reasoning` // [living]
 
 ---
 
@@ -81,37 +81,41 @@ The Landscape section warrants specific guidance beyond the general framework. P
 
 ## The Open Questions
 
-**1. Whether the section sequence reflects priority.**
+**[OQ-SSRP] Whether the section sequence reflects priority.**
 
 The current section order — engagement with documents, holding discipline, operational leakage, document landscape — follows the sequence in which the behaviors were designed, not an explicit priority ordering. Whether this sequence is the right one for LLM activation, or whether a different ordering would produce more reliable behavior, has not been tested.
 
-**2. The compression boundary.**
+**[OQ-CMPB] The compression boundary.**
 
-The prompt must be compressed enough to activate reliably but parseable enough for the human maintainer to audit. Where exactly that boundary sits is not empirically established. It has been approached through practice but not tested systematically — each edit that compresses further is a judgment call without a quality gate.
+The prompt must be compressed enough to activate reliably but parseable enough for the human maintainer to audit. Where exactly that boundary sits is not empirically established. The prompt must be compressed enough to activate reliably but parseable enough for the human maintainer to audit. Where exactly that boundary sits is not empirically established — it is approached through practice, and its location can only be revealed by observing when compression begins to degrade LLM behavior or human auditability. No designed gate can substitute for that observation.
 
 ---
 
 ## Hard Lessons
 
-**1. The traveling prompt is a derivative of a reasoning document — not the other way around.**
+**[HL-TPDR] The traveling prompt is a derivative of a reasoning document — not the other way around.**
 
 The temptation to write the traveling prompt directly from sweep patterns and hard lessons is real — the material is all there, the prompt practically writes itself. Resisting this temptation is the methodology proving itself. The reasoning document is written first. The prompt follows. This lesson is earned before the prompt exists.
 
-**2. The traveling prompt has two readers with different needs — compression and verifiability are both non-negotiable.**
+**[HL-TPTR] The traveling prompt has two readers with different needs — compression and verifiability are both non-negotiable.**
 
 The LLM needs directness and precision — reassurance, backward-glance summaries, and redundant clauses consume tokens without adding behavior. The human needs the prompt to remain verifiable — parseable enough to confirm it still reflects the methodology. Compress where the LLM is the reader, preserve where the human needs to audit. When a clause exists to reassure rather than instruct, remove it. The prompt should be as short as it can be while still activating the right behaviors reliably.
 
-**3. Domain terminology and claim discipline belong in the traveling prompt, not only in operational documents.**
+**[HL-DTCD] Domain terminology and claim discipline belong in the traveling prompt, not only in operational documents.**
 
 How claims are formed, how observation is separated from interpretation, and how the reasoning object stays visible across all artifacts is a reasoning discipline principle — not a house style concern. A principle with that scope belongs in the traveling prompt. The operational document may carry project-local reminders, but it should not be the primary source for a principle that governs the quality of reasoning itself.
 
-**4. The level test and research re-anchoring belong in the traveling prompt as behavioral instructions.**
+**[HL-LTRB] The level test and research re-anchoring belong in the traveling prompt as behavioral instructions.**
 
 Two failure modes identified in practice: drafting at the wrong hierarchy level without testing first, and external research pulling a session toward operational detail before the level is named. Both require an explicit pause and a named test before drafting begins. Principles without behavioral expression are aspirations. The traveling prompt is where aspirations become instructions.
 
+**[HL-CDAO] Content-derived IDs are assigned once and never re-derived — the operational document carries the rule.**
+
+Positional numbers in Hard Lessons and Open Questions create a renumbering tax under curation and break cross-references silently. Content-derived IDs (`[HL-XXXX]`, `[OQ-XXXX]`) solve this — but only if the ID is assigned once at capture and treated as fixed. The risk is author-dependency: two collaborators may independently derive different abbreviations for the same entry. The mitigation is that the rule lives in `RFM_operational.md`, not in session memory. The traveling prompt carries the behavioral instruction to use IDs rather than position numbers in any cross-reference.
+
 ---
 
-*v0.0.0.2 // module_reasoning // [living]*
+*v0.0.0.4 // module_reasoning // [living]*
 *the traveling prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*

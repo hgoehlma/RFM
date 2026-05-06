@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Operational Document
-`v0.0.0.1` // `operational` // [living]
+`v0.0.0.3` // `operational` // [living]
 
 ---
 
@@ -33,11 +33,35 @@ The README carries orientation for public readers without version numbers. It is
 
 ---
 
+## Content-Derived IDs for Hard Lessons and Open Questions
+
+Hard Lessons and Open Questions use content-derived IDs rather than positional numbers. Format: `[HL-XXXX]` for Hard Lessons, `[OQ-XXXX]` for Open Questions, where XXXX is a short abbreviation derived from the entry title.
+
+Rules:
+- ID is assigned once at capture and never re-derived
+- Abbreviation must be recoverable on cold read without session context
+- Cross-references use the ID, never the position number
+- IDs are unique within their section type across all documents
+
+---
+
 ## Version Number Discipline
 
 Version numbers appear in two places in every reasoning document: the header and the footer. Both must be bumped together in the same edit. A document where header and footer versions disagree is already drifting.
 
 ---
 
-*v0.0.0.1 // operational // [living]*
+## Empty Section Placeholder Convention
+
+When a section has no entries, use a placeholder rather than leaving it blank. This signals that the section was considered and is genuinely empty — not overlooked.
+
+Standard placeholder: `*No [section name] at this time.*`
+
+Examples: `*No open questions at this time.*` / `*No hard lessons at this time.*`
+
+A blank section is ambiguous. A placeholder is an explicit statement.
+
+---
+
+*v0.0.0.3 // operational // [living]*
 *carries what — the reasoning documents carry why*
