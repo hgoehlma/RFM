@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Sweep Prompts Reasoning Document
-`v0.0.0.1` // `module_reasoning` // [living]
+`v0.0.0.5` // `module_reasoning` // [living]
 
 ---
 
@@ -59,6 +59,14 @@ The structural sweep requires section sequence to be honored — it reviews arch
 
 Hierarchy failures require holding the full document structure in view and reasoning across it. Expression failures require close reading of individual sentences. Assigning each to its own sweep ensures neither cognitive mode is diluted by the other's presence.
 
+**Why the structural sweep owns positional grey zones:**
+
+Some failures sit ambiguously between structural and language classes. The resolution follows the primary failure type. When the primary failure is positional — the content is at the wrong level or in the wrong section — the structural sweep owns it regardless of whether expression failures are also present. When the primary failure is expressive — opaque wording, session residue, disambiguation gap — the language sweep owns it. When both failures are present in equal weight, the structural sweep flags it explicitly as a grey zone and names both failure types. The language sweep does not run on that entry until the human has ruled on the structural dimension. This prevents the sweeps from absorbing each other's job and ensures nothing falls through by being claimed by neither.
+
+**Why the structural sweep owns cross-level duplication detection:**
+
+When a module branches from a parent document, the parent is expected to contract — removing whatever the module now owns. In practice this contraction is a distinct step that does not happen automatically, and the failure it leaves behind is not visible from inside a single document. It requires holding both levels in view simultaneously: what does the child module own, and is the parent still carrying it? This is architectural judgment — the same cognitive mode the structural sweep already applies to section-level ownership. The language sweep cannot detect it: cross-level duplication is positional, not expressive. The Chosen Direction primary question is the right detection point because module ownership decisions are recorded there — if the parent's Chosen Direction still carries entries the child module now governs, the contraction failure is visible at that section first.
+
 ---
 
 ## The Boundaries
@@ -71,33 +79,23 @@ Hierarchy failures require holding the full document structure in view and reaso
 
 ## The Open Questions
 
-**1. The section-by-section protocol.**
-
-What exactly does each sweep do at each of the eight sections? The structural sweep and language sweep will have different attention at each section — what the structural sweep looks for in Assumptions differs from what it looks for in Hard Lessons. The per-section protocol for each sweep is undesigned. This is the primary design work remaining before either prompt can be built.
-
-**2. The quality gate.**
-
-How does the human know a sweep was deep rather than superficial? Absence of findings is ambiguous. A sweep that produces no findings against a well-curated document looks identical to a sweep that produced no findings because it didn't concentrate. The quality gate — the signal that distinguishes a complete sweep from a shallow one — is undesigned.
-
-**3. Grey zone ownership.**
-
-Some failures sit ambiguously between structural and language classes — a term that is both session residue and in the wrong section, an assumption that is both an implementation detail and opaquely worded. Which sweep owns the grey zone, and how is that decision made without one sweep absorbing the other's job? Unresolved.
+*No open questions at this time.*
 
 ---
 
 ## Hard Lessons
 
-**1. A sweep prompt that is too ambient fails silently.**
+**[HL-SAFT] A sweep prompt that is too ambient fails silently.**
 
 The sweep fails not by producing wrong findings but by producing shallow ones — the LLM runs through sections without concentrating, flags nothing, and the document appears clean. Ambient character is the traveling prompt's strength and the sweep prompt's primary failure mode. The sweep must feel like deliberate critique, not background discipline.
 
-**2. Repetition across sections is invisible from inside the session that produced it.**
+**[HL-RPSI] Repetition across sections is invisible from inside the session that produced it.**
 
 The same argument restated in different styles across Options Considered and Chosen Direction looks like thoroughness from inside the drafting session. It is only visible under the concentrated attention of a structural sweep. This is a primary target for the structural sweep — not duplication of content, but duplication of reasoning dressed as distinct entries.
 
 ---
 
-*v0.0.0.1 // module_reasoning // [living]*
+*v0.0.0.5 // module_reasoning // [living]*
 *the sweep prompts are the corrective arm*
 *findings for ruling, not edits*
 *the reasoning comes first — the prompts follow*
