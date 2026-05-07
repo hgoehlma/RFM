@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Operational Document
-`v0.0.0.3` // `operational` // [living]
+`v0.0.0.4` // `operational` // [living]
 
 ---
 
@@ -63,5 +63,5 @@ A blank section is ambiguous. A placeholder is an explicit statement.
 
 ---
 
-*v0.0.0.3 // operational // [living]*
+*v0.0.0.4 // operational // [living]*
 *carries what — the reasoning documents carry why*

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.34` // `top_level_document` // [living]
+`v0.0.0.35` // `top_level_document` // [living]
 
 ---
 
@@ -7,8 +7,8 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.34 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
-| `RFM_operational.md` | Operational | v0.0.0.3 | File naming conventions, document map maintenance, version discipline |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.35 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_operational.md` | Operational | v0.0.0.4 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.0.0.3 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.30 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.4 | The reasoning document governing traveling prompt design decisions |
@@ -17,6 +17,7 @@
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.0.0.2 | The prompt artifact that activates the structural sweep — findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.0.0.1 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.0.0.1 | Reasoning document for the human prompt — skeleton, in active design |
+| `RFM_human_prompt.md` | Human prompt | v0.0.0.2 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
 
 ---
 
@@ -350,6 +351,6 @@ The first drift is toward loose prose that stops distinguishing neighboring appr
 
 ---
 
-*v0.0.0.34 // top_level_document // [living]*
+*v0.0.0.35 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
