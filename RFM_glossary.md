@@ -1,5 +1,5 @@
 # RFM — Glossary
-`v0.0.0.3` // `glossary` // [living]
+`v0.0.0.4` // `glossary` // [living]
 
 ---
 
@@ -17,12 +17,13 @@ This glossary disambiguates terms used in RFM documents that carry different mea
 | **Compression** | Always a structural change — the loss of reasoning signal from a document, regardless of how it presents. Compression can appear as curation, cleanup, or re-homing. None of those framings change what it is. | Commonly understood as a neutral efficiency operation — making something shorter without loss. In RFM, shortening a reasoning document is never neutral. |
 | **Curation** | The discipline of keeping a reasoning document alive through both addition and reduction. Two modes: triggered (something accumulates or surfaces in use) and deliberate return (coming back without a specific trigger). Both are required. A document that only grows is already dying. | Commonly understood as passive collection or careful archiving. In RFM it is an active discipline that includes honest removal. |
 | **Derivative** | Any artifact created from a reasoning document — code, prompts, operational documents, outputs. The chain has structure: reasoning document → operational document → code → outputs. A derivative that moves without its source reasoning document is drift by another name. | Carries strong associations with financial instruments and calculus. In RFM it means strictly: an artifact whose source is a reasoning document, and whose changes must be traceable back to that source. |
+| **Friction** | The signal that something in the reasoning doesn't fit — present before you can articulate why. Kahneman's work on System 1 reasoning established that human pattern recognition fires before conscious articulation: the signal is real before the argument is formed. In RFM, friction is treated as information worth following, not noise to smooth over. When something the AI produces doesn't quite land, that sense of something not fitting is friction — name it rather than suppress it. | Commonly associated with unproductive conflict or inefficiency — something to be eliminated. In RFM it is the opposite: friction is a signal to follow, not remove. Smoothing it over is the failure mode. |
 | **Joint reasoning sequence** | The governing pattern of co-authorship in RFM: propose → reflect → converge → execute. Both parties contribute to the proposal, both test it against the reasoning and each other's instincts, both align on a direction, and then whoever is best positioned carries out the execution. The sequence is directed — it completes at execution and restarts fresh with the next problem. Division of labor (the LLM formulates and edits, the human judges and confirms) is one expression of this pattern at the execution step, not a description of the whole. | Commonly the collaboration pattern is described as a division of labor between LLM and human. In RFM that division describes the execution step only — the full pattern is joint throughout the first three steps. |
 | **Operational (document)** | A domain-specific derivative that carries the *what* — constants, interfaces, procedures, and known values — that a reasoning document must never absorb. It exists because some domains have hard execution contracts requiring their own artifact. Not a general overflow for implementation detail. | Commonly means "currently running" or "in production." In RFM it names a specific document type in the derivative chain, distinct from the reasoning document that is its source. |
 | **Sweep** | A deliberately invoked corrective review pass — concentrated on a specific document, producing findings for human ruling rather than edits. Two types: language and clarity (expression failures) and structural and hierarchy (architecture failures). Each requires its own cognitive mode and must not run simultaneously with the other. | Commonly means a general cleanup, search operation, or background process. In RFM it is deliberately timed, not ambient, not automated, and not a substitute for the traveling prompt. |
 
 ---
 
-*v0.0.0.3 // glossary // [living]*
+*v0.0.0.4 // glossary // [living]*
 *disambiguation is reasoning*
 *losing the why behind a definition produces the same failure as losing any other reasoning*
