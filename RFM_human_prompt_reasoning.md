@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Human Prompt Reasoning Document
-`v0.0.0.2` // `module_reasoning` // [skeleton]
+`v0.0.0.5` // `module_reasoning` // [living]
 
 ---
 
@@ -19,9 +19,9 @@ The asymmetry is real and consequential: one collaborator has a behavioral artif
 
 3. **Consequence ordering is the right ordering principle for this artifact.** Entries are ordered by the cost of getting them wrong, not by frequency of failure or session sequence. A reader encountering the artifact for the first time reads the highest-stakes practices first. This is a deliberate design choice, not a neutral one — it assumes the reader benefits more from consequence salience than from a sequence that mirrors how sessions typically unfold.
 
-4. **The cognitive offloading risk generalizes to RFM practitioners.** The framing paragraph draws on research conducted with students, knowledge workers, and professionals in controlled settings — not with people doing reasoning-first collaborative methodology work. The assumption is that the risk transfers: that an RFM practitioner is as susceptible to gradually substituting AI output for independent reasoning as the populations studied. The evidence is strong in general populations; whether it transfers to RFM practitioners specifically — a narrower, self-selected group with a natural affinity for deliberate reflection — remains untested. It is also the assumption doing the most work in the artifact's opening — if it is wrong or only partially right, the framing overclaims.
+4. **The risk of gradually substituting AI output for independent reasoning generalizes to RFM practitioners.** The framing paragraph draws on research conducted with students, knowledge workers, and professionals in controlled settings — not with people doing reasoning-first collaborative methodology work. The assumption is that the risk transfers: that an RFM practitioner is as susceptible to gradually substituting AI output for independent reasoning as the populations studied. The evidence is strong in general populations; whether it transfers to RFM practitioners specifically — a narrower, self-selected group with a natural affinity for deliberate reflection — remains untested. It is also the assumption doing the most work in the artifact's opening — if it is wrong or only partially right, the framing overclaims.
 
-5. **The artifact assumes minimum viable orientation.** It is not an introduction to the methodology. A reader who has encountered RFM through the GitHub README and the top-level reasoning document has sufficient orientation for the entries to land. A reader who has not will find the references to reasoning documents, co-authorship, and the document landscape unanchored.
+5. **This document assumes the reader has already encountered RFM through the GitHub README and the top-level reasoning document.** It is not an introduction to the methodology. A reader with that orientation has sufficient context for the entries to land. A reader who has not will find the references to reasoning documents, co-authorship, and the document landscape unanchored.
 
 ---
 
@@ -46,7 +46,7 @@ A pre-session checklist the human works through before starting — verify engag
 
 **2. Mirror vs. guide**
 
-A compact recognition surface only — short phrases the human can consult mid-session to detect drift, without extended explanation. Closer to the reference card than to the full artifact. Rejected because a reader encountering the methodology for the first time cannot act on a phrase they do not yet understand. The extended entries carry enough reasoning to make the practice legible on first read. Once internalized, the reference card serves the recognition function — but the entries must come first.
+A compact set of phrases the human can consult mid-session to detect drift — without extended explanation. Closer to the reference card than to the full artifact. Rejected because a reader encountering the methodology for the first time cannot act on a phrase they do not yet understand. The extended entries carry enough reasoning to make the practice legible on first read. Once internalized, the reference card serves the recognition function — but the entries must come first.
 
 **3. Ordering by session sequence vs. ordering by consequence**
 
@@ -64,7 +64,7 @@ A numbered reference card implying a sequence to work through in order. Rejected
 
 A checklist produces evidence of completion, not evidence of practice. The practices the human prompt describes — tolerating uncertainty, naming friction, holding the co-author role under pressure — cannot be verified by ticking a box before a session starts. They are visible only in the session itself, when something is hard and the human either applies the practice or doesn't. The cultivation design accepts that the human prompt cannot enforce the posture. What it can do is make the practices explicit and repeatable until they become internalized — present without being consulted.
 
-**Why guide over something the human can consult mid-session to detect drift — and why the two-part structure resolves the tension**
+**Why guide over mirror — and why the two-part structure resolves the tension**
 
 Something the human can consult mid-session alone assumes the reader already knows what they are recognizing. A reader encountering the human prompt for the first time needs enough reasoning to understand why the practice matters before the phrase can trigger the behavior. The extended entries carry that reasoning. The reference card then serves the recognition function once the entries have been read enough times that the phrases have become internalized. The two-part structure is not redundancy — it is a temporal design. The entries are for the readings before the reference card can stand alone. The reference card is for every reading after.
 
@@ -75,6 +75,26 @@ Ordering by session sequence optimizes for familiarity — the reader encounters
 **Why plain list in the reference card**
 
 Numbers imply a sequence to complete. The reference card is not a sequence — it is a repertoire. Its purpose is recognition: phrases that, through repeated exposure, become internalized as behavioral triggers without requiring conscious retrieval. A numbered list works against that purpose by creating a reading mode of completion rather than internalization. The phrases are still ordered by consequence for the first read. The absence of numbers signals that subsequent reads are not about working through the list — they are about the phrases becoming automatic.
+
+**Why these entries and not others**
+
+Entries were selected to address failure modes on the human side of the collaboration that the traveling prompt cannot reach from the LLM side. The traveling prompt calibrates the LLM's posture. The human prompt addresses what remains uncalibrated. Any practice that addresses a genuine failure mode in that space is a candidate. Any practice that duplicates what the traveling prompt already handles from the other side is not.
+
+Output quality is a distinct failure mode category the traveling prompt cannot address — the LLM producing text that looks polished but is verbose, journaling, or repetitive. It requires a separate entry because the human's corrective move is different: not recalibrating the collaboration but reading the output critically before accepting it.
+
+The set is not closed and carries no significance as a count. Entries are added when practice reveals an uncovered failure mode and removed when one is fully superseded or drops below the consequence threshold. The reference card has one additional constraint: it must be short enough to scan without becoming a reading task — cognitive science on working memory suggests a practical ceiling of roughly seven to twelve phrases for a recognition tool of this kind. The current count falls within that range. The number at any given version is a snapshot, not a design target.
+
+**Why each entry follows a layered structure**
+
+The entries emerged from a specific observation: understanding why a practice matters is not the same as knowing what to do when it matters. The explanation carries the reasoning — why the failure mode is real, why the practice addresses it. Without it, the instruction is a rule without a principle, and rules without principles fail on novel situations. But explanation alone leaves the reader without a concrete move. "In practice:" answers that directly — a specific action the human can take in the moment, not a restatement of the explanation in imperative form.
+
+The italic phrase in the header serves a navigation function: it matches the corresponding phrase in the reference card exactly. A reader who encounters a phrase on the reference card and wants the full reasoning behind it can locate the entry immediately without scanning. The match is intentional. The phrases were not invented for the header — they emerged through use as behavioral shorthands before the artifact existed, and were captured in the header where they fit naturally. Not every entry has an obvious shorthand; the pattern is applied where it is genuine, not forced.
+
+RFM connections appear in the body where they arise organically — where a concept in the entry has a direct home in the methodology that adds meaning rather than noise.
+
+**Why "To Internalize Next" exists as a third section**
+
+The reference card must stay short enough to function as a recognition tool — a repertoire that fires without being consulted. That constraint is a design feature, not a limitation. "To Internalize Next" holds practices that are genuine but sit below the current consequence threshold for the reference card — the next tier in the same ordering logic. As practices in the reference card become fully internalized, they no longer need to occupy that space and can be replaced by practices drawn from this section. The section keeps the reference card disciplined without discarding real content.
 
 **Why the framing paragraph opens with the cognitive offloading research**
 
@@ -102,21 +122,27 @@ Every other artifact in the RFM document landscape was preceded by its reasoning
 
 **[OQ-AFHP] Whether the artifact form holds under real use.**
 
-The human prompt was designed by its authors, for its authors, from observations accumulated in their own practice. Whether the three-part structure — entries, reference card, also worth knowing — serves readers encountering it fresh, in different domains, with different collaborative rhythms, is untested. The form feels right from the inside. That is not sufficient evidence that it works from the outside.
+The human prompt was designed by its authors, for its authors, from observations accumulated in their own practice. Whether the three-part structure — entries, reference card, To Internalize Next — serves readers encountering it fresh, in different domains, with different collaborative rhythms, is untested. The form feels right from the inside. That is not sufficient evidence that it works from the outside.
 
-**[OQ-SSDM] The session-start drift failure mode.**
+**[OQ-TINQ] The curation mechanism for "To Internalize Next."**
 
-The human prompt addresses drift detection during a session. It does not address a distinct variant: the LLM arriving in a new session already using RFM insider terminology before the collaborative posture has been established. This surfaced in the session that produced this reasoning document. Whether it belongs as an addition to the existing drift entry in the human prompt, as a new entry, or somewhere else is unresolved. It is captured here until that decision is made.
+The section exists as a reservoir for practices that are genuine but sit below the current consequence threshold for the reference card. What belongs there, what makes a practice a candidate for the reference card rather than this section, and what triggers a swap as the human's posture develops — none of this is designed. The section will remain empty until the methodology has accumulated enough practice with real users to reveal what belongs there.
 
 ---
 
 ## Hard Lessons
 
-*Not yet drafted.*
+**[HL-ABRR] The artifact-before-reasoning-document inversion is acceptable once — and only if the debt is paid immediately.**
+
+The right order is reasoning document first, artifact second. When the sequence is inverted, the reasoning document must follow while the context is fresh. Deferring it is not the same as accepting the exception. This lesson does not generalize.
+
+**[HL-SSDM] The LLM's behavioral posture is not fully established at session start — the human must notice and correct early.**
+
+In the session that produced this reasoning document, RFM insider terminology appeared in the first response before the collaborative posture had been established. The traveling prompt activates the LLM's methodology discipline, but activation is not instantaneous — the early exchanges can already reflect tool behavior rather than co-author posture. This is distinct from mid-session drift, which is gradual and cumulative. Session-start drift is immediate and easy to miss precisely because the output looks competent. The human's job in the early exchanges is to read for posture, not just content, and to correct before the pattern compounds.
 
 ---
 
-*v0.0.0.2 // module_reasoning // [skeleton]*
+*v0.0.0.5 // module_reasoning // [living]*
 *the human prompt is the derivative*
 *this document is the source*
-*draft the reasoning before the artifact*
+*the reasoning followed the artifact — that was the exception, not the rule*

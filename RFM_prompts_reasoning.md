@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.30` // `top_level_document` // [living]
+`v0.0.0.31` // `top_level_document` // [living]
 
 ---
 
@@ -179,9 +179,6 @@ Can a fresh LLM, given only the traveling prompt and the relevant reasoning docu
 
 The co-author role exists in two places: the traveling prompt and the methodology's assumptions about co-authorship. Currently they are aligned. What remains open is the maintenance discipline going forward — as the methodology evolves, what ensures they stay synchronized? If the assumption evolves and the traveling prompt does not follow, the drift will be invisible until it has already done damage. No resolution yet.
 
-**[OQ-GDDP] The guided drafting prompt design.**
-What does a guided drafting prompt look like in practice? It must walk a newcomer through the eight sections in sequence without collapsing into a checklist. It must activate genuine reasoning — not form-filling. How it handles a newcomer who stalls, skips sections, or produces content at the wrong level of abstraction is undesigned. Whether it requires its own reasoning document immediately or can be held as an incubating design until practice reveals the shape is also open.
-
 **[OQ-FRDQ] The future-reader discipline question.**
 
 Hard Lessons — and reasoning document content generally — risk being written for the session in which the insight was earned rather than for future readers encountering the methodology fresh. Session-specific references, examples that require prior context, and language that assumes shared history all degrade over time. What is the right discipline for catching this? The language sweep is the natural mechanism — concentrated review with explicit attention to disambiguation failures is well-positioned to flag content that is opaque without context. Whether that mechanism is sufficient, or whether additional discipline is needed at the moment of capture, remains open.
@@ -230,7 +227,7 @@ Each reasoning document carries its version number in the header and in the foot
 
 ---
 
-*v0.0.0.30 // top_level_document // [living]*
+*v0.0.0.31 // top_level_document // [living]*
 *the traveling prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*

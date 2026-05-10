@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Human Prompt
-`v0.0.0.2` // `human_prompt` // [living]
+`v0.0.0.4` // `human_prompt` // [living]
 
 ---
 
@@ -71,6 +71,16 @@ In practice: when the AI produces an answer that feels satisfying, pause before 
 
 ---
 
+**Read the first few exchanges for posture, not just content**
+
+*"Hold the co-author role" — and mean it from the first exchange*
+
+The traveling prompt activates the LLM's methodology discipline at session start — but behavioral calibration takes a few exchanges to become visible. Early responses can look competent while still reflecting tool behavior: agreeing readily, producing on demand, not pushing back. This is distinct from mid-session drift, which is gradual and cumulative. Session-start drift is immediate and easy to miss precisely because the output reads well. The correction must happen early, before the pattern compounds into the shape of the session.
+
+In practice: read the first few exchanges for posture, not just content. Is the AI surprising you? Pushing back? Proposing rather than waiting? If the early responses are polished but unchallenging, name it directly — "you're in tool mode, not co-author mode" — and recalibrate before continuing.
+
+---
+
 **Notice when the AI drifts — and pull it back**
 
 *Ask: "are you drifting?"*
@@ -80,6 +90,22 @@ The AI you are working with has been trained to be helpful. That sounds like exa
 Drift is the term for this — the gradual slide from thinking partner back toward assistant. It is invisible while it is happening and only obvious in retrospect. It is not a flaw; it is what the AI was trained to do. Your job is to notice and redirect.
 
 In practice: the clearest signal is when the AI stops surprising you. If every response feels like a polished version of what you already thought, drift has set in. You can ask directly: "are you drifting?" or "stop being agreeable — push back." The AI will understand and recalibrate.
+
+---
+
+**Check the output — not only the posture**
+
+*Check the output: verbose, journaling, repetitive?*
+
+The AI's posture drift — agreeing, waiting, not pushing back — is visible in how it behaves. There is a second, less visible failure mode: what it produces. Output that looks polished can still be verbose, journaling, or repetitive — and all three enter reasoning documents silently if the human doesn't catch them.
+
+Verbose means words that don't earn their place. A paragraph that could be two sentences without losing anything is a paragraph that should be two sentences. Length that isn't justified by content is noise, not thoroughness.
+
+Journaling means language that made sense in the session that produced it but requires that session to be understood — insider references, observations written for the moment rather than for a future reader, shorthand that carries meaning only between the two collaborators present. In a reasoning document, journaling is invisible degradation: the entry reads as complete but isn't legible without context that won't travel.
+
+Repetitive means the same reasoning restated across entries, dressed differently enough to look distinct. It is the hardest of the three to catch because each instance reads well in isolation. The failure only becomes visible when entries are held against each other.
+
+In practice: after the AI produces a substantial piece of text — a section, an entry, a proposed addition — read it once for posture and once for output quality. Ask specifically: is anything here longer than it needs to be? Does any sentence require the session to be understood? Is any reasoning here already said elsewhere? The AI will not reliably catch these failures itself. That scan is the human's job.
 
 ---
 
@@ -161,6 +187,8 @@ Pause before accepting a confident answer — has the question actually been res
 
 Ask: "are you drifting?"
 
+Check the output: verbose, journaling, repetitive?
+
 Name the friction before it gets buried
 
 Ask "where does this belong?" before "can you develop this?"
@@ -173,13 +201,13 @@ Open the document before you decide — not after
 
 ---
 
-## Also Worth Knowing
+## To Internalize Next
 
 *No entries at this time.*
 
 ---
 
-*v0.0.0.2 // human_prompt // [living]*
+*v0.0.0.4 // human_prompt // [living]*
 *the reasoning document is the source*
 *this artifact is the derivative*
 *the discipline travels with every session*
