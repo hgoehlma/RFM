@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Operational Document
-`v0.0.0.4` // `operational` // [living]
+`v0.0.0.5` // `operational` // [living]
 
 ---
 
@@ -33,9 +33,9 @@ The README carries orientation for public readers without version numbers. It is
 
 ---
 
-## Content-Derived IDs for Hard Lessons and Open Questions
+## Content-Derived IDs for Assumptions, Hard Lessons and Open Questions
 
-Hard Lessons and Open Questions use content-derived IDs rather than positional numbers. Format: `[HL-XXXX]` for Hard Lessons, `[OQ-XXXX]` for Open Questions, where XXXX is a short abbreviation derived from the entry title.
+Assumptions, Hard Lessons, and Open Questions use content-derived IDs rather than positional numbers. Format: `[AS-XXXX]` for Assumptions, `[HL-XXXX]` for Hard Lessons, `[OQ-XXXX]` for Open Questions, where XXXX is a short abbreviation derived from the entry content.
 
 Rules:
 - ID is assigned once at capture and never re-derived
@@ -63,5 +63,5 @@ A blank section is ambiguous. A placeholder is an explicit statement.
 
 ---
 
-*v0.0.0.4 // operational // [living]*
+*v0.0.0.5 // operational // [living]*
 *carries what — the reasoning documents carry why*
