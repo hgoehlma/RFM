@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.0.0.36` // `top_level_document` // [living]
+`v0.0.0.38` // `top_level_document` // [living]
 
 ---
 
@@ -7,9 +7,9 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.36 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.38 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
 | `RFM_operational.md` | Operational | v0.0.0.5 | File naming conventions, document map maintenance, version discipline |
-| `RFM_glossary.md` | Glossary | v0.0.0.4 | Disambiguation of terms that carry different meanings across reader contexts |
+| `RFM_glossary.md` | Glossary | v0.0.0.5 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.31 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.4 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.0.21 | The system prompt that carries the methodology into every LLM conversation |
@@ -17,8 +17,11 @@
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.0.0.2 | The prompt artifact that activates the structural sweep — findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.0.0.1 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | Reasoning document for the human prompt — skeleton, in active design |
-| `RFM_human_prompt.md` | Human prompt | v0.0.0.4 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
-| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.1 | Reasoning document governing guided drafting prompt design decisions |
+| `RFM_human_prompt.md` | Human prompt | v0.0.0.5 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
+| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.2 | Reasoning document governing guided drafting prompt design decisions |
+| `RFM_guided_drafting_prompt_operational.md` | Operational | v0.0.0.1 | Deployment and artifact inventory for the guided drafting prompt module |
+| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.0.0.1 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
+| `RFM_first_session_guidance.md` | First session guidance | v0.0.0.1 | Practical preparation for a newcomer's first guided drafting session — what to bring, what to expect, what to watch for |
 
 ---
 
@@ -40,29 +43,29 @@ This problem is not new. What is new is that LLMs have made the consequences of 
 
 The following are believed to be true. They cannot all be fully proven yet. If any of them is wrong, the methodology needs to change.
 
-1. **Context is irreducibly important for LLMs.** High signal reasoning context minimizes hallucination. This holds regardless of how capable models become — a better LLM with poor context will still underperform a modest LLM with rich context.
+**[AS-CIIL] - Context is irreducibly important for LLMs.** High signal reasoning context minimizes hallucination. This holds regardless of how capable models become — a better LLM with poor context will still underperform a modest LLM with rich context.
 
-2. **Abstraction will continue to evolve — and language is the next layer.** The history of software is a history of increasing abstraction. LLMs make intention expressible in natural language. But no level of abstraction removes the need to articulate what you want. The thinking cannot be delegated.
+**[AS-AELN] - Abstraction will continue to evolve — and language is the next layer.** The history of software is a history of increasing abstraction. LLMs make intention expressible in natural language. But no level of abstraction removes the need to articulate what you want. The thinking cannot be delegated.
 
-3. **Modularity is the only sustainable architecture.** Monolithic systems resist change, learning, and maintenance. The reasoning document hierarchy should mirror and enforce modular thinking from the start.
+**[AS-MOSA] - Modularity is the only sustainable architecture.** Monolithic systems resist change, learning, and maintenance. The reasoning document hierarchy should mirror and enforce modular thinking from the start.
 
-4. **Code alone will never carry its own motivation.** The gap between what code does and why it exists cannot be closed by better code. It requires a separate, connected reasoning artifact maintained proactively.
+**[AS-CACM] - Code alone will never carry its own motivation.** The gap between what code does and why it exists cannot be closed by better code. It requires a separate, connected reasoning artifact maintained proactively.
 
-5. **Quality of execution — human or AI — is upstream of the reasoning investment.** Thinking first is not overhead. It is the highest leverage point in the entire development process.
+**[AS-QEUP] - Quality of execution — human or AI — is upstream of the reasoning investment.** Thinking first is not overhead. It is the highest leverage point in the entire development process.
 
 The first five assumptions describe the world as the methodology finds it. The next six describe what working within that world requires.
 
-6. **Curation must be deliberate, not optional.** Curation has two modes and both are required. The first is triggered — something accumulates, strains, or surfaces in use, and draws you back to the document. The second is deliberate return — you come back without a specific trigger, to ask whether the document still reflects what you know. Neither mode can be replaced by a scheduled rhythm; a time-triggered cadence risks becoming performative rather than genuine. The methodology only holds if both modes are practiced as discipline, not suggestion.
+**[AS-CDNO] - Curation must be deliberate, not optional.** Curation has two modes and both are required. The first is triggered — something accumulates, strains, or surfaces in use, and draws you back to the document. The second is deliberate return — you come back without a specific trigger, to ask whether the document still reflects what you know. Neither mode can be replaced by a scheduled rhythm; a time-triggered cadence risks becoming performative rather than genuine. The methodology only holds if both modes are practiced as discipline, not suggestion.
 
-7. **A reasoning document designed explicitly for both humans and LLMs simultaneously outperforms one designed for either alone.** This is not a natural default. It requires conscious design.
+**[AS-RDHL] - A reasoning document designed explicitly for both humans and LLMs simultaneously outperforms one designed for either alone.** This is not a natural default. It requires conscious design.
 
-8. **Hard lessons are as valuable as successes.** What failed, and why, carries as much reasoning value as what worked. A methodology that doesn't capture failure will repeat it.
+**[AS-HLVS] - Hard lessons are as valuable as successes.** What failed, and why, carries as much reasoning value as what worked. A methodology that doesn't capture failure will repeat it.
 
-9. **Document strain is diagnostic of hierarchy.** When a section strains under its own weight — too many options, too much detail, too many edge cases — that is a signal to branch into a new module, not a signal to write more carefully. The module structure is not designed upfront. It emerges from the writing. The hierarchy reveals itself through strain.
+**[AS-DSDH] - Document strain is diagnostic of hierarchy.** When a section strains under its own weight — too many options, too much detail, too many edge cases — that is a signal to branch into a new module, not a signal to write more carefully. The module structure is not designed upfront. It emerges from the writing. The hierarchy reveals itself through strain.
 
-10. **In domains where execution has hard contracts — software being the primary example — the reasoning document is accompanied by an operational document.** The operational document carries constants, interfaces, procedures, and known values. It is a derivative of the reasoning, not a replacement for it. The methodology stays universal. The operational document is domain-specific.
+**[AS-DWHC] - In domains where execution has hard contracts — software being the primary example — the reasoning document is accompanied by an operational document.** The operational document carries constants, interfaces, procedures, and known values. It is a derivative of the reasoning, not a replacement for it. The methodology stays universal. The operational document is domain-specific.
 
-11. **These assumptions describe a self-reinforcing loop — when the discipline holds.** When an LLM works within a well-reasoned document, its downstream execution — code generation, system design, prompt construction — is more correct and less prone to hallucination. Higher correctness produces better output for the human to reason against. Better joint reasoning produces richer documents. Richer documents improve the next round of LLM execution. The loop is self-reinforcing — but only when both parties hold the discipline: the LLM guided by a correctly designed system prompt, the human committed to reasoning before execution and curating honestly. When either breaks, the loop degrades.
+**[AS-ADSR] - These assumptions describe a self-reinforcing loop — when the discipline holds.** When an LLM works within a well-reasoned document, its downstream execution — code generation, system design, prompt construction — is more correct and less prone to hallucination. Higher correctness produces better output for the human to reason against. Better joint reasoning produces richer documents. Richer documents improve the next round of LLM execution. The loop is self-reinforcing — but only when both parties hold the discipline: the LLM guided by a correctly designed system prompt, the human committed to reasoning before execution and curating honestly. When either breaks, the loop degrades.
 
 ---
 
@@ -194,11 +197,11 @@ How short can a reasoning document be and still work? The methodology must not b
 
 **[OQ-ONBQ] The onboarding question.**
 
-How does someone encounter this methodology for the first time and understand its value quickly enough to adopt it? The feedback loop for good reasoning is slow and invisible. The feedback loop for coding is fast and visible. Bridging that gap is a change management challenge that the methodology does not yet fully answer.
+How does someone encounter this methodology for the first time and understand its value quickly enough to adopt it? The feedback loop for good reasoning is slow and invisible. The feedback loop for coding is fast and visible. Bridging that gap is a change management challenge the methodology does not yet fully answer.
 
-The document map — a lightweight navigation table at the top of every top-level reasoning document — is a partial answer. It gives a new collaborator immediate orientation without requiring them to read everything first. A more powerful component is the LLM itself — a partner with a well-designed system prompt that understands the methodology and can guide a newcomer through it actively. The LLM becomes part of the onboarding infrastructure, not just a tool within it. The deeper question — how to convey the value of the methodology quickly enough to motivate adoption — remains open.
+Two partial answers exist. The document map gives a new collaborator immediate orientation without requiring them to read everything first. The LLM itself — guided by a well-designed system prompt — becomes part of the onboarding infrastructure, actively guiding a newcomer through their first reasoning document rather than waiting to be directed.
 
-A related and more immediate question is the division of labor between human and LLM in the drafting process itself. The governing pattern is the joint reasoning sequence — propose, reflect, converge, execute — in which both parties contribute through the first three steps. At the execution step, the natural division applies: the LLM formulates and edits, the human judges and confirms. That the sequence should be explicitly described in the methodology is no longer open — it is. What remains open is whether the description is sufficient to build the collaborative posture in a newcomer, or whether additional onboarding support is needed.
+The deeper question has been sharpened by work at the module level: RFM is not designed for broad adoption. The target is a self-selected newcomer with a natural affinity for deliberate reflection — someone who found the methodology, read into it, and is willing to try. For that person, the question is not persuasion but sequencing: what is the right first experience, in what order, before the overhead becomes discouraging and before the value has been felt? That question is now carried at the module level in [OQ-ONSQ] in `RFM_guided_drafting_prompt_reasoning.md`. What remains open here is whether the answer to [OQ-ONSQ] — once earned through practice — requires a corresponding change to the methodology's top-level assumptions about who RFM is for.
 
 **[OQ-AUTB] The autonomy boundary.**
 
@@ -310,7 +313,7 @@ An insight that is parked rather than captured immediately degrades. What return
 
 **[HL-SBSC] Session-born shorthands are candidates for the document, not automatic entries.**
 
-A session-born shorthand is a term that emerged between two collaborators and carries the session context that gave it meaning. When it enters a document, it meets a reader who wasn't in that session. Before capturing one, apply this test: does it carry its meaning without the conversation behind it? If not, spell it out instead. Terms that feel precise inside a session can be opaque to every reader since — the test must be applied at the moment of capture, not assumed to have been passed.
+A session-born shorthand is a term that emerged between two collaborators and carries the session context that gave it meaning. When it enters a document, it meets a reader who wasn't in that session. Before capturing one, apply this test: does it carry its meaning without the conversation behind it? If not, spell it out instead. Terms that feel precise inside a session can be opaque to every reader since — the test must be applied at the moment of capture, not assumed to have been passed. This applies equally to shorthands introduced by the human — a term you coined feels self-evident to you in a way that masks how opaque it is to anyone else. The test is the same regardless of who introduced the term.
 
 **[HL-WENO] The worked example is never optional — at any stage of the methodology's development.**
 
@@ -352,6 +355,6 @@ The first drift is toward loose prose that stops distinguishing neighboring appr
 
 ---
 
-*v0.0.0.36 // top_level_document // [living]*
+*v0.0.0.38 // top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*

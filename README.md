@@ -26,20 +26,31 @@ The methodology operates in two modes. Reasoning mode is the default: the reason
 
 ---
 
-## Document Map
+## Where To Start
 
-| Document | Type | What it carries |
-|---|---|---|
-| [`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md) | Top-level reasoning | The methodology itself — the problem, the assumptions, the landscape, the chosen direction, the hard lessons earned |
-| [`RFM_prompts_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_prompts_reasoning.md) | Prompts reasoning | The reasoning document governing all system prompt decisions — why the prompt is designed the way it is |
-| [`RFM_traveling_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_traveling_prompt.md) | Traveling system prompt | The system prompt that carries the methodology into every LLM conversation — the discipline made ambient |
-| [`RFM_traveling_prompt_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_traveling_prompt_reasoning.md) | Module reasoning | The reasoning document governing traveling prompt design decisions |
-| [`RFM_sweep_prompts_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_sweep_prompts_reasoning.md) | Module reasoning | The reasoning document governing sweep prompt design decisions |
-| [`RFM_operational.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_operational.md) | Operational | File naming conventions, document map maintenance, version discipline |
-| [`RFM_human_prompt_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_human_prompt_reasoning.md) | Module reasoning | Reasoning document for the human prompt — skeleton, in active design |
-| [`RFM_glossary.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_glossary.md) | Glossary | Disambiguation of terms that carry different meanings across reader contexts |
+If you are encountering RFM for the first time:
 
-*Start with `RFM_top_level_reasoning.md`. It is the map, the anchor, and the most complete entry point into the methodology.*
+1. [`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md) — the methodology itself. Start here.
+2. [`RFM_first_session_guidance.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_first_session_guidance.md) — practical preparation for your first guided drafting session.
+
+That is enough to begin. The rest of the document landscape is for collaborators maintaining and extending the methodology — you will find your way into it naturally once you have produced your first reasoning document.
+
+## System Documents
+
+For collaborators working within the methodology:
+
+| Document | What it carries |
+|---|---|
+| [`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md) | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| [`RFM_human_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_human_prompt.md) | Practices that keep the human's collaborative posture alive across sessions |
+| [`RFM_traveling_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_traveling_prompt.md) | The system prompt that carries the methodology into every LLM conversation |
+| [`RFM_guided_drafting_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_guided_drafting_prompt.md) | The prompt that activates a guided first-document session |
+| [`RFM_sweep_prompt_structural.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_sweep_prompt_structural.md) | Structural sweep — findings for ruling, not edits |
+| [`RFM_sweep_prompt_language.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_sweep_prompt_language.md) | Language sweep — findings for ruling, not edits |
+| [`RFM_glossary.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_glossary.md) | Disambiguation of terms that carry RFM-specific meanings |
+| [`RFM_operational.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_operational.md) | File naming, version discipline, ID conventions |
+
+Reasoning documents for each artifact are in the repository — named `RFM_[artifact]_reasoning.md`. They carry the why behind every design decision.
 
 ---
 
@@ -55,7 +66,11 @@ RFM is a vehicle, not a prescription. The reasoning comes first — everything e
 
 ## Why It Matters Now
 
-The most important argument for RFM is not that it helps teams remember why they built what they built. It is that as AI systems become more autonomous, the reasoning document becomes the mechanism by which humans stay legible to the systems they are directing — and by which those systems stay accountable to human intent. A capable agent acting on vague intent doesn't fail cautiously. It fails confidently, at scale. The reasoning document is the deterministic anchor. Everything else is derivative.
+Context engineering has become the defining AI skill of 2025–2026 — the discipline of assembling everything a model needs to act: documents, memory, tools, state. It is the right frame. But it answers the wrong question first. It asks: what information does the model need? RFM asks first: what reasoning produced that information, and does it still hold?
+
+A model working from well-assembled context but poorly-reasoned documents doesn't fail cautiously. It executes confidently on assumptions that were never examined, alternatives that were never named, and decisions whose reasoning disappeared the moment they were made. Context engineering without reasoning capture is infrastructure without content.
+
+The agentic shift makes this more urgent, not less. As AI systems act autonomously across longer chains — planning, executing, adjusting without human oversight at each step — the reasoning document becomes the only reliable mechanism for keeping human intent legible to the systems executing it. A capable agent acting on vague intent fails at scale, and the failure is hard to trace. The reasoning document is the deterministic anchor. Explicit reasoning before autonomous execution is not overhead. It is the only thing that makes the execution accountable.
 
 ---
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Human Prompt
-`v0.0.0.4` // `human_prompt` // [living]
+`v0.0.0.5` // `human_prompt` // [living]
 
 ---
 
@@ -203,11 +203,43 @@ Open the document before you decide — not after
 
 ## To Internalize Next
 
-*No entries at this time.*
+**Steel man the option you're inclined to dismiss**
+
+*"Steel man this" — before you reject it*
+
+Red teaming attacks your own best idea. Steel manning is the opposite move: building the strongest possible version of an argument you are already inclined to dismiss. The distinction matters because the failure mode in reasoning is not only building on weak ideas — it is also rejecting strong ones too easily. An option dismissed without genuine engagement looks like a considered rejection in the reasoning document. It is not. The Options Considered section depends on this discipline holding: each rejection must survive the test of the option's best case, not its worst.
+
+The asymmetry is worth naming. When you red team your own idea, you are motivated to find the holes. When you evaluate an option you already doubt, the motivation reverses — you are looking for confirmation that the doubt was right. Steel manning is the corrective: it forces you to find the strongest version of the opposing case before you rule it out.
+
+In practice: when you find yourself ready to dismiss an option quickly, stop before asking the AI to help you reject it. Instead say "steel man this" — ask the AI to build the most compelling version of the case for that option. Engage with that version honestly before deciding. If the option still doesn't hold, the rejection is now earned. If it does hold, you have avoided a premature closure that would have been invisible in the document.
 
 ---
 
-*v0.0.0.4 // human_prompt // [living]*
+**Expose the reasoning before you accept the answer**
+
+*"Show your work" — when an answer arrives too cleanly*
+
+A confident, well-structured answer from an AI is not evidence that the reasoning behind it is sound. Fluency and correctness are independent. An answer that arrives cleanly — without visible hesitation, without named uncertainty, without a path you can trace — is the one most worth pausing on, not least. The reasoning that produced it may be solid. Or it may have been skipped entirely in favor of a plausible-sounding conclusion. You cannot tell from the answer alone.
+
+This is different from asking what is still unresolved. That question surfaces uncertainty the AI is aware of. "Show your work" surfaces the reasoning path itself — the steps, the assumptions, the places where a different input would have produced a different output. Making that path visible lets you evaluate it rather than just receive the conclusion.
+
+In practice: when an answer arrives that feels satisfying and complete, resist accepting it on that basis alone. Say "show your work" — ask the AI to walk through the reasoning that produced it, step by step. Read the path, not just the destination. The places where the reasoning is thin or skips a step are where the answer is most likely to be wrong. A conclusion you can trace is one you can genuinely build on.
+
+---
+
+**Test whether a term carries its meaning outside the session that coined it**
+
+*"Does this travel?" — before a session-born term enters a document*
+
+Every productive reasoning session generates its own language. Terms that feel precise and shared between you and the AI — shorthand that captures something real — arrive with a false sense of clarity. They feel document-ready because they worked so well in the conversation that produced them. But the conversation is not the document. A document is read by people and LLMs who were not in that session. If the term requires the session to be understood, it will degrade every time it is read without that context.
+
+This failure is easy to miss because the human introduces shorthands too — not only the AI. A term you coined feels obvious to you in a way that masks how opaque it is to anyone else. The discipline is to test it at the moment of capture, before it enters the document, not after.
+
+In practice: when a term or phrase has emerged in the session and feels worth capturing, pause before writing it into the document. Ask the AI: "does this travel?" — meaning, would a first-time reader understand this without the conversation behind it? The AI will engage with this directly and tell you honestly if the term needs spelling out. If it doesn't travel, either define it inline, find a more self-contained phrase, or add it to the glossary. A term that requires explanation every time it is encountered is not a term — it is a private language.
+
+---
+
+*v0.0.0.5 // human_prompt // [living]*
 *the reasoning document is the source*
 *this artifact is the derivative*
 *the discipline travels with every session*

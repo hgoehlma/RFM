@@ -23,6 +23,10 @@ Project files drop the version suffix — the file in the project is always curr
 
 Archive files carry the version suffix: `RFM_prompts_reasoning_v0.0.0.5.md`
 
+Some artifacts are unique — produced once for a specific purpose with no repeating instances. These follow the same naming pattern but are not listed as reusable types:
+
+- `RFM_first_session_guidance.md` — practical preparation document for a newcomer's first guided drafting session
+
 ---
 
 ## Document Map Maintenance
@@ -42,6 +46,11 @@ Rules:
 - Abbreviation must be recoverable on cold read without session context
 - Cross-references use the ID, never the position number
 - IDs are unique within their section type across all documents
+
+---
+
+
+
 
 ---
 
