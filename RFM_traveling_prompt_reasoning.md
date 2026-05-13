@@ -11,9 +11,9 @@ The traveling prompt is the mechanism by which the methodology travels. Its desi
 
 ## The Assumptions
 
-1. **The ambient character is constitutive.** The traveling prompt must not feel like concentrated review — if it does, it has failed at its primary job regardless of whether its content is correct. Ambient discipline and deliberate critique are incompatible modes. The prompt is designed for the former unconditionally.
+**[AS-ACCT] - The ambient character is constitutive.** The traveling prompt must not feel like concentrated review — if it does, it has failed at its primary job regardless of whether its content is correct. Ambient discipline and deliberate critique are incompatible modes. The prompt is designed for the former unconditionally.
 
-2. **Compression and verifiability are in tension — and both are non-negotiable.** The traveling prompt is read primarily by an LLM, making compression a feature. But it must remain parseable by the human maintaining it — not as friendly prose, but well enough to confirm it still reflects the methodology. Optimizing for one reader at the expense of the other produces either an unauditable derivative or an ineffective prompt.
+** [AS-CVTN] - Compression and verifiability are in tension — and both are non-negotiable.** The traveling prompt is read primarily by an LLM, making compression a feature. But it must remain parseable by the human maintaining it — not as friendly prose, but well enough to confirm it still reflects the methodology. Optimizing for one reader at the expense of the other produces either an unauditable derivative or an ineffective prompt.
 
 ---
 

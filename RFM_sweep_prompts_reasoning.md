@@ -11,9 +11,9 @@ The sweep prompts are the corrective arm of the prompt system. Their existence a
 
 ## The Assumptions
 
-1. **The two sweeps require different cognitive modes and must not run simultaneously.** The structural sweep requires architectural judgment — is this content at the right level, is this section straining, is this open question ready to graduate? The language sweep requires close reading — does this term carry its meaning without session context, has session residue accumulated? Each mode requires concentration the other's presence would dilute. Running both in one pass produces shallow work in both directions.
+** [AS-SDCM] - The two sweeps require different cognitive modes and must not run simultaneously.** The structural sweep requires architectural judgment — is this content at the right level, is this section straining, is this open question ready to graduate? The language sweep requires close reading — does this term carry its meaning without session context, has session residue accumulated? Each mode requires concentration the other's presence would dilute. Running both in one pass produces shallow work in both directions.
 
-2. **The structural sweep's precondition is section sequence, not content presence.** A coherent draft means the eight sections have been populated in order — Problem before Assumptions, Landscape before Options, Options before Chosen Direction. Content can be sparse. What cannot be missing is the sequence. A structural sweep invoked before the sequence is honored has no architecture to review against — it produces noise, not findings.
+** [AS-SSPS] - The structural sweep's precondition is section sequence, not content presence.** A coherent draft means the eight sections have been populated in order — Problem before Assumptions, Landscape before Options, Options before Chosen Direction. Content can be sparse. What cannot be missing is the sequence. A structural sweep invoked before the sequence is honored has no architecture to review against — it produces noise, not findings.
 
 ---
 

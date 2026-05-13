@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Guided Drafting Prompt Reasoning Document
-`v0.0.0.1` // `module_reasoning` // [living]
+`v0.0.0.2` // `module_reasoning` // [living]
 
 ---
 
@@ -24,6 +24,8 @@ The guided drafting prompt is a deliberate response to a specific risk: that RFM
 **[AS-LREG] - The Landscape section requires grounding in current external knowledge that the newcomer may not have.** Every other section can be drafted from the newcomer's own reasoning. The Landscape requires knowing what approaches already exist in the relevant domain. Without that knowledge — or without a mechanism to acquire it during the session — the Landscape will either be thin or invented.
 
 **[AS-CBTM] - Understanding the methodology does not resolve the cost/benefit timing mismatch of the first document.** A newcomer who knows what a reasoning document is may still stall when the first section proves harder than expected and the benefit feels distant.
+
+**[AS-PSRQ] - A guided drafting session requires specific practical conditions to succeed.** The newcomer must arrive with a genuine problem — not too large, and one they already know something about. The session requires sustained cognitive engagement: roughly two hours of uninterrupted, focused time. A newcomer who arrives depleted, distracted, or without a real problem will not produce honest reasoning — they will produce text that fills sections. The session cannot manufacture the conditions it requires. They must be present before it begins.
 
 **[AS-LLNB] - The "livingness" of RFM documents substantially lowers the barrier for a newcomer — if it is made explicit.** A newcomer who understands that the first document does not need to be complete, correct, or final — only honest and structured — faces a different task than one who believes the artifact must be authoritative before it is useful. RFM's founding commitment to living, curated documents means the first version is a starting point, not a deliverable.
 
@@ -68,7 +70,13 @@ The guided drafting prompt governs LLM behavior during the session — what it a
 
 **Why Socratic facilitation over directive mode**
 
-The failure the guided drafting prompt exists to prevent is a newcomer who produces a correctly structured document without reasoning through it. Directive mode — definitions, examples, what good looks like — hands the newcomer a template. A template answered is not a reasoning document. It is a form. The Socratic mode draws reasoning out through questions the newcomer must answer from their own thinking. This is slower and requires tolerating uncertainty. That friction is the point — it is the signal that genuine reasoning is happening. The prompt manages the motivational risk (Assumption 4) by making the livingness commitment explicit early (Assumption 5), not by reducing the cognitive demand. Reducing the cognitive demand is the failure mode, not the mitigation.
+The failure the guided drafting prompt exists to prevent is a newcomer who produces a correctly structured document without reasoning through it. Directive mode — definitions, examples, what good looks like — hands the newcomer a template. A template answered is not a reasoning document. It is a form. Socratic mode guards against this by keeping the reasoning with the newcomer: questions draw out what the newcomer must answer from their own thinking.
+
+Socratic mode does not mean the LLM withholds its own reasoning. The co-author role remains fully active — the LLM proposes, red teams, and contributes genuinely throughout the session. The constraint is narrow: the LLM does not fill sections on the newcomer's behalf. Within that constraint, the session is genuine co-authorship. A newcomer who experiences the LLM reasoning alongside them — rather than extracting their reasoning through interrogation — will understand what RFM co-authorship feels like before they have finished their first document. That experience is part of what the guided drafting session is designed to produce.
+
+**Why the LLM names the pressure explicitly rather than yielding to it**
+
+When a newcomer pushes for directive answers — asking what to write, requesting definitions, or expressing frustration with questions — the path of least resistance is to yield. Yielding feels like care. It is the failure mode. The LLM's counter-move is to name what is happening rather than either yielding or simply repeating the question: "you are asking me to fill this section; my job is to draw your reasoning out." Naming the pressure makes it visible to the newcomer without making it adversarial. After naming it, the LLM returns to questions from a different angle — not the same question repeated, which compounds frustration, but a different entry point into the same reasoning gap. This move is the Socratic mode held under pressure, expressed as co-author behavior rather than rule-following.
 
 **Why the revision loop after the Landscape is non-negotiable**
 
@@ -89,6 +97,10 @@ The traveling prompt governs collaborative posture — it is always present. The
 **Why the livingness commitment is stated before section work begins**
 
 A newcomer who understands that the first document needs only to be honest and structured — not complete or authoritative — faces a different task than one who doesn't. That understanding doesn't come from having read the methodology. It comes from hearing it stated as permission at the moment the cost of starting is highest. The prompt makes explicit — before the first section opens — that the document is a living artifact: a starting point, not a deliverable.
+
+**Why the First Session Guidance explicitly names the energy requirement**
+
+The human prompt carries the general principle: if you are not ready to think, you are not ready to collaborate. That principle is true in every RFM session. In a guided drafting session it is more consequential — the session is longer, the newcomer has not yet internalized drift-correction practices, and the cost of passive consumption is higher because the reasoning document being built is the newcomer's first. A newcomer who arrives depleted and accepts what the LLM produces without genuine engagement will leave with a document that looks correct and reasons poorly — and will likely conclude that RFM does not work. The First Session Guidance names the energy requirement explicitly and in advance, not as a disclaimer but as a genuine prerequisite. The session is designed to succeed with an engaged newcomer. It is not designed to compensate for an absent one.
 
 **Why the guided drafting prompt must establish the co-author posture before section work begins**
 
@@ -120,6 +132,18 @@ A newcomer who stalls may push the LLM toward directive mode — asking directly
 
 The prompt was designed for a newcomer's first reasoning document. A first reasoning document for a new project — written by an experienced RFM practitioner — shares many of the same characteristics: the problem is not yet sharp, the assumptions are untested, the landscape is unmapped. Whether the guided drafting prompt serves that case as well as the newcomer case, or whether a separate artifact is warranted, is undesigned.
 
+**[OQ-CPFD] Whether context pressure degrades Socratic mode before the session completes.**
+
+A single prompt governing the full session may lose behavioral fidelity as the session lengthens — not because the LLM forgets the instructions, but because co-author posture drifts under accumulated context. Whether this degradation is significant enough to warrant per-section prompt recalibration, or whether the human's drift-correction practices from the human prompt are sufficient mitigation, requires trial. The first version assumes a single prompt is sufficient. This assumption should be tested explicitly in early use.
+
+**[OQ-LTCT] The LLM contribution threshold in a first session.**
+
+When should the LLM shift from drawing out the newcomer's reasoning through questions to contributing its own reasoning directly? In a standard RFM session the co-author role is fully active throughout. In a guided drafting session the threshold for direct contribution is higher — the risk of the LLM's reasoning displacing the newcomer's is real when the newcomer has not yet developed the practice of pushing back. Where exactly that threshold sits, how it varies by section and by newcomer state, and whether it can be specified in the prompt or must remain a live judgment call, requires trial.
+
+**[OQ-ONSQ] The onboarding sequence for a willing newcomer.**
+
+The guided drafting prompt assumes a newcomer who is already willing to try RFM — self-selected, posture-aligned, past the README and the top-level reasoning document. What that newcomer needs is not persuasion but a first experience that returns value before the overhead becomes discouraging. The right sequence of artifacts and asks for that specific person — what they read, in what order, before and during their first session — has not been designed. The guided drafting prompt is one element of that sequence, not the sequence itself.
+
 ---
 
 ## Hard Lessons
@@ -130,7 +154,7 @@ Drafting The Problem and The Assumptions first, then conducting Landscape resear
 
 ---
 
-*v0.0.0.1 // module_reasoning // [living]*
+*v0.0.0.2 // module_reasoning // [living]*
 *the guided drafting prompt is the derivative*
 *this document is the source*
 *the reasoning comes first — the prompt follows*
