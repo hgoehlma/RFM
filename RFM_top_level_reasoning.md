@@ -18,9 +18,9 @@
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.0.0.2 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | Reasoning document for the human prompt — skeleton, in active design |
 | `RFM_human_prompt.md` | Human prompt | v0.0.0.5 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
-| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.2 | Reasoning document governing guided drafting prompt design decisions |
+| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.3 | Reasoning document governing guided drafting prompt design decisions |
 | `RFM_guided_drafting_prompt_operational.md` | Operational | v0.0.0.1 | Deployment and artifact inventory for the guided drafting prompt module |
-| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.0.0.1 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
+| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.0.0.2 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
 | `RFM_first_session_guidance.md` | First session guidance | v0.0.0.1 | Practical preparation for a newcomer's first guided drafting session — what to bring, what to expect, what to watch for |
 
 ---

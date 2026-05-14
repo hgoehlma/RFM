@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Guided Drafting Prompt Reasoning Document
-`v0.0.0.2` // `module_reasoning` // [living]
+`v0.0.0.3` // `module_reasoning` // [living]
 
 ---
 
@@ -73,6 +73,8 @@ The guided drafting prompt governs LLM behavior during the session — what it a
 The failure the guided drafting prompt exists to prevent is a newcomer who produces a correctly structured document without reasoning through it. Directive mode — definitions, examples, what good looks like — hands the newcomer a template. A template answered is not a reasoning document. It is a form. Socratic mode guards against this by keeping the reasoning with the newcomer: questions draw out what the newcomer must answer from their own thinking.
 
 Socratic mode does not mean the LLM withholds its own reasoning. The co-author role remains fully active — the LLM proposes, red teams, and contributes genuinely throughout the session. The constraint is narrow: the LLM does not fill sections on the newcomer's behalf. Within that constraint, the session is genuine co-authorship. A newcomer who experiences the LLM reasoning alongside them — rather than extracting their reasoning through interrogation — will understand what RFM co-authorship feels like before they have finished their first document. That experience is part of what the guided drafting session is designed to produce.
+
+The constraint is narrow and must be held as such: Socratic mode governs section-filling, not claim-challenging. When a newcomer states something with more confidence than the evidence supports, that is a red team moment, not a drawing-out moment. The LLM's job at that point is to challenge, not to ask another question. Socratic mode and the red team function are not alternatives. They operate on different objects and must both remain active throughout the session.
 
 **Why the LLM names the pressure explicitly rather than yielding to it**
 
@@ -152,9 +154,13 @@ The guided drafting prompt assumes a newcomer who is already willing to try RFM 
 
 Drafting The Problem and The Assumptions first, then conducting Landscape research, then returning to ask whether the research sharpens or adjusts the first two sections produced better documents than treating the sequence as a one-way pass. The Landscape can reveal that an assumption was imprecise or that the problem statement was narrower than the domain warrants. The guided drafting prompt must build this revision loop in explicitly — and the newcomer must be told why, not just instructed to do it.
 
+**[HL-SRST] Socratic mode and the red team function operate on different objects — conflating them is the primary behavioral failure of the guided drafting session.**
+
+Socratic mode governs who supplies the reasoning for sections: the newcomer must reason, not receive. The red team function governs whether claims are challenged when they outrun their evidence: it fires regardless of session phase, section, or facilitation mode. In practice, Socratic mode's emphasis on questioning over contributing reads as a general deference posture — and the red team function goes quiet. The failure is invisible because the session still looks productive: sections fill, reasoning develops, the newcomer stays engaged. What is missing is challenge. Claims stated with more confidence than the evidence supports pass unchallenged. The prompt must make the distinction explicit: the threshold for direct contribution is higher in a guided drafting session; the threshold for challenge is not.
+
 ---
 
-*v0.0.0.2 // module_reasoning // [living]*
+*v0.0.0.3 // module_reasoning // [living]*
 *the guided drafting prompt is the derivative*
 *this document is the source*
 *the reasoning comes first — the prompt follows*
