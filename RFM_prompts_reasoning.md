@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.0.0.31` // `top_level_document` // [living]
+`v0.0.0.32` // `top_level_document` // [living]
 
 ---
 
@@ -151,6 +151,14 @@ One governance constraint applies: the prompt must remain verifiable by the huma
 
 The traveling prompt is developed and refined primarily through use with a single LLM. That creates a specific drift risk: the prompt gradually encodes that LLM's behavioral idiosyncrasies as methodology. The discipline looks rigorous — it is grounded in real experience — but the ground is model-specific and moving. Deliberate testing against a second LLM serves the same function as the fresh-LLM test recommended for reasoning documents: it surfaces what has been invisibly optimized away. This is a curation practice for the prompt artifact itself, not a requirement of the methodology in general use.
 
+**Why curation discipline must be consistent across all three prompt components:**
+
+The three prompt components were designed sequentially, not as a system. That sequence creates a coherence risk: a failure mode identified in one component may not be named in the others at the level appropriate to each. The symptom is asymmetry — a failure the human prompt asks the human to catch, the traveling prompt does not prevent, and the sweep prompts do not detect.
+
+Curation discipline is the clearest example. The right balance in a reasoning document is completeness without wordiness, journaling residue, or redundancy. Wordiness is text that does not earn its place. Journaling residue is language written for the session that produced it rather than for a future reader. Redundancy is reasoning restated across entries without adding signal. All three are expression failures — they enter documents gradually and are invisible from inside the session that produces them.
+
+This failure mode is named in the human prompt as something the human must catch in AI output. That is necessary but insufficient. The traveling prompt must name it as a prevention posture — flag these failures before they enter the document. The language sweep must name it as a detection criterion — entries that are wordy, journal-mode, or redundant are expression failures subject to findings for ruling. The same failure mode, addressed at the appropriate level in each component, is what system coherence requires.
+
 ---
 
 ## The Boundaries
@@ -227,7 +235,7 @@ Each reasoning document carries its version number in the header and in the foot
 
 ---
 
-*v0.0.0.31 // top_level_document // [living]*
+*v0.0.0.32 // top_level_document // [living]*
 *the traveling prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*
