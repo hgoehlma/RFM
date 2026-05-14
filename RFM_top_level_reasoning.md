@@ -10,12 +10,12 @@
 | `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.38 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
 | `RFM_operational.md` | Operational | v0.0.0.5 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.0.0.5 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.31 | The reasoning document governing all system prompt decisions |
-| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.4 | The reasoning document governing traveling prompt design decisions |
-| `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.0.21 | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.32 | The reasoning document governing all system prompt decisions |
+| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | The reasoning document governing traveling prompt design decisions |
+| `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.0.22 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_prompts_reasoning.md` | Module reasoning | v0.0.0.5 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.0.0.2 | The prompt artifact that activates the structural sweep — findings for ruling, not edits |
-| `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.0.0.1 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
+| `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.0.0.2 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | Reasoning document for the human prompt — skeleton, in active design |
 | `RFM_human_prompt.md` | Human prompt | v0.0.0.5 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.2 | Reasoning document governing guided drafting prompt design decisions |

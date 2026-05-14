@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Traveling Prompt Reasoning Document
-`v0.0.0.4` // `module_reasoning` // [living]
+`v0.0.0.5` // `module_reasoning` // [living]
 
 ---
 
@@ -63,11 +63,9 @@ The traveling prompt must activate judgment, not trigger avoidance. Failure-mode
 
 A principle without behavioral expression is an aspiration. A behavioral instruction without its principle is a rule. Each section pairs them: the principle establishes why, the behavioral instruction establishes what the LLM does with it. The sequence within each section is always principle first, then behavior — matching the methodology's own founding constraint.
 
-**Why the section type framework and Landscape drift modes belong in the traveling prompt:**
+**Why the section type framework and Landscape drift modes are ambient discipline — and belong in the traveling prompt, not the sweep prompts:**
 
-The eight sections divide into stable sections, active reasoning zones, uncertainty sections, and stability signals — and an LLM that holds this framework engages differently with each. A Boundaries section is held firm. An Open Questions section is contributed to actively. A Problem section that wants to change signals something fundamental has shifted. This framework governs every interaction with a reasoning document — it belongs in the traveling prompt, not the sweep prompt.
-
-The Landscape section warrants specific guidance beyond the general framework. Practice revealed two predictable drift modes: loose prose that stops distinguishing neighboring approaches clearly, and early option selection that absorbs work belonging in Options Considered. Both share a root — the section lost its sequence. Naming these drift modes gives the LLM something specific to watch for rather than a general instruction to hold the section correctly.
+Section-type awareness — how to engage differently with Boundaries vs. Open Questions vs. The Problem — governs every interaction with a reasoning document. It is ambient discipline, not corrective review. The same applies to Landscape drift detection: both drift modes (loose prose, early option selection) are caught best in the moment, not in a dedicated corrective pass. Placing this guidance in the sweep prompts would restrict it to deliberate invocation. Placing it in the traveling prompt makes it always present.
 
 ---
 
@@ -87,7 +85,7 @@ The current section order — engagement with documents, holding discipline, ope
 
 **[OQ-CMPB] The compression boundary.**
 
-The prompt must be compressed enough to activate reliably but parseable enough for the human maintainer to audit. Where exactly that boundary sits is not empirically established. The prompt must be compressed enough to activate reliably but parseable enough for the human maintainer to audit. Where exactly that boundary sits is not empirically established — it is approached through practice, and its location can only be revealed by observing when compression begins to degrade LLM behavior or human auditability. No designed gate can substitute for that observation.
+The prompt must be compressed enough to activate reliably but parseable enough for the human maintainer to audit. Where exactly that boundary sits is not empirically established — it is approached through practice, and its location can only be revealed by observing when compression begins to degrade LLM behavior or human auditability. No designed gate can substitute for that observation.
 
 ---
 
@@ -115,7 +113,7 @@ Positional numbers in Hard Lessons and Open Questions create a renumbering tax u
 
 ---
 
-*v0.0.0.4 // module_reasoning // [living]*
+*v0.0.0.5 // module_reasoning // [living]*
 *the traveling prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*
