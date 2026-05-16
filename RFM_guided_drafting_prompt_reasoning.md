@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Guided Drafting Prompt Reasoning Document
-`v0.0.0.3` // `module_reasoning` // [living]
+`v0.0.0.4` // `module_reasoning` // [living]
 
 ---
 
@@ -28,6 +28,10 @@ The guided drafting prompt is a deliberate response to a specific risk: that RFM
 **[AS-PSRQ] - A guided drafting session requires specific practical conditions to succeed.** The newcomer must arrive with a genuine problem — not too large, and one they already know something about. The session requires sustained cognitive engagement: roughly two hours of uninterrupted, focused time. A newcomer who arrives depleted, distracted, or without a real problem will not produce honest reasoning — they will produce text that fills sections. The session cannot manufacture the conditions it requires. They must be present before it begins.
 
 **[AS-LLNB] - The "livingness" of RFM documents substantially lowers the barrier for a newcomer — if it is made explicit.** A newcomer who understands that the first document does not need to be complete, correct, or final — only honest and structured — faces a different task than one who believes the artifact must be authoritative before it is useful. RFM's founding commitment to living, curated documents means the first version is a starting point, not a deliverable.
+
+**[AS-ODAM] - The session produces a reasoning document, and the newcomer must be able to leave with it.** The guided drafting session generates structured reasoning section by section. Without a mechanism to consolidate and deliver that output, the newcomer's work exists only in the chat interface — subject to loss if the session breaks, the window closes, or memory limits are reached. The output delivery mechanism is not a convenience; it is a prerequisite for the session's primary purpose.
+
+**[AS-FCRN] - Formatting conventions lower cognitive load and actively support reasoning.** A newcomer deciding how to structure each section spends attention on form rather than content. Suggested conventions remove that decision — but they are not neutral scaffolding. The conventions are reasoning aids: each one is chosen because it serves the thinking the section requires, not only because it makes the section readable. Formatting that serves the thinking is worth specifying; formatting that merely serves the reader is not.
 
 ---
 
@@ -92,6 +96,9 @@ If the Landscape research reveals that a solution to the newcomer's problem alre
 
 The newcomer must own the decision to move from one section to the next. A multi-turn scaffold that manages pacing collapses that ownership into the LLM's judgment — the LLM decides when the section is complete, when to move forward, when to loop back. That is the wrong division of labor at the execution step of the joint reasoning sequence. A single prompt that governs the LLM's behavior throughout the session preserves the newcomer's ownership of that decision. The LLM contributes through questions and pushback. The newcomer decides when a section has been reasoned through honestly enough to move forward.
 
+**Why output is consolidated at each section boundary, not at session end.**
+Consolidating at session end risks total loss if the session breaks before completion. Consolidating on request puts the burden on a newcomer who doesn't yet know to ask. Section boundary consolidation — offering a clean markdown block after each section is confirmed — distributes the preservation discipline across the session without requiring the newcomer to manage it.
+
 **Why the guided drafting prompt layers over the traveling prompt rather than replacing it**
 
 The traveling prompt governs collaborative posture — it is always present. The guided drafting prompt governs session behavior for a specific task — it is invoked for a newcomer's first reasoning document. They are not in conflict. The traveling prompt stays silent on what it has no instruction about. The guided drafting prompt operates within the posture the traveling prompt establishes. The "too much" risk is real but the resolution is scoping, not reduction. A well-scoped guided drafting prompt does not override the traveling prompt. It narrows the session's focus within it.
@@ -107,6 +114,14 @@ The human prompt carries the general principle: if you are not ready to think, y
 **Why the guided drafting prompt must establish the co-author posture before section work begins**
 
 The joint reasoning sequence — propose, reflect, converge, execute — governs how both parties work together. This applies to a newcomer's first reasoning document as much as to any other session. The LLM is not a facilitator guiding the newcomer through a process. It is a co-author contributing to the reasoning, red teaming weak thinking, and holding the methodology discipline jointly. The guided drafting prompt must make this explicit before the first section opens — not leave it to be inferred from the traveling prompt. A newcomer who arrives treating the LLM as a sophisticated assistant will push it into tool mode regardless of what the traveling prompt instructs. Establishing the co-author posture is the first job of the guided drafting prompt, not a precondition it can assume has been met.
+
+**Why formatting conventions are specified here and not elevated to methodology**
+
+RFM does not prescribe formatting. The reasoning document structure is fixed — eight sections, same discipline at every level — but how each section is rendered on the page is not. Elevating formatting to methodology would conflate structure with presentation and constrain practitioners unnecessarily.
+
+The conventions specified in the operational doc exist for a narrower purpose: to lower cognitive load for a newcomer in their first session, and to serve the reasoning each section requires. The Landscape convention illustrates both functions — an intro sentence that names the specific question the landscape must answer forces precision before the table begins; the gap paragraph forces the author to name what the collective comparison revealed, which is a reasoning step that directly prepares the Options Considered. The Assumptions convention — bold ID and claim, body following — forces the author to name the belief before elaborating. The Chosen Direction convention — **Why X** as heading — forces justification rather than description. Each convention was chosen because it serves the thinking, not only the reader.
+
+These conventions are suggested for newcomers, not prescribed as methodology. A practitioner who develops different formatting practices that serve their reasoning equally well has not violated anything. The RFM documents themselves follow these conventions — not because they are required, but because practice has shown they serve the reasoning well. They are the best formulation we have found so far.
 
 ---
 
@@ -160,7 +175,7 @@ Socratic mode governs who supplies the reasoning for sections: the newcomer must
 
 ---
 
-*v0.0.0.3 // module_reasoning // [living]*
+*module_reasoning // [living]*
 *the guided drafting prompt is the derivative*
 *this document is the source*
 *the reasoning comes first — the prompt follows*
