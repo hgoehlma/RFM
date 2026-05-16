@@ -8,8 +8,8 @@
 | Document | Type | Version | What it carries |
 |---|---|---|---|
 | `RFM_top_level_reasoning.md` | Top-level reasoning | v0.0.0.38 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
-| `RFM_operational.md` | Operational | v0.0.0.5 | File naming conventions, document map maintenance, version discipline |
-| `RFM_glossary.md` | Glossary | v0.0.0.5 | Disambiguation of terms that carry different meanings across reader contexts |
+| `RFM_operational.md` | Operational | v0.0.0.6 | File naming conventions, document map maintenance, version discipline |
+| `RFM_glossary.md` | Glossary | v0.0.0.6 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.32 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.0.22 | The system prompt that carries the methodology into every LLM conversation |
@@ -18,10 +18,10 @@
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.0.0.2 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | Reasoning document for the human prompt — skeleton, in active design |
 | `RFM_human_prompt.md` | Human prompt | v0.0.0.5 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
-| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.3 | Reasoning document governing guided drafting prompt design decisions |
-| `RFM_guided_drafting_prompt_operational.md` | Operational | v0.0.0.1 | Deployment and artifact inventory for the guided drafting prompt module |
-| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.0.0.2 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
-| `RFM_first_session_guidance.md` | First session guidance | v0.0.0.1 | Practical preparation for a newcomer's first guided drafting session — what to bring, what to expect, what to watch for |
+| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.4 | Reasoning document governing guided drafting prompt design decisions |
+| `RFM_guided_drafting_prompt_operational.md` | Operational | v0.0.0.3 | Deployment and artifact inventory for the guided drafting prompt module |
+| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.0.0.3 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
+| `RFM_first_session_guidance.md` | First session guidance | v0.0.0.3 | Practical preparation for a newcomer's first guided drafting session — what to bring, what to expect, what to watch for |
 
 ---
 
@@ -355,6 +355,6 @@ The first drift is toward loose prose that stops distinguishing neighboring appr
 
 ---
 
-*v0.0.0.38 // top_level_document // [living]*
+*top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*

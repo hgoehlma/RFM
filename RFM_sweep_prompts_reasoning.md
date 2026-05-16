@@ -95,7 +95,7 @@ The same argument restated in different styles across Options Considered and Cho
 
 ---
 
-*v0.0.0.5 // module_reasoning // [living]*
+*module_reasoning // [living]*
 *the sweep prompts are the corrective arm*
 *findings for ruling, not edits*
 *the reasoning comes first — the prompts follow*
