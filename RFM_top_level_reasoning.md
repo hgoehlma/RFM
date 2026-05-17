@@ -8,11 +8,11 @@
 | Document | Type | Version | What it carries |
 |---|---|---|---|
 | `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.0 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
-| `RFM_operational.md` | Operational | v0.0.1 | File naming conventions, document map maintenance, version discipline |
+| `RFM_operational.md` | Operational | v0.1.0 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.0.0.6 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.32 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | The reasoning document governing traveling prompt design decisions |
-| `RFM_traveling_prompt.md` | Traveling system prompt | v0.0.1 | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_traveling_prompt.md` | Traveling system prompt | v0.1.0 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_prompts_reasoning.md` | Module reasoning | v0.0.0.5 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.0.0.2 | The prompt artifact that activates the structural sweep — findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.0.0.2 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
