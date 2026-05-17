@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Operational Document
-`v0.0.0.6` // `operational` // [living]
+`v0.0.1` // `operational` // [living]
 
 ---
 
@@ -17,11 +17,11 @@ Where `type` is one of:
 - `sweep_prompt_language`
 - `sweep_prompt_structural`
 - `operational`
-- `human_prompt` (anticipated)
+- `human_prompt`
 
 Project files drop the version suffix — the file in the project is always current. The version is visible in the document header.
 
-Archive files carry the version suffix: `RFM_prompts_reasoning_v0.0.0.5.md`
+Archive files carry the version suffix: `RFM_prompts_reasoning_v0.0.5.md`
 
 Some artifacts are unique — produced once for a specific purpose with no repeating instances. These follow the same naming pattern but are not listed as reusable types:
 
@@ -51,7 +51,9 @@ Rules:
 
 ## Version Number Discipline
 
-Version numbers appear in two places in every reasoning document: the header and the footer. Both must be bumped together in the same edit. A document where header and footer versions disagree is already drifting.
+Version numbers appear in the document header. The header is the single source of version truth. A document where the header version has not been bumped after an edit is already drifting.
+
+Version numbers follow the format vX.X.X — major.minor.patch. The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or structural changes. The major digit increments for fundamental methodology changes.
 
 ---
 

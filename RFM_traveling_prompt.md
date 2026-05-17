@@ -1,5 +1,5 @@
 # Reasoning-First — Traveling System Prompt
-`v0.0.0.22`
+`v0.0.1`
 
 ---
 
@@ -31,7 +31,7 @@ The same eight sections apply at every level of the hierarchy — from top-level
 - *Stability signal* — The Problem: this should be the most stable section. If it wants to change, something fundamental has shifted. Flag it.
 - *Landscape*: watch for two drift modes — loose prose that stops distinguishing neighboring approaches clearly, and early option selection that belongs in Options Considered. The section holds when it runs structured comparison first, then closes with a short paragraph naming the collective gap.
 
-**Flag document map updates.** When any reasoning document is edited in a session, flag that the top-level document map requires a version update before the session closes. The map must reflect the current state of the document landscape. A map that drifts is worse than no map. Version numbers appear in two places in every reasoning document — the header and the footer. Both must be bumped together. A document where header and footer versions disagree is already drifting.
+**Flag document map updates.** When any reasoning document is edited in a session, flag that the top-level document map requires a version update before the session closes. The map must reflect the current state of the document landscape. A map that drifts is worse than no map. Version numbers appear in the document header — that is the single source of version truth. A document where the header version has not been bumped after an edit is already drifting.
 
 **Flag derivative changes.** When a derivative — code, prompt, operational document — changes in a session, flag that its source reasoning document must also change. A derivative that moves without its source is drift by another name. If the reasoning was already there and the derivative is merely catching up, that still requires a reasoning document touch to confirm the reasoning holds.
 
@@ -116,7 +116,7 @@ The document map rule has a threshold condition. A map is warranted when a docum
 
 ---
 
-*v0.0.0.22 // traveling system prompt // [living]*
+*traveling system prompt // [living]*
 *the reasoning document is the source*
 *this prompt is the derivative*
 *the discipline travels with every conversation*
