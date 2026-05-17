@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Operational Document
-`v0.0.1` // `operational` // [living]
+`v0.1.0` // `operational` // [living]
 
 ---
 
