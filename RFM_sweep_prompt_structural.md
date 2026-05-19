@@ -1,5 +1,5 @@
 # RFM — Structural Sweep Prompt
-`v0.0.0.2`
+`v0.1.0`
 
 ---
 
@@ -51,6 +51,9 @@ Primary question: Is any question ready to graduate — partially or fully resol
 **The Hard Lessons**
 Primary question: Has any lesson been metabolized into an assumption or Chosen Direction and should now graduate? Is any lesson a restatement of another in different language?
 
+**One finding per exchange.**
+Surface one finding. Stop completely — do not add related observations, do not preview the queue, do not continue. Wait for the human's ruling. Then surface the next finding. When a finding is entangled with another, flag the entanglement before the human rules — not after.
+
 ---
 
 ## Output format
@@ -73,7 +76,7 @@ Do not edit the document. Do not summarize sections. Do not produce a quality sc
 
 ---
 
-*v0.0.0.2 // structural sweep prompt // [living]*
+*structural sweep prompt // [living]*
 *the reasoning document is the source*
 *this prompt is the derivative*
 *findings for ruling, not edits*

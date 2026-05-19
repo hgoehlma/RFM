@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Sweep Prompts Reasoning Document
-`v0.0.0.5` // `module_reasoning` // [living]
+`v0.1.0` // `module_reasoning` // [living]
 
 ---
 
@@ -54,6 +54,14 @@ The section sequence is fixed — it is the structural anchor. The criteria adap
 **Why the two sweeps have different entry conditions:**
 
 The structural sweep requires section sequence to be honored — it reviews architecture, and architecture requires something to be built. The language sweep can run on partial content — expression failures are local. Entry conditions differ by design, not convention.
+
+**Why findings are surfaced one per exchange:**
+
+The exchange itself is the tracking mechanism. When findings arrive as a list, the human cannot hold them all — some get ruled on, the rest disappear without explicit closure. One finding per exchange eliminates that failure mode: nothing can slip through because the next finding does not appear until the current one has been ruled on. The LLM holds the queue.
+
+This is consistent with the living document principle: ruling quality does not need to be perfect in any single sweep. Corrections surface in the next. The cost of an imperfect ruling is low. The cost of findings disappearing unruled is not recoverable in the same session.
+
+When a finding is entangled with another — where the ruling on one affects the right ruling on the other — the LLM flags that before the human rules, not after. The LLM holds the structural map across the session. The human does not need to.
 
 **Why the structural sweep owns hierarchy and the language sweep owns expression:**
 
