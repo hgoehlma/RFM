@@ -1,5 +1,5 @@
 # RFM — Language Sweep Prompt
-`v0.0.0.2`
+`v0.1.0`
 
 ---
 
@@ -49,6 +49,9 @@ Primary question: Is each question genuinely open as stated, or has session cont
 **The Hard Lessons**
 Primary question: Does each lesson carry the reasoning that earned it, or has it been compressed to a conclusion? Would a reader who wasn't in the session that produced the lesson understand both what happened and why it matters?
 
+**One finding per exchange.**
+Surface one finding. Stop completely — do not add related observations, do not preview the queue, do not continue. Wait for the human's ruling. Then surface the next finding. When a finding is entangled with another, flag the entanglement before the human rules — not after.
+
 ---
 
 ## Output format
@@ -71,7 +74,7 @@ Do not edit the document. Do not summarize sections. Do not produce a quality sc
 
 ---
 
-*v0.0.0.2 // language sweep prompt // [living]*
+*vlanguage sweep prompt // [living]*
 *the reasoning document is the source*
 *this prompt is the derivative*
 *findings for ruling, not edits*
