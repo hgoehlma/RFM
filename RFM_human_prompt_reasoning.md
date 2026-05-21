@@ -7,7 +7,7 @@
 
 The traveling prompt calibrates the LLM's collaborative posture precisely. Nothing calibrates the human's. The methodology assumes a human who already works in a particular way — thinking out loud rather than stating destinations, tolerating uncertainty rather than demanding confident answers, pushing back with genuine curiosity, applying the "so what?" test to their own best ideas. These are not personality traits. They are practices. And without an artifact that makes them explicit and actionable, the methodology's value depends on the human arriving with them already internalized.
 
-The asymmetry is real and consequential: one collaborator has a behavioral artifact designed for them, the other does not. When the human's collaborative posture drifts — toward passive acceptance, toward delegating rather than reasoning, toward smoothing over friction rather than naming it — the reasoning document accumulates what the AI produces rather than what both parties worked out together. The discipline holds on one side of the collaboration and quietly fails on the other.
+The asymmetry is real and consequential: one practitioner has a behavioral artifact designed for them, the other does not. When the human's collaborative posture drifts — toward passive acceptance, toward delegating rather than reasoning, toward smoothing over friction rather than naming it — the reasoning document accumulates what the AI produces rather than what both parties worked out together. The discipline holds on one side of the collaboration and quietly fails on the other.
 
 ---
 

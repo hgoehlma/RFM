@@ -10,7 +10,7 @@
 | `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.0 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
 | `RFM_operational.md` | Operational | v0.1.0 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.0 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.0.0.32 | The reasoning document governing all system prompt decisions |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.0 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.1.0 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_prompts_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing sweep prompt design decisions |
@@ -285,7 +285,7 @@ When an open question partially resolves, the resolved part simply goes. What su
 
 **[HL-ARGI] An assumption that receives a graduated insight must carry the reasoning that earned it, not just the conclusion.**
 
-When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader or collaborator to challenge it honestly rather than inherit it silently.
+When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader or practitioner to challenge it honestly rather than inherit it silently.
 
 ---
 
