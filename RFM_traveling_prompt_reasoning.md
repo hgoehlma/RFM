@@ -109,7 +109,7 @@ Two failure modes identified in practice: drafting at the wrong hierarchy level 
 
 **[HL-CDAO] Content-derived IDs are assigned once and never re-derived — the operational document carries the rule.**
 
-Positional numbers in Hard Lessons and Open Questions create a renumbering tax under curation and break cross-references silently. Content-derived IDs (`[HL-XXXX]`, `[OQ-XXXX]`) solve this — but only if the ID is assigned once at capture and treated as fixed. The risk is author-dependency: two collaborators may independently derive different abbreviations for the same entry. The mitigation is that the rule lives in `RFM_operational.md`, not in session memory. The traveling prompt carries the behavioral instruction to use IDs rather than position numbers in any cross-reference.
+Positional numbers in Hard Lessons and Open Questions create a renumbering tax under curation and break cross-references silently. Content-derived IDs (`[HL-XXXX]`, `[OQ-XXXX]`) solve this — but only if the ID is assigned once at capture and treated as fixed. The risk is author-dependency: two practitioners may independently derive different abbreviations for the same entry. The mitigation is that the rule lives in `RFM_operational.md`, not in session memory. The traveling prompt carries the behavioral instruction to use IDs rather than position numbers in any cross-reference.
 
 ---
 
