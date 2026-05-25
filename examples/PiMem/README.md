@@ -20,7 +20,7 @@ Read the reasoning document first. The AGENTS.md rules only make sense — and c
 
 ## How to use
 
-Copy `PiMemAGENTS.md` content into your project's `AGENTS.md`. Adapt the categories and ceilings to your situation. If you change a rule, change the reasoning document first.
+Add the contents as a section in your existing `AGENTS.md`. Adapt the categories and ceilings to your situation. If you change a rule, change the reasoning document first.
 
 To derive a version optimized for your agent: give your preferred LLM the reasoning and operational documents and ask it to produce an AGENTS.md that activates the discipline with minimal text.
 
