@@ -1,3 +1,5 @@
+Add this section to your project's AGENTS.md.
+
 ## Memory rules
 
 You maintain a single `MEMORY.md` file across sessions. These rules govern every read and write.
