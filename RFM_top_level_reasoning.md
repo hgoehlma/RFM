@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.1.3` // `top_level_reasoning` // [living]
+`v0.1.4` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,7 +7,7 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.3 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.4 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
 | `RFM_operational.md` | Operational | v0.1.1 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.0 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.1 | The reasoning document governing all system prompt decisions |
@@ -47,11 +47,11 @@ The following are believed to be true. They cannot all be fully proven yet. If a
 
 **[AS-CIIL] - Context is irreducibly important for LLMs.** High signal reasoning context minimizes hallucination. This holds regardless of how capable models become — a better LLM with poor context will still underperform a modest LLM with rich context.
 
-**[AS-AELN] - Abstraction will continue to evolve — and language is the next layer.** The history of software is a history of increasing abstraction. LLMs make intention expressible in natural language. But no level of abstraction removes the need to articulate what you want. The thinking cannot be delegated.
+**[AS-AELN] - Abstraction will continue to evolve — and language is the next layer.** The history of software is one example of a broader pattern: every discipline involving complex execution has progressively raised its level of abstraction. LLMs make intention expressible in natural language. But no level of abstraction removes the need to articulate what you want. The thinking cannot be delegated.
 
 **[AS-MOSA] - Modularity is the only sustainable architecture.** Monolithic systems resist change, learning, and maintenance. The reasoning document hierarchy should mirror and enforce modular thinking from the start.
 
-**[AS-CACM] - Code alone will never carry its own motivation.** The gap between what code does and why it exists cannot be closed by better code. It requires a separate, connected reasoning artifact maintained proactively.
+**[AS-CACM] - Execution artifacts alone will never carry their own motivation.** The gap between what an artifact does and why it exists cannot be closed by improving the artifact itself. It requires a separate, connected reasoning document maintained proactively. In software, this gap is most visible — code can be read but not interrogated for intent. But the same gap exists in any domain where complex reasoning precedes execution.
 
 **[AS-QEUP] - Quality of execution — human or AI — is upstream of the reasoning investment.** Thinking first is not overhead. It is the highest leverage point in the entire development process.
 
@@ -65,7 +65,7 @@ The assumptions above are beliefs about the domain — why the problem exists an
 
 **[AS-DSDH] - Document strain is diagnostic of hierarchy.** When a section strains under its own weight — too many options, too much detail, too many edge cases — that is a signal to branch into a new module, not a signal to write more carefully. The module structure is not designed upfront. It emerges from the writing. The hierarchy reveals itself through strain.
 
-**[AS-DWHC] - In domains where execution has hard contracts — software being the primary example — the reasoning document is accompanied by an operational document that carries constants, interfaces, procedures, and known values. It is a derivative of the reasoning, not a replacement for it.**
+**[AS-DWHC] - Hard-contract domains require an operational document.** In domains where execution has hard contracts — software being the primary example — the reasoning document is accompanied by an operational document that carries constants, interfaces, procedures, and known values. It is a derivative of the reasoning, not a replacement for it.
 
 **[AS-ADSR] - The reasoning discipline is self-reinforcing when held.** A well-reasoned document improves LLM execution. Better execution produces richer joint reasoning. Richer reasoning produces better documents. The loop degrades when either party breaks the discipline.
 
@@ -115,9 +115,9 @@ Enough tests and guardrails to control output without understanding internals. R
 
 The goal is facilitated joint reasoning between human and LLM. Everything that follows — the reasoning artifact at the center, the temporal discipline of reasoning before execution, the fractal structure, the enforced curation — serves that goal. It is not about elegant documentation. It is about creating a shared interface through which both human and LLM contribute, execute, and stay honest.
 
-The methodology places the reasoning artifact at the center of software development practice. Not the code. Not the tests. Not the documentation. The reasoning — explicit, hierarchical, curated, and designed from the outset to serve both humans and LLMs simultaneously.
+The methodology places the reasoning artifact at the center of any practice where complex reasoning precedes execution. Not the code. Not the tests. Not the documentation. The reasoning — explicit, hierarchical, curated, and designed from the outset to serve both humans and LLMs simultaneously.
 
-The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM — that is not accidental and is kept. The reasoning document is not a record of decisions. It is where decisions are made. A record is written after the fact and drifts. A decision-making interface is consulted before action and stays alive because it must. Every change to a system begins with a change to the reasoning document at the appropriate level. Code is the derivative. The document is the source.
+The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM — the exasperated instruction issued when someone acts without reading first. That resonance is not accidental and is kept. The reasoning document is not a record of decisions. It is where decisions are made. A record is written after the fact and drifts. A decision-making interface is consulted before action and stays alive because it must. Every change to a system begins with a change to the reasoning document at the appropriate level. The execution artifact is the derivative. The document is the source.
 
 **On the governing co-authorship pattern**
 
@@ -139,7 +139,7 @@ The same eight sections, the same discipline, the same navigational practice —
 
 The document is kept alive through enforced curation. Not just addition but reduction. What has evolved? What can be removed? What needs replacing? A document that only grows is a document that is already dying. The pressure of constraint is a feature, not a limitation.
 
-A healthy document expands when new signal arrives and contracts when old signal has been absorbed into assumptions or practice. Contraction has two legitimate forms: graduation, where a hard lesson or open question has been fully absorbed and its reasoning travels to the appropriate destination — an assumption, a change to Chosen Direction, a Boundaries entry, or a module-level document; and expiry, where an entry described a stage the project has passed and is honestly removed. Both are curation. Neither is loss.
+A healthy document expands when new signal arrives and contracts when old signal has been absorbed into assumptions or practice. Contraction has two legitimate forms: graduation, where a hard lesson or open question has been fully absorbed and its reasoning travels to the appropriate destination — an assumption, a change to Chosen Direction, a Boundaries entry, or a module-level document; and expiry, where an entry described a stage the project has passed and is honestly removed. Both are curation. Neither is loss. Both terms — graduation and expiry — are defined precisely in the glossary.
 
 Hard lessons earn a dedicated section — not an appendix, not an afterthought.
 
@@ -177,11 +177,11 @@ The reasoning document is the deterministic anchor — the fixed, explicitly rea
 
 This methodology is explicitly not:
 
-**A software development tool.** No specific platform is prescribed. What the methodology does require of any practitioner deploying it: reasoning documents must be maintained in a format and location accessible to both human and LLM. Markdown satisfies this — human-readable, LLM-readable, version-controllable, and tool-agnostic. Where the document lives is a deployment decision, but accessibility to both parties is not optional.
+**A platform or tooling prescription.** No specific platform is prescribed. What the methodology does require of any practitioner deploying it: reasoning documents must be maintained in a format and location accessible to both human and LLM. Markdown satisfies this — human-readable, LLM-readable, version-controllable, and tool-agnostic. Where the document lives is a deployment decision, but accessibility to both parties is not optional.
 
-**A replacement for technical expertise.** The methodology does not eliminate the need for skilled developers, architects, or domain experts. It gives their expertise a structure to live in and a way to survive beyond the person who holds it.
+**A replacement for domain expertise.** The methodology does not eliminate the need for skilled practitioners, domain experts, or specialists. It gives their expertise a structure to live in and a way to survive beyond the person who holds it.
 
-**A documentation standard.** This is not about writing more or better documentation. It is about a fundamental shift in what the primary artifact of software development is. Documentation describes a system after the fact. A reasoning document precedes and drives it.
+**A documentation standard.** This is not about writing more or better documentation. It is about a fundamental shift in what the primary artifact of any reasoning-first practice is. Documentation describes a system after the fact. A reasoning document precedes and drives it.
 
 **A methodology for AI development.** It does not prescribe how to build, train, or fine-tune AI models. It prescribes how to reason about and direct their use within a system.
 
@@ -243,9 +243,13 @@ A reader or LLM encountering a project for the first time cannot orient from the
 
 Branching to a new module does not automatically contract the top level. Without deliberate reduction, both layers accumulate entries about the same content — the top level drifts toward restating what the module now owns. The discipline after branching is not just creating the new module; it is returning to the top level and removing whatever the module now carries. This is a distinct step, not an automatic consequence of branching. See [AS-DSDH] for the branching signal itself — this lesson names what must happen after that signal is acted on.
 
+**[HL-CPSC] Compressing a reasoning document feels like curation — it is structural change.**
+
+Removing or condensing articulated reasoning can present as tidying up: cutting redundancy, tightening prose, removing what feels obvious. None of those framings change what is actually happening. When reasoning is compressed, signal is lost that cannot be recovered — the distinctions that felt obvious in the session that produced them are precisely what a future reader or a fresh LLM cannot reconstruct. The danger is that compression is invisible from inside the session that performs it: the compressor holds the missing context and cannot perceive the gap they are creating. Any proposed reduction of articulated reasoning — however it is framed — is a structural change to the document, and requires the same joint decision that any structural change requires.
+
 **[HL-DRIFT] The drift problem is not solved by the methodology — it is the methodology's greatest vulnerability.**
 
-The methodology was designed to prevent documentation drift. But the reasoning document itself can drift from the system it describes. Naming this problem is not solving it. This lesson must stay visible until a genuine answer exists. The methodology's own curation discipline — triggered and deliberate return — addresses drift in principle but cannot guarantee it in practice: a team that stops returning honestly will produce documents that describe a past state while appearing current. No structural mechanism yet exists to detect that failure from inside the system. One asymmetry is known: applying the methodology from inception is the only reliable prevention — reconstructed reasoning produces plausible documents, but not necessarily true ones. There is no reliable cure for drift once it has set in.
+The methodology was designed to prevent documentation drift. But the reasoning document itself can drift from the system it describes. Naming this problem is not solving it. This lesson must stay visible until a genuine answer exists. The methodology's own curation discipline — triggered and deliberate return — addresses drift in principle but cannot guarantee it in practice. No structural mechanism yet exists to detect that failure from inside the system. One asymmetry is known: applying the methodology from inception is the only reliable prevention — reconstructed reasoning produces plausible documents, but not necessarily true ones. The sweep prompts — deliberately invoked corrective artifacts — reduce the risk of undetected drift, but require honest and regular application to do so. A team that invokes them performatively rather than genuinely will produce documents that appear current while describing a past state. Structural mechanisms for detecting that failure from inside the system remain an open question.
 
 **Human-LLM collaboration**
 
@@ -259,7 +263,7 @@ Even a disciplined LLM develops bias over a long conversation — toward ideas t
 
 **[HL-WENO] The worked example is never optional — at any stage of the methodology's development.**
 
-Theory without ground truth is hypothesis. Applying the methodology from inception — reasoning before any code exists — proves the chain in both directions: reasoning document to operational document to code, with traceability at every step and no undocumented judgment calls made during implementation. Applying it to existing systems reveals that reconstructed reasoning produces plausible documents but not necessarily true ones. Both directions of experience are necessary.
+Theory without ground truth is hypothesis. Applying the methodology from inception — before any execution artifacts exist — proves the chain in both directions: reasoning document to derivative, with traceability at every step and no undocumented judgment calls made during implementation. Applying it to an existing project — where decisions have already been made without explicit reasoning — reveals that reconstructed reasoning produces plausible documents but not necessarily true ones. Both directions of experience are necessary.
 
 **[HL-DIHQ] Deferred items must carry their context, not just their topic.**
 
@@ -273,7 +277,7 @@ A well-reasoned document hierarchy will not prevent all gaps from appearing duri
 
 **[HL-HACD] A holding artifact shapes co-author behavior in ways that weren't designed.**
 
-Introducing a designated holding artifact — a parking file, a deferred items list — lowers the threshold for parking by making it the path of least resistance. What was designed as a last resort before losing signal becomes a first resort before doing the harder work of deciding whether something is ready. The behavioral effect is that the co-author parks rather than works, defers rather than drafts. The test before suggesting the holding artifact: is the candidate genuinely unready, or is the holding artifact simply available? If the candidate is sharp enough to describe precisely, it is probably ready to be drafted.
+Introducing a designated place to park unresolved items — a holding artifact such as a deferred items list or parking file — lowers the threshold for parking by making it the path of least resistance. What was designed as a last resort before losing signal becomes a first resort before doing the harder work of deciding whether something is ready. The behavioral effect is that the co-author parks rather than works, defers rather than drafts. The test before suggesting the holding artifact: is the candidate genuinely unready, or is the holding artifact simply available? If the candidate is sharp enough to describe precisely, it is probably ready to be drafted.
 
 **[HL-GCDND] Graduated content disappears — it does not narrate its own departure.**
 
@@ -281,7 +285,7 @@ When an open question partially resolves, the resolved part simply goes. What su
 
 **[HL-ARGI] An assumption that receives a graduated insight must carry the reasoning that earned it, not just the conclusion.**
 
-When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader or practitioner to challenge it honestly rather than accept it as given without being able to test or challenge it.
+When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader to test it honestly rather than inherit it blindly.
 
 ---
 
