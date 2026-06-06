@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.1.0` // `top_level_document` // [living]
+`v0.1.1` // `top_level_document` // [living]
 
 ---
 
@@ -7,7 +7,7 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.0 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.1 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
 | `RFM_operational.md` | Operational | v0.1.0 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.0 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.0 | The reasoning document governing all system prompt decisions |
@@ -79,7 +79,7 @@ The problem of meaning in software is not unrecognized. Several movements have a
 | **Domain-Driven Design** | Made meaning an explicit design target. Gave us Ubiquitous Language and Bounded Contexts | Presupposes reasoning already exists — it structures meaning, it doesn't generate or preserve it |
 | **Clean Code / TDD** | Made quality and correctness first-class concerns | Correctness is not the same as meaning. A perfectly tested system can still be incomprehensible |
 | **Wardley Mapping** | Made situational awareness and strategic reasoning explicit, visual, and owned | Stops at the strategic level. Doesn't cascade into a connected reasoning practice at every level of execution |
-| **Peter Naur's "Programming as Theory Building"** | Argued that programming is primarily the activity of building a theory of the problem in the programmer's mind — code is a secondary artifact of that theory. Anticipates RFM's founding insight that the reasoning behind a system is more valuable than the system's outputs | Stops at the individual programmer's mental model. Does not prescribe a structural artifact for capturing that theory, does not address the LLM dimension, and has no mechanism for the theory to survive beyond the person who holds it |
+| **Peter Naur's "Programming as Theory Building"** | Argued that programming is primarily the activity of building a theory of the problem in the programmer's mind — code is a secondary artifact of that theory. Anticipates RFM's founding insight that the reasoning behind a system is more valuable than the system's outputs | Stops at the individual programmer's mental model. Does not prescribe a structural artifact for capturing that theory, does not address the LLM dimension, and has no mechanism for the theory to survive beyond the person who holds it, and does not anticipate that disciplined externalization in text is sufficient for a system with no tacit knowledge to derive working execution from it |
 | **ADRs** | Capture individual decisions | Not hierarchical. Not designed for LLM consumption. Document conclusions, rarely the full reasoning journey |
 | **Context Engineering** | Recognizes that LLM output quality depends on input quality | Tactical — prompt-level thinking, not a systemic methodology |
 
