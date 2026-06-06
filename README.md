@@ -6,7 +6,7 @@ RFM places the reasoning document at the center. Not the code. Not the output. T
 
 Every change to a system begins with a change to the reasoning document at the appropriate level. The document is the source. Everything else follows from them.
 
-If you've ever joined a project and had no idea why anything was built the way it was — or watched a decision get made again from scratch because no one recorded why it was made the first time — this is for that. The problem is not unique to software. But software is where it hurts most visibly.
+If you've ever joined a project and had no idea why anything was built the way it was — or watched a decision get made again from scratch because no one recorded why it was made the first time — this is for that. Peter Naur diagnosed this problem in 1985. He had no structural solution. This is ours.
 
 ---
 
