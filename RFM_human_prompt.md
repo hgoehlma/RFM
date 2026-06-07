@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Human Prompt
-`v0.0.0.5` // `human_prompt` // [living]
+`v0.1.0` // `human_prompt` // [living]
 
 ---
 
@@ -239,7 +239,6 @@ In practice: when a term or phrase has emerged in the session and feels worth ca
 
 ---
 
-*v0.0.0.5 // human_prompt // [living]*
 *the reasoning document is the source*
 *this artifact is the derivative*
 *the discipline travels with every session*

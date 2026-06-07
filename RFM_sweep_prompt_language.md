@@ -1,5 +1,5 @@
 # RFM — Language Sweep Prompt
-`v0.1.0`
+`v0.1.0` // `sweep_prompt_language` // [living]
 
 ---
 

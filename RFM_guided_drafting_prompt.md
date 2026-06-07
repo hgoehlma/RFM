@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Guided Drafting Prompt
-`v0.0.0.3` // `guided_drafting_prompt` // [living]
+`v0.1.0` // `guided_drafting_prompt` // [living]
 
 ---
 

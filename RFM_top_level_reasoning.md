@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.1.4` // `top_level_reasoning` // [living]
+`v0.1.7` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,21 +7,22 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.4 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
-| `RFM_operational.md` | Operational | v0.1.1 | File naming conventions, document map maintenance, version discipline |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.7 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_operational.md` | Operational | v0.1.2 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.0 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.1 | The reasoning document governing all system prompt decisions |
-| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.0.0.5 | The reasoning document governing traveling prompt design decisions |
-| `RFM_traveling_prompt.md` | Traveling system prompt | v0.1.0 | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.3 | The reasoning document governing all system prompt decisions |
+| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.3 | The reasoning document governing traveling prompt design decisions |
+| `RFM_traveling_prompt_operational.md` | Operational | v0.1.0 | Derivation procedure and coverage check discipline for the traveling prompt |
+| `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.0 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_prompts_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.1.0 | The prompt artifact that activates the structural sweep — findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.1.0 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.0 | Reasoning document governing human prompt design decisions |
-| `RFM_human_prompt.md` | Human prompt | v0.0.0.5 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
-| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.0.0.4 | Reasoning document governing guided drafting prompt design decisions |
-| `RFM_guided_drafting_prompt_operational.md` | Operational | v0.0.0.3 | Deployment and artifact inventory for the guided drafting prompt module |
-| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.0.0.3 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
-| `RFM_first_session_guidance.md` | First session guidance | v0.0.0.3 | Practical preparation for a newcomer's first guided drafting session — what to bring, what to expect, what to watch for |
+| `RFM_human_prompt.md` | Human prompt | v0.1.0 | The prompt artifact for the human collaborator — practices that keep the co-author role alive across sessions |
+| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.1.0 | Reasoning document governing guided drafting prompt design decisions |
+| `RFM_guided_drafting_prompt_operational.md` | Operational | v0.1.0 | Deployment and artifact inventory for the guided drafting prompt module |
+| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.1.0 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
+| `RFM_first_session_guidance.md` | First session guidance | v0.1.0 | Practical preparation for a newcomer's first guided drafting session — what to bring, what to expect, what to watch for |
 
 ---
 
@@ -52,6 +53,8 @@ The following are believed to be true. They cannot all be fully proven yet. If a
 **[AS-MOSA] - Modularity is the only sustainable architecture.** Monolithic systems resist change, learning, and maintenance. The reasoning document hierarchy should mirror and enforce modular thinking from the start.
 
 **[AS-CACM] - Execution artifacts alone will never carry their own motivation.** The gap between what an artifact does and why it exists cannot be closed by improving the artifact itself. It requires a separate, connected reasoning document maintained proactively. In software, this gap is most visible — code can be read but not interrogated for intent. But the same gap exists in any domain where complex reasoning precedes execution.
+
+**[AS-PLHD] - Premature language hardens the object before it is fully known.** In domains where the problem itself is still being shaped, the words used to describe it carry a specific risk: they harden into reality before the object is fully understood. What gets named gets treated as settled. RFM's explicit, curated reasoning discipline is most valuable here — not because it prevents naming, but because it keeps the reasoning behind the names visible and contestable. The condition is not binary: it scales with how unsettled the object is and how consequential premature closure would be.
 
 **[AS-QEUP] - Quality of execution — human or AI — is upstream of the reasoning investment.** Thinking first is not overhead. It is the highest leverage point in the entire development process.
 
@@ -139,9 +142,19 @@ The same eight sections, the same discipline, the same navigational practice —
 
 The document is kept alive through enforced curation. Not just addition but reduction. What has evolved? What can be removed? What needs replacing? A document that only grows is a document that is already dying. The pressure of constraint is a feature, not a limitation.
 
-A healthy document expands when new signal arrives and contracts when old signal has been absorbed into assumptions or practice. Contraction has two legitimate forms: graduation, where a hard lesson or open question has been fully absorbed and its reasoning travels to the appropriate destination — an assumption, a change to Chosen Direction, a Boundaries entry, or a module-level document; and expiry, where an entry described a stage the project has passed and is honestly removed. Both are curation. Neither is loss. Both terms — graduation and expiry — are defined precisely in the glossary.
+A healthy document expands when new signal arrives and contracts when old signal has run its course. Contraction has two legitimate forms: graduation, where an entry's reasoning still has work to do and travels to the appropriate destination; and expiry, where it no longer does and is honestly removed. Both are curation. Neither is loss.
 
 Hard lessons earn a dedicated section — not an appendix, not an afterthought.
+
+**On graduation and expiry**
+
+Graduation and expiry are reasoning acts, not mechanical procedures. The discipline cannot be reduced to a lookup table — "hard lessons graduate to assumptions" or "open questions graduate to Chosen Direction" — because the destination depends on what the resolution is, not on what section the entry came from.
+
+The prior test is the same for both: does this entry's reasoning still have a recipient? Would a practitioner encountering it change how they think or act somewhere in the current system? If yes, the reasoning must travel — that is graduation. If no, the entry expires. Version history holds the record; the active document holds only live reasoning. A document that retains entries the version history already preserves is hoarding, not curating.
+
+For entries that graduate, the destination is determined by what the resolution is. A resolution that settles a belief about the domain becomes an assumption. One that commits the methodology to a direction belongs in Chosen Direction. One that constrains scope belongs in Boundaries. One whose reasoning is operative only within a specific module travels to that module's reasoning document. The routing question is: where does a practitioner need to encounter this reasoning for it to do its work?
+
+The graduation act requires two steps: place the resolved reasoning at its destination, then remove the source entry. Both steps are required. An entry that has been resolved but not removed annotates the document rather than curating it — and annotation blurs the boundary between what is settled and what is not. The procedure for executing graduation is carried in `RFM_operational.md`.
 
 Every change to a derivative — code, prompt, operational document — begins with a change to its source reasoning document. Derivatives don't merely stay connected to the reasoning; they are created from it. That is the right order, and maintaining it is what curation means in practice.
 
@@ -152,6 +165,14 @@ The methodology generates its own disambiguation need. Terms like co-author, der
 **On the operational document as a domain-specific derivative**
 
 The methodology is universal — the same eight sections, the same discipline, applicable across any domain where complex reasoning precedes execution. But some domains have hard execution contracts: software being the primary example, where constants, interfaces, and procedures must be explicitly specified for execution to be reliable. In those domains, the reasoning document is accompanied by an operational document that carries those contracts. The operational document is a derivative of the reasoning — created from it, not loosely connected to it. The methodology stays universal. The operational document is domain-specific. This is a design decision, not a concession: keeping implementation contracts out of the reasoning document is what allows the reasoning to stay portable across domains and across time.
+
+**Why reasoning documents avoid count-dependent references:**
+
+Anything in a reasoning document whose correctness depends on a count remaining stable becomes a maintenance liability the moment the count changes. The failure is silent: the reference still reads as valid while the document has already drifted. This principle governs four specific design decisions. Version numbers are excluded from cross-document references because they become stale the moment the referenced document is bumped — the document name is the stable identifier, and the document map carries the version snapshot for practitioners who need it. Numerical counts of entries (assumptions, options, hard lessons) are excluded because adding or removing one entry invalidates every statement about how many exist. Cross-document ID references are excluded because they would require a shared registry to prevent collisions — and the need for a registry is itself a signal that the entry is probably in the wrong place. IDs therefore scope to a single document only. The unifying principle: if a statement in a reasoning document would become wrong when a count changes elsewhere, that statement does not belong in a reasoning document.
+
+**On terminological discipline when the object is unsettled**
+
+When [AS-PLHD] applies — when the problem is still being shaped and the language used to describe it is itself forming — terminological discipline becomes a structural requirement, not a stylistic preference. Three practices follow from this. First, words actively used to describe an unsettled problem are shorthand candidates: each one should find its way into the glossary with explicit reasoning, not just a definition. Second, the research that builds the Landscape is where terminological maturity gets assessed: where established vocabulary exists across prior approaches, the object is more settled; where the research surfaces sparse, contested, or session-invented terminology, that is the moment to name the condition and raise the glossary discipline for this project. Third, the traveling prompt carries the instruction to watch for this signal during Landscape research — when the joint work is generating new vocabulary to describe a problem that isn't yet fully known, name it and treat each new term as a glossary candidate before it hardens.
 
 **On execution mode and the two-mode design**
 
@@ -213,11 +234,7 @@ As agentic systems become more capable, where exactly is the line between what m
 
 **[OQ-EVST] The evolutionary stage problem.**
 
-The methodology is currently designed and validated at genesis stage — a single practitioner, early structure, everything still surprising. It is an open question how the discipline needs to change as a project matures. The Hard Lessons section is where this strain will show first: it only grows, it is cross-cutting, and curation becomes harder as the project ages. Structured sweep discipline addresses this in practice — but whether it scales, and whether the methodology itself needs to describe explicit transition points as a project matures, remains open.
-
-**[OQ-LCDCE] The lifecycle of document content.**
-
-How do entries that have outlived their relevance exit honestly? Some content describes a stage the project has passed — not wrong, not graduated, simply no longer active. The methodology affirms that such entries should be removed, but the discipline for recognizing and executing that removal is not yet described. A document that accumulates without expiring content will eventually misrepresent the project's current state. What makes an entry a candidate for expiry rather than graduation, and what does honest removal look like in practice, remains open.
+The methodology is currently designed and validated at genesis stage — a single practitioner, early structure, everything still surprising. Whether the methodology itself needs to describe explicit transition points as a project matures remains open.
 
 **[OQ-MCDC] The minimal capture discipline.**
 

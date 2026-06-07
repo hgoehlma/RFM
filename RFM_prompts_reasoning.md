@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.1.0` // `module_reasoning` // [living]
+`v0.1.3` // `module_reasoning` // [living]
 
 ---
 
@@ -155,6 +155,14 @@ Curation discipline is the clearest example. The right balance in a reasoning do
 
 This failure mode is named in the human prompt as something the human must catch in AI output. That is necessary but insufficient. The traveling prompt must name it as a prevention posture — flag these failures before they enter the document. The language sweep must name it as a detection criterion — entries that are wordy, journal-mode, or redundant are expression failures subject to findings for ruling. The same failure mode, addressed at the appropriate level in each component, is what system coherence requires.
 
+**Why the traveling prompt must name the full derivative chain, not only the reasoning/derivative distinction:**
+
+The reasoning/derivative binary — does this require reasoning? — is necessary but insufficient. An LLM holding only that binary will ask the question, find no reasoning gap, and proceed to execution. The question it must also ask is whether the implementation behavior is now concrete enough that a practitioner could ask "what exactly do we do?" — and if so, that behavior belongs in the operational document before or alongside execution artifacts. The full chain is: reasoning document → operational document → execution artifacts → outputs. Each layer is a source for the layer below it. A behavioral instruction that names only the first link leaves the middle link invisible, and the operational document gets bypassed silently under execution pressure.
+
+**Why reasoning compression must be named as structural change — regardless of how it presents:**
+
+Compression can arrive dressed as legitimate moves: curation ("this is wordy"), anti-deference ("propose and execute"), or re-homing ("this belongs at a lower level"). None of those framings change what compression is. Losing articulated reasoning is a structural change — it requires joint decision weight, not light confirmation. Naming the masquerade explicitly is what makes the behavioral instruction enforceable: an LLM that recognizes the pattern can flag it; one that only knows "don't compress" will miss it when it arrives as something else.
+
 ---
 
 ## The Boundaries
@@ -207,17 +215,15 @@ The ceiling failure is the mirror: the LLM interprets the anti-deference instruc
 
 Neither failure is humility. Both are failures of judgment about when deference is earned and when it isn't. The prompt can name both directions. It cannot guarantee the behavior. Making the asymmetry visible — to both parties — is sufficient reason to capture it here.
 
-**[HL-TPNFD] The traveling prompt must name the full derivative chain, not only the reasoning/derivative distinction.**
+**[HL-VNTP] Version discipline requires an explicit behavioral reminder in the traveling prompt.**
 
-The prompt is strong on reasoning before derivatives and on flagging derivative drift. What it did not make explicit is that the derivative chain has structure: reasoning document → operational document → code → outputs. Each layer is a source for the layer below it. An LLM holding only the reasoning/derivative binary will ask "does this require reasoning?" and, if not, proceed to code. The question it must also ask is "does this require new or newly explicit operational semantics?" The trigger for that second question is: when implementation behavior becomes concrete enough that a practitioner could ask "what exactly do we do?", that behavior belongs in the operational document before or alongside code — not left for code or outputs to explain first. Code is derivative of both reasoning and operational documents. Neither source moves after the fact.
+The header is the single source of version truth. Without an explicit reminder in the traveling prompt, version bumps are missed silently — the principle alone is insufficient. The traveling prompt carries the instruction.
 
-**[HL-RCAS] Reasoning compression is always structural — regardless of how it presents.**
+**[HL-PDLR] Prompt derivation loops optimize expression instead of converging.**
 
-Compressing articulated reasoning feels like curation. It can present as anti-deference ("propose and execute"), as cleanup ("this is wordy"), or as re-homing ("this belongs at a lower level"). None of those framings change what it is. Losing articulation in a reasoning document is a structural change. It requires joint decision weight, not light confirmation. When boundary strain is detected, the first safe move is to flag it — not to compress. If re-homing is proposed, the reasoning travels intact until a joint decision is made about what to preserve, what to move, and what to let go. Summarizing articulated reasoning into a shorter proxy is not a safe boundary-cleanup move. It is structural authorship without the joint decision that structural authorship requires.
+When a prompt derivation is run more than once and outputs are compared, each comparison generates new variation — phrasing differences, structural alternatives, emphasis shifts. The natural instinct is to reconcile until the result feels right. The problem: "feels right" under session pressure means expression has converged, not that the prompt is better. Each loop adds comparison cost and risks replacing load-bearing language with language that reads more cleanly but activates less reliably.
 
-**[HL-VNTP] Version numbers in reasoning documents appear in two places — and will drift apart without an explicit reminder.**
-
-Each reasoning document carries its version number in the header and in the footer. This was an early design decision to make the version visible at both ends of what can be a long document. The maintenance risk it creates was not named at the time: when a document is bumped, both locations must be updated in the same edit. Without an explicit behavioral instruction, one location is updated and the other is missed — and the document signals two different versions simultaneously. The traveling prompt carries the reminder. This is the reasoning behind it.
+The right stopping condition is structural: the load-bearing items are present, the structure is cleaner than the previous version, and the content is shorter without losing substance. When that condition is met, stop. One reconciliation pass, not a loop. The derivation loop is the failure — not a quality mechanism.
 
 ---
 
