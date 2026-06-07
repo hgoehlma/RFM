@@ -59,18 +59,6 @@ A human prompt would be a new document type — `RFM_human_prompt.md` — sittin
 
 ---
 
-## G. RFM value rises when language itself can distort the object
-
-Cross-LLM feedback from a discovery science application surfaced a precise observation the documents don't yet contain: RFM is most valuable when the scientific object is still being shaped and the language used to describe it can itself distort it. The current framing in the top-level reasoning document is that RFM prevents reasoning from disappearing. This is more specific: RFM is most valuable when premature language hardens into unexamined reality — when the words used to describe the problem become the problem, invisibly. The discipline of keeping reasoning explicit and curated protects the object from the names we give it before it is fully known.
-
-**Why not captured yet:** signal count at threshold but both observations from LLM-assisted domain-facing work. A third signal from a different context, or a cleaner test of the core claim, would justify proposing a document home.
-
-**Possible home when ready:** Open Question 6 (evolutionary stage problem) — domain fit as a function of how settled the object is; or Open Question 2 (minimum viable document) — the domain-fit condition as a determinant of where RFM earns its overhead. Could also connect to A and B if those converge.
-
-**Flag on "shallow work" framing:** the observation that RFM is too heavy for shallow work is not yet principled enough to capture. "Shallow" is undefined and risks becoming a self-serving exit condition. Hold until OQ2 produces a better frame for domain fit.
-
-**Signal count: 2** *(cross-LLM, discovery science domain, pre-dating the counter; Codex / GPT-5.4, domain-facing delivery context, April 2026 — moderate match)*
-
 ---
 
 ## H. Once a module exists, top-level ownership must be actively reduced
@@ -109,16 +97,6 @@ Premature review — invoking a reviewer subagent before a coherent draft exists
 
 ---
 
-## K. External feedback requires explicit triage before it affects documents
-
-When external or reviewer feedback enters a reasoning session, it exerts gravity of its own kind — not the operational-detail gravity that "re-anchor after research" addresses, but a flattening pressure: the tendency to treat all critique as equally valid before separating what is solid signal, what may be overreach, and what actually warrants a document change. Without explicit triage, the LLM (and the human) can end up polishing in the direction of the most recent feedback rather than the most correct one. The triage is: (1) solid signal — confirmed by evidence or reasoning, (2) possible overreach — plausible but not yet grounded in the local context, (3) what actually changes our documents — the subset that survives both prior tests. Applying this split early in a feedback session, rather than late, is the discipline.
-
-**Why not captured yet:** at threshold. Ready for a document home conversation.
-
-**Possible home when ready:** traveling prompt as a behavioral instruction, parallel in structure to "re-anchor after research" but scoped to feedback rather than research material. Could also inform the sweep prompt design (OQ9) if reviewer subagents are in scope there.
-
-**Signal count: 2** *(Codex / GPT-5.4, domain-facing delivery context, April 2026; Codex / GPT-5.4, subagent and Copilot feedback triage, April 2026 — strong match)*
-
 ---
 
 ## L. The prompt system has no mechanism for grounding against evolving prompt engineering practice
@@ -138,6 +116,38 @@ Anthropic's "dreaming" feature for Managed Agents (May 2026) is a scheduled proc
 **Possible home when ready:** AS-CDNO in `RFM_top_level_reasoning.md` — the assumption would carry a stronger grounding sentence. Or the Landscape in the same document if the automated-vs-deliberate tension becomes sharp enough to warrant a named row.
 
 **Signal count: 1** *(Anthropic Managed Agents blog, May 2026)*
+
+---
+
+## N. RFM translation to a new LLM environment fails predictably at the derivative chain
+
+A quick-and-dirty RFM translation to a new agentic environment under time pressure produced a working result — the derivative chain held well enough to generate a working agent specification from two reasoning documents within four hours, in a non-software domain, with a non-technical operator. But two structural drifts entered undetected:
+
+The operational document was repositioned as independent infrastructure rather than a derivative of the reasoning document, granting the agent explicit autonomy to modify it without a reasoning document touch. This inverts the derivative chain at the point most likely to cause silent failures.
+
+A fictional bash script entered the operational document, referencing files and commands that do not exist. It reads as executable infrastructure. It is not.
+
+Both failures share a common shape: under time pressure, the operational layer is where the derivative discipline slips first. The reasoning structure holds. The connection between reasoning and operational breaks.
+
+**Why not captured yet:** single deployment, single context. The pattern feels robust; a second independent signal would confirm it.
+
+**Possible home when ready:** Hard Lessons in `RFM_top_level_reasoning.md` under execution practice, or a behavioral instruction in the traveling prompt about translation verification checkpoints.
+
+**Signal count: 1** *(Antigravity IDE, organizational behavior analysis domain, real deployment under four-hour delivery pressure, May 2026)*
+
+---
+
+## O. The human's collaboration contract needs to be named at session start
+
+When the human doesn't state the collaboration loop structure explicitly before work begins — what counts as a draft, what counts as a file write, what order is expected — the LLM fills the gap with its own assumptions. Those assumptions are often wrong, and the correction comes after drift has already occurred rather than before it.
+
+This is distinct from engagement level (covered in the human prompt) and from thinking out loud (same). It's about the working agreement for the session: comparison intent, review loop, ordering. The LLM cannot reliably infer these from the work itself.
+
+**Why not captured yet:** single deployment, single context (Codex). The failure is human-side and travels with the human, but one observation is insufficient. A second independent signal — same gap surfacing in a Claude collaboration — would confirm it.
+
+**Possible home when ready:** human prompt, as a new entry between "be engaged or don't start" and "read the first few exchanges for posture." Or a new practice in "To Internalize Next."
+
+**Signal count: 1** *(Codex deployment, May 2026 — human-side failure identified by Codex LLM self-assessment)*
 
 ---
 

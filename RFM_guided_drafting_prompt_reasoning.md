@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Guided Drafting Prompt Reasoning Document
-`v0.0.0.4` // `module_reasoning` // [living]
+`v0.1.0` // `module_reasoning` // [living]
 
 ---
 

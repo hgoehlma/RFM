@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Traveling Prompt Reasoning Document
-`v0.0.0.5` // `module_reasoning` // [living]
+`v0.1.3` // `module_reasoning` // [living]
 
 ---
 
@@ -63,9 +63,31 @@ The traveling prompt must activate judgment, not trigger avoidance. Failure-mode
 
 A principle without behavioral expression is an aspiration. A behavioral instruction without its principle is a rule. Each section pairs them: the principle establishes why, the behavioral instruction establishes what the LLM does with it. The sequence within each section is always principle first, then behavior — matching the methodology's own founding constraint.
 
+**Why the prompt instructs explicit verification before assertion:**
+
+Conversational memory is an unreliable proxy for document content — an LLM working across a long session accumulates a model of what documents contain that diverges from their actual state. Acting on that model rather than the document produces confident, plausible, and wrong assertions. The instruction to verify before asserting is a behavioral check against this failure mode. It cannot be left implicit: an LLM that understands the principle in the abstract will still assert from memory under the pressure of a fast-moving session. The explicit instruction is load-bearing.
+
+**Why the prompt instructs capture while sharp and shorthand testing at the moment of capture:**
+
+Insight that emerges in a session has a short half-life — the context that makes it feel obvious is the session itself. Two failure modes follow from this. First, parking an insight for later processing loses the signal: what felt clear at the moment of emergence requires reconstruction later, and reconstruction is lossy. The instruction to capture immediately is load-bearing, not stylistic. Second, session-born shorthands feel self-evident to the parties who coined them and opaque to everyone else — including a fresh LLM in the next session. A shorthand that requires the session context to be understood belongs in the conversation, not the document. The cold-read test — can a first-time reader understand this without the conversation behind it? — must be applied at the moment of capture, not after the shorthand has already entered the document.
+
+**Why prompt structure reflects temporal targets, not design sequence:**
+
+The prompt operates across two distinct temporal moments. Identity instructions — who the co-author is, what governs the relationship — do their work at the edges: the opening declaration establishes the frame before any instruction is read; a closing re-activation re-grounds the identity just before the first user message lands. These are not redundant. The opening sets the interpretive frame cold. The closing restores it warm, after the operational instructions have been processed. Operational instructions — what to do when a specific situation arises — are retrieved during the session, not at its edges. Placing a session-initialization instruction inside an operational section misidentifies its temporal target. Cold start instructions belong at the closing edge alongside the identity re-activation, not inside document engagement rules. Section sequence should follow this logic, not the sequence in which behaviors were designed.
+
+**Why the coverage check follows derivation rather than preceding it:**
+
+LLM derivation is probabilistic — the same source documents will produce slightly different output each time. A derivation that begins by reading the previous version anchors on prior expression and narrows that variance toward refinement rather than fresh reasoning. The coverage check after derivation exploits the variance productively: derive clean to get the best reasoning from source, then check coverage to catch what the probabilistic process missed. A gap found during coverage check has two causes: the derivation missed reasoning present in the source, or the previous version carried reasoning the source did not hold. The first is corrected by adding to the derived version. The second is a source document gap requiring a reasoning addition before the next derivation cycle.
+
+**Why the derivation instruction within the procedure carries no version number:**
+
+The derivation instruction tells the LLM what to produce, not what the result should say. The artifact it produces carries a version assigned by the human at acceptance. The instruction itself does not accumulate a history — changes to it are changes to the operational document, tracked by that document's version.
+
 **Why the section type framework and Landscape drift modes are ambient discipline — and belong in the traveling prompt, not the sweep prompts:**
 
 Section-type awareness — how to engage differently with Boundaries vs. Open Questions vs. The Problem — governs every interaction with a reasoning document. It is ambient discipline, not corrective review. The same applies to Landscape drift detection: both drift modes (loose prose, early option selection) are caught best in the moment, not in a dedicated corrective pass. Placing this guidance in the sweep prompts would restrict it to deliberate invocation. Placing it in the traveling prompt makes it always present.
+
+A third Landscape failure mode belongs in the same instruction: when the joint work generates new vocabulary for a problem not yet fully known, that vocabulary hardens into reality before the object is understood. Terms coined in a session feel self-evident to the parties who coined them — and opaque to every subsequent reader, including a fresh LLM. Each new term is a glossary candidate until it has been tested on a cold read. This failure mode is caught best in the moment of coinage, which is why it belongs in ambient discipline rather than corrective review.
 
 ---
 
@@ -73,15 +95,17 @@ Section-type awareness — how to engage differently with Boundaries vs. Open Qu
 
 **Not sufficient without the reasoning documents.** The traveling prompt carries the discipline. The reasoning documents carry the content the discipline protects. An LLM operating with the prompt but without the relevant documents holds the right posture toward the wrong or missing material. Both are required. The prompt does not substitute for the documents it travels with.
 
+**Not specific to any project, including RFM itself.** The traveling prompt carries methodology discipline into any project where complex reasoning precedes execution. It must not contain instructions that only make sense when working on the RFM methodology itself. When session history is dominated by RFM development work, fresh derivations face a specific risk: RFM-specific framings harden into the prompt as if they were generic methodology instructions. The genericity constraint must be held explicitly — if an instruction would not apply to a practitioner using RFM on an unrelated project, it does not belong in the traveling prompt.
+
 **Not a Commander's Intent anchor until reasoning documents are established.** In execution mode the prompt functions as the ambient discipline layer while reasoning documents serve as Commander's Intent. This only holds when those documents are sufficiently complete before execution pressure arrives. A traveling prompt deployed ahead of established reasoning documents provides discipline without substance — it enforces a standard against material that does not yet exist.
 
 ---
 
 ## The Open Questions
 
-**[OQ-SSRP] Whether the section sequence reflects priority.**
+**[OQ-SSRP] Whether the ordering of the four operational sections reflects activation priority.**
 
-The current section order — engagement with documents, holding discipline, operational leakage, document landscape — follows the sequence in which the behaviors were designed, not an explicit priority ordering. Whether this sequence is the right one for LLM activation, or whether a different ordering would produce more reliable behavior, has not been tested.
+The temporal target principle establishes that identity instructions belong at the edges and operational instructions in the middle. What remains untested: whether the ordering of the four operational sections — document engagement, discipline, operational leakage, document landscape — produces more or less reliable LLM behavior in a different sequence. This has not been deliberately varied or observed.
 
 **[OQ-CMPB] The compression boundary.**
 
@@ -107,13 +131,16 @@ How claims are formed, how observation is separated from interpretation, and how
 
 Two failure modes identified in practice: drafting at the wrong hierarchy level without testing first, and external research pulling a session toward operational detail before the level is named. Both require an explicit pause and a named test before drafting begins. Principles without behavioral expression are aspirations. The traveling prompt is where aspirations become instructions.
 
+**[HL-EFBT] External feedback requires explicit triage before it affects documents.**
+
+When external or reviewer feedback enters a reasoning session, it exerts its own gravity — not the operational-detail pull that research re-anchoring addresses, but a flattening pressure: the tendency to treat all critique as equally valid before separating what is solid signal, what may be overreach, and what actually warrants a document change. Without explicit triage, the session polishes in the direction of the most recent feedback rather than the most correct one. The triage applies three tests in order: is this confirmed by evidence or reasoning; is this plausible but not yet grounded in the local context; does it actually change a document. Only what survives all three tests proceeds to a document change. Apply this split at the start of a feedback session, not at the end.
+
 **[HL-CDAO] Content-derived IDs are assigned once and never re-derived — the operational document carries the rule.**
 
 Positional numbers in Hard Lessons and Open Questions create a renumbering tax under curation and break cross-references silently. Content-derived IDs (`[HL-XXXX]`, `[OQ-XXXX]`) solve this — but only if the ID is assigned once at capture and treated as fixed. The risk is author-dependency: two practitioners may independently derive different abbreviations for the same entry. The mitigation is that the rule lives in `RFM_operational.md`, not in session memory. The traveling prompt carries the behavioral instruction to use IDs rather than position numbers in any cross-reference.
 
 ---
 
-*v0.0.0.5 // module_reasoning // [living]*
 *the traveling prompt is the derivative*
 *this document is the source*
 *the prompt follows the reasoning*

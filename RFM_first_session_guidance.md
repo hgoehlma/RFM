@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — First Session Guidance
-`v0.0.0.3` // `first_session_guidance` // [living]
+`v0.1.0` // `first_session_guidance` // [living]
 
 ---
 

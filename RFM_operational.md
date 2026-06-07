@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Operational Document
-`v0.1.0` // `operational` // [living]
+`v0.1.2` // `operational` // [living]
 
 ---
 
@@ -18,6 +18,7 @@ Where `type` is one of:
 - `sweep_prompt_structural`
 - `operational`
 - `human_prompt`
+- `glossary`
 
 Project files drop the version suffix — the file in the project is always current. The version is visible in the document header.
 
@@ -26,6 +27,8 @@ Archive files carry the version suffix: `RFM_prompts_reasoning_v0.0.5.md`
 Some artifacts are unique — produced once for a specific purpose with no repeating instances. These follow the same naming pattern but are not listed as reusable types:
 
 - `RFM_first_session_guidance.md` — practical preparation document for a newcomer's first guided drafting session
+
+Execution artifacts — the traveling prompt, sweep prompts, and human prompt — carry a version number in their header only. They do not carry a document type tag or `[living]` marker. These artifacts sit at the end of the derivative chain: they are regenerated from their source reasoning documents, not curated independently. The version number is sufficient to detect drift against the source.
 
 ---
 
@@ -96,6 +99,26 @@ One intro sentence naming the specific question this landscape must answer. Tabl
 
 **The Hard Lessons**
 `**[HL-XXXX] Title.**` as bold line, prose body as separate paragraph below. Category subheadings permitted when lesson count warrants grouping.
+
+---
+
+## Graduation and Expiry Procedure
+
+**Graduation** — an entry whose reasoning still has a recipient:
+1. Identify the destination: the section and document where a practitioner needs to encounter this reasoning for it to do its work.
+2. Draft the resolved reasoning in the destination document and confirm it is complete without the source entry. Complete the destination edit before returning to remove the source entry — one document at a time, in that order.
+3. Remove the source entry from its original location.
+4. Bump the version of both the destination document and the source document. Update the document map.
+
+Both steps 2 and 3 are required in the same session. An entry resolved but not removed annotates rather than curates.
+
+**Expiry** — an entry whose reasoning no longer has a recipient:
+1. Confirm the reasoning would not change how any practitioner thinks or acts anywhere in the current system.
+2. Confirm the version history holds the record.
+3. Remove the entry.
+4. Bump the version of the source document. Update the document map.
+
+The distinction between graduation and expiry is a reasoning act, not a mechanical classification. When the case is genuinely ambiguous, flag it rather than resolve it unilaterally.
 
 ---
 
