@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Operational Document
-`v0.1.2` // `operational` // [living]
+`v0.1.3` // `operational` // [living]
 
 ---
 
@@ -119,6 +119,38 @@ Both steps 2 and 3 are required in the same session. An entry resolved but not r
 4. Bump the version of the source document. Update the document map.
 
 The distinction between graduation and expiry is a reasoning act, not a mechanical classification. When the case is genuinely ambiguous, flag it rather than resolve it unilaterally.
+
+---
+
+## Prose Derivative Writing
+
+Text-facing RFM derivatives — public documentation, onboarding guides, worked examples, README files — require two layers of writing discipline applied together. Neither substitutes for the other.
+
+**Layer 1: Write from the reasoning**
+
+RFM prose follows from RFM's epistemic commitments. Apply these directly:
+
+- State the argument first, then support it. Do not build to a conclusion.
+- Name uncertainty explicitly. Do not smooth over it.
+- When something could fail, say so. Do not lead with aspiration.
+- Commit to one defensible position. Do not hedge across multiple alternatives to avoid commitment.
+
+These are not style preferences. They are what RFM reasoning looks like in prose form. A derivative that does not reflect them is not consistent with its source.
+
+**Layer 2: Protect legibility**
+
+LLM-generated text carries recognizable behavioral patterns. Readers detect them — consciously or not — and they undermine the signal the derivative is meant to carry. Suppress the following regardless of how well Layer 1 is applied:
+
+- Uniform paragraph length and sentence rhythm
+- Importance inflation: phrases like "a pivotal moment," "it is worth noting," "this underscores"
+- Throat-clearing openers: grand statements about the state of the world, restatement of the question just asked
+- Structural false contrasts: "It's not X, it's Y" / "Not X — just Y"
+- Em dashes: avoid entirely. Use a comma, parenthesis, or recast the sentence.
+- Vocabulary tells: "delve," "underscore," "robust," "seamless," "transformative," "holistic," "leverage" (as verb), "comprehensive"
+
+**Applying both layers**
+
+Draft for Layer 1 first — get the reasoning character right. Then read for Layer 2 — remove the patterns that would make the derivative read as machine-generated. A draft that passes Layer 1 but fails Layer 2 has the right content and will not be read. A draft that passes Layer 2 but fails Layer 1 is legible and says nothing worth reading.
 
 ---
 

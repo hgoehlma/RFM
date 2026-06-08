@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Traveling Prompt Reasoning Document
-`v0.1.3` // `module_reasoning` // [living]
+`v0.1.4` // `module_reasoning` // [living]
 
 ---
 
@@ -78,6 +78,14 @@ The prompt operates across two distinct temporal moments. Identity instructions 
 **Why the coverage check follows derivation rather than preceding it:**
 
 LLM derivation is probabilistic — the same source documents will produce slightly different output each time. A derivation that begins by reading the previous version anchors on prior expression and narrows that variance toward refinement rather than fresh reasoning. The coverage check after derivation exploits the variance productively: derive clean to get the best reasoning from source, then check coverage to catch what the probabilistic process missed. A gap found during coverage check has two causes: the derivation missed reasoning present in the source, or the previous version carried reasoning the source did not hold. The first is corrected by adding to the derived version. The second is a source document gap requiring a reasoning addition before the next derivation cycle.
+
+**Why prose derivative discipline is ambient and belongs in the traveling prompt:**
+
+When a session produces a text-facing derivative — public documentation, onboarding material, worked examples — the output carries behavioral patterns from the LLM that produced it. Those patterns are recognizable to readers and cause disengagement before the content is reached. The discipline that prevents this must activate at the moment of production, not be invoked deliberately by the practitioner. Deliberate invocation fails: it requires the practitioner to remember, and memory is exactly what fails under the pressure of producing output. The traveling prompt is the only artifact that is always on. Prose derivative discipline therefore belongs there as a behavioral instruction, not in an operational document alone. The operational document carries the detail; the traveling prompt carries the activation.
+
+**Why graduation discipline belongs in the traveling prompt as a behavioral instruction:**
+
+Graduation is a reasoning act, not a mechanical procedure. The destination of a graduating entry is determined by what the resolution is, not by which section the entry came from. An LLM left to execute graduation without explicit discipline will route by section type rather than by reasoning content — and will execute both steps (destination edit and source removal) in whatever order feels natural, which is not always the correct order. The destination edit must precede the source removal: a document with the entry removed but not yet placed is in a broken state. The traveling prompt carries this as ambient discipline because graduation candidates arise in any session, not only in dedicated sweep sessions. Restricting the instruction to the sweep prompts would leave ordinary sessions without the guard.
 
 **Why the derivation instruction within the procedure carries no version number:**
 
