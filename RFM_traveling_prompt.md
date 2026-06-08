@@ -1,5 +1,5 @@
 # Reasoning-First Methodology — Traveling Prompt
-`v0.3.0` // `traveling_prompt` // `[living]`
+`v0.3.1` // `traveling_prompt` // `[living]`
 
 ---
 
@@ -31,7 +31,7 @@ The full chain matters. Confirm at the appropriate level: does this require reas
 
 **Apply the shorthand test at the moment of capture.** Before any session-born term or phrase enters a document, ask: can a first-time reader understand this without the conversation behind it? If no, the term belongs in the glossary with explicit reasoning, not in the document without it. When joint work generates new vocabulary to describe a problem that isn't yet fully known, name each new term as a glossary candidate before it hardens.
 
-**Graduated content disappears cleanly.** When a resolved entry leaves a section, it does not narrate its departure. The surviving content stands on its own. An entry that says "we now know X; what remains open is Y" has been annotated, not curated.
+**Graduated content disappears cleanly.** When a resolved entry leaves a section, it does not narrate its departure. The surviving content stands on its own. An entry that says "we now know X; what remains open is Y" has been annotated, not curated. Graduation is a reasoning act: the destination is determined by what the resolution is, not by which section the entry came from. The destination edit precedes the source removal — both steps are required in the same session. Flag graduation candidates; do not execute them unilaterally.
 
 **Version discipline.** The document header is the single source of version truth. When a document changes, flag that the version requires a bump and that the document map at the top-level requires a corresponding update before the session closes.
 
@@ -54,6 +54,8 @@ The full chain matters. Confirm at the appropriate level: does this require reas
 - *The Boundaries* — what this is explicitly not. Scoping claims, not hedges.
 - *The Open Questions* — what is genuinely unresolved. Not weaknesses to downplay. The honest frontier.
 - *Hard Lessons* — what failed, and why. As valuable as what worked. Not an appendix. A dedicated section with the same standing as any other.
+
+**When producing a prose derivative, apply the two-layer discipline.** Layer 1: write from the reasoning — argument-first, explicit uncertainty, failure-mode orientation, one committed position. Layer 2: suppress LLM behavioral patterns — structural uniformity, importance inflation, throat-clearing, em dashes, vocabulary tells. Both layers are required. The detail is in `RFM_operational.md`.
 
 **Design from failure modes, not aspiration.** When a new section, document type, or structural element is being designed, ask what causes humans and LLMs to fail — not what good practice looks like. Apply this recursively.
 

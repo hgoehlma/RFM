@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.1.7` // `top_level_reasoning` // [living]
+`v0.1.8` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,13 +7,13 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.7 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
-| `RFM_operational.md` | Operational | v0.1.2 | File naming conventions, document map maintenance, version discipline |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.8 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_operational.md` | Operational | v0.1.3 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.0 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.3 | The reasoning document governing all system prompt decisions |
-| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.3 | The reasoning document governing traveling prompt design decisions |
+| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.4 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.1.0 | Derivation procedure and coverage check discipline for the traveling prompt |
-| `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.0 | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.1 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_prompts_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.1.0 | The prompt artifact that activates the structural sweep — findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.1.0 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
@@ -114,7 +114,7 @@ Enough tests and guardrails to control output without understanding internals. R
 
 ## The Chosen Direction and Why
 
-**On the central commitment**
+**Why reasoning is the primary artifact**
 
 The goal is facilitated joint reasoning between human and LLM. Everything that follows — the reasoning artifact at the center, the temporal discipline of reasoning before execution, the fractal structure, the enforced curation — serves that goal. It is not about elegant documentation. It is about creating a shared interface through which both human and LLM contribute, execute, and stay honest.
 
@@ -122,11 +122,11 @@ The methodology places the reasoning artifact at the center of any practice wher
 
 The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM — the exasperated instruction issued when someone acts without reading first. That resonance is not accidental and is kept. The reasoning document is not a record of decisions. It is where decisions are made. A record is written after the fact and drifts. A decision-making interface is consulted before action and stays alive because it must. Every change to a system begins with a change to the reasoning document at the appropriate level. The execution artifact is the derivative. The document is the source.
 
-**On the governing co-authorship pattern**
+**Why the co-authorship sequence governs joint reasoning**
 
 The joint reasoning sequence — propose → reflect → converge → execute — is the governing pattern through which co-authorship operates in practice. Both parties contribute through the first three steps. At the execution step, the natural division applies: the LLM formulates and edits, the human judges and confirms. This sequence is not a convenience — it is what keeps co-authorship from collapsing into either deference or unilateral authorship. The full reasoning for its design is in `RFM_prompts_reasoning.md`.
 
-**On the prompt system**
+**Why the prompt system has four components with distinct scopes**
 
 The methodology travels through a core pair of ambient artifacts and a corrective arm. The traveling prompt carries the discipline into every LLM conversation. The human prompt calibrates the human collaborator's posture across sessions. Together they ensure both sides of the collaboration are actively held. The two sweep prompts — structural and language — form the corrective arm: invoked deliberately during curation, each targeting a distinct failure class. Prevention and correction are different cognitive modes and require separate artifacts.
 
@@ -134,11 +134,11 @@ A fifth artifact exists for specific session types: the guided drafting prompt w
 
 The full reasoning for the prompt system design is in `RFM_prompts_reasoning.md`.
 
-**On the structure**
+**Why the same eight sections apply at every level**
 
 The same eight sections, the same discipline, the same navigational practice — whether you are at the top of the hierarchy or deep inside a single module. Think of a geographic map: a country map and a street map use identical discipline at different resolution. The street map is a module of the country map — each complete at its own resolution, each connected to the level above it. This property — the same structure governing at every level — is what mathematicians call fractal. The term is precise and worth keeping: a fractal is not just a pattern that repeats, it is a pattern whose rules apply at every level. That is exactly what the reasoning document hierarchy is.
 
-**On keeping it alive**
+**Why curation requires both addition and reduction**
 
 The document is kept alive through enforced curation. Not just addition but reduction. What has evolved? What can be removed? What needs replacing? A document that only grows is a document that is already dying. The pressure of constraint is a feature, not a limitation.
 
@@ -146,7 +146,7 @@ A healthy document expands when new signal arrives and contracts when old signal
 
 Hard lessons earn a dedicated section — not an appendix, not an afterthought.
 
-**On graduation and expiry**
+**Why graduation and expiry are reasoning acts, not mechanical procedures**
 
 Graduation and expiry are reasoning acts, not mechanical procedures. The discipline cannot be reduced to a lookup table — "hard lessons graduate to assumptions" or "open questions graduate to Chosen Direction" — because the destination depends on what the resolution is, not on what section the entry came from.
 
@@ -158,23 +158,41 @@ The graduation act requires two steps: place the resolved reasoning at its desti
 
 Every change to a derivative — code, prompt, operational document — begins with a change to its source reasoning document. Derivatives don't merely stay connected to the reasoning; they are created from it. That is the right order, and maintaining it is what curation means in practice.
 
-**On the glossary as a named document type**
+**Why the glossary travels with RFM regardless of domain**
 
 The methodology generates its own disambiguation need. Terms like co-author, derivative, compression, and sweep appear across all RFM documents and carry meanings that diverge from their everyday use. A glossary is warranted not by domain-specific conditions but by the methodology's existence — it travels with RFM regardless of the domain it is applied in. The glossary is a reasoning artifact, not a reference artifact: it records why a term means what it means here, not just what it means. It is subject to the same curation discipline as any reasoning document.
 
-**On the operational document as a domain-specific derivative**
+**Why the operational document is domain-specific while the methodology stays universal**
 
 The methodology is universal — the same eight sections, the same discipline, applicable across any domain where complex reasoning precedes execution. But some domains have hard execution contracts: software being the primary example, where constants, interfaces, and procedures must be explicitly specified for execution to be reliable. In those domains, the reasoning document is accompanied by an operational document that carries those contracts. The operational document is a derivative of the reasoning — created from it, not loosely connected to it. The methodology stays universal. The operational document is domain-specific. This is a design decision, not a concession: keeping implementation contracts out of the reasoning document is what allows the reasoning to stay portable across domains and across time.
+
+**Why prose derivatives carry a distinct prose style**
+
+When RFM produces text-facing derivatives — public documentation, onboarding guides, worked examples — those artifacts carry a prose character that follows from the methodology's own epistemic commitments. That character is not imposed stylistically. It is derivable: reasoning-first methodology produces argument-first prose. Explicit uncertainty in the reasoning document produces explicit uncertainty in the derivative. Failure-mode orientation produces prose that names what could go wrong rather than what is hoped to be true. One committed position, honestly reasoned, produces a conclusion that can be tested — not five hedged alternatives that cannot.
+
+This prose character is domain-agnostic. It does not depend on the practitioner's field or vocabulary. It follows from how RFM reasons, not from who is doing the reasoning.
+
+A second requirement is legibility. A derivative written with the right reasoning character but rendered in the behavioral patterns common to LLM-generated text will not be read the same way. Those patterns — structural uniformity, importance inflation, excessive connective punctuation, throat-clearing — are recognizable to readers regardless of whether they can name them. They undermine the signal the derivative is meant to carry. Suppressing them is not a stylistic preference. It is a condition for the derivative reaching its reader intact.
+
+The operational guidance for prose derivatives is carried in `RFM_operational.md`.
+
+**Why em dashes are excluded from prose derivatives**
+
+RFM derivatives are read before they are reasoned with. A reader who pattern-matches machine-generated text disengages before the content is reached. The reasoning is never encountered. Em dashes have become the highest-signal single typographic marker of LLM-generated prose — recognizable to readers who cannot name why, acted on before they decide to act on it.
+
+The exclusion is therefore not a stylistic preference. It is a commitment made in service of the derivative reaching its reader. If the content does not land, the reasoning behind it is irrelevant.
+
+The operational consequence is carried in `RFM_operational.md`.
 
 **Why reasoning documents avoid count-dependent references:**
 
 Anything in a reasoning document whose correctness depends on a count remaining stable becomes a maintenance liability the moment the count changes. The failure is silent: the reference still reads as valid while the document has already drifted. This principle governs four specific design decisions. Version numbers are excluded from cross-document references because they become stale the moment the referenced document is bumped — the document name is the stable identifier, and the document map carries the version snapshot for practitioners who need it. Numerical counts of entries (assumptions, options, hard lessons) are excluded because adding or removing one entry invalidates every statement about how many exist. Cross-document ID references are excluded because they would require a shared registry to prevent collisions — and the need for a registry is itself a signal that the entry is probably in the wrong place. IDs therefore scope to a single document only. The unifying principle: if a statement in a reasoning document would become wrong when a count changes elsewhere, that statement does not belong in a reasoning document.
 
-**On terminological discipline when the object is unsettled**
+**Why terminological discipline is a structural requirement when the object is unsettled**
 
 When [AS-PLHD] applies — when the problem is still being shaped and the language used to describe it is itself forming — terminological discipline becomes a structural requirement, not a stylistic preference. Three practices follow from this. First, words actively used to describe an unsettled problem are shorthand candidates: each one should find its way into the glossary with explicit reasoning, not just a definition. Second, the research that builds the Landscape is where terminological maturity gets assessed: where established vocabulary exists across prior approaches, the object is more settled; where the research surfaces sparse, contested, or session-invented terminology, that is the moment to name the condition and raise the glossary discipline for this project. Third, the traveling prompt carries the instruction to watch for this signal during Landscape research — when the joint work is generating new vocabulary to describe a problem that isn't yet fully known, name it and treat each new term as a glossary candidate before it hardens.
 
-**On execution mode and the two-mode design**
+**Why the methodology operates in two modes**
 
 The methodology operates in two modes. Reasoning mode is the default: reasoning precedes execution, the document is the source, every change begins at the appropriate level of the hierarchy. Execution mode is invoked when delivery pressure makes the full reasoning discipline locally unacceptable — a deadline, a sprint, a time-boxed commitment. Execution mode is not a degraded version of the methodology. It is the correct response to a specific condition, provided the reasoning documents are sufficiently complete before pressure hits.
 
@@ -182,7 +200,7 @@ The reasoning documents then function as Commander's Intent — a military doctr
 
 This running record is a Chesterton's Fence log — see the glossary for the full definition. Chesterton's Fence is the principle that you should not remove a fence until you understand why it was built. Under execution pressure, fences do get removed — the log ensures that each removal is noted and why. The return to reasoning mode after pressure lifts is not optional. It is where execution mode's debts are paid.
 
-**On the question of future autonomy**
+**Why increasing autonomy raises the stakes for reasoning documents**
 
 The most common objection to this approach is that increasingly capable and autonomous AI systems will eventually make it unnecessary. This misunderstands what the reasoning document is for. It is not a workaround for limited AI capability. It is the expression of human intent, human values, and human context applied to a specific problem. No level of AI autonomy removes the need for that — it only changes who executes once the intent is clear.
 
