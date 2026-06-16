@@ -20,21 +20,21 @@ Where `type` is one of:
 - `human_prompt`
 - `glossary`
 
-Project files drop the version suffix — the file in the project is always current. The version is visible in the document header.
+Project files drop the version suffix; the file in the project is always current. The version is visible in the document header.
 
 Archive files carry the version suffix: `RFM_prompts_reasoning_v0.0.5.md`
 
-Some artifacts are unique — produced once for a specific purpose with no repeating instances. These follow the same naming pattern but are not listed as reusable types:
+Some artifacts are unique (produced once for a specific purpose with no repeating instances). These follow the same naming pattern but are not listed as reusable types:
 
 - `RFM_first_session_guidance.md` — practical preparation document for a newcomer's first guided drafting session
 
-Execution artifacts — the traveling prompt, sweep prompts, and human prompt — carry a version number in their header only. They do not carry a document type tag or `[living]` marker. These artifacts sit at the end of the derivative chain: they are regenerated from their source reasoning documents, not curated independently. The version number is sufficient to detect drift against the source.
+Execution artifacts (the traveling prompt, sweep prompts, and human prompt) carry a version number in their header only. They do not carry a document type tag or `[living]` marker. These artifacts sit at the end of the derivative chain: they are regenerated from their source reasoning documents, not curated independently. The version number is sufficient to detect drift against the source.
 
 ---
 
 ## Document Map Maintenance
 
-The document map lives at the top of `RFM_top_level_reasoning.md`. It must be updated in the same session as any document version bump. Version numbers in the map must be real — no wildcards.
+The document map lives at the top of `RFM_top_level_reasoning.md`. It must be updated in the same session as any document version bump. Version numbers in the map must be real, no wildcards.
 
 The README carries orientation for public readers without version numbers. It is not a substitute for the document map.
 
@@ -56,13 +56,13 @@ Rules:
 
 Version numbers appear in the document header. The header is the single source of version truth. A document where the header version has not been bumped after an edit is already drifting.
 
-Version numbers follow the format vX.X.X — major.minor.patch. The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or structural changes. The major digit increments for fundamental methodology changes.
+Version numbers follow the format vX.X.X (major.minor.patch). The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or structural changes. The major digit increments for fundamental methodology changes.
 
 ---
 
 ## Empty Section Placeholder Convention
 
-When a section has no entries, use a placeholder rather than leaving it blank. This signals that the section was considered and is genuinely empty — not overlooked.
+When a section has no entries, use a placeholder rather than leaving it blank. This signals that the section was considered and is genuinely empty, not overlooked.
 
 Standard placeholder: `*No [section name] at this time.*`
 
@@ -74,7 +74,7 @@ A blank section is ambiguous. A placeholder is an explicit statement.
 
 ## Formatting Conventions for Reasoning Documents
 
-These conventions apply to all RFM reasoning documents. They are not methodology — they are the formatting that practice has shown best serves the reasoning each section requires. Newcomers are guided to follow them in their first session. RFM documents follow them as the current best formulation.
+These conventions apply to all RFM reasoning documents. They are not methodology; they are the formatting that practice has shown best serves the reasoning each section requires. Newcomers are guided to follow them in their first session. RFM documents follow them as the current best formulation.
 
 **The Problem**
 Plain prose. Bold subheading only when a structurally distinct second argument would otherwise read as continuation of the first.
@@ -106,7 +106,7 @@ One intro sentence naming the specific question this landscape must answer. Tabl
 
 **Graduation** — an entry whose reasoning still has a recipient:
 1. Identify the destination: the section and document where a practitioner needs to encounter this reasoning for it to do its work.
-2. Draft the resolved reasoning in the destination document and confirm it is complete without the source entry. Complete the destination edit before returning to remove the source entry — one document at a time, in that order.
+2. Draft the resolved reasoning in the destination document and confirm it is complete without the source entry. Complete the destination edit before returning to remove the source entry, one document at a time, in that order.
 3. Remove the source entry from its original location.
 4. Bump the version of both the destination document and the source document. Update the document map.
 
@@ -124,7 +124,7 @@ The distinction between graduation and expiry is a reasoning act, not a mechanic
 
 ## Prose Derivative Writing
 
-Text-facing RFM derivatives — public documentation, onboarding guides, worked examples, README files — require two layers of writing discipline applied together. Neither substitutes for the other.
+Text-facing RFM derivatives (public documentation, onboarding guides, worked examples, README files) require two layers of writing discipline applied together. Neither substitutes for the other.
 
 **Layer 1: Write from the reasoning**
 
@@ -139,7 +139,7 @@ These are not style preferences. They are what RFM reasoning looks like in prose
 
 **Layer 2: Protect legibility**
 
-LLM-generated text carries recognizable behavioral patterns. Readers detect them — consciously or not — and they undermine the signal the derivative is meant to carry. Suppress the following regardless of how well Layer 1 is applied:
+LLM-generated text carries recognizable behavioral patterns. Readers detect them (consciously or not) and they undermine the signal the derivative is meant to carry. Suppress the following regardless of how well Layer 1 is applied:
 
 - Uniform paragraph length and sentence rhythm
 - Importance inflation: phrases like "a pivotal moment," "it is worth noting," "this underscores"

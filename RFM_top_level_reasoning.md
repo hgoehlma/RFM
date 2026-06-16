@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.1.8` // `top_level_reasoning` // [living]
+`v0.2.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,13 +7,13 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.1.8 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.2.0 | The methodology itself — problem, assumptions, landscape, chosen direction, hard lessons |
 | `RFM_operational.md` | Operational | v0.1.3 | File naming conventions, document map maintenance, version discipline |
-| `RFM_glossary.md` | Glossary | v0.1.0 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.3 | The reasoning document governing all system prompt decisions |
+| `RFM_glossary.md` | Glossary | v0.1.3 | Disambiguation of terms that carry different meanings across reader contexts |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.5 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.4 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.1.0 | Derivation procedure and coverage check discipline for the traveling prompt |
-| `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.1 | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.2 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_prompts_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.1.0 | The prompt artifact that activates the structural sweep — findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.1.0 | The prompt artifact that activates the language sweep — findings for ruling, not edits |
@@ -23,6 +23,10 @@
 | `RFM_guided_drafting_prompt_operational.md` | Operational | v0.1.0 | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.1.0 | The prompt artifact that activates the guided drafting session — behavioral specification for the LLM, section intentions for the newcomer |
 | `RFM_first_session_guidance.md` | First session guidance | v0.1.0 | Practical preparation for a newcomer's first guided drafting session — what to bring, what to expect, what to watch for |
+| `RFM_derivation_prompt_reasoning.md` | Module reasoning | v0.4.1 | The reasoning document governing derivation prompt design decisions |
+| `RFM_derivation_prompt_operational.md` | Operational | v0.2.6 | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
+| `RFM_derivation_prompt.md` | Derivation prompt | v0.2.0 | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
+| `RFM_derivation_session_guidance.md` | Derivation session guidance | v0.1.0 | Practical preparation for a phase two derivation session — what to confirm, what to expect, the one step that must not be skipped |
 
 ---
 
@@ -38,7 +42,7 @@ Current tools address symptoms. None address the root cause: there is no discipl
 
 **Why now?**
 
-This problem is not new. What is new is that LLMs have made the consequences of missing reasoning suddenly visible and concrete. But the same LLMs also create the opportunity to fix it — because a well-reasoned document doesn't just help humans understand a system. It directly improves how AI executes within it. The problem and the solution have arrived together.
+This problem is not new. What is new is that LLMs have made the consequences of missing reasoning suddenly visible and concrete. But the same LLMs also create the opportunity to fix it. A well-reasoned document does not just help humans understand a system. It is the source from which an LLM can derive and execute autonomously, without the human present at execution time. The reasoning document is what makes human intent legible to a system that has no other way to access it. The problem and the solution have arrived together.
 
 ---
 
@@ -63,6 +67,8 @@ The assumptions above are beliefs about the domain — why the problem exists an
 **[AS-CDNO] - Curation must be deliberate, not optional.** A reasoning document that is only visited when something forces it gradually stops being true. Deliberate return — coming back without a specific trigger — is as necessary as triggered curation. A time-triggered cadence risks becoming performative rather than genuine. Both modes must be practiced as discipline, not suggestion.
 
 **[AS-RDHL] - A reasoning document designed explicitly for both humans and LLMs simultaneously outperforms one designed for either alone.** This is not a natural default. It requires conscious design.
+
+**[AS-TPAS] - The reasoning document hierarchy serves two structurally distinct phases, each with different design requirements.** In the first phase, human and LLM collaborate to build the reasoning documents: all eight sections, at every level of the hierarchy. Both parties must be able to read, contribute to, and challenge them. The design requirement is joint legibility. In the second phase, the completed documents are the source from which the LLM derives and executes across the artifact landscape: operational documents, glossary, code, and other domain-specific derivatives, without the human present at derivation time. The design requirement shifts to derivation-legibility: the documents must be complete and internally sufficient for autonomous execution. Documents optimised only for joint legibility will underperform at derivation. Documents designed only for derivation may be illegible to the human maintaining them. Both phases must be held simultaneously as design constraints. This assumption breaks if the two phases collapse: if derivation always happens in the presence of the human, the distinction loses its force. Current agentic practice suggests the phases are genuinely distinct and the distinction will sharpen as autonomy increases.
 
 **[AS-HLVS] - Hard lessons are as valuable as successes.** What failed, and why, carries as much reasoning value as what worked. A methodology that doesn't capture failure will repeat it.
 
@@ -92,7 +98,7 @@ What would it take to treat reasoning as a hierarchical, living artifact — mai
 
 *On Peter Naur and this methodology's closest prior art.* Naur's 1985 essay "Programming as Theory Building" is the closest diagnosis of the problem RFM addresses. His core claim — that programming is primarily the activity of building a theory, and that code is a secondary artifact of that theory — anticipates RFM's founding insight directly. What his essay does not provide is a structural prescription: no artifact for capturing the theory, no mechanism for the theory to survive beyond the person who holds it, and no anticipation of the LLM dimension — that disciplined externalization in text is sufficient for a system with no tacit knowledge to execute from it. Naur named the problem. RFM attempts to answer it.
 
-**The gap:** none of these treat reasoning as a hierarchical, living, curated artifact designed simultaneously for human understanding and LLM execution — maintained at every level, from strategic intent to individual module, through the full life of a system.
+**The gap:** none of these treat reasoning as a hierarchical, living, curated artifact that serves both phases of collaborative practice: joint human-LLM authorship, and autonomous LLM derivation from a completed document without the human present. No prior approach maintains this artifact at every level, from strategic intent to individual module, through the full life of a system.
 
 ---
 
@@ -113,6 +119,14 @@ Enough tests and guardrails to control output without understanding internals. R
 ---
 
 ## The Chosen Direction and Why
+
+**Why the methodology is built around two distinct phases**
+
+The methodology serves two structurally distinct goals. The first is joint reasoning: human and LLM collaborate to build the reasoning documents, each contributing across all eight sections at every level of the hierarchy. Neither can do this well alone. The collaboration is the point. The goal is a document hierarchy complete enough to act as the source for derivation.
+
+The second is autonomous execution: once the reasoning documents are sufficiently complete, the LLM derives from them without the human present at derivation time. The full artifact landscape follows: operational documents, glossary, code, and other domain-specific derivatives. The quality of each derivative is determined entirely by the quality of its source document. The human-LLM collaboration produces the source. The LLM executes from it. This is the design intent the entire methodology is built to serve.
+
+These two phases have different design requirements. The first requires joint legibility: both parties must be able to read, contribute to, and challenge the documents. The second requires derivation-legibility: the documents must be complete and internally sufficient for autonomous execution. Holding both simultaneously is the founding constraint of the methodology.
 
 **Why reasoning is the primary artifact**
 
@@ -258,6 +272,10 @@ The methodology is currently designed and validated at genesis stage — a singl
 
 Execution mode requires minimal capture — a record of deviations, deferrals, and broken assumptions sufficient to make the return to reasoning mode honest. What this looks like in practice is undesigned. How short can it be and still serve its purpose? What is the right artifact — a section appended to the reasoning document, a separate log, something else? How does a team distinguish a deviation worth capturing from noise? And what does the return-to-reasoning-mode session actually look like — what is its protocol, its output, its quality gate? These questions are unresolved. The two-mode design is a working hypothesis, not a tested practice.
 
+**[OQ-DLTQ] The derivation-legibility threshold.**
+
+The methodology names derivation-legibility as a design requirement for phase two: the reasoning documents must be complete and internally sufficient for autonomous LLM execution without the human present. What that threshold looks like in practice is partially known. One protocol has been tested: ask the LLM iteratively whether it could derive cleanly from the current documents alone, surface the assumptions it would have to make, reason through each one, adjust the documents accordingly, and repeat until the answer is yes. This protocol works: it surfaces undocumented assumptions, forces them into the documents, and produces a genuine readiness signal. What remains open is whether this protocol generalises across domains and document types, what makes some assumption-surfacing rounds more productive than others, and how derivation-legibility degrades as the system evolves and documents drift from it. The threshold has a working operationalisation; its reliability and generalisation remain to be tested.
+
 ---
 
 ## Hard Lessons
@@ -321,6 +339,10 @@ When an open question partially resolves, the resolved part simply goes. What su
 **[HL-ARGI] An assumption that receives a graduated insight must carry the reasoning that earned it, not just the conclusion.**
 
 When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default — it states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption — the evidence, the path, the conditions — must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader to test it honestly rather than inherit it blindly.
+
+**[HL-DCFL] Derivation failures can originate in source documents that are internally sound.**
+
+A reasoning document can be internally correct and still produce derivation failures. The failure mode identified in practice: two distinct concepts stated in close proximity in a Chosen Direction entry collapsed into one during LLM derivation under compression. The source document treated them as distinct. The deriving LLM conflated them. The document was not wrong. It was not sufficiently derivation-legible. This is the practical consequence of the two-phase design requirement named in [AS-TPAS]: joint legibility and derivation-legibility are different properties, and a document can satisfy one without satisfying the other. The mitigation is not longer or more detailed source writing. It is structural separation: concepts that must remain distinct at derivation time must be visibly distinct in the source, with enough distance or explicit differentiation that compression cannot collapse them.
 
 ---
 

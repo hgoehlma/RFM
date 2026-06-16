@@ -1,5 +1,5 @@
 # Reasoning-First — System Prompt(s) Reasoning Document
-`v0.1.3` // `module_reasoning` // [living]
+`v0.1.5` // `module_reasoning` // [living]
 
 ---
 
@@ -163,6 +163,12 @@ The reasoning/derivative binary — does this require reasoning? — is necessar
 
 Compression can arrive dressed as legitimate moves: curation ("this is wordy"), anti-deference ("propose and execute"), or re-homing ("this belongs at a lower level"). None of those framings change what compression is. Losing articulated reasoning is a structural change — it requires joint decision weight, not light confirmation. Naming the masquerade explicitly is what makes the behavioral instruction enforceable: an LLM that recognizes the pattern can flag it; one that only knows "don't compress" will miss it when it arrives as something else.
 
+**Why the coverage check after derivation is a traceability check, not a quality comparison:**
+
+The coverage check exists to catch attention failures: items present in the source documents that the derivation missed. Framing it as a quality comparison against the prior version introduces prior-version pull toward its phrasing, structure, and emphasis regardless of whether those choices were correct. That pull is the derivation loop failure named in `[HL-PDLR]` arriving one step earlier.
+
+The mitigation is traceability. Any item found in the prior version that is absent from the fresh derivation must trace back to the source documents before it can be added. If it traces cleanly, add it. If it does not trace, do not add it. Flag it as a source document gap and return to phase one. The prior version is never the authority. The source documents are.
+
 ---
 
 ## The Boundaries
@@ -185,7 +191,7 @@ The prompt artifacts are explicitly not:
 
 **[OQ-FLMT] The fresh-LLM test.**
 
-Can a fresh LLM, given only the traveling prompt and the relevant reasoning documents, orient correctly and contribute meaningfully without further explanation? This is the ongoing quality test for the prompt system as a whole — not a one-time validation. The test has been run at small document scale and passed. The document landscape has since grown substantially — whether the test still holds at current scale has not been verified.
+Can a fresh LLM, given only the traveling prompt and the relevant reasoning documents, orient correctly and contribute meaningfully without further explanation? This is the ongoing quality test for the prompt system as a whole — not a one-time validation. The test has been run at small document scale and passed. The document landscape has since grown substantially — whether the test still holds at current scale has not been verified. This test addresses phase one readiness: can a fresh LLM orient and contribute to the joint authorship session? Phase two readiness, whether the LLM can derive autonomously from the completed documents without the human present, is a distinct question. Both tests are required. Passing the fresh-LLM orientation test does not confirm derivation-legibility.
 
 **[OQ-CRSR] The co-author role synchronization risk.**
 
