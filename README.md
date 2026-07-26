@@ -1,3 +1,5 @@
+<img src="/assets/RFM.png" alt="Project Logo" width="50" />
+
 # Reasoning-First Methodology (RFM)
 
 Every complex system has the same failure: the thinking disappears. What remains is code, output, or structure, but the reasoning that shaped it, the alternatives that were rejected, the assumptions that were made: that is gone. Humans who come later must reconstruct it. And anyone (human or AI) working within it without that context is guessing.
