@@ -1,4 +1,6 @@
-<img src="/assets/RFM.png" alt="Project Logo" width="50" />
+<div align="center">
+  <img src="/assets/RFM.png" alt="RFM Logo" width="100" />
+</div>
 
 # Reasoning-First Methodology (RFM)
 
