@@ -1,0 +1,86 @@
+# Reasoning-First Methodology: RFM Unslop Skill Operational Document
+`v0.1.1` // `skill_unslop_operational` // `[living]`
+
+---
+
+## What this document covers
+
+Derivation procedure for the `rfm-unslop` skill and the traveling prompt declaration that activates it. The reasoning behind every decision here is in `RFM_skill_unslop_reasoning.md`.
+
+---
+
+## The artifact
+
+`rfm-unslop.skill` — a packaged skill file installed to the user's skill directory for the current environment.
+
+The skill source is `rfm-unslop/SKILL.md`. Package it using the skill-creator packaging tool available in the current environment.
+
+---
+
+## Traveling prompt declaration
+
+The traveling prompt must carry this line in the Identity section, immediately after the source/derivative statement:
+
+> This is a project using the RFM approach. Apply the `rfm-unslop` skill to every response you produce in this session.
+
+This declaration is the trigger mechanism. Without it, the skill does not fire. Any project using the RFM approach and loading the traveling prompt inherits the declaration.
+
+---
+
+## Source documents — load before editing the skill
+
+1. `RFM_skill_unslop_reasoning.md`: the reasoning governing all design decisions
+2. `RFM_operational.md`: formatting conventions and naming rules
+
+---
+
+## Skill structure
+
+The skill has no `references/` directory. All content is in `SKILL.md`. If the body exceeds 500 lines in a future revision, extract the pattern list to `references/patterns.md` and add a pointer in the body.
+
+YAML frontmatter rules:
+- Description must be a single quoted string. Multi-line YAML values break validation.
+- Keep description between 200-400 characters.
+- Front-load "RFM approach" in the description for truncation safety.
+
+---
+
+## Pattern list maintenance
+
+The pattern list in the skill body is the canonical list of slop patterns for RFM sessions. When a new pattern is identified in practice:
+
+1. Add it to the skill body under the appropriate position in the list.
+2. Update `RFM_skill_unslop_reasoning.md` if the new pattern reflects a reasoning change (new assumption, new hard lesson).
+3. Repackage the skill.
+4. Bump versions on both the skill source and this operational document.
+
+When a pattern is retired:
+1. Remove it from the skill body.
+2. Record why in Hard Lessons if the retirement reflects a lesson.
+3. Repackage and bump versions.
+
+---
+
+## Register rules maintenance
+
+The register-specific rules at the bottom of the skill body are a separate section from the pattern list. They govern threshold and remediation, not pattern detection. Edit them independently of the pattern list when register behavior changes.
+
+---
+
+## Coverage check: after derivation
+
+Verify the packaged skill:
+- Validates without error via the environment's skill packaging tool
+- Description is a single line, target 200-400 characters, "RFM approach" appears early
+- Body opens directly on the pattern list, no preamble
+- Register rules section present at the end
+- No em dashes in the skill body
+
+Verify the traveling prompt:
+- Declaration line present in Identity section
+- Version bumped
+
+---
+
+*skill_unslop_operational // [living]*
+*carries what; the reasoning documents carry why*

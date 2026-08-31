@@ -1,0 +1,126 @@
+# Reasoning-First Methodology: Sweep Prompts Operational Document
+`v0.1.5` // `operational` // [living]
+
+---
+
+## What this module produces
+
+This module produces sweep prompt artifacts, one per mode.
+
+**The structural sweep prompt** (`RFM_sweep_prompt_structural.md`) activates a concentrated architectural review pass over a reasoning document. Findings for human ruling, not edits. Invoked deliberately, not ambient.
+
+**The language sweep prompt** (`RFM_sweep_prompt_language.md`) activates a concentrated language review pass over a reasoning document. Findings for human ruling, not edits. Invoked deliberately, not ambient.
+
+**The operational sweep prompt** activates a boundary check between a reasoning document and its operational derivative. Findings for human ruling, not edits. Invoked deliberately, not ambient.
+
+No two sweep prompts are invoked simultaneously. Each requires a cognitive mode the other's presence would dilute.
+
+---
+
+## Source documents
+
+Load all before deriving any sweep prompt:
+
+1. `RFM_top_level_reasoning.md`: the methodology itself
+2. `RFM_prompts_reasoning.md`: the reasoning governing the prompt system architecture
+3. `RFM_sweep_module_reasoning.md`: the reasoning governing sweep prompt design decisions specifically
+
+---
+
+## Language catalog
+
+This catalog is the source specification for the language sweep prompt's "What you are looking for" section. Any change to failure types or per-section primary questions begins here.
+
+**Language failure types**
+
+- Session-born shorthands that require the drafting session to be understood
+- Insider terminology without definition or glossary pointer
+- Claims that outrun their evidence without being flagged
+- Reasoning compressed to a conclusion without showing the path
+- Observation and interpretation conflated in the same sentence
+- Wording that implies uncertainty that no longer exists
+- Curation failures: wordy (text that does not earn its place), journal-mode (language written for the session that produced it rather than a future reader), or redundant with reasoning stated elsewhere without adding signal
+
+Not in scope: structural failures, meaning content at the wrong level, wrong section, module strain, graduation candidates. Those belong to the structural sweep.
+
+**Grey zone rule:** when a failure is both a language failure and positional, the positional dimension must be ruled on by the appropriate sweep before the language dimension is assessed. Flag as grey zone, name both failure types, and do not assess the language dimension until the positional ruling is in.
+
+**Per-section primary questions**
+
+*The Problem:* Does this section use any terms carrying project-specific meaning without a glossary pointer or inline definition? Is the problem statement legible to a domain-agnostic reader?
+
+*The Assumptions:* Does each entry read as a testable belief to a first-time reader, or does the wording make it sound like a description or instruction? Has any session-born shorthand been captured without being spelled out?
+
+*The Landscape:* Does each row use consistent language across entries? Has any cell absorbed insider shorthand a fresh reader cannot parse? Does the closing paragraph use domain-legible wording or process-internal shorthand?
+
+*The Options Considered:* Is each option's rejection reasoning legible without the session context that produced it? Does any entry assume the reader knows what was tried before the option was named?
+
+*The Chosen Direction and Why:* Does each entry separate observation from interpretation cleanly? Has any entry compressed reasoning into a conclusion without showing the path? Is any claim present that outruns its evidence without being flagged?
+
+*The Boundaries:* Is each boundary stated in terms a first-time reader can apply, or does any entry require prior session context to understand what is being excluded?
+
+*The Open Questions:* Is each question genuinely open as stated, or has session context resolved it invisibly, leaving wording that implies uncertainty that no longer exists? Does any entry use shorthand for a question that requires spelling out?
+
+*The Hard Lessons:* Does each lesson carry the reasoning that earned it, or has it been compressed to a conclusion? Would a reader who was not in the session that produced the lesson understand both what happened and why it matters?
+
+---
+
+## Operational sweep specification
+
+This specification is the source for the operational sweep prompt's entry conditions, finding criteria, and output format. Any change to any of these begins here.
+
+**Entry conditions**
+
+Two conditions must both be met before the boundary check begins.
+
+*Both documents present.* The sweep requires the reasoning document and its operational derivative simultaneously. If either is absent, stop and flag it.
+
+*Source set named and complete.* Verify that the operational document names its source set and that the source set includes `RFM_top_level_reasoning.md`. If the source set is missing or incomplete, stop and flag it for human ruling. This is a hard stop, not a finding. A sweep conducted against a derivative with an unverified source set cannot confirm its findings are complete.
+
+**Finding criteria**
+
+*Forward direction.* An announced need is a finding only when its absence would leave an LLM deriving the current artifact without a necessary behavioral decision, constraint, or interface specification. Do not report the absence of a restatement of reasoning, an acknowledgement of future uncertainty, or a textual counterpart that adds no derivation guidance.
+
+*Reverse direction.* A specification is grounded when it traces to any commitment in the reasoning document, including a chosen direction or design principle. The absence of a one-to-one announced need is not a finding when broader grounding exists. A finding requires the absence of any grounding at any level.
+
+*Pre-filter gate.* Before surfacing a finding in either direction, confirm that the proposed addition or change would alter current derivation behavior. If it would not, do not report it.
+
+**Output format**
+
+Each finding uses two location fields, one per document. Either field may be blank when the finding is one-sided.
+
+*Reasoning document:* [section name, entry or claim if specific; blank if the finding originates in the operational document]
+*Operational document:* [section name, entry if specific; blank if the finding originates in the reasoning document]
+*Finding:* [the boundary failure, named precisely: announced need with no coverage, or specification with no grounding in the reasoning document]
+*Proposed resolution:* [one sentence]
+
+When a section has no findings: **[Section name]: no boundary findings.**
+
+---
+
+## Sweep session invocation
+
+Load the sweep prompt as the system prompt for a fresh conversation. Provide the document under sweep in the first human turn. Do not include other documents unless the sweep type requires them. The structural sweep and language sweep read a single document; the operational sweep requires both the reasoning document and its operational derivative.
+
+Do not invoke a sweep inside a co-authorship session. The traveling prompt and a sweep prompt require incompatible postures. A sweep run inside a co-authorship session is not a sweep. It is the traveling prompt applied to one document, which is what the traveling prompt already does. The separation is the point.
+
+Run one sweep per session. Running two simultaneously dilutes the cognitive mode each requires.
+
+---
+
+## Coverage check: after derivation
+
+Compare against the previous version of the sweep prompt. The derivation is accepted if it is structurally better or equivalent and loses no load-bearing behavioral instructions. If the previous version carried something the derivation missed, assess whether it was present in the source reasoning documents. If yes: the derivation missed it, add it. If no: the previous version carried reasoning its source did not hold; that is a source document gap requiring a reasoning document addition before the next derivation cycle.
+
+Do not loop the derivation. One pass, one coverage check, one reconciliation.
+
+---
+
+## Version discipline
+
+The version number is assigned by the human at acceptance. A clean re-derivation increments the minor digit. A patch-level fix increments the patch digit. The header of each sweep prompt file is the single source of version truth for that artifact.
+
+---
+
+*operational // [living]*
+*carries what; the reasoning documents carry why*

@@ -1,0 +1,75 @@
+# Reasoning-First Methodology: RFM Ripple Check Skill Operational Document
+`v0.1.0` // `skill_rfm_ripple_check_operational` // `[living]`
+
+---
+
+## What this document covers
+
+Derivation procedure for the `rfm-ripple-check` skill. The reasoning behind every decision here is in `RFM_skill_rfm_ripple_check_reasoning.md`.
+
+---
+
+## The artifact
+
+`rfm-ripple-check.skill` — a packaged skill file installed to the user's skill directory for the current environment.
+
+The skill source is `rfm-ripple-check/SKILL.md`. Package it using the skill-creator packaging tool available in the current environment.
+
+---
+
+## Trigger conditions
+
+The skill description is the trigger mechanism. The conditions as of v0.1.0:
+
+- A term is renamed, retired, or redefined
+- A section or document is retired
+- Content graduates out of any section (Open Question resolved, Hard Lesson metabolized, deferred item closed)
+- An edit changes what one document says about another
+
+When adding or changing trigger conditions, update the skill description first. The description is the canonical list.
+
+---
+
+## Source documents — load before editing the skill
+
+1. `RFM_skill_rfm_ripple_check_reasoning.md`: the reasoning governing all design decisions
+2. `RFM_operational.md`: formatting conventions and naming rules
+
+---
+
+## Skill structure
+
+The skill has no `references/` directory. All content is in `SKILL.md`. If the body exceeds 500 lines in a future revision, extract the procedure to `references/procedure.md` and add a pointer in the body.
+
+YAML frontmatter rules:
+- Description must be a single quoted string. Multi-line YAML values break validation.
+- Keep description between 200-400 characters.
+- Front-load "RFM sessions only" in the description for truncation safety.
+
+---
+
+## Retirement of `/ripple-check`
+
+The general `/ripple-check` skill is retired when `rfm-ripple-check` is installed. Steps:
+
+1. Install `rfm-ripple-check.skill`.
+2. Remove `/ripple-check` from the user skill directory.
+3. Remove R-RIPPLECHECK from `RFM_handover_rules.md`.
+4. Bump versions on `RFM_handover_rules.md` and this document.
+5. Run `rfm-ripple-check` to confirm no remaining references to the old skill name across RFM documents.
+
+---
+
+## Coverage check: after derivation
+
+Verify the packaged skill:
+- Validates without error via the environment's skill packaging tool
+- Description is a single line, target 200-400 characters, "RFM sessions only" appears first
+- Body opens directly on the procedure, no preamble
+- Behavioral constraints section present at the end
+- No em dashes in the skill body
+
+---
+
+*skill_rfm_ripple_check_operational // [living]*
+*carries what; the reasoning documents carry why*

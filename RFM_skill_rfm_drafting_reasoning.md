@@ -1,0 +1,82 @@
+# Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
+`v0.1.1` // `skill_rfm_drafting_reasoning` // `[living]`
+
+---
+
+## The Problem
+
+RFM has two corrective mechanisms for document quality: the structural sweep and the language sweep. Both are after-the-fact passes. They catch failures that have already entered a document. The cost of correction scales with how much content was drafted before the sweep ran.
+
+The gap is at the moment of production. When drafting new content for a reasoning or operational document, the practitioner holds the argument in mind and writes. Section-type conventions, placement rules, and language discipline exist in separate documents. Under production load, they compete poorly with the drive to get the reasoning down. Structural misplacements and language failures enter at this moment and persist until a sweep finds them.
+
+Nothing currently fires at the moment of drafting to encode: where does this belong, what does this section require, and what does clean RFM prose look like.
+
+---
+
+## The Assumptions
+
+**[AS-PRODLOAD]** Production load is the highest-risk moment for structural misplacement. The practitioner holds the reasoning and writes simultaneously. Checking placement requires stepping out of that mode. Without a forcing function, the check does not happen.
+
+**[AS-DISTINCT]** Structural misplacement is distinct from language failure. A well-written sentence in the wrong section is a structural failure. A correctly placed sentence with slop patterns is a language failure. Both need coverage but they are different failure classes.
+
+**[AS-UNSLOP]** `rfm-unslop` already handles language compliance for all RFM session output. The drafting skill does not replicate that coverage. It references it and covers what it does not.
+
+**[AS-HOME]** As RFM drafting practice accumulates insight, that insight needs a canonical home. The drafting skill is that home. It is explicitly extensible.
+
+**[AS-SCOPE]** The skill covers reasoning documents, operational documents, and glossary entries. Execution artifacts sit at the end of the derivative chain and are regenerated, not drafted independently. They are out of scope.
+
+---
+
+## The Landscape
+
+*[To be completed in a dedicated session. Prior approaches to consider: ambient instructions in the traveling prompt, section-type guidance in the operational doc, structural sweep as the only structural corrective.]*
+
+---
+
+## The Options Considered
+
+*[To be completed in a dedicated session.]*
+
+---
+
+## The Chosen Direction and Why
+
+**Why a skill rather than extended operational doc guidance.**
+The operational doc carries formatting conventions. Drafting guidance is behavioral: it needs to fire at the moment of production, not be consulted after the fact. A skill fires; a document section does not.
+
+**Why one skill covering structural placement, section-type behavior, and the derivative chain.**
+These three concerns arise simultaneously at the moment of drafting. Splitting them across separate artifacts requires a classification decision at the trigger point. That decision fails under production load. One skill with clear internal layers removes the decision.
+
+**Why language compliance is delegated to rfm-unslop rather than duplicated.**
+`rfm-unslop` is already always-on for all RFM session output. Duplicating its coverage in this skill creates two sources of truth for language rules. Delegation keeps language rules in one place and makes this skill's scope structurally distinct.
+
+**Why glossary entries are in scope.**
+Glossary entries are drafted at the same moment as other document content. The failure mode is specific: a term enters a document before it has been tested for standalone readability. The shorthand test and the reasoning requirement are the correct corrective at the drafting moment, not after the fact.
+
+---
+
+## The Boundaries
+
+**Not a substitute for the structural sweep.** The structural sweep is a concentrated corrective pass requiring architectural judgment across a whole document. The drafting skill governs a single piece of content at the moment of production.
+
+**Not a substitute for the language sweep.** `rfm-unslop` is the production-time language corrective. The language sweep catches what gets through.
+
+**Not applicable to execution artifacts.** Traveling prompt, sweep prompts, and human prompt are regenerated from their sources. Drafting guidance does not apply to regeneration.
+
+**Not applicable to non-RFM projects.** The section-type conventions and document structure rules are RFM-specific. The skill description front-loads this scope restriction.
+
+---
+
+## The Open Questions
+
+**[OQ-TRIGGER] Does the skill trigger reliably on drafting tasks without being explicitly invoked?**
+The description is written to fire on "drafting new content for any reasoning document, operational document, or glossary entry." Whether this is specific enough to activate without being asked, across different drafting contexts, is not yet known. Needs observation across sessions.
+
+**[OQ-GROWTH] What additional drafting guidance belongs here that is not yet known?**
+Practice will surface failure classes not yet anticipated. This question tracks what accumulates and signals when the skill body needs updating.
+
+---
+
+## Hard Lessons
+
+*[No hard lessons at this time.]*
