@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.2.10` // `top_level_reasoning` // [living]
+`v0.2.11` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,7 +7,7 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_operational.md` | Operational | v0.1.6 | File naming conventions, document map maintenance, version discipline |
+| `RFM_operational.md` | Operational | v0.1.7 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.8 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.6 | The reasoning document governing traveling prompt design decisions |
@@ -28,7 +28,7 @@
 | `RFM_derivation_prompt_operational.md` | Operational | v0.2.6 | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
 | `RFM_derivation_prompt.md` | Derivation prompt | v0.2.0 | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
 | `RFM_derivation_session_guidance.md` | Derivation session guidance | v0.1.1 | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
-| `RFM_skill_unslop_reasoning.md` | Skill reasoning | v0.2.0 | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
+| `RFM_skill_unslop_reasoning.md` | Skill reasoning | v0.2.1 | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
 | `RFM_skill_unslop_operational.md` | Skill operational | v0.1.1 | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
 | `RFM_skill_rfm_ripple_check_reasoning.md` | Skill reasoning | v0.1.1 | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
 | `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.1.0 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
@@ -304,6 +304,10 @@ The most robust design decision in the methodology was to derive the eight secti
 **[HL-DMAP] The document map belongs at the top of every top-level reasoning document when a document landscape exists to navigate.**
 
 A reader or LLM encountering a project for the first time cannot orient from the top-level reasoning document alone. The map is only meaningful when a document landscape exists to navigate; a single-document system has nothing to map. Navigation is not reasoning, but it is a prerequisite for reasoning about the right thing. The document map and the public-facing entry point for new readers serve different audiences and must not be conflated: the map carries real version numbers for practitioners detecting drift; the entry point carries orientation without versions for readers encountering the project fresh. Neither substitutes for the other.
+
+**[HL-SELFREF] The top-level reasoning document must not appear as a row in its own document map.**
+
+When `RFM_top_level_reasoning.md` was included as a map row, sessions updated the document header version without updating the corresponding map entry. The mismatch was invisible during the session and surfaced only at the next version check, where it had to be traced and corrected rather than having never existed. Excluding the containing document from the map it governs removes that maintenance surface.
 
 **[HL-TLOR] Once a module exists, top-level ownership must be actively reduced.**
 

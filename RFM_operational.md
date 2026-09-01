@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.1.6` // `operational` // [living]
+`v0.1.7` // `operational` // [living]
 
 ---
 
@@ -67,7 +67,7 @@ Reasoning documents must not contain statements whose correctness depends on a c
 
 ## Version Number Discipline
 
-Version numbers appear in the document header. The header is the single source of version truth. A document where the header version has not been bumped after an edit is already drifting.
+Version numbers appear in the document header. The header is the single source of version truth. An unbumped header mid-session is expected, not drift. Drift is a header and document map that still disagree after the close-out bump step has run.
 
 Version numbers follow the format vX.X.X (major.minor.patch). The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or structural changes. The major digit increments for fundamental methodology changes.
 

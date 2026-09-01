@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Reasoning Document
-`v0.2.0` // `skill_unslop_reasoning` // `[living]`
+`v0.2.1` // `skill_unslop_reasoning` // `[living]`
 
 ---
 
@@ -84,15 +84,13 @@ Epistemic failures (sycophancy, anchoring to early framings, uniform confidence 
 
 **Not a voice or style skill.** Adding soul, varying rhythm, using first person: wrong register for reasoning documents. The generic unslop skill covers those. This skill strips patterns; it does not add character.
 
-**Not applicable to non-RFM projects.** The trigger is the session system prompt's RFM declaration. Without that declaration the skill does not fire. Within RFM sessions it fires on all output without exception.
+**Not applicable to non-RFM projects.** The trigger is the session system prompt's RFM declaration. Without that declaration the skill does not fire.
+
+**Not self-activating.** The skill does not fire through its description alone. Reliable activation requires explicit invocation. In RFM projects, that invocation is handled by the rules file and the handover carry-forward mechanism.
 
 ---
 
 ## The Open Questions
-
-**[OQ-CONV] Does the skill fire reliably on conversational output in practice?**
-
-The design intent is session-wide activation on all output. In practice, slop continues to enter conversational responses in RFM sessions despite the declaration being present in the traveling prompt. Whether this is a failure of the declaration wording, the skill artifact's pattern specificity, or LLM compliance under load is not yet determined. Needs evidence from structured observation across sessions.
 
 **[OQ-EPFL] Can epistemic flatness be specified concretely enough to be actionable in the skill?**
 
