@@ -1,5 +1,5 @@
 # RFM: Structural Sweep Prompt
-`v0.3.2` // `sweep_prompt_structural` // [living]
+`v0.3.3` // `sweep_prompt_structural` // [living]
 
 ---
 
@@ -41,7 +41,7 @@ Primary question: Does each entry state a testable belief, or has implementation
 Primary question: Does each row distinguish its approach clearly from its neighbors? Does the closing paragraph name the gap without beginning to choose? Has early option selection absorbed work that belongs in Options Considered?
 
 **The Options Considered**
-Primary question: Is each option genuinely distinct, or is one a restatement of another dressed differently? Is any option missing that the Chosen Direction implicitly rejected without naming?
+Primary question: Is each option genuinely distinct, or is one a restatement of another dressed differently? Does each entry show evidence of having been actively considered, rather than invented to round out the section? Does the rejection name a specific failure mode, or only a preference? Does any entry restate the Chosen Direction's committed path instead of a discarded alternative? Is any option missing that the Chosen Direction implicitly rejected without naming?
 
 **The Chosen Direction and Why**
 Primary question: Does each entry carry only why, or has how leaked in? Is any entry restating an option rather than justifying a direction? Does any entry restate content that a child module now owns, a sign the parent failed to contract after branching?
@@ -50,7 +50,7 @@ Primary question: Does each entry carry only why, or has how leaked in? Is any e
 Primary question: Has any boundary drifted into a constraint on decision-making (which belongs in Assumptions)? Is anything described as "not this" that is actually just undesigned?
 
 **The Open Questions**
-Primary question: Is any question ready to graduate, partially or fully resolved by the Chosen Direction or by an assumption? Is any question actually a deferred decision rather than a genuine unknown?
+Primary question: Is any question ready to graduate, partially or fully resolved by the Chosen Direction or by an assumption? Is any question actually a deferred decision rather than a genuine unknown? Does the question have a plausible condition under which it could be resolved, or is it open-ended with no path to an answer? Would resolving it materially change the reasoning or the system, or is it decorative?
 
 **The Hard Lessons**
 Primary question: Has any lesson been metabolized into an assumption or Chosen Direction and should now graduate? Is any lesson a restatement of another in different language?

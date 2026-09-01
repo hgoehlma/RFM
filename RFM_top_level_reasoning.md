@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.2.11` // `top_level_reasoning` // [living]
+`v0.2.12` // `top_level_reasoning` // [living]
 
 ---
 
@@ -15,7 +15,7 @@
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.4 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_module_reasoning.md` | Module reasoning | v0.2.3 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_module_operational.md` | Operational | v0.1.5 | Source documents, coverage check, and version discipline for the sweep prompts |
-| `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.3.2 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
+| `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.3.3 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.1.3 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_operational.md` | Operational sweep prompt | v0.1.2 | The prompt artifact that activates the operational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.1 | Reasoning document governing human prompt design decisions |
@@ -307,7 +307,11 @@ A reader or LLM encountering a project for the first time cannot orient from the
 
 **[HL-SELFREF] The top-level reasoning document must not appear as a row in its own document map.**
 
-When `RFM_top_level_reasoning.md` was included as a map row, sessions updated the document header version without updating the corresponding map entry. The mismatch was invisible during the session and surfaced only at the next version check, where it had to be traced and corrected rather than having never existed. Excluding the containing document from the map it governs removes that maintenance surface.
+When `RFM_top_level_reasoning.md` was included as a map row, sessions updated the document header version without updating the corresponding map entry. The mismatch was invisible during the session and surfaced only at the next version check, where it had to be traced and corrected rather than having never existed. Excluding the containing document from the map it governs removes that maintenance surface. This applies while the map lives inside the top-level reasoning document. Once the map is extracted into its own file, see HL-MAPSCALE, self-listing is safe: the map and the document being edited are no longer the same file.
+
+**[HL-MAPSCALE] At sufficient project scale, the document map outgrows the top-level reasoning document and must become its own governed file.**
+
+A large-scale deployment of RFM extracted its document map into a standalone file with its own version, independent of the top-level reasoning document it once lived inside. The map's own growth, not the surrounding document's content, was the presenting symptom of strain. Two additions followed naturally once the map had its own space: a category for maintained inputs that modules consume but do not own as descendants in the reasoning-to-execution chain, and a set of task-specific read pathways naming which documents to read for which kind of work. Extraction is not required at every scale. It becomes warranted when the map itself, not the reasoning it navigates, is what strains.
 
 **[HL-TLOR] Once a module exists, top-level ownership must be actively reduced.**
 
