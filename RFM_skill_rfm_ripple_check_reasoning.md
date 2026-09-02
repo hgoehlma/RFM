@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: RFM Ripple Check Skill Reasoning Document
-`v0.1.1` // `skill_rfm_ripple_check_reasoning` // `[living]`
+`v0.1.2` // `skill_rfm_ripple_check_reasoning` // `[living]`
 
 ---
 
 ## The Problem
 
-Structural changes in RFM documents — renamed terms, retired sections, graduated content — propagate inconsistently. A change made in one document leaves the old reference standing in others. Each document looks correct in isolation. The inconsistency is invisible until a session encounters the conflict and must reconstruct what changed and when.
+A structural change in an RFM document, such as a renamed term, a retired section, or graduated content, propagates inconsistently. A change made in one document leaves the old reference standing in others. Each document looks correct in isolation. The inconsistency is invisible until a session encounters the conflict and must reconstruct what changed and when.
 
 The failure is not that practitioners miss ripple effects intentionally. It is that the scope of a structural change is not visible at the moment it is made. Without a systematic check, the practitioner works from a local view of the change and closes it without knowing what references remain active elsewhere.
 

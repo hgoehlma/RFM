@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.1.8` // `module_reasoning` // [living]
+`v0.1.9` // `module_reasoning` // [living]
 
 ---
 
@@ -199,7 +199,7 @@ The co-author role exists in two places: the traveling prompt and the methodolog
 
 **[OQ-FRDQ] The future-reader discipline question.**
 
-Hard Lessons, and reasoning document content generally, risk being written for the session in which the insight was earned rather than for future readers encountering the methodology fresh. Session-specific references, examples that require prior context, and language that assumes shared history all degrade over time. The language sweep is the established corrective mechanism: concentrated review with explicit attention to disambiguation failures is well-positioned to flag content that is opaque without context. What remains open is whether the sweep alone is sufficient, or whether additional discipline is needed at the moment of capture to prevent session residue from entering documents in the first place.
+Hard Lessons, and reasoning document content generally, risk being written for the session in which the insight was earned rather than for future readers encountering the methodology fresh. Session-specific references, examples that require prior context, and language that assumes shared history all degrade over time. The language sweep is the established corrective mechanism: concentrated review with explicit attention to disambiguation failures is well-positioned to flag content that is opaque without context. What remains open is whether the sweep alone is sufficient, or whether additional discipline is needed at the moment of capture to prevent session residue from entering documents in the first place. One instance has now been observed. A reasoning entry was drafted with three sentences narrating the incident that prompted it. Nothing in the drafting path flagged them, and human reading caught the entry before it reached a document. The instance shows the gap is real at capture time. It does not show that capture-time discipline would cost less than sweep-time detection, which is what the question turns on.
 
 **[OQ-TRCQ] The trigger conditions question.**
 

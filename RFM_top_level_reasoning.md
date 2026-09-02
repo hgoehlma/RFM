@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.2.13` // `top_level_reasoning` // [living]
+`v0.2.14` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,15 +7,15 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_operational.md` | Operational | v0.1.8 | File naming conventions, document map maintenance, version discipline |
+| `RFM_operational.md` | Operational | v0.1.9 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.8 | The reasoning document governing all system prompt decisions |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.9 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.6 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.1.1 | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.4 | The system prompt that carries the methodology into every LLM conversation |
-| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.2.3 | The reasoning document governing sweep prompt design decisions |
+| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.2.4 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_module_operational.md` | Operational | v0.1.5 | Source documents, coverage check, and version discipline for the sweep prompts |
-| `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.3.3 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
+| `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.3.4 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.1.3 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_operational.md` | Operational sweep prompt | v0.1.2 | The prompt artifact that activates the operational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.1 | Reasoning document governing human prompt design decisions |
@@ -28,12 +28,12 @@
 | `RFM_derivation_prompt_operational.md` | Operational | v0.2.6 | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
 | `RFM_derivation_prompt.md` | Derivation prompt | v0.2.0 | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
 | `RFM_derivation_session_guidance.md` | Derivation session guidance | v0.1.1 | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
-| `RFM_skill_unslop_reasoning.md` | Skill reasoning | v0.2.2 | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
-| `RFM_skill_unslop_operational.md` | Skill operational | v0.1.1 | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
-| `RFM_skill_rfm_ripple_check_reasoning.md` | Skill reasoning | v0.1.1 | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
-| `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.1.0 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
+| `RFM_skill_unslop_reasoning.md` | Skill reasoning | v0.2.3 | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
+| `RFM_skill_unslop_operational.md` | Skill operational | v0.1.2 | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
+| `RFM_skill_rfm_ripple_check_reasoning.md` | Skill reasoning | v0.1.2 | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
+| `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.1.1 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
 | `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.1.1 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
-| `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.1.0 | Derivation procedure, skill body maintenance, and R-LENSMODE retirement steps for the rfm-drafting skill |
+| `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.1.1 | Derivation procedure, skill body maintenance, and R-LENSMODE retirement steps for the rfm-drafting skill |
 
 ---
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Ripple Check Skill Operational Document
-`v0.1.0` // `skill_rfm_ripple_check_operational` // `[living]`
+`v0.1.1` // `skill_rfm_ripple_check_operational` // `[living]`
 
 ---
 
@@ -11,9 +11,9 @@ Derivation procedure for the `rfm-ripple-check` skill. The reasoning behind ever
 
 ## The artifact
 
-`rfm-ripple-check.skill` — a packaged skill file installed to the user's skill directory for the current environment.
+The `rfm-ripple-check` skill, installed and active in the user's environment.
 
-The skill source is `rfm-ripple-check/SKILL.md`. Package it using the skill-creator packaging tool available in the current environment.
+The skill source is `rfm-ripple-check/SKILL.md`. Delivery is environment-specific: some environments package the source into an installable file the user downloads, others present the source for review and save it directly. Use the mechanism the current environment provides. The requirement is that the user ends up with the skill installed, not that a file is produced.
 
 ---
 
@@ -30,7 +30,7 @@ When adding or changing trigger conditions, update the skill description first. 
 
 ---
 
-## Source documents — load before editing the skill
+## Source documents: load before editing the skill
 
 1. `RFM_skill_rfm_ripple_check_reasoning.md`: the reasoning governing all design decisions
 2. `RFM_operational.md`: formatting conventions and naming rules
@@ -52,7 +52,7 @@ YAML frontmatter rules:
 
 The general `/ripple-check` skill is retired when `rfm-ripple-check` is installed. Steps:
 
-1. Install `rfm-ripple-check.skill`.
+1. Install `rfm-ripple-check`.
 2. Remove `/ripple-check` from the user skill directory.
 3. Remove R-RIPPLECHECK from `RFM_handover_rules.md`.
 4. Bump versions on `RFM_handover_rules.md` and this document.
@@ -62,8 +62,8 @@ The general `/ripple-check` skill is retired when `rfm-ripple-check` is installe
 
 ## Coverage check: after derivation
 
-Verify the packaged skill:
-- Validates without error via the environment's skill packaging tool
+Verify the skill:
+- Frontmatter validates without error
 - Description is a single line, target 200-400 characters, "RFM sessions only" appears first
 - Body opens directly on the procedure, no preamble
 - Behavioral constraints section present at the end

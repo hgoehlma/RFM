@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.1.8` // `operational` // [living]
+`v0.1.9` // `operational` // [living]
 
 ---
 
@@ -32,7 +32,7 @@ Some artifacts are unique (produced once for a specific purpose with no repeatin
 
 - `RFM_first_session_guidance.md`: practical preparation document for a newcomer's first guided drafting session
 
-Execution artifacts (the traveling prompt, sweep prompts, and human prompt) carry a version number in their header only. They do not carry a document type tag or `[living]` marker. These artifacts sit at the end of the derivative chain: they are regenerated from their source reasoning documents, not curated independently. The version number is sufficient to detect drift against the source.
+Execution artifacts (the traveling prompt, sweep prompts, and human prompt) carry a version number in their header only. They do not carry a document type tag or `[living]` marker. These artifacts sit at the end of the derivative chain: they are regenerated from their source reasoning documents, not curated independently. The version number is sufficient to detect drift against the source. A patch-level fix to an execution artifact is legitimate only when the source reasoning document changed first.
 
 ---
 

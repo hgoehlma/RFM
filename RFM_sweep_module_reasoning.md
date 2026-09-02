@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.2.3` // `module_reasoning` // [living]
+`v0.2.4` // `module_reasoning` // [living]
 
 ---
 
@@ -96,6 +96,10 @@ Some failures are both positional and about wording. The primary failure type de
 **Why the mode-contamination test applies to the question, not the finding's content:**
 
 When an LLM running the structural sweep evaluates whether a finding belongs, the test is the cognitive mode that generated the question, not what the finding happens to touch. A structural question can surface an expression symptom incidentally and remain correctly placed: the question arose from architectural judgment. A question framed in expression-review mode does not belong in the structural sweep regardless of whether it also identifies a positional problem. The behavioral instruction must specify the register test: is this question an act of architectural judgment, or of close reading? If close reading generated the question, it belongs in the language sweep, not here. Framing the test as "does this finding touch expression failures?" produces false positives: legitimate structural findings that name expression symptoms get suppressed.
+
+**Why absence checks name what qualifies rather than inviting inference:**
+
+A sweep question that asks what is missing has no natural stopping point. Any commitment in a document can be described as the one that survived an alternative nobody wrote down. So a check that asks the reviewer to infer from silence lets the reviewer invent findings. The invented finding looks like a real one: both name something the document does not contain, and the reviewer cannot test either against the document. An absence check must therefore say what would have to be true for the missing thing to belong in that section. For Options Considered, the missing alternative must have been pursued as a competing way to resolve the Problem. A supporting commitment inside the Chosen Direction does not qualify, because it was never a path the work took and rejected. Stating the test keeps the finding the check exists to catch, an option that was considered and dropped without record, and stops the reviewer inferring the rest.
 
 **Why the operational sweep checks both directions across the reasoning-to-operational boundary:**
 

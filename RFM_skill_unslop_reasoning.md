@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Reasoning Document
-`v0.2.2` // `skill_unslop_reasoning` // `[living]`
+`v0.2.3` // `skill_unslop_reasoning` // `[living]`
 
 ---
 
@@ -111,3 +111,7 @@ During an em-dash sweep, the default replacement was parentheses. The rfm-unslop
 **[HL-SELFENF] A rule that names its own invocation mechanism is not proof the mechanism runs.**
 
 This skill's Boundaries entry credited "the rules file and the handover carry-forward mechanism" with reliable activation. Nothing executed at session open actually read the rules file. The rule existed in writing. The skill still didn't fire, twice in the same session. The fix was not a stronger rule. It was adding an explicit step to session-startup that reads the rules file before producing any output. A rule that says to read something is not self-enforcing; only an executed step is.
+
+**[HL-PLCL] A pattern list catches the patterns on it, not bad writing in general.**
+
+Two drafts of a reasoning entry passed every check in this skill and were rejected on register. The failure was elevated diction with an abstraction as the sentence's subject: "a check that invites inference from silence licenses invention." No pattern named it, so both drafts came back clean, and human reading caught what the skill could not. The error was treating a clean pass as evidence the prose was sound. The list reports only on what it enumerates. When a new failure shows up in practice, add it as a pattern; until then, a clean pass says nothing about that failure.

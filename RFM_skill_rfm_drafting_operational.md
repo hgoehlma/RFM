@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.1.0` // `skill_rfm_drafting_operational` // `[living]`
+`v0.1.1` // `skill_rfm_drafting_operational` // `[living]`
 
 ---
 
@@ -11,9 +11,9 @@ Derivation procedure for the `rfm-drafting` skill. The reasoning behind every de
 
 ## The artifact
 
-`rfm-drafting.skill`: a packaged skill file installed to the user's skill directory for the current environment.
+The `rfm-drafting` skill, installed and active in the user's environment.
 
-The skill source is `rfm-drafting/SKILL.md`. Package it using the skill-creator packaging tool available in the current environment.
+The skill source is `rfm-drafting/SKILL.md`. Delivery is environment-specific: some environments package the source into an installable file the user downloads, others present the source for review and save it directly. Use the mechanism the current environment provides. The requirement is that the user ends up with the skill installed, not that a file is produced.
 
 ---
 
@@ -40,7 +40,7 @@ YAML frontmatter rules:
 
 R-LENSMODE in `RFM_handover_rules.md` is retired when `rfm-drafting` is installed. Steps:
 
-1. Install `rfm-drafting.skill`.
+1. Install `rfm-drafting`.
 2. Remove R-LENSMODE from `RFM_handover_rules.md`.
 3. Bump version on `RFM_handover_rules.md`.
 4. Run `rfm-ripple-check` to confirm no remaining references to R-LENSMODE across RFM documents.
@@ -54,15 +54,15 @@ When a new drafting failure class is identified in practice:
 1. Determine which layer it belongs to: placement (Layer 1), writing rules (Layer 2), or derivative chain (Layer 3).
 2. Add it to the skill body under the appropriate layer.
 3. Update `RFM_skill_rfm_drafting_reasoning.md` if the addition reflects a new assumption or hard lesson.
-4. Repackage the skill.
+4. Reinstall the updated skill in the user's environment.
 5. Bump versions on both the skill source and this operational document.
 
 ---
 
 ## Coverage check: after derivation
 
-Verify the packaged skill:
-- Validates without error via the environment's skill packaging tool
+Verify the skill:
+- Frontmatter validates without error
 - Description is a single line, target 200-400 characters, "RFM sessions only" appears first
 - Body opens directly on Layer 1, no preamble
 - No em dashes in the skill body

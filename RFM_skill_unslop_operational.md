@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Operational Document
-`v0.1.1` // `skill_unslop_operational` // `[living]`
+`v0.1.2` // `skill_unslop_operational` // `[living]`
 
 ---
 
@@ -11,9 +11,9 @@ Derivation procedure for the `rfm-unslop` skill and the traveling prompt declara
 
 ## The artifact
 
-`rfm-unslop.skill` — a packaged skill file installed to the user's skill directory for the current environment.
+The `rfm-unslop` skill, installed and active in the user's environment.
 
-The skill source is `rfm-unslop/SKILL.md`. Package it using the skill-creator packaging tool available in the current environment.
+The skill source is `rfm-unslop/SKILL.md`. Delivery is environment-specific: some environments package the source into an installable file the user downloads, others present the source for review and save it directly. Use the mechanism the current environment provides. The requirement is that the user ends up with the skill installed, not that a file is produced.
 
 ---
 
@@ -27,7 +27,7 @@ This declaration is the trigger mechanism. Without it, the skill does not fire. 
 
 ---
 
-## Source documents — load before editing the skill
+## Source documents: load before editing the skill
 
 1. `RFM_skill_unslop_reasoning.md`: the reasoning governing all design decisions
 2. `RFM_operational.md`: formatting conventions and naming rules
@@ -51,13 +51,13 @@ The pattern list in the skill body is the canonical list of slop patterns for RF
 
 1. Add it to the skill body under the appropriate position in the list.
 2. Update `RFM_skill_unslop_reasoning.md` if the new pattern reflects a reasoning change (new assumption, new hard lesson).
-3. Repackage the skill.
+3. Reinstall the updated skill in the user's environment.
 4. Bump versions on both the skill source and this operational document.
 
 When a pattern is retired:
 1. Remove it from the skill body.
 2. Record why in Hard Lessons if the retirement reflects a lesson.
-3. Repackage and bump versions.
+3. Reinstall the updated skill and bump versions.
 
 ---
 
@@ -69,8 +69,8 @@ The register-specific rules at the bottom of the skill body are a separate secti
 
 ## Coverage check: after derivation
 
-Verify the packaged skill:
-- Validates without error via the environment's skill packaging tool
+Verify the skill:
+- Frontmatter validates without error
 - Description is a single line, target 200-400 characters, "RFM approach" appears early
 - Body opens directly on the pattern list, no preamble
 - Register rules section present at the end
