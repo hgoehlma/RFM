@@ -1,13 +1,15 @@
 # Reasoning-First Methodology: Operational Document
-`v0.1.7` // `operational` // [living]
+`v0.1.8` // `operational` // [living]
 
 ---
 
 ## File Naming Convention
 
-RFM documents follow this naming pattern:
+Documents follow this naming pattern:
 
-`RFM_[type]_[descriptor].md`
+`[project]_[type]_[descriptor].md`
+
+`project` is the tag for whichever project is applying the RFM approach. This project's tag is `RFM`, since the project's subject is the methodology itself. A different project applying the RFM approach uses its own tag there instead.
 
 Where `type` is one of:
 - `top_level_reasoning`

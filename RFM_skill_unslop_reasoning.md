@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Reasoning Document
-`v0.2.1` // `skill_unslop_reasoning` // `[living]`
+`v0.2.2` // `skill_unslop_reasoning` // `[living]`
 
 ---
 
@@ -86,7 +86,7 @@ Epistemic failures (sycophancy, anchoring to early framings, uniform confidence 
 
 **Not applicable to non-RFM projects.** The trigger is the session system prompt's RFM declaration. Without that declaration the skill does not fire.
 
-**Not self-activating.** The skill does not fire through its description alone. Reliable activation requires explicit invocation. In RFM projects, that invocation is handled by the rules file and the handover carry-forward mechanism.
+**Not self-activating.** The skill does not fire through its description alone. Reliable activation requires explicit invocation. In RFM projects, that invocation depends on session-startup reading the handover rules file at session open; a rule stating this skill must be invoked is not sufficient by itself. See HL-SELFENF.
 
 ---
 
@@ -107,3 +107,7 @@ An LLM confirms a skill is loaded, then violates it in the next response. The sk
 **[HL-RSGV] A corrective pass applied without reading the governing skill produces output that looks compliant and is not.**
 
 During an em-dash sweep, the default replacement was parentheses. The rfm-unslop skill explicitly flags parentheses as trading one AI tell for another. The error was not caught until the skill was consulted mid-session. The surface check passed. The deeper check failed. Any corrective pass on style, structure, or language must begin by reading the artifact that governs the failure class being corrected.
+
+**[HL-SELFENF] A rule that names its own invocation mechanism is not proof the mechanism runs.**
+
+This skill's Boundaries entry credited "the rules file and the handover carry-forward mechanism" with reliable activation. Nothing executed at session open actually read the rules file. The rule existed in writing. The skill still didn't fire, twice in the same session. The fix was not a stronger rule. It was adding an explicit step to session-startup that reads the rules file before producing any output. A rule that says to read something is not self-enforcing; only an executed step is.
