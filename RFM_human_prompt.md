@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt
-`v0.1.1` // `human_prompt` // [living]
+`v0.1.2` // `human_prompt` // [living]
 
 ---
 
@@ -109,6 +109,20 @@ In practice: after the AI produces a substantial piece of text (a section, an en
 
 ---
 
+**When you correct, ask rather than instruct**
+
+*"Correct with a question, not a verdict"*
+
+When something the AI produces is wrong, the natural move is to say so directly: "this hedge is doing nothing, remove it." That is a verdict. Verdicts provide resolution. The AI closes a verdict by pattern-matching to avoid the marked behavior. The form improves; the judgment does not.
+
+A correction shaped as a question withholds resolution. "I still don't see why this matters" cannot be closed by pattern-matching. To answer it, the AI must generate a position, which means it must exercise judgment. The same problem, reached by a question rather than a verdict, yields reasoning rather than compliance.
+
+This applies whether you are correcting posture drift or output quality. The discipline lands on the human side: withholding the answer requires you to hold it back even when you know it. That is harder than it sounds when the problem is obvious and naming it directly feels faster.
+
+In practice: when you see what is wrong and are about to say so directly, pause. Ask instead. "I don't follow the reasoning here" reaches the same problem as "this reasoning is wrong, revise it," and it requires the AI to reason to a response rather than to avoid a pattern.
+
+---
+
 **When you feel friction, name it, then push back**
 
 *Name the friction before it gets buried*
@@ -188,6 +202,8 @@ Pause before accepting a confident answer: has the question actually been resolv
 Ask: "are you drifting?"
 
 Check the output: verbose, journaling, repetitive?
+
+Correct with a question, not a verdict
 
 Name the friction before it gets buried
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.2.15` // `top_level_reasoning` // [living]
+`v0.2.16` // `top_level_reasoning` // [living]
 
 ---
 
@@ -18,8 +18,8 @@
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.3.4 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.1.3 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_operational.md` | Operational sweep prompt | v0.1.2 | The prompt artifact that activates the operational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
-| `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.1 | Reasoning document governing human prompt design decisions |
-| `RFM_human_prompt.md` | Human prompt | v0.1.1 | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
+| `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.2 | Reasoning document governing human prompt design decisions |
+| `RFM_human_prompt.md` | Human prompt | v0.1.2 | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.1.1 | Reasoning document governing guided drafting prompt design decisions |
 | `RFM_guided_drafting_prompt_operational.md` | Operational | v0.1.1 | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.1.1 | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
@@ -35,6 +35,7 @@
 | `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.1.1 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
 | `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.1.1 | Derivation procedure, skill body maintenance, and R-LENSMODE retirement steps for the rfm-drafting skill |
 | `RFM_skills_module_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing skill design decisions across skills |
+| `RFM_skills_module_operational.md` | Operational | v0.1.0 | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 
 ---
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.1.1` // `module_reasoning` // [living]
+`v0.1.2` // `module_reasoning` // [living]
 
 ---
 
@@ -83,6 +83,8 @@ Entries were selected to address failure modes on the human side of the collabor
 Output quality is a distinct failure mode category the traveling prompt cannot address: the LLM producing text that looks polished but is verbose, journaling, or repetitive. It requires a separate entry because the human's corrective move is different: not recalibrating the collaboration but reading the output critically before accepting it.
 
 The set is not closed and carries no significance as a count. Entries are added when practice reveals an uncovered failure mode and removed when one is fully superseded or drops below the consequence threshold. The reference card has one additional constraint: it must be short enough to scan without becoming a reading task; cognitive science on working memory suggests a practical ceiling of roughly seven to twelve phrases for a recognition tool of this kind. The current count falls within that range. The number at any given version is a snapshot, not a design target.
+
+A dedicated entry on how the human delivers corrections addresses a failure mode that neither the drift entry nor the output entry names: the human defaults to verdict-shaped correction. A verdict ("this is wrong, remove it") provides resolution. The LLM closes a verdict by pattern-matching to avoid the marked behavior, not by reasoning to a position. The result is improved form without improved judgment. A correction that withholds resolution forces the LLM to generate a position. The LLM cannot close that loop without exercising judgment. The cost lands on the human side. Withholding resolution requires the human to hold back the answer even when they know it. That is a discipline only the human can apply.
 
 **Why each entry follows a layered structure**
 
