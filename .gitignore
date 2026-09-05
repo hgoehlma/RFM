@@ -12,3 +12,6 @@ RFM_handover_rules.md
 # Migration scratch
 github-rfm.bundle
 git-filter-repo.py
+
+# Private handover history, separate repository
+_handover/
