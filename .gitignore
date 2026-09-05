@@ -15,3 +15,6 @@ git-filter-repo.py
 
 # Private handover history, separate repository
 _handover/
+
+# Private, never published
+_private/
