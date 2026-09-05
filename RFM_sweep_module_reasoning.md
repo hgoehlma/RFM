@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.2.4` // `module_reasoning` // [living]
+`v0.2.5` // `module_reasoning` // [living]
 
 ---
 
@@ -119,7 +119,7 @@ Labeling the sweeps by document type creates a trap. A reasoning sweep and an op
 
 **Why the language catalog transfers across document types but the architecture jobs do not share one:**
 
-Language failures appear regardless of document type. Session residue accumulates in a reasoning document and an operational document for the same reason: the person writing had context the reader lacks. Opaque wording, compressed reasoning, claims that outrun their evidence: none of these care what kind of document they are in. One catalog catches them all. Architecture failures are specific to document type. The structural sweep checks whether the eight-section spine is intact and whether content sits at the right level, a question that only makes sense for reasoning documents. The relational check asks whether every need announced in the reasoning document is covered in the operational document, a question that only makes sense when both documents are present. No catalog spans both, because the questions themselves do not overlap.
+Language failures appear regardless of document type. Session residue accumulates in a reasoning document and an operational document for the same reason: the person writing had context the reader lacks. Opaque wording, compressed reasoning, claims that outrun their evidence: none of these care what kind of document they are in. One catalog catches them all. Architecture failures are specific to document type. The structural sweep checks whether the eight-section spine is intact and whether content sits at the right level, a question that only makes sense for reasoning documents. The relational check asks whether every need announced in the reasoning document is covered in the operational document, a question that only makes sense when both documents are present. No set of per-section questions spans both, because the questions themselves do not overlap.
 
 **Why detecting content a parent document still carries after branching belongs in the structural sweep:**
 

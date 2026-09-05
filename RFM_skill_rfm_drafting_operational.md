@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.2.0` // `skill_rfm_drafting_operational` // `[living]`
+`v0.3.0` // `skill_rfm_drafting_operational` // `[living]`
 
 ---
 
@@ -36,15 +36,31 @@ YAML frontmatter rules:
 
 ---
 
+## Pre-check specification
+
+The pre-check is Layer 4 of the skill body. It runs after Layers 1 to 3 and before the draft is shown to the human. It is scoped to the content in hand, never to the document the content will enter.
+
+**The questions.** One per failure family in the Failure Taxonomy in `RFM_operational.md`. Any change to a question begins here.
+
+*Structural:* Does every part of this content belong at this level, in this section, and to this document rather than another?
+
+*Language:* Would a reader who was not in this session understand this content and see the reasoning behind each claim it makes?
+
+**On a hit.** Revise before presenting. When the hit cannot be resolved without a ruling, present the draft with the concern named rather than silently resolving it.
+
+**What the pre-check does not do.** It does not report a draft as swept. It reads two questions against one piece of content; a sweep reads a document. A draft that passes the pre-check carries no evidence about anything the pre-check did not ask.
+
+---
+
 ## Skill body maintenance
 
 When a new drafting failure class is identified in practice:
 
-1. Determine which layer it belongs to: placement (Layer 1), writing rules (Layer 2), or derivative chain (Layer 3).
+1. Determine which layer it belongs to: placement (Layer 1), writing rules (Layer 2), derivative chain (Layer 3), or the pre-check (Layer 4).
 2. Add it to the skill body under the appropriate layer.
-3. Update `RFM_skill_rfm_drafting_reasoning.md` if the addition reflects a new assumption or hard lesson.
+3. Update `RFM_skill_rfm_drafting_reasoning.md` if the addition reflects a new assumption or hard lesson. If the addition is a new failure class rather than new guidance, it belongs in the Failure Taxonomy in `RFM_operational.md` first.
 4. Reinstall the updated skill in the user's environment.
-5. Bump versions on both the skill source and this operational document.
+5. Bump the version on this operational document. Skills carry no version number.
 
 ---
 
@@ -54,6 +70,7 @@ Apply the shared coverage check in `RFM_skills_module_operational.md` first. In 
 - Description front-loads "RFM sessions only"
 - Body opens directly on Layer 1
 - rfm-unslop is referenced in Layer 2, not duplicated
+- Layer 4 states that the pre-check is not a sweep
 
 ---
 

@@ -1,5 +1,5 @@
 # RFM: Structural Sweep Prompt
-`v0.3.4` // `sweep_prompt_structural` // [living]
+`v0.3.5` // `sweep_prompt_structural` // [living]
 
 ---
 
@@ -83,6 +83,6 @@ Do not introduce language-sweep content into structural findings. Mode-contamina
 ---
 
 *structural sweep prompt // [living]*
-*the reasoning document is the source*
+*the structural failure types in `RFM_operational.md` and the per-section questions in `RFM_sweep_module_operational.md` are the source for "What you are looking for" and "Protocol"*
 *this prompt is the derivative*
 *findings for ruling, not edits*

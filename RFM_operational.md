@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.3.0` // `operational` // [living]
+`v0.3.1` // `operational` // [living]
 
 ---
 
@@ -114,6 +114,33 @@ One intro sentence naming the specific question this landscape must answer. Tabl
 
 **The Hard Lessons**
 `**[HL-XXXX] Title.**` as bold line, prose body as separate paragraph below. Category subheadings permitted when lesson count warrants grouping.
+
+---
+
+## Failure Taxonomy
+
+This section is the single source for the failure classes RFM recognizes. Both arms retrieve from here: the sweep prompts through `RFM_sweep_module_operational.md`, and the drafting-moment check through the drafting skill. Neither restates the classes in its own words. Each derives its own questions from them.
+
+**Structural failure types**
+
+- Content at the wrong level of the hierarchy
+- Content in the wrong section of a document
+- A section straining toward a new module
+- Reasoning duplicated across sections of one document
+- Reasoning a child module owns still carried by the parent
+- An entry ready to graduate or expire
+
+**Language failure types**
+
+- Session-born shorthand that requires the drafting session to be understood
+- Insider terminology without a definition or a glossary pointer
+- A claim that outruns its evidence without being flagged
+- Reasoning compressed to a conclusion without showing the path
+- Observation and interpretation conflated in one sentence
+- Wording that implies uncertainty that no longer exists
+- Curation failures: text that does not earn its place, language written for the session that produced it rather than for a future reader, repetition of reasoning stated elsewhere that adds no signal
+
+**Boundary between the families.** A failure is structural when it concerns where content sits. A failure is language when it concerns how content reads. A well-written sentence in the wrong section is structural. A correctly placed sentence carrying session residue is language. When a failure meets both descriptions, the artifact that invoked the taxonomy applies its own ordering rule; the sweep ordering is in `RFM_sweep_module_operational.md`.
 
 ---
 

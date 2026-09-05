@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.2.0` // `skill_rfm_drafting_reasoning` // `[living]`
+`v0.3.0` // `skill_rfm_drafting_reasoning` // `[living]`
 
 ---
 
@@ -44,7 +44,7 @@ Nothing currently fires at the moment of drafting to encode: where does this bel
 **Why a skill rather than extended operational doc guidance.**
 The operational doc carries formatting conventions. Drafting guidance is behavioral: it needs to fire at the moment of production, not be consulted after the fact. A skill fires; a document section does not.
 
-**Why one skill covering structural placement, section-type behavior, and the derivative chain.**
+**Why one skill covers the concerns that arise at the drafting moment**
 These concerns arise at the same moment, when a practitioner is about to write content into a document. The module's rule groups a family that shares one moment, and its reasoning is in `RFM_skills_module_reasoning.md`. The rule applies cleanly here because no member of the family has a moment of its own to fire at.
 
 **Why language compliance is delegated to rfm-unslop rather than duplicated.**
@@ -52,6 +52,16 @@ These concerns arise at the same moment, when a practitioner is about to write c
 
 **Why glossary entries are in scope.**
 Glossary entries are drafted at the same moment as other document content. The failure mode is specific: a term enters a document before it has been tested for standalone readability. The shorthand test and the reasoning requirement are the correct corrective at the drafting moment, not after the fact.
+
+---
+
+**Why the pre-check derives its own questions instead of running the sweep questions**
+
+The pre-check and the sweeps read the same failure taxonomy in `RFM_operational.md`. Their questions differ because their moments differ. A sweep question asks whether a finished document contains a failure, which requires the whole document in view. A pre-check question asks whether the content about to be written will introduce one, which requires only that content. A sweep question asked at the drafting moment cannot be answered honestly, because the document it asks about does not exist yet.
+
+The second reason concerns what the practitioner believes afterwards. A pre-check carrying a question per section reads as a sweep. A draft that passes it feels swept, and the concentrated pass then feels redundant. `[HL-NSWP]` records the failure this check answers, and the check must not produce a larger version of it. One question per failure family keeps the pre-check visibly smaller than the pass it does not replace.
+
+The cost is that a question this coarse may catch nothing. That cost is accepted because it is visible: a check that finds nothing across sessions is evidence, and it can be sharpened against the failures it missed. A pre-check that displaces the sweep produces no evidence of having done so.
 
 ---
 

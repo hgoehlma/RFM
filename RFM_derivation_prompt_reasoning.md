@@ -16,7 +16,7 @@ Derivative chain for this module:
 
 ## The Problem
 
-RFM is built around two distinct phases. Phase one is collaborative: the human and the LLM reason jointly through a propose–reflect–converge–execute sequence to build the reasoning documents. The traveling prompt was designed for this phase, carrying methodology discipline into every co-authorship session. That design is correct for the phase it was designed for.
+RFM is built around two distinct phases. Phase one is collaborative: the human and the LLM reason jointly through a propose, reflect, converge, execute sequence to build the reasoning documents. The traveling prompt was designed for this phase, carrying methodology discipline into every co-authorship session. That design is correct for the phase it was designed for.
 
 Phase two is different. The reasoning documents have been completed through collaboration, and the LLM now executes from them without the human present. No governing artifact exists for this session type. That is the gap this module addresses.
 

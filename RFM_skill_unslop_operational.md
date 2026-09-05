@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Operational Document
-`v0.2.0` // `skill_unslop_operational` // `[living]`
+`v0.2.1` // `skill_unslop_operational` // `[living]`
 
 ---
 
@@ -52,12 +52,12 @@ The pattern list in the skill body is the canonical list of slop patterns for RF
 1. Add it to the skill body under the appropriate position in the list.
 2. Update `RFM_skill_unslop_reasoning.md` if the new pattern reflects a reasoning change (new assumption, new hard lesson).
 3. Reinstall the updated skill in the user's environment.
-4. Bump versions on both the skill source and this operational document.
+4. Bump the version on this operational document. Skills carry no version number.
 
 When a pattern is retired:
 1. Remove it from the skill body.
 2. Record why in Hard Lessons if the retirement reflects a lesson.
-3. Reinstall the updated skill and bump versions.
+3. Reinstall the updated skill and bump the version on this operational document.
 
 ---
 

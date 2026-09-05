@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Operational Document
-`v0.1.5` // `operational` // [living]
+`v0.2.0` // `operational` // [living]
 
 ---
 
@@ -29,21 +29,9 @@ Load all before deriving any sweep prompt:
 
 ## Language catalog
 
-This catalog is the source specification for the language sweep prompt's "What you are looking for" section. Any change to failure types or per-section primary questions begins here.
+The failure types the language sweep looks for are in `RFM_operational.md` under Failure Taxonomy. This catalog carries the per-section primary questions derived from them, and is the source specification for the language sweep prompt's "What you are looking for" section. Any change to a question begins here. Any change to a failure type begins in `RFM_operational.md`.
 
-**Language failure types**
-
-- Session-born shorthands that require the drafting session to be understood
-- Insider terminology without definition or glossary pointer
-- Claims that outrun their evidence without being flagged
-- Reasoning compressed to a conclusion without showing the path
-- Observation and interpretation conflated in the same sentence
-- Wording that implies uncertainty that no longer exists
-- Curation failures: wordy (text that does not earn its place), journal-mode (language written for the session that produced it rather than a future reader), or redundant with reasoning stated elsewhere without adding signal
-
-Not in scope: structural failures, meaning content at the wrong level, wrong section, module strain, graduation candidates. Those belong to the structural sweep.
-
-**Grey zone rule:** when a failure is both a language failure and positional, the positional dimension must be ruled on by the appropriate sweep before the language dimension is assessed. Flag as grey zone, name both failure types, and do not assess the language dimension until the positional ruling is in.
+The language sweep assesses the language failure types only. The structural failure types belong to the structural sweep.
 
 **Per-section primary questions**
 
@@ -62,6 +50,38 @@ Not in scope: structural failures, meaning content at the wrong level, wrong sec
 *The Open Questions:* Is each question genuinely open as stated, or has session context resolved it invisibly, leaving wording that implies uncertainty that no longer exists? Does any entry use shorthand for a question that requires spelling out?
 
 *The Hard Lessons:* Does each lesson carry the reasoning that earned it, or has it been compressed to a conclusion? Would a reader who was not in the session that produced the lesson understand both what happened and why it matters?
+
+---
+
+## Grey zone rule
+
+When a failure is both positional and about wording, the positional dimension must be ruled on before the language dimension is assessed. The structural sweep flags it as a grey zone, names both failure types, and proposes a structural resolution. The language sweep does not assess that entry until the human has ruled.
+
+---
+
+## Structural catalog
+
+The failure types the structural sweep looks for are in `RFM_operational.md` under Failure Taxonomy. This catalog carries the per-section primary questions derived from them, and is the source specification for the structural sweep prompt's "What you are looking for" and "Protocol" sections. Any change to a question begins here. Any change to a failure type begins in `RFM_operational.md`.
+
+The structural sweep assesses the structural failure types only. The language failure types belong to the language sweep.
+
+**Per-section primary questions**
+
+*The Problem:* Has this section absorbed scope that belongs at a lower level, or has it drifted from the original statement without a flag?
+
+*The Assumptions:* Does each entry state a testable belief, or has implementation detail leaked in? Are any assumptions now contradicted by the Chosen Direction?
+
+*The Landscape:* Does each row distinguish its approach clearly from its neighbors? Does the closing paragraph name the gap without beginning to choose? Has early option selection absorbed work that belongs in Options Considered?
+
+*The Options Considered:* Is each option genuinely distinct, or is one a restatement of another dressed differently? Does each entry show evidence of having been actively considered, rather than invented to round out the section? Does the rejection name a specific failure mode, or only a preference? Does any entry restate the Chosen Direction's committed path instead of a discarded alternative? Is any option missing that was pursued as a competing way to resolve the Problem and dropped without record? A supporting commitment inside the Chosen Direction is not evidence of one.
+
+*The Chosen Direction and Why:* Does each entry carry only why, or has how leaked in? Is any entry restating an option rather than justifying a direction? Does any entry restate content that a child module now owns, a sign the parent failed to contract after branching?
+
+*The Boundaries:* Has any boundary drifted into a constraint on decision-making (which belongs in Assumptions)? Is anything described as "not this" that is actually just undesigned?
+
+*The Open Questions:* Is any question ready to graduate, partially or fully resolved by the Chosen Direction or by an assumption? Is any question actually a deferred decision rather than a genuine unknown? Does the question have a plausible condition under which it could be resolved, or is it open-ended with no path to an answer? Would resolving it materially change the reasoning or the system, or is it decorative?
+
+*The Hard Lessons:* Has any lesson been metabolized into an assumption or Chosen Direction and should now graduate? Is any lesson a restatement of another in different language?
 
 ---
 
