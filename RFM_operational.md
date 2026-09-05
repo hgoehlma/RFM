@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.2.0` // `operational` // [living]
+`v0.3.0` // `operational` // [living]
 
 ---
 
@@ -177,6 +177,16 @@ Anything destined for a file is written without em dashes from the first draft, 
 Verify by grep, not by rereading. Write the candidate text to a scratch file outside the project and grep it for the character. The destination document is never the file grepped. Report the check as done only after the grep returns clean.
 
 Replace an em dash with a comma, a period, or a recast sentence. Parentheses are not a substitute. They carry the same tell, and a sweep that used them as the default replacement is recorded as a hard lesson in `RFM_skill_unslop_reasoning.md`.
+
+## Skill Count Working Band
+
+A well-triggered skill is one whose description is written from the vocabulary a practitioner uses at the moment the skill is needed.
+
+Tens of well-triggered skills sit inside the range where selection holds. Low hundreds sit past the point where degradation is reported. Use the band as the starting point when deciding whether a family of related behavior becomes one skill or several, not as a limit to fill up to.
+
+The band is inferred from published tool-selection results and has not been measured on this project. Revise it when better evidence arrives. Why a band is the right form, and why it is likely conservative for this project, is in `RFM_skills_module_reasoning.md`.
+
+---
 
 ---
 

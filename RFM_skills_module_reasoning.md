@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Skills Module Reasoning Document
-`v0.2.0` // `module_reasoning` // `[living]`
+`v0.3.0` // `module_reasoning` // `[living]`
 
 ---
 
@@ -61,9 +61,21 @@ Every installed skill charges its description against the same session-open budg
 
 The grouping holds only while the family shares a moment. When one member fires at a different moment from the rest, a single description has to name two moments and matches well for neither, which is worse than the split it was meant to save.
 
+**Why the skill count is judged rather than measured**
+
+How many skills a project can carry before their descriptions cost more than the skills save is a real quantity, and it does not hold still. It moves with how well a model matches a description against a session, with how much instruction density costs that model, and with what the tooling preloads at session open. What generalizes is the shape rather than the value. Selection accuracy holds up over a range and then falls off, and the fall is attributed to how attention handles large choice sets rather than to any one model's limits, so a better model moves the point without removing it. The published figures come from catalogues of thousands of tools where the model chooses one per call, which is not this situation. They establish that the shape is real and say nothing about where the point sits here. So the count is decided by judgment at the moment a grouping is made. `RFM_operational.md` carries the working band that judgment starts from, which can be revised when better evidence arrives without this entry changing.
+
+**Why a few skills are forced from an always-on artifact and most are not**
+
+A description raises the probability that a skill fires and never makes it certain, so every skill carries some rate of silent absence. What decides whether that rate is tolerable is not how much the skill matters. It is whether the miss shows. When a skill fails to load and the work comes out visibly wrong or visibly missing, the practitioner sees it and invokes the skill by name, and the imperfect description costs one correction. When a skill fails to load and the work comes out looking like ordinary work, nothing in the session marks the absence, and the cost lands later in a document that has already been accepted. Forcing is reserved for the second case: a miss that is both expensive and invisible in the output. Both conditions are required. An expensive miss that shows is caught by the practitioner. An invisible miss that is cheap does not earn what forcing costs.
+
+What forcing costs is an instruction in an artifact every session reads, naming the moment and requiring the load, present in the sessions where the moment never arrives as well as the ones where it does. That is part of the ambient cost that moving the behavior into a skill was meant to shed, taken back deliberately. It also accumulates one line at a time, which is the failure `RFM_top_level_reasoning.md` records as a hard lesson about instructions added to strengthen compliance. So the criterion is narrow on purpose, and a skill qualifies by the shape of its failure rather than by its importance.
+
 **Why a trigger description is written from the vocabulary of the moment, not from the skill's contents**
 
 A description is matched against what the session appears to be doing, which reaches the model as the words the practitioner has been using. A description written from the skill's contents describes the skill accurately and shares little surface with the session that needs it. The lever available to the author is overlap with the language of the moment, not accuracy about the skill. An RFM project has an advantage here that a general skill author does not: the glossary fixes the vocabulary a practitioner uses, so the words that will be present when a skill is needed are known rather than guessed.
+
+This also bears on where this project sits on that curve. The reported failures concentrate in cases where the right unit is not the obvious match. A fixed vocabulary is what makes it the obvious match, so a project whose triggers are built from its glossary should carry more skills before accuracy falls than a catalogue of the same size assembled without one. That inference has not been tested here. It rests on where the reported failures concentrate, not on any result measured for skills.
 
 ---
 
@@ -79,17 +91,13 @@ A description is matched against what the session appears to be doing, which rea
 
 ## The Open Questions
 
-**[OQ-SILENT] Can a skill's failure to fire be observed?**
+**[OQ-BALANCE] What signals that the skill count has moved past what this project can carry?**
 
-A skill that does not match leaves no record. The session proceeds, the behavior is absent, and nothing distinguishes that from a session where the skill was never needed. Without a way to see a non-fire, every question about trigger quality and skill count is answered by impression. Resolution paths exist and none has been tested.
+The balance is judged, not computed, so what a practitioner needs is not a number but a reason to revisit. The available signals are weak. A skill that fails to fire leaves the session looking exactly like a session that never needed it, since the load is recorded and the moment is not, so the most direct signal is the one that cannot be read. What remains is indirect: skills that used to fire and stop, descriptions that have to be widened to keep matching, moments where the practitioner reaches for a skill by name. None has been tested as an indicator and none is reliable alone.
 
-**[OQ-COUNT] How many skills can a project install before their descriptions cost more than the skills save?**
+**[OQ-FORCE] Does an always-on instruction to load a skill reliably produce the load?**
 
-Every installed skill spends its description at session open, and selection accuracy falls as the candidate set grows. Both effects are established. Where they cross for a given project is not, and the answer would change how aggressively behavior is grouped into families. It is the same unmeasured quantity named in `[AS-AMBC]` and `[AS-MATCH]`, and it cannot be settled while `[OQ-SILENT]` is open.
-
-**[OQ-FORCE] Which skills need a mechanism outside themselves to guarantee they fire?**
-
-A skill whose absence is silent and costly is not made reliable by a better description alone. Something always-on can name the moment and force the load, which reintroduces the ambient cost that moving the behavior into a skill was meant to avoid. Whether that trade is worth making, and what property of a skill decides it, is unresolved.
+Forcing assumes the instruction is followed where the description was not. The instruction sits in an artifact whose other lines compete for the same attention, and instruction-following degrades as density rises, so the mechanism relied on to remove one silent failure has a silent failure of its own. Unlike a description, this one is testable: the load is recorded, and the moment the instruction names is fixed rather than inferred, so a session either loaded the skill at that moment or did not. Nothing has been observed systematically.
 
 **[OQ-POSTR] Does the register that makes a skill act also push the model toward executing rather than co-authoring?**
 

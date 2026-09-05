@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.3.0` // `top_level_reasoning` // [living]
+`v0.3.1` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,7 +7,7 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_operational.md` | Operational | v0.2.0 | File naming conventions, document map maintenance, version discipline |
+| `RFM_operational.md` | Operational | v0.3.0 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.10 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.0 | The reasoning document governing traveling prompt design decisions |
@@ -34,7 +34,7 @@
 | `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.2.0 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
 | `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.2.0 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
 | `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.2.0 | Derivation procedure, skill body maintenance, and R-LENSMODE retirement steps for the rfm-drafting skill |
-| `RFM_skills_module_reasoning.md` | Module reasoning | v0.2.0 | The reasoning document governing skill design decisions across skills |
+| `RFM_skills_module_reasoning.md` | Module reasoning | v0.3.0 | The reasoning document governing skill design decisions across skills |
 | `RFM_skills_module_operational.md` | Operational | v0.1.1 | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 
 ---
@@ -360,6 +360,10 @@ A well-reasoned document hierarchy will not prevent all gaps from appearing duri
 **[HL-DCFL] Derivation failures can originate in source documents that are internally sound.**
 
 A reasoning document can be internally correct and still produce derivation failures. The failure mode identified in practice: two distinct concepts stated in close proximity in a Chosen Direction entry collapsed into one during LLM derivation under compression. The source document treated them as distinct. The deriving LLM conflated them. The document was not wrong. It was not sufficiently derivation-legible. This is the practical consequence of the two-phase design requirement named in [AS-TPAS]: joint legibility and derivation-legibility are different properties, and a document can satisfy one without satisfying the other. The mitigation is not longer or more detailed source writing. It is structural separation: concepts that must remain distinct at derivation time must be visibly distinct in the source, with enough distance or explicit differentiation that compression cannot collapse them.
+
+**[HL-OQGATE] A stated dependency between two Open Questions is read as an order of work.**
+
+One entry closed by saying it could not be settled while another remained open. The dependency was accurate and the entry claimed nothing about priority. It did not need to. A session deciding what to work on finds the only sequencing claim in the section and follows it, so the wording set the agenda, and the work that followed was measurement of a quantity that did not need measuring. Say what one question needs from another, and say whether anything actually waits on it.
 
 **[HL-INAD] An instruction restated in a second artifact dilutes the rule instead of reinforcing it.**
 
