@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.2.16` // `top_level_reasoning` // [living]
+`v0.3.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,10 +7,10 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_operational.md` | Operational | v0.1.9 | File naming conventions, document map maintenance, version discipline |
+| `RFM_operational.md` | Operational | v0.2.0 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.10 | The reasoning document governing all system prompt decisions |
-| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.6 | The reasoning document governing traveling prompt design decisions |
+| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.0 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.1.1 | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.4 | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_module_reasoning.md` | Module reasoning | v0.2.4 | The reasoning document governing sweep prompt design decisions |
@@ -28,14 +28,14 @@
 | `RFM_derivation_prompt_operational.md` | Operational | v0.2.6 | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
 | `RFM_derivation_prompt.md` | Derivation prompt | v0.2.0 | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
 | `RFM_derivation_session_guidance.md` | Derivation session guidance | v0.1.1 | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
-| `RFM_skill_unslop_reasoning.md` | Skill reasoning | v0.2.3 | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
-| `RFM_skill_unslop_operational.md` | Skill operational | v0.1.2 | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
+| `RFM_skill_unslop_reasoning.md` | Skill reasoning | v0.3.0 | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
+| `RFM_skill_unslop_operational.md` | Skill operational | v0.2.0 | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
 | `RFM_skill_rfm_ripple_check_reasoning.md` | Skill reasoning | v0.1.2 | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
-| `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.1.1 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
-| `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.1.1 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
-| `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.1.1 | Derivation procedure, skill body maintenance, and R-LENSMODE retirement steps for the rfm-drafting skill |
-| `RFM_skills_module_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing skill design decisions across skills |
-| `RFM_skills_module_operational.md` | Operational | v0.1.0 | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
+| `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.2.0 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
+| `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.2.0 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
+| `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.2.0 | Derivation procedure, skill body maintenance, and R-LENSMODE retirement steps for the rfm-drafting skill |
+| `RFM_skills_module_reasoning.md` | Module reasoning | v0.2.0 | The reasoning document governing skill design decisions across skills |
+| `RFM_skills_module_operational.md` | Operational | v0.1.1 | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 
 ---
 
@@ -209,6 +209,12 @@ This prose character is domain-agnostic. It does not depend on the practitioner'
 
 A second requirement is legibility. Behavioral patterns common to LLM-generated text are recognizable to readers and undermine the signal before the content is reached. Suppressing them is not a stylistic preference. It is a condition for the derivative reaching its reader intact. The specific patterns and the two-layer writing discipline are in `RFM_operational.md`.
 
+**Why em dashes are enforced by a check rather than by instruction**
+
+Em dashes are the highest-signal typographic marker of LLM-generated prose, recognizable to readers who cannot say why, and they are the one suppressed pattern in RFM output enforced mechanically. Instruction does not hold them. Models told to remove an em dash commonly remove the named one and insert another in the same sentence, satisfying the instruction locally while violating it globally. The likeliest explanation available is token economy, the character costing one token where its alternatives cost two or three, so the training objective favors it and no prompt reaches that. That explanation rests on one analysis of one model family and is not settled. The commitment rests on the observed behavior, which holds whichever explanation is right.
+
+A check is possible here because a character either appears or it does not. Throat-clearing, importance inflation, and epistemic flatness are judgments about prose that no search settles. A pattern earns a check when it reduces to a search, not when it matters most. The check and its scope are in `RFM_operational.md`.
+
 **Why reasoning documents avoid count-dependent references:**
 
 Anything in a reasoning document whose correctness depends on a count remaining stable becomes a maintenance liability the moment the count changes. The failure is silent: the reference still reads as valid while the document has already drifted. The specific design decisions that follow from this principle are in `RFM_operational.md`.
@@ -354,6 +360,10 @@ A well-reasoned document hierarchy will not prevent all gaps from appearing duri
 **[HL-DCFL] Derivation failures can originate in source documents that are internally sound.**
 
 A reasoning document can be internally correct and still produce derivation failures. The failure mode identified in practice: two distinct concepts stated in close proximity in a Chosen Direction entry collapsed into one during LLM derivation under compression. The source document treated them as distinct. The deriving LLM conflated them. The document was not wrong. It was not sufficiently derivation-legible. This is the practical consequence of the two-phase design requirement named in [AS-TPAS]: joint legibility and derivation-legibility are different properties, and a document can satisfy one without satisfying the other. The mitigation is not longer or more detailed source writing. It is structural separation: concepts that must remain distinct at derivation time must be visibly distinct in the source, with enough distance or explicit differentiation that compression cannot collapse them.
+
+**[HL-INAD] An instruction restated in a second artifact dilutes the rule instead of reinforcing it.**
+
+Em dashes were barred in nine places across the document set: the traveling prompt, the top-level operational document, four skill operational documents, and the skill body. Every mention was written by someone trying to make the rule hold, and the character kept appearing anyway. One of the nine instructed the writer to replace an em dash with parentheses, which the skill governing that rule explicitly forbids. Nobody wrote a contradiction. It appeared because no artifact owned the rule, so each copy aged on its own and nothing reconciled them. The count also priced every later fix at nine edits instead of one. The corrective is ownership: one artifact carries the rule, and every other mention is a reference or is deleted.
 
 ---
 

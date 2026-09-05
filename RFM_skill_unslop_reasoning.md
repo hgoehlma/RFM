@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Reasoning Document
-`v0.2.3` // `skill_unslop_reasoning` // `[living]`
+`v0.3.0` // `skill_unslop_reasoning` // `[living]`
 
 ---
 
@@ -18,8 +18,6 @@ The following are believed to be true. If any is wrong, the skill design needs t
 **[AS-SESS] -** The boundary between session text and document text is not detectable in practice. Any output produced during a session (a draft, an answer to a phrasing question, incorporated thinking) can migrate into a document.
 
 **[AS-AMB] -** An instruction that competes with active reasoning load will not reliably fire. The more demanding the session work, the more the suppression instruction loses to it. This holds regardless of how clearly the instruction is written.
-
-**[AS-TRIG] -** A trigger that requires the LLM to classify output type before activating inherits the same failure as an ambient instruction. The classification is a judgment call under load. The trigger must require no judgment to activate.
 
 **[AS-REG] -** The behavioral patterns that constitute slop are the same across document types. What differs is the threshold for what counts as a violation. A single skill with register-specific thresholds is simpler to maintain than separate skills per document type, and removes the classification judgment that per-register skills require.
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Skills Module Reasoning Document
-`v0.1.0` // `module_reasoning` // `[living]`
+`v0.2.0` // `module_reasoning` // `[living]`
 
 ---
 
@@ -57,7 +57,9 @@ The split between the traveling prompt and a skill is decided by one question: m
 
 **Why a skill covers a family of behavior rather than a single behavior**
 
-Every installed skill charges its description against the same session-open budget, and match reliability falls as the number of candidates rises, so the count of skills is a cost paid by every skill including the ones that fire. A family grouped under one skill spends one description where the split version spends several. The grouping holds only while the family shares a moment. When one member fires at a different moment from the rest, a single description has to name two moments and matches well for neither, which is worse than the split it was meant to save.
+Every installed skill charges its description against the same session-open budget, and match reliability falls as the number of candidates rises, so the count of skills is a cost paid by every skill including the ones that fire. A family grouped under one skill spends one description where the split version spends several. Splitting a family also inserts a judgment before the trigger. One skill covering a moment fires on that moment. Several skills covering the same moment fire only after something has decided which of them applies. That decision falls on whoever is present when the moment arrives: the model, when the split runs along a property of the model's own output, or the practitioner, when the split runs along which artifact to reach for. In both cases the judgment is made under the load the skill exists to relieve, and it is made before any skill body has loaded, so nothing the skill carries is available to inform it. This cost is independent of the description budget. A split whose descriptions were free would still fail at the point where someone has to classify first.
+
+The grouping holds only while the family shares a moment. When one member fires at a different moment from the rest, a single description has to name two moments and matches well for neither, which is worse than the split it was meant to save.
 
 **Why a trigger description is written from the vocabulary of the moment, not from the skill's contents**
 

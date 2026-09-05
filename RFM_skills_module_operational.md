@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Skills Module Operational Document
-`v0.1.0` // `module_operational` // `[living]`
+`v0.1.1` // `module_operational` // `[living]`
 
 ---
 
@@ -36,7 +36,6 @@ Each skill operational document may add skill-specific items after this list.
 - Frontmatter validates without error.
 - Description is a single line, 200 to 400 characters, scope phrase appears first.
 - Body opens directly on content, no preamble.
-- No em dashes in the skill body.
 
 ---
 

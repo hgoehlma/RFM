@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.1.9` // `operational` // [living]
+`v0.2.0` // `operational` // [living]
 
 ---
 
@@ -160,13 +160,23 @@ LLM-generated text carries recognizable behavioral patterns. Readers detect them
 - Importance inflation: phrases like "a pivotal moment," "it is worth noting," "this underscores"
 - Throat-clearing openers: grand statements about the state of the world, restatement of the question just asked
 - Structural false contrasts: "It's not X, it's Y" / "Not X, just Y"
-- Em dashes: avoid entirely. Use a comma, parenthesis, or recast the sentence.
+- Em dashes: barred entirely. See Em Dash Check.
 - Vocabulary tells: "delve," "underscore," "robust," "seamless," "transformative," "holistic," "leverage" (as verb), "comprehensive"
 - Rhetorical ramps: announcing an instruction before giving it. "The required act is simple:", "The answer is straightforward:", "What this requires is:" all bury the instruction under an announcement of the instruction. State the action directly.
 
 **Applying both layers**
 
 Draft for Layer 1 first, get the reasoning character right. Then read for Layer 2, remove the patterns that would make the derivative read as machine-generated. A draft that passes Layer 1 but fails Layer 2 has the right content and will not be read. A draft that passes Layer 2 but fails Layer 1 is legible and says nothing worth reading.
+
+## Em Dash Check
+
+Em dashes are barred from every file in the project. Conversation is out of scope.
+
+Anything destined for a file is written without em dashes from the first draft, a draft shown for approval included. A draft approved with em dashes in it becomes a rewrite of content already agreed.
+
+Verify by grep, not by rereading. Write the candidate text to a scratch file outside the project and grep it for the character. The destination document is never the file grepped. Report the check as done only after the grep returns clean.
+
+Replace an em dash with a comma, a period, or a recast sentence. Parentheses are not a substitute. They carry the same tell, and a sweep that used them as the default replacement is recorded as a hard lesson in `RFM_skill_unslop_reasoning.md`.
 
 ---
 

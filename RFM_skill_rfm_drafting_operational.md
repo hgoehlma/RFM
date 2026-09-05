@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.1.1` // `skill_rfm_drafting_operational` // `[living]`
+`v0.2.0` // `skill_rfm_drafting_operational` // `[living]`
 
 ---
 
 ## What this document covers
 
-Derivation procedure for the `rfm-drafting` skill. The reasoning behind every decision here is in `RFM_skill_rfm_drafting_reasoning.md`.
+Derivation procedure for the `rfm-drafting` skill. The reasoning behind every decision here is in `RFM_skill_rfm_drafting_reasoning.md`. Rules shared by all RFM skills are in `RFM_skills_module_operational.md`. This document carries what is specific to `rfm-drafting`.
 
 ---
 
@@ -36,17 +36,6 @@ YAML frontmatter rules:
 
 ---
 
-## Retirement of R-LENSMODE
-
-R-LENSMODE in `RFM_handover_rules.md` is retired when `rfm-drafting` is installed. Steps:
-
-1. Install `rfm-drafting`.
-2. Remove R-LENSMODE from `RFM_handover_rules.md`.
-3. Bump version on `RFM_handover_rules.md`.
-4. Run `rfm-ripple-check` to confirm no remaining references to R-LENSMODE across RFM documents.
-
----
-
 ## Skill body maintenance
 
 When a new drafting failure class is identified in practice:
@@ -61,11 +50,9 @@ When a new drafting failure class is identified in practice:
 
 ## Coverage check: after derivation
 
-Verify the skill:
-- Frontmatter validates without error
-- Description is a single line, target 200-400 characters, "RFM sessions only" appears first
-- Body opens directly on Layer 1, no preamble
-- No em dashes in the skill body
+Apply the shared coverage check in `RFM_skills_module_operational.md` first. In addition, verify the skill:
+- Description front-loads "RFM sessions only"
+- Body opens directly on Layer 1
 - rfm-unslop is referenced in Layer 2, not duplicated
 
 ---

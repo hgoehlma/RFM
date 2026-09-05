@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.1.1` // `skill_rfm_drafting_reasoning` // `[living]`
+`v0.2.0` // `skill_rfm_drafting_reasoning` // `[living]`
 
 ---
 
@@ -45,7 +45,7 @@ Nothing currently fires at the moment of drafting to encode: where does this bel
 The operational doc carries formatting conventions. Drafting guidance is behavioral: it needs to fire at the moment of production, not be consulted after the fact. A skill fires; a document section does not.
 
 **Why one skill covering structural placement, section-type behavior, and the derivative chain.**
-These three concerns arise simultaneously at the moment of drafting. Splitting them across separate artifacts requires a classification decision at the trigger point. That decision fails under production load. One skill with clear internal layers removes the decision.
+These concerns arise at the same moment, when a practitioner is about to write content into a document. The module's rule groups a family that shares one moment, and its reasoning is in `RFM_skills_module_reasoning.md`. The rule applies cleanly here because no member of the family has a moment of its own to fire at.
 
 **Why language compliance is delegated to rfm-unslop rather than duplicated.**
 `rfm-unslop` is already always-on for all RFM session output. Duplicating its coverage in this skill creates two sources of truth for language rules. Delegation keeps language rules in one place and makes this skill's scope structurally distinct.
@@ -79,4 +79,6 @@ Practice will surface failure classes not yet anticipated. This question tracks 
 
 ## Hard Lessons
 
-*[No hard lessons at this time.]*
+**[HL-NSWP] Nothing checks a draft against the sweeps at the moment it is drafted.**
+
+A Chosen Direction entry was drafted for the top-level reasoning document and presented as ready. Checked afterward against the two sweep prompts, it failed three times: a procedure had leaked into an entry that carries only why, a claim about model behavior was written as settled when it rested on a single analysis, and the entry ran to three paragraphs where two carried the argument. The check ran only because the human asked for it. The drafting skill was loaded at the moment the entry was written, carries placement and section-type rules, and caught none of the three. The sweeps catch them by design and run only when invoked, which is after the content is already in the document. A draft that passes the checks that happened to run says nothing about the checks that did not.

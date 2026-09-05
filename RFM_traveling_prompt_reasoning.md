@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.1.6` // `module_reasoning` // [living]
+`v0.2.0` // `module_reasoning` // [living]
 
 ---
 
@@ -82,14 +82,6 @@ LLM derivation is probabilistic: the same source documents will produce slightly
 **Why prose derivative discipline is ambient and belongs in the traveling prompt:**
 
 When a session produces a text-facing derivative (public documentation, onboarding material, worked examples), the output carries behavioral patterns from the LLM that produced it. Those patterns are recognizable to readers and cause disengagement before the content is reached. The discipline that prevents this must activate at the moment of production, not be invoked deliberately by the practitioner. Deliberate invocation fails: it requires the practitioner to remember, and memory is exactly what fails under the pressure of producing output. The traveling prompt is the only artifact that is always on. Prose derivative discipline therefore belongs there as a behavioral instruction, not in an operational document alone. The operational document carries the detail; the traveling prompt carries the activation.
-
-**Why em dashes are excluded from prose derivatives:**
-
-RFM derivatives are read before they are reasoned with. A reader who pattern-matches machine-generated text disengages before the content is reached. The reasoning is never encountered. Em dashes have become the highest-signal single typographic marker of LLM-generated prose: recognizable to readers who cannot name why, acted on before they decide to act on it.
-
-The exclusion is therefore not a stylistic preference. It is a commitment made in service of the derivative reaching its reader. If the content does not land, the reasoning behind it is irrelevant.
-
-The operational consequence is carried in `RFM_operational.md`.
 
 **Why graduation discipline belongs in the traveling prompt as a behavioral instruction:**
 
