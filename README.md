@@ -1,84 +1,87 @@
 # Reasoning-First Methodology (RFM)
 
-Every complex system has the same failure: the thinking disappears. What remains is code, output, or structure. The reasoning that shaped it, the alternatives that were rejected, the assumptions that were made are gone. Humans who come later must reconstruct it. Anyone working within the system without that context is guessing.
+Every complex project fails the same way: the thinking disappears.
 
-RFM places the reasoning document at the center. Not the code. Not the output. The reasoning, explicit, hierarchical and curated, is designed to survive beyond the people and sessions that produced it, so that returning to it six months later, or bringing in a new collaborator, does not mean starting from scratch.
+What survives is documents, notes, code, software, etc. But the alternatives that someone rejected at some point, the assumptions that people worked from, the reason a decision was taken one way and not the other are rarely visible. People who join a project later need to reconstruct it or hope that someone with the right knowledge is still around. Anyone working on the content of the project / system without that information is often guessing.
 
-Every change to a system begins with a change to the reasoning document at the appropriate level. The document is the source. Everything else follows from it.
+RFM puts the reasoning document at the center and treats it as the source. Any digital output (e.g., code / slide decks / business plans) is derived from it. The reasoning document is explicit and actively curated, arranged in a hierarchy, and written in such a way that people can come back to it after six months or can hand the project to someone new who will not have to start over.
 
-If you have ever joined a project with no idea why anything was built the way it was, or watched a decision get made again from scratch because no one recorded why it was made the first time: this is for that. Peter Naur diagnosed this problem in 1985. He had no structural solution. This is ours.
+Therefore every change begins with a change to the reasoning document at the appropriate level.
+
+In other words: we start with the why. The why as intent. Reasoning why something is done. Operational documents hold the what and the how. They cover specifications and the variables that are needed to fulfil the why.
+
+If you have ever joined a project and had no idea why anything was built the way it was or if you ever watched a team reconstruct a decision from scratch because nobody wrote down why they made it to begin with, this may be for you. Peter Naur diagnosed the problem in 1985. He did not offer a structural solution. This is ours.
 
 ---
 
 ## The core idea
 
-A reasoning document is a structured, living artifact with eight sections: The Problem, The Assumptions, The Landscape, The Options Considered, The Chosen Direction and Why, The Boundaries, The Open Questions and Hard Lessons.
+A reasoning document has eight sections: The Problem, The Assumptions, The Landscape, The Options Considered, The Chosen Direction and Why, The Boundaries, The Open Questions, Hard Lessons.
 
-The same eight sections apply at every level of the hierarchy, from top-level methodology to individual module, with different scope but identical discipline. Think of a country map and a street map: different resolution, same navigational rules, and they connect. Mathematicians call this fractal. The term is precise: a fractal is not just a pattern that repeats, it is a pattern whose rules apply at every level. That is exactly what the reasoning document hierarchy is.
+The same eight sections apply at every level, from the methodology as a whole down to a single module. While the scope and the content change over time, the discipline does not. You can compare it with a country map and a street map. They differ in resolution but they follow the same navigational rules and they still connect to each other.
 
-The AI is a co-author in this practice, not a tool that executes within it. It is expected to challenge weak thinking, notice when something is off, and hold the discipline alongside the human without waiting to be asked. The methodology applies to itself: these documents were built in collaboration between human and AI using RFM principles, with the reasoning coming before the structure.
+Mathematicians call such a structure fractal. A fractal's defining property is that its rules hold at every magnification. This is exactly the idea for the sections of a reasoning document.
 
-One honest caveat: AI systems are trained to be agreeable, and that tendency does not disappear because you instruct them otherwise. RFM designs for this directly. The reasoning document holds the position even when the AI would soften it, and the human's active role in the collaboration is a designed practice, not a constant struggle.
+### The role of a Large Language Model
+
+The LLM works as a co-author. It challenges weak thinking, says when something is off, and holds the discipline without being asked each time. RFM was built exactly this way. Human and AI working together and reasoning first before deciding on the structure and the approach.
+
+And this raises an obvious objection: LLMs are trained to agree. When you instruct an LLM to push back you cannot undo how the LLM was trained. RFM attempts to handle this structurally: the reasoning document holds a position the AI would otherwise weaken and the human's side of the collaboration is specified as a practice defined in a "human prompt".
 
 ---
 
 ## The two phases
 
-The collaboration has two distinct phases. In the first, human and LLM build the reasoning documents together: reasoning through the problem, the assumptions, the landscape, the options and the chosen direction. Neither can do this well alone. In the second, the completed documents become the source from which the LLM derives and executes: writing code, drafting operational documents, producing whatever the domain requires, without the human present at each step. The quality of what the LLM produces in phase two is determined entirely by the quality of what was reasoned through in phase one.
+Phase one: human and LLM build the reasoning documents together. They jointly work through the problem, the assumptions, the landscape, the options, and so on. Each brings strengths the other lacks.
+
+Phase two: the finished documents become the source from which the LLM derives the digital output(s). Code, operational documents, business strategy, whatever a particular domain needs. This output is generated without the human.
+
+Therefore the output of phase two depends on how well the documents of phase one were reasoned and specified.
 
 ---
 
 ## Two modes
 
-The methodology operates in two modes. Reasoning mode is the default: the reasoning document precedes execution, every change begins at the appropriate level of the hierarchy. Execution mode is the correct response to delivery pressure, a deadline or time-boxed commitment, when reasoning documents are sufficiently established. The discipline shifts from reasoning before every action to executing within established reasoning, using those documents as the fixed reference point. What execution mode requires is minimal capture: deviations, deferrals and broken assumptions noted as they happen, enough to make the return to reasoning mode honest rather than reconstructed after the fact. The return is not optional.
+The reasoning mode is the default setting. The document drafting, refining, and curation precedes execution. Every change starts with the corresponding document at the appropriate level of the hierarchy.
+
+You switch into execution mode under delivery pressure. However, this requires that the reasoning and operational documents are established far enough. Then the human and the LLM can execute within existing reasoning. However, you keep a minimal log: deviations from the thinking, deferrals, but also assumptions that broke. That log keeps the return to reasoning mode honest and is intended to avoid reconstruction afterwards.
+
+You do return to reasoning mode. Eventually. And then the log is what you will have to work through.
 
 ---
 
 ## Where to start
 
-If you are encountering RFM for the first time:
+Two documents.
 
-1. [`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md): the methodology itself. Start here.
-2. [`RFM_first_session_guidance.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_first_session_guidance.md): practical preparation for producing your first reasoning document.
+1. [`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md), the methodology's own reasoning. Start here.
+2. [`RFM_first_session_guidance.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_first_session_guidance.md), practical steps for producing your first reasoning document.
 
-That is enough to begin. The rest of the document landscape is for collaborators maintaining and extending the methodology. You will find your way into it naturally once you have produced your first reasoning document.
+The rest of the repository serves people maintaining and extending RFM. However, if you want to go deeper, do read the glossary. As mentioned before, operational documents hold the what, the procedures, the specifications. Review prompts have been designed to sweep completed documents for structural and language failures, but also for operational problems. Documents in RFM are living, so you change them often. The review prompts are what keep them in shape as they change. A set of skills has been developed that the LLM loads at the moments they apply. They also have their own reasoning documents. Furthermore, there is a shared failure taxonomy that both the sweeps and the skills draw on to check and detect problems.
 
-## System documents
+In other words, every component of the approach has a reasoning document (and often an operational document) beside it. The naming convention is `RFM_[artifact]_reasoning.md`, carrying why it is built the way it is.
 
-For collaborators working within the methodology:
-
-| Document | What it carries |
-|---|---|
-| [`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md) | The methodology itself: problem, assumptions, landscape, chosen direction, hard lessons |
-| [`RFM_human_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_human_prompt.md) | Practices that keep the human's collaborative posture alive across sessions |
-| [`RFM_traveling_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_traveling_prompt.md) | The system prompt that carries the methodology into every LLM conversation |
-| [`RFM_guided_drafting_prompt.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_guided_drafting_prompt.md) | The prompt that activates a guided first-document session |
-| [`RFM_sweep_prompt_structural.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_sweep_prompt_structural.md) | Structural review: findings for ruling, not edits |
-| [`RFM_sweep_prompt_language.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_sweep_prompt_language.md) | Language review: findings for ruling, not edits |
-| [`RFM_glossary.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_glossary.md) | Disambiguation of terms that carry RFM-specific meanings |
-| [`RFM_operational.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_operational.md) | File naming, version discipline, ID conventions |
-
-Reasoning documents for each artifact are in the repository, named `RFM_[artifact]_reasoning.md`. They carry the why behind every design decision.
+The full list, with current versions, is also within the document map at the top of `RFM_top_level_reasoning.md`. It is maintained only there.
 
 ---
 
 ## State
 
-This methodology is in active development. All documents are living artifacts, versioned and curated.
+The approach is in active development. Every document is living, versioned and continuously curated.
 
-The abbreviation RFM is not accidental. Those who recognise the older acronym will understand immediately what this methodology thinks you should do before touching anything.
+The acronym for the methodology was chosen deliberately. Anyone who recognises the older expansion already knows what this methodology thinks you should do before touching anything.
 
-RFM is a vehicle, not a prescription. The reasoning comes first. Everything else is yours to design for your domain, your team and your discipline.
+RFM is a vehicle, not a prescription. The reasoning comes first. What you build on top of it is yours.
 
 ---
 
-## Why it matters now
+## Where this bites
 
-The way people work with AI is changing fast, and the dominant focus is on assembling everything a model needs to act well: the right documents, the right context, the right instructions. That is the right instinct. But it answers the wrong question first. It asks: what does the AI need? RFM asks first: was the reasoning behind that actually worked through, thoroughly, from multiple angles, before anything was built?
+Most of the current effort around working with AI goes into assembling what an LLM needs: the right documents, the right context, the right instructions. Sounds right, but it is the wrong first question. It asks what the AI needs before anyone has asked whether the reasoning underneath it was worked through at all.
 
-A model working from well-assembled context but poorly-reasoned documents does not fail cautiously. It executes confidently on assumptions that were never examined, alternatives that were never named and decisions whose reasoning disappeared the moment they were made.
+If you give an LLM a well-assembled context and badly-reasoned documents, it will execute with confidence on assumptions that nobody examined and alternatives nobody named.
 
-The agentic shift makes this more urgent. As AI systems act autonomously across longer chains, planning, executing and adjusting without human oversight at each step, the reasoning document becomes the only reliable mechanism for keeping human intent legible to the systems executing it. A capable agent acting on vague intent fails at scale, and the failure is hard to trace. Explicit reasoning before autonomous execution is not overhead. It is the only thing that makes the execution accountable.
+What's worse is that agentic systems make it even more challenging. As LLMs plan and act across long chains with no human checking each step, the reasoning document is intended to provide a mechanism that keeps the human intent visible to the system that executes it. Note that the industry calls those chains reasoning. But that is reasoning as inference, not reasoning as intent, and it is the second kind that disappears. In other words, a highly capable agent acting on vague intent fails confidently at scale. That failure is hard to trace back to its cause. Reasoning made explicit before autonomous execution is what makes the execution accountable.
 
 ---
 
@@ -90,4 +93,4 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inter
 
 © 2026 Hinrich W.H. Göhlmann
 
-*Developed in collaboration with Claude Sonnet 4.6 (Anthropic), acting as co-author throughout.*
+*Developed in collaboration with Claude (Anthropic), acting as co-author throughout.*

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.3.2` // `top_level_reasoning` // [living]
+`v0.3.3` // `top_level_reasoning` // [living]
 
 ---
 
@@ -389,4 +389,12 @@ An instruction in an always-on artifact fires every time its condition is met. W
 The worked example is version bumps. The traveling prompt instructed that a document change required a bump to be flagged, and the close-out sequence owned when bumps actually happen. Across several sessions the bump was performed mid-session instead. On one occasion it was folded into the same write as the content that triggered it, which put it past review entirely. Both artifacts were correct read alone.
 
 An instruction naming an action that a later step performs belongs with that step. An always-on artifact should carry only what gets acted on where it is read.
+
+**[HL-LOADPT] An instruction that overrides a standing default binds only where the artifact carrying it is loaded.**
+
+An artifact loaded at a defined moment carries its instructions into that moment only. When one of those instructions overrides a default that applies more widely than the artifact does, the override holds inside the moment and the default holds everywhere else. Nothing errors. The instruction is correct, it is present in the project, and it does not fire.
+
+The worked example is the commit attribution footer. `session-closeout` states that commit messages carry no attribution footer, and states it explicitly against the live system instruction requiring one. Five commits were made this session outside the close sequence, during a repository migration. The close-out skill was loaded at none of them, so the system instruction applied unopposed and all five carried a footer the project's own convention bars. They were pushed to a public repository before the skill was read.
+
+An override belongs with the default it overrides, or in an artifact loaded wherever that default applies. Putting it inside a procedure narrows its reach to that procedure.
 
