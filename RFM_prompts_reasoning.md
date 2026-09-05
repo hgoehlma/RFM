@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.1.9` // `module_reasoning` // [living]
+`v0.1.10` // `module_reasoning` // [living]
 
 ---
 
@@ -230,6 +230,10 @@ The header is the single source of version truth. Without an explicit reminder i
 When a prompt derivation is run more than once and outputs are compared, each comparison generates new variation: phrasing differences, structural alternatives, emphasis shifts. The natural instinct is to reconcile until the result feels right. The problem: "feels right" under session pressure means expression has converged, not that the prompt is better. Each loop adds comparison cost and risks replacing load-bearing language with language that reads more cleanly but activates less reliably.
 
 The right stopping condition is structural: the load-bearing items are present, the structure is cleaner than the previous version, and the content is shorter without losing substance. When that condition is met, stop. One reconciliation pass, not a loop. The derivation loop is the failure, not a quality mechanism.
+
+**[HL-IVCK] An invented structural rule is indistinguishable from a real one in the form it arrives in.**
+
+The LLM stated a check that no document holds, that every question named in The Problem must have a belief under it in The Assumptions, and applied it to two drafts before the human asked whether a rule was being designed. The check named a section, a trigger, and a failure mode, which is the form every real rule in the system takes, so nothing about how it read marked it as invented. A prohibition on inventing rules would not catch this, because the LLM producing the check does not experience it as invention. It reads as recall. What caught it was the human recognizing the shape of a rule where none had been agreed, and that detection is available to the reader of the claim rather than to its author, which is what makes it hard to move to the LLM's side.
 
 ---
 

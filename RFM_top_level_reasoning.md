@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.2.14` // `top_level_reasoning` // [living]
+`v0.2.15` // `top_level_reasoning` // [living]
 
 ---
 
@@ -9,7 +9,7 @@
 |---|---|---|---|
 | `RFM_operational.md` | Operational | v0.1.9 | File naming conventions, document map maintenance, version discipline |
 | `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.9 | The reasoning document governing all system prompt decisions |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.10 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.1.6 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.1.1 | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.4 | The system prompt that carries the methodology into every LLM conversation |
@@ -34,6 +34,7 @@
 | `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.1.1 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
 | `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.1.1 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
 | `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.1.1 | Derivation procedure, skill body maintenance, and R-LENSMODE retirement steps for the rfm-drafting skill |
+| `RFM_skills_module_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing skill design decisions across skills |
 
 ---
 
