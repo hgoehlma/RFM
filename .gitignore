@@ -4,3 +4,11 @@
 
 # SMB deletion leftovers
 .smbdelete*
+
+# Session continuity prosthetics, not published
+RFM_handover_session.md
+RFM_handover_rules.md
+
+# Migration scratch
+github-rfm.bundle
+git-filter-repo.py
