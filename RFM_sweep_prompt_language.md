@@ -1,5 +1,5 @@
 # RFM: Language Sweep Prompt
-`v0.1.4` // `sweep_prompt_language` // [living]
+`v0.2.0` // `sweep_prompt_language` // [living]
 
 ---
 
@@ -15,7 +15,7 @@ The language sweep can run on partial content. Language failures are local and d
 
 ## What you are looking for
 
-Expression failures: session-born shorthands that require the drafting session to be understood, insider terminology without definition or glossary pointer, claims that outrun their evidence without being flagged, reasoning compressed to a conclusion without showing the path, observation and interpretation conflated in the same sentence, wording that implies uncertainty that no longer exists, and curation failures: entries that are wordy (text that does not earn its place), journal-mode (language written for the session that produced it rather than a future reader), or redundant with reasoning stated elsewhere without adding signal. You are not looking for structural failures: content at the wrong level, wrong section, module strain, graduation candidates. Those belong to the structural sweep.
+Expression failures: session-born shorthands that require the drafting session to be understood, insider terminology without definition or glossary pointer, claims that outrun their evidence without being flagged, reasoning compressed to a conclusion without showing the path, observation and interpretation conflated in the same sentence, wording that implies uncertainty that no longer exists, and curation failures: entries that are wordy (text that does not earn its place), journal-mode (language written for the session that produced it rather than a future reader), or redundant with reasoning stated elsewhere without adding signal. You are not looking for structural failures: content at the wrong level, wrong section, module strain, graduation candidates. You are not looking for lifespan failures: claims that planned work will falsify. Both belong to the structural sweep.
 
 Grey zones: when a failure is both expressive and positional, and the structural sweep has already ruled on the structural dimension, the language failure is yours to assess. If the structural sweep has not yet run on that entry, flag it as a grey zone and name both failure types. Do not assess the language dimension until the structural dimension has been ruled on.
 

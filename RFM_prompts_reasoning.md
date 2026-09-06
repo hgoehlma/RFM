@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.1.10` // `module_reasoning` // [living]
+`v0.2.0` // `module_reasoning` // [living]
 
 ---
 
@@ -97,57 +97,57 @@ Sweep running as a background discipline: triggered automatically at intervals o
 
 A system of prompt artifacts, each with a reasoning document as its foundation, each designed for its specific job.
 
-**Why each collaborator and each failure class requires its own artifact:**
+**Why each collaborator and each corrective mode requires its own artifact**
 
-The traveling prompt and a single sweep prompt would address prevention and correction as a pair. That pairing leaves the human collaborator's posture uncalibrated: the traveling prompt reaches the LLM, not the human. The human prompt closes that gap. Within the corrective arm, a single sweep prompt is insufficient because the two failure classes (structural hierarchy failures and language failures) require different cognitive modes. A structural sweep asks: is this content at the right level, is this section straining toward a new module, is this open question ready to graduate? A language sweep asks: does this term carry its meaning without session context, has session residue accumulated, are claims separated from interpretation? Running both in one pass concentrates attention on neither.
+The traveling prompt and a single sweep prompt would address prevention and correction as a pair. That pairing leaves the human collaborator's posture uncalibrated: the traveling prompt reaches the LLM, not the human. The human prompt closes that gap. Within the corrective arm, a single sweep prompt is insufficient because structural and language failures require different cognitive modes. A structural sweep asks: is this content at the right level, is this section straining toward a new module, is this open question ready to graduate? A language sweep asks: does this term carry its meaning without session context, has session residue accumulated, are claims separated from interpretation? Running both in one pass concentrates attention on neither.
 
-**Why sweep prompts produce findings for ruling, not edits:**
+**Why sweep prompts produce findings for ruling, not edits**
 
 The sweep prompts are corrective artifacts, not authoring artifacts. A sweep prompt that makes edits directly collapses the corrective pass into the authoring pass: it removes the human judgment step that the correction exists to protect. Findings for ruling keeps the human as the decision-maker at the moment correction is proposed. This is the co-author ceiling applied to the corrective arm: the sweep identifies, names, and proposes; the human rules.
 
-**Why guiding principles over hard rules:**
+**Why guiding principles over hard rules**
 
 Design from failure modes, not from aspiration. The failure mode of hard rules is an LLM that complies without understanding and fails on novel situations. The failure mode of guiding principles is an LLM that understands but occasionally applies judgment differently than expected. The latter is recoverable. The former produces confident wrong behavior at scale.
 
-**Why the co-author role matters:**
+**Why the co-author role matters**
 
 An LLM that understands itself as a tool executing within the methodology will wait to be asked before contributing. An LLM that understands itself as a co-author will notice when something is off and say so without waiting. The red team function, the drift detection, the strain flagging: none of these work if the LLM is waiting for permission. The system prompt must make the co-author role explicit and mean it.
 
 The joint reasoning sequence expresses this role in practice: propose → reflect → converge → execute. Both parties contribute to the proposal; either may surface a direction or propose a draft. Both reflect on it, testing it against the reasoning and each other's instincts. Both converge on a direction through explicit alignment. Execution then follows, carried by whoever is best positioned, most often the LLM formulating and editing, the human judging and confirming. That division of labor is one expression of the sequence at the execution step. It is not a description of the whole. Neither party defers the step they are best equipped to carry.
 
-**Why the prompt artifacts form a system:**
+**Why the prompt artifacts form a system**
 
 The traveling prompt prevents failures from entering: it makes the discipline ambient. The human prompt calibrates the human collaborator's posture across sessions, the side of the collaboration the traveling prompt cannot reach. The sweep prompts correct failures that crept in despite that discipline, whether introduced by the human or the LLM co-author. Prevention and correction are different jobs and require different artifacts. A single prompt attempting both produces neither the ambient discipline nor the concentrated review that each requires.
 
-**Why prompt artifacts are direct derivatives with no operational layer:**
+**Why prompt artifacts are direct derivatives with no operational layer**
 
 The derivative chain for prompt artifacts is: reasoning document → prompt artifact. No operational document sits between them. Operational documents carry hard execution contracts (constants, interfaces, procedures with specific values) that a reasoning document must not absorb. Prompt artifacts carry none of these. They carry activated behavior, and the reasoning document is sufficient as their source. This holds for the traveling prompt, the structural sweep prompt, and the language sweep prompt equally. If concrete thresholds or procedures ever emerge that a prompt references but should not absorb (a named log format, a specific recurrence count), those values would move to `RFM_operational.md`. Until that condition exists, the chain is direct.
 
 This also establishes why reasoning documents are the shared interface while prompt artifacts are derivatives. Reasoning documents serve both human and LLM readers without optimization for either. The prompt artifacts are each optimized for their specific reader and mode: the traveling prompt for ambient collaboration, the sweep prompts for concentrated review. The reasoning documents are the authority. The prompts are the derivatives.
 
-**Why the document map update tax is acceptable:**
+**Why the document map update tax is acceptable**
 
 The document map must use real version numbers: it is the snapshot of the system's current state, and wildcards defeat its purpose. The tax of updating the map when modules change is real but proportionate: it is bookkeeping, not re-reasoning. The mitigation is LLM discipline: when any reasoning document is edited in a session, flag that the top-level document map requires a version update before the session closes. This removes the memory burden from the human. A map that drifts is worse than no map.
 
-**Why each prompt artifact and its reasoning document version in step:**
+**Why each prompt artifact and its reasoning document version in step**
 
 Every change to a derivative requires a corresponding change to its source reasoning document. This is the methodology's founding principle applied to itself. If any prompt artifact changes, something in its reasoning either changed or was insufficiently expressed; both cases require a reasoning document update. Independent versioning would allow the derivative to move without its source, which is drift by another name. Each prompt artifact versions in step with its reasoning document.
 
-**Why the traveling prompt carries a behavioral instruction for derivative changes:**
+**Why the traveling prompt carries a behavioral instruction for derivative changes**
 
 The principle, every derivative change requires a source reasoning document change, is in the methodology. But principles without behavioral expression are aspirations. The traveling prompt must make this actionable: when a derivative changes in a session, flag it. The LLM is the mechanism by which the discipline becomes ambient rather than effortful. This instruction is that mechanism applied to the derivative change principle itself.
 
-**Why the prompt is optimized for its reader, not its author:**
+**Why the prompt is optimized for its reader, not its author**
 
 The traveling prompt is read by an LLM, not a human. It does not need to be written as friendly prose: compression and directness are features, not shortcuts. If tighter language activates the right behaviors more reliably, that is a better prompt. The reasoning document is the human-readable source. The prompt is the derivative, optimized for its reader.
 
 One governance constraint applies: the prompt must remain verifiable by the human. Not fully readable as prose, but parseable enough that the human can verify it still reflects the methodology. If the prompt drifts into shorthand the human cannot evaluate, oversight of the methodology is lost. The bar is verifiability, not readability.
 
-**Why cross-LLM testing is part of prompt curation discipline:**
+**Why cross-LLM testing is part of prompt curation discipline**
 
 The traveling prompt is developed and refined primarily through use with a single LLM. That creates a specific drift risk: the prompt gradually encodes that LLM's behavioral idiosyncrasies as methodology. The discipline looks rigorous, it is grounded in real experience, but the ground is model-specific and moving. Deliberate testing against a second LLM serves the same function as the fresh-LLM test recommended for reasoning documents: it surfaces what has been invisibly optimized away. This is a curation practice for the prompt artifact itself, not a requirement of the methodology in general use.
 
-**Why the same failure mode must be addressed at the appropriate level in each relevant component:**
+**Why the same failure mode must be addressed at the appropriate level in each relevant component**
 
 The prompt components were designed sequentially, not as a system. That sequence creates a coherence risk: a failure mode identified in one component may not be named in the others at the level appropriate to each. The symptom is asymmetry: a failure the human prompt asks the human to catch, the traveling prompt does not prevent, and the sweep prompts do not detect.
 
@@ -155,15 +155,15 @@ Curation discipline is the clearest example. The right balance in a reasoning do
 
 This failure mode is named in the human prompt as something the human must catch in AI output. That is necessary but insufficient. The traveling prompt must name it as a prevention posture: flag these failures before they enter the document. The language sweep must name it as a detection criterion: entries that are wordy, journal-mode, or redundant are language failures subject to findings for ruling. The same failure mode, addressed at the appropriate level in each component, is what system coherence requires.
 
-**Why the traveling prompt must name the full derivative chain, not only the reasoning/derivative distinction:**
+**Why the traveling prompt must name the full derivative chain, not only the reasoning/derivative distinction**
 
 The reasoning/derivative binary, does this require reasoning, is necessary but insufficient. An LLM holding only that binary will ask the question, find no reasoning gap, and proceed to execution. The question it must also ask is whether the implementation behavior is now concrete enough that a practitioner could ask "what exactly do we do?", and if so, that behavior belongs in the operational document before or alongside execution artifacts. The full chain is: reasoning document → operational document → execution artifacts → outputs. Each layer is a source for the layer below it. A behavioral instruction that names only the first link leaves the middle link invisible, and the operational document gets bypassed silently under execution pressure.
 
-**Why reasoning compression must be named as structural change, regardless of how it presents:**
+**Why reasoning compression must be named as structural change, regardless of how it presents**
 
 Compression can arrive dressed as legitimate moves: curation ("this is wordy"), anti-deference ("propose and execute"), or re-homing ("this belongs at a lower level"). None of those framings change what compression is. Losing articulated reasoning is a structural change: it requires joint decision weight, not light confirmation. Naming the masquerade explicitly is what makes the behavioral instruction enforceable: an LLM that recognizes the pattern can flag it; one that only knows "don't compress" will miss it when it arrives as something else.
 
-**Why the coverage check after derivation is a traceability check, not a quality comparison:**
+**Why the coverage check after derivation is a traceability check, not a quality comparison**
 
 The coverage check exists to catch attention failures: items present in the source documents that the derivation missed. Framing it as a quality comparison against the prior version introduces prior-version pull toward its phrasing, structure, and emphasis regardless of whether those choices were correct. That pull is the derivation loop failure named in `[HL-PDLR]` arriving one step earlier.
 

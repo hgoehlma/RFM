@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.3.0` // `skill_rfm_drafting_operational` // `[living]`
+`v0.4.0` // `skill_rfm_drafting_operational` // `[living]`
 
 ---
 
@@ -46,9 +46,11 @@ The pre-check is Layer 4 of the skill body. It runs after Layers 1 to 3 and befo
 
 *Language:* Would a reader who was not in this session understand this content and see the reasoning behind each claim it makes?
 
+*Lifespan:* Will work already planned make any part of this content false or redundant?
+
 **On a hit.** Revise before presenting. When the hit cannot be resolved without a ruling, present the draft with the concern named rather than silently resolving it.
 
-**What the pre-check does not do.** It does not report a draft as swept. It reads two questions against one piece of content; a sweep reads a document. A draft that passes the pre-check carries no evidence about anything the pre-check did not ask.
+**What the pre-check does not do.** It does not report a draft as swept. It reads one question per failure family against one piece of content; a sweep reads a document. A draft that passes the pre-check carries no evidence about anything the pre-check did not ask.
 
 ---
 

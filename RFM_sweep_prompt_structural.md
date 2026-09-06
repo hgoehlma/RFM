@@ -1,5 +1,5 @@
 # RFM: Structural Sweep Prompt
-`v0.3.5` // `sweep_prompt_structural` // [living]
+`v0.4.0` // `sweep_prompt_structural` // [living]
 
 ---
 
@@ -19,7 +19,7 @@ Two conditions must both be met before architectural review begins.
 
 ## What you are looking for
 
-Structural failures: content at the wrong level, content in the wrong section, sections straining toward a new module, reasoning duplicated across sections, entries ready to graduate or expire. You are not looking for language failures: opaque wording, session residue, disambiguation gaps. Those belong to the language sweep.
+Structural failures: content at the wrong level, content in the wrong section, sections straining toward a new module, reasoning duplicated across sections, entries ready to graduate or expire. Lifespan failures: content that is correctly placed and clearly written today and that work already planned will make false or redundant. You are not looking for language failures: opaque wording, session residue, disambiguation gaps. Those belong to the language sweep.
 
 Cross-level duplication: content that a child module now owns but the parent document still carries, a sign the parent failed to contract after branching. This is distinct from duplication within a document: the failure is between hierarchy levels, not between sections. The Chosen Direction is the first place this becomes visible, since module ownership decisions are recorded there.
 
@@ -55,6 +55,9 @@ Primary question: Is any question ready to graduate, partially or fully resolved
 **The Hard Lessons**
 Primary question: Has any lesson been metabolized into an assumption or Chosen Direction and should now graduate? Is any lesson a restatement of another in different language?
 
+**Every section**
+Alongside each section's primary question, ask: does any entry state a condition that work already planned will satisfy? Report it under the section it appears in.
+
 **One finding per exchange.**
 Surface one finding. Stop completely. Do not add related observations, do not preview the queue, do not continue. Wait for the human's ruling. Then surface the next finding. When a finding is entangled with another, flag the entanglement before the human rules, not after.
 
@@ -83,6 +86,6 @@ Do not introduce language-sweep content into structural findings. Mode-contamina
 ---
 
 *structural sweep prompt // [living]*
-*the structural failure types in `RFM_operational.md` and the per-section questions in `RFM_sweep_module_operational.md` are the source for "What you are looking for" and "Protocol"*
+*the structural and lifespan failure types in `RFM_operational.md` and the per-section questions in `RFM_sweep_module_operational.md` are the source for "What you are looking for" and "Protocol"*
 *this prompt is the derivative*
 *findings for ruling, not edits*

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.3.0` // `skill_rfm_drafting_reasoning` // `[living]`
+`v0.4.0` // `skill_rfm_drafting_reasoning` // `[living]`
 
 ---
 
@@ -17,7 +17,7 @@ Nothing currently fires at the moment of drafting to encode: where does this bel
 
 **[AS-PRODLOAD]** Production load is the highest-risk moment for structural misplacement. The practitioner holds the reasoning and writes simultaneously. Checking placement requires stepping out of that mode. Without a forcing function, the check does not happen.
 
-**[AS-DISTINCT]** Structural misplacement is distinct from language failure. A well-written sentence in the wrong section is a structural failure. A correctly placed sentence with slop patterns is a language failure. Both need coverage but they are different failure classes.
+**[AS-DISTINCT]** Failure families do not cover each other. Content that passes one family's test can fail another's, so a check asking a single question catches a single family. The taxonomy in `RFM_operational.md` names the families and the boundaries between them.
 
 **[AS-UNSLOP]** `rfm-unslop` already handles language compliance for all RFM session output. The drafting skill does not replicate that coverage. It references it and covers what it does not.
 

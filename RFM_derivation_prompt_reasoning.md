@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Reasoning Document
-`v0.4.3` // `module_reasoning` // [living]
+`v0.4.4` // `module_reasoning` // [living]
 
 ---
 
@@ -65,41 +65,41 @@ Derivation procedures for specific artifacts already exist in operational docume
 
 ## The Chosen Direction and Why
 
-**Why a separate prompt rather than an extension of the traveling prompt:**
+**Why a separate prompt rather than an extension of the traveling prompt**
 
 The traveling prompt establishes the co-author role as its founding behavioral distinction. That role is correct for phase one and wrong for phase two. The difference is not one of degree, it is structural. A mode switch appended to the traveling prompt cannot reliably separate two postures that are incompatible by design. A separate artifact is the only architecture that makes the distinction unambiguous.
 
-**Why the prompt is generic:**
+**Why the prompt is generic**
 
 The derivation prompt activates behavior, not knowledge. What the LLM needs to know about the domain, the artifact, and the specific choices already made lives in the reasoning and operational documents. The prompt's job is to establish the posture from which the LLM reads those documents and executes from them. Mixing content into the prompt conflates two distinct layers and makes both harder to maintain.
 
-**Why the derivative type is not specified in the prompt:**
+**Why the derivative type is not specified in the prompt**
 
 What is being derived, code, text, a presentation, a document, is domain and project specific. That belongs in the operational documents, not in a generic behavioral artifact. A prompt that specifies derivative type must be rewritten for every new context and is no longer generic.
 
-**Why posture and behavior are the prompt's exclusive job:**
+**Why posture and behavior are the prompt's exclusive job**
 
 The confirmation gate, gap-flagging, and the faithful rendering frame are what the prompt must establish. These behaviors cannot be sourced from the reasoning or operational documents at session start, they must be active before the LLM reads anything. Everything else follows from the documents. A prompt that tries to do more than establish posture and behavior conflates its role with the documents it is designed to activate.
 
-**Why mid-session drift monitoring is the human's responsibility:**
+**Why mid-session drift monitoring is the human's responsibility**
 
 The derivation prompt establishes the posture at session start. It cannot enforce it throughout. LLMs drift toward prior-dominant behavior under session pressure regardless of what the prompt specifies. The human watches for this, re-anchors when needed, and is the quality gate the prompt cannot be. This mirrors the human's role in phase one, where the human prompt (see glossary) makes the same monitoring responsibility explicit for co-authorship sessions.
 
-**Why the derivation prompt optimizes for LLM activation with a verifiability floor:**
+**Why the derivation prompt optimizes for LLM activation with a verifiability floor**
 
 The derivation prompt has one primary reader: the LLM executing from it. Unlike the traveling prompt, which must remain parseable by its human maintainer as a condition of ongoing curation, the derivation prompt is invoked rarely and for a narrow purpose. Optimizing its language, structure, and phrasing for reliable LLM activation is the primary design constraint.
 
 The floor is verifiability, not readability. A human must be able to confirm that the prompt's coverage against its source documents is intact. Not parse it as friendly prose, but check that the load-bearing behavioral instructions are present and have not drifted. If the prompt becomes opaque enough that this coverage check is unexecutable, the maintenance relationship to the source documents breaks. That is the constraint. It is a lower bar than the traveling prompt's two-reader requirement, and intentionally so.
 
-**Why the prompt carries no domain knowledge or output specification:**
+**Why the prompt carries no domain knowledge or output specification**
 
 A prompt that encodes domain knowledge or specifies output form is no longer generic. It must be rewritten for every new project and every new derivative type. The derivation prompt is intentionally minimal: posture and behavior only. Everything substantive comes from the reasoning and operational documents. What is not in those documents will not be built. That constraint is a feature, not a limitation, it enforces the discipline that the documents are the source.
 
-**Why the confirmation gate appears at both the opening and closing of the prompt:**
+**Why the confirmation gate appears at both the opening and closing of the prompt**
 
 LLMs attend most reliably to the beginning and end of a prompt. Content in the middle receives less consistent attention regardless of how it is written. The confirmation gate is the behavioral instruction the derivation prompt cannot afford to have missed or underweighted. Placing it only at the opening creates a single point of attention. Placing it at both edges exploits primacy and recency to double-reinforce the single most critical constraint. Everything else in the prompt sits between two gate anchors.
 
-**Why a second, conditional gate governs derivation of mode-distinct siblings:**
+**Why a second, conditional gate governs derivation of mode-distinct siblings**
 
 The standard confirmation gate verifies fidelity to source. It does not verify fidelity to scope when the document being derived is one of two or more sibling derivatives whose source reasoning assigns each a deliberately distinct, mutually exclusive mode. A sentence can be faithfully sourced and still belong to a sibling's mode rather than the artifact being derived. The confirmation gate has no mechanism to catch this, because its three questions ask whether content is grounded, not whether it is grounded in the right artifact.
 

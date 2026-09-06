@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.3.3` // `top_level_reasoning` // [living]
+`v0.4.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -7,16 +7,16 @@
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_operational.md` | Operational | v0.3.1 | File naming conventions, document map maintenance, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
+| `RFM_operational.md` | Operational | v0.4.0 | File naming conventions, document map maintenance, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.1.10 | The reasoning document governing all system prompt decisions |
-| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.0 | The reasoning document governing traveling prompt design decisions |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.2.0 | The reasoning document governing all system prompt decisions |
+| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.1 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.1.1 | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.4 | The system prompt that carries the methodology into every LLM conversation |
-| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.2.5 | The reasoning document governing sweep prompt design decisions |
-| `RFM_sweep_module_operational.md` | Operational | v0.2.0 | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
-| `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.3.5 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
-| `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.1.4 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
+| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.3.0 | The reasoning document governing sweep prompt design decisions |
+| `RFM_sweep_module_operational.md` | Operational | v0.3.0 | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
+| `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.4.0 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
+| `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.2.0 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_operational.md` | Operational sweep prompt | v0.1.2 | The prompt artifact that activates the operational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.2 | Reasoning document governing human prompt design decisions |
 | `RFM_human_prompt.md` | Human prompt | v0.1.2 | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
@@ -24,7 +24,7 @@
 | `RFM_guided_drafting_prompt_operational.md` | Operational | v0.1.1 | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.1.1 | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
 | `RFM_first_session_guidance.md` | First session guidance | v0.1.3 | Practical preparation for a newcomer's first guided drafting session: what to bring, what to expect, what to watch for |
-| `RFM_derivation_prompt_reasoning.md` | Module reasoning | v0.4.3 | The reasoning document governing derivation prompt design decisions |
+| `RFM_derivation_prompt_reasoning.md` | Module reasoning | v0.4.4 | The reasoning document governing derivation prompt design decisions |
 | `RFM_derivation_prompt_operational.md` | Operational | v0.2.6 | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
 | `RFM_derivation_prompt.md` | Derivation prompt | v0.2.0 | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
 | `RFM_derivation_session_guidance.md` | Derivation session guidance | v0.1.1 | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
@@ -32,9 +32,9 @@
 | `RFM_skill_unslop_operational.md` | Skill operational | v0.2.1 | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
 | `RFM_skill_rfm_ripple_check_reasoning.md` | Skill reasoning | v0.1.2 | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
 | `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.2.0 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
-| `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.3.0 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
-| `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.3.0 | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
-| `RFM_skills_module_reasoning.md` | Module reasoning | v0.3.0 | The reasoning document governing skill design decisions across skills |
+| `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.4.0 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
+| `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.4.0 | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
+| `RFM_skills_module_reasoning.md` | Module reasoning | v0.4.0 | The reasoning document governing skill design decisions across skills |
 | `RFM_skills_module_operational.md` | Operational | v0.1.1 | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 
 ---
@@ -223,7 +223,17 @@ The questions built on that taxonomy are not shared. A sweep asks whether a fini
 
 The owner is `RFM_operational.md` rather than a module operational document. Every project using RFM installs `RFM_operational.md`, because `RFM_traveling_prompt.md` and every skill operational document name it. No module operational document is named by any artifact a consuming project runs. Placing the taxonomy in a module operational document would add a file that a consuming project must deploy before it can draft.
 
-**Why reasoning documents avoid count-dependent references:**
+**Why lifespan is a separate failure family**
+
+The failure families divide by the property a reviewer checks. Structural failures concern where content sits. Language failures concern how content reads. Both are properties of the document in front of the reviewer, and both can be judged from it alone.
+
+How long content stays true is not such a property. It depends on what is planned elsewhere. A sentence that will be falsified by scheduled work is correctly placed and clearly written, so a reviewer holding only the document has nothing to catch it with. `[HL-KNEXP]` records what that costs when it is not caught.
+
+Folding the failure into the language family was considered and fails on the language arm's own question. That arm asks whether a claim outruns its evidence. A forward-looking clause does not: it is accurate when written, and its evidence is the plan it names. Folding it into the structural family fails for the same kind of reason, since the sentence is in the section where its subject belongs.
+
+Each family costs a question in every artifact that derives from the taxonomy, so families are added on demonstrated failures rather than on argument. This one is added on a recorded incident and on the two arms visibly passing the content that caused it.
+
+**Why reasoning documents avoid count-dependent references**
 
 Anything in a reasoning document whose correctness depends on a count remaining stable becomes a maintenance liability the moment the count changes. The failure is silent: the reference still reads as valid while the document has already drifted. The specific design decisions that follow from this principle are in `RFM_operational.md`.
 
@@ -397,4 +407,20 @@ An artifact loaded at a defined moment carries its instructions into that moment
 The worked example is the commit attribution footer. `session-closeout` states that commit messages carry no attribution footer, and states it explicitly against the live system instruction requiring one. Five commits were made this session outside the close sequence, during a repository migration. The close-out skill was loaded at none of them, so the system instruction applied unopposed and all five carried a footer the project's own convention bars. They were pushed to a public repository before the skill was read.
 
 An override belongs with the default it overrides, or in an artifact loaded wherever that default applies. Putting it inside a procedure narrows its reach to that procedure.
+
+**[HL-KNEXP] Content written when its expiry is already known schedules maintenance work rather than avoiding it.**
+
+A claim can be accurate when written and false by the next session, because the work that falsifies it was already planned when it was written. The common shape is a forward-looking clause: a sentence stating what a thing does not yet do, or what it will require, where the requirement is already on the plan. It reads as careful. It passes review as true, correctly placed and clearly written. Review lets it through for those reasons, not despite them.
+
+The worked example is a drafting session where the LLM produced clauses of the form "this will only work once X is in place." They were accepted as sensible caution. Work on X began a few hours later. A following session reported those paragraphs as stale and needing maintenance, which pulled ripple checks into documents that only referenced them, and one compression made during that cleanup removed content that had to be reconstructed from an earlier version. Nothing in the chain was wrong on its own. The first sentence was true when written.
+
+A condition that planned work will satisfy belongs in the plan, not in the document the plan will change. Writing it in both places makes the document a second record of the plan, and the ripple work is the price of keeping the two agreeing until the plan lands.
+
+**[HL-UNCHK] A convention that nothing checks drifts, however plainly it is stated.**
+
+A writer drafting inside a document works from what is in front of them and from the nearest existing example. A convention held in another document only reaches that moment if the writer goes and reads it. When the nearest example already departs from the convention, the departure is what gets copied, and nothing errors at any point.
+
+`RFM_operational.md` carries two conventions of the same kind. Em dashes are barred, with a grep behind the rule that runs before every write. Chosen Direction headings were specified without a trailing colon, with no check behind them. Measured together, the em dash count across the project was zero and the heading violations were fifty-two, spread over five documents including the top-level reasoning document.
+
+A convention that reduces to a search gets the search, run at the moment the convention applies rather than at review. A convention that does not reduce to a search is guidance, and naming it a convention claims an enforcement that does not exist.
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.3.1` // `operational` // [living]
+`v0.4.0` // `operational` // [living]
 
 ---
 
@@ -140,7 +140,12 @@ This section is the single source for the failure classes RFM recognizes. Both a
 - Wording that implies uncertainty that no longer exists
 - Curation failures: text that does not earn its place, language written for the session that produced it rather than for a future reader, repetition of reasoning stated elsewhere that adds no signal
 
-**Boundary between the families.** A failure is structural when it concerns where content sits. A failure is language when it concerns how content reads. A well-written sentence in the wrong section is structural. A correctly placed sentence carrying session residue is language. When a failure meets both descriptions, the artifact that invoked the taxonomy applies its own ordering rule; the sweep ordering is in `RFM_sweep_module_operational.md`.
+**Lifespan failure types**
+
+- A claim conditioned on something already planned, which that plan will make false
+- A note or placeholder describing work that a scheduled step will perform
+
+**Boundary between the families.** A failure is structural when it concerns where content sits. A failure is language when it concerns how content reads. A failure is lifespan when the content sits correctly and reads clearly today and planned work will make it false or redundant. A well-written sentence in the wrong section is structural. A correctly placed sentence carrying session residue is language. A correctly placed, clearly written sentence describing a condition already scheduled for removal is lifespan. A conditional whose trigger is uncertain is not a lifespan failure, because no plan holds that condition and the document is the only place it is recorded. When a failure meets more than one description, the artifact that invoked the taxonomy applies its own ordering rule; the sweep ordering is in `RFM_sweep_module_operational.md`.
 
 ---
 

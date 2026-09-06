@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Skills Module Reasoning Document
-`v0.3.0` // `module_reasoning` // `[living]`
+`v0.4.0` // `module_reasoning` // `[living]`
 
 ---
 
@@ -86,6 +86,8 @@ This also bears on where this project sits on that curve. The reported failures 
 **Not the allocation of content within the traveling prompt.** This module owns one side of the boundary: whether a behavior belongs in a skill. What the traveling prompt should carry and how it should be organized is reasoned about in the prompts documents. A finding here that would change the traveling prompt's internal design belongs there.
 
 **Not a general theory of skill design for LLMs.** The direction taken here depends on a project having a curated vocabulary that a trigger description can be built from. A project without one has to reason about trigger design differently. These claims hold for a project applying RFM, not for skill authoring at large.
+
+**Not versioned artifacts.** RFM skills carry no version number. Skill frontmatter holds a name and a description and nothing else, so a version string would have to sit in the body, where no loader reads it and no reader thinks to look. The operational document that derives each skill carries the version instead, and a change to a skill body is recorded by bumping that document. Telling two skill bodies apart is done by reading the installed file, not by comparing a number inside it.
 
 ---
 

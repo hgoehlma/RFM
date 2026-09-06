@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.2.0` // `module_reasoning` // [living]
+`v0.2.1` // `module_reasoning` // [living]
 
 ---
 
@@ -47,51 +47,51 @@ Stating "you are a co-author" directly vs. letting the role emerge from the beha
 
 ## The Chosen Direction and Why
 
-**Why explicit role declaration opens the prompt:**
+**Why explicit role declaration opens the prompt**
 
 The co-author/tool distinction governs every subsequent instruction. If it is not established first, the LLM has no frame for interpreting what follows. An LLM reading "surgical edits only" as a tool interprets it as a constraint. An LLM reading it as a co-author interprets it as a shared standard. Same instruction, different behavior. The declaration must precede everything else.
 
-**Why named sections over flat structure:**
+**Why named sections over flat structure**
 
 The prompt serves two readers with different needs. The LLM executes it sequentially at session start and retrieves from it during the session: sections create addressable regions without adding sequential overhead. The human maintainer audits it periodically; sections make the audit tractable by grouping related behavioral instructions. A flat list serves neither reader well at the length required to carry the full methodology.
 
-**Why positive framing throughout:**
+**Why positive framing throughout**
 
 The traveling prompt must activate judgment, not trigger avoidance. Failure-mode warnings ("never summarize") produce compliance behavior: the LLM avoids the named failure without understanding why. Positive directives ("surgical edits only") activate the underlying principle, which the LLM can then apply to novel situations the prompt did not anticipate. The risk of positive framing being followed less reliably than explicit rules is accepted: an LLM that understands the principle recovers from edge cases; an LLM following rules fails silently on anything the rules didn't cover.
 
-**Why behavioral instructions follow principles within each section:**
+**Why behavioral instructions follow principles within each section**
 
 A principle without behavioral expression is an aspiration. A behavioral instruction without its principle is a rule. Each section pairs them: the principle establishes why, the behavioral instruction establishes what the LLM does with it. The sequence within each section is always principle first, then behavior, matching the methodology's own founding constraint.
 
-**Why the prompt instructs explicit verification before assertion:**
+**Why the prompt instructs explicit verification before assertion**
 
 Conversational memory is an unreliable proxy for document content: an LLM working across a long session accumulates a model of what documents contain that diverges from their actual state. Acting on that model rather than the document produces confident, plausible, and wrong assertions. The instruction to verify before asserting is a behavioral check against this failure mode. It cannot be left implicit: an LLM that understands the principle in the abstract will still assert from memory under the pressure of a fast-moving session. The explicit instruction is load-bearing.
 
-**Why the prompt instructs capture while sharp and shorthand testing at the moment of capture:**
+**Why the prompt instructs capture while sharp and shorthand testing at the moment of capture**
 
 Insight that emerges in a session has a short half-life: the context that makes it feel obvious is the session itself. Two failure modes follow from this. First, parking an insight for later processing loses the signal: what felt clear at the moment of emergence requires reconstruction later, and reconstruction is lossy. The instruction to capture immediately is load-bearing, not stylistic. Second, session-born shorthands feel self-evident to the parties who coined them and opaque to everyone else, including a fresh LLM in the next session. A shorthand that requires the session context to be understood belongs in the conversation, not the document. The cold-read test, can a first-time reader understand this without the conversation behind it, must be applied at the moment of capture, not after the shorthand has already entered the document.
 
-**Why prompt structure reflects temporal targets, not design sequence:**
+**Why prompt structure reflects temporal targets, not design sequence**
 
 The prompt operates across two distinct temporal moments. Identity instructions, who the co-author is, what governs the relationship, do their work at the edges: the opening declaration establishes the frame before any instruction is read; a closing re-activation re-grounds the identity just before the first user message lands. These are not redundant. The opening sets the interpretive frame cold. The closing restores it warm, after the operational instructions have been processed. Operational instructions, what to do when a specific situation arises, are retrieved during the session, not at its edges. Placing a session-initialization instruction inside an operational section misidentifies its temporal target. Cold start instructions belong at the closing edge alongside the identity re-activation, not inside document engagement rules. Section sequence should follow this logic, not the sequence in which behaviors were designed.
 
-**Why the coverage check follows derivation rather than preceding it:**
+**Why the coverage check follows derivation rather than preceding it**
 
 LLM derivation is probabilistic: the same source documents will produce slightly different output each time. A derivation that begins by reading the previous version anchors on prior expression and narrows that variance toward refinement rather than fresh reasoning. The coverage check after derivation exploits the variance productively: derive clean to get the best reasoning from source, then check coverage to catch what the probabilistic process missed. A gap found during coverage check has two causes: the derivation missed reasoning present in the source, or the previous version carried reasoning the source did not hold. The first is corrected by adding to the derived version. The second is a source document gap requiring a reasoning addition before the next derivation cycle.
 
-**Why prose derivative discipline is ambient and belongs in the traveling prompt:**
+**Why prose derivative discipline is ambient and belongs in the traveling prompt**
 
 When a session produces a text-facing derivative (public documentation, onboarding material, worked examples), the output carries behavioral patterns from the LLM that produced it. Those patterns are recognizable to readers and cause disengagement before the content is reached. The discipline that prevents this must activate at the moment of production, not be invoked deliberately by the practitioner. Deliberate invocation fails: it requires the practitioner to remember, and memory is exactly what fails under the pressure of producing output. The traveling prompt is the only artifact that is always on. Prose derivative discipline therefore belongs there as a behavioral instruction, not in an operational document alone. The operational document carries the detail; the traveling prompt carries the activation.
 
-**Why graduation discipline belongs in the traveling prompt as a behavioral instruction:**
+**Why graduation discipline belongs in the traveling prompt as a behavioral instruction**
 
 Graduation is a reasoning act, not a mechanical procedure. The destination of a graduating entry is determined by what the resolution is, not by which section the entry came from. An LLM left to execute graduation without explicit discipline will route by section type rather than by reasoning content, and will execute both steps (destination edit and source removal) in whatever order feels natural, which is not always the correct order. The destination edit must precede the source removal: a document with the entry removed but not yet placed is in a broken state. The traveling prompt carries this as ambient discipline because graduation candidates arise in any session, not only in dedicated sweep sessions. Restricting the instruction to the sweep prompts would leave ordinary sessions without the guard.
 
-**Why the derivation instruction within the procedure carries no version number:**
+**Why the derivation instruction within the procedure carries no version number**
 
 The derivation instruction tells the LLM what to produce, not what the result should say. The artifact it produces carries a version assigned by the human at acceptance. The instruction itself does not accumulate a history: changes to it are changes to the operational document, tracked by that document's version.
 
-**Why the section type framework and Landscape drift modes are ambient discipline, and belong in the traveling prompt, not the sweep prompts:**
+**Why the section type framework and Landscape drift modes are ambient discipline, and belong in the traveling prompt, not the sweep prompts**
 
 Section-type awareness, how to engage differently with Boundaries vs. Open Questions vs. The Problem, governs every interaction with a reasoning document. It is ambient discipline, not corrective review. The same applies to Landscape drift detection: both drift modes (loose prose, early option selection) are caught best in the moment, not in a dedicated corrective pass. Placing this guidance in the sweep prompts would restrict it to deliberate invocation. Placing it in the traveling prompt makes it always present.
 

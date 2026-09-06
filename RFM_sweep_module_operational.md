@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Operational Document
-`v0.2.0` // `operational` // [living]
+`v0.3.0` // `operational` // [living]
 
 ---
 
@@ -63,7 +63,7 @@ When a failure is both positional and about wording, the positional dimension mu
 
 The failure types the structural sweep looks for are in `RFM_operational.md` under Failure Taxonomy. This catalog carries the per-section primary questions derived from them, and is the source specification for the structural sweep prompt's "What you are looking for" and "Protocol" sections. Any change to a question begins here. Any change to a failure type begins in `RFM_operational.md`.
 
-The structural sweep assesses the structural failure types only. The language failure types belong to the language sweep.
+The structural sweep assesses the structural and lifespan failure types. The language failure types belong to the language sweep.
 
 **Per-section primary questions**
 
@@ -82,6 +82,10 @@ The structural sweep assesses the structural failure types only. The language fa
 *The Open Questions:* Is any question ready to graduate, partially or fully resolved by the Chosen Direction or by an assumption? Is any question actually a deferred decision rather than a genuine unknown? Does the question have a plausible condition under which it could be resolved, or is it open-ended with no path to an answer? Would resolving it materially change the reasoning or the system, or is it decorative?
 
 *The Hard Lessons:* Has any lesson been metabolized into an assumption or Chosen Direction and should now graduate? Is any lesson a restatement of another in different language?
+
+**Cross-section question**
+
+*Lifespan:* Does any entry state a condition that work already planned will satisfy? Ask it in every section alongside that section's primary question. Lifespan failures are not specific to a section, so no per-section wording is derived for them.
 
 ---
 
