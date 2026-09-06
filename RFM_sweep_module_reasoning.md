@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.4.0` // `module_reasoning` // [living]
+`v0.5.0` // `module_reasoning` // [living]
 
 ---
 
@@ -15,7 +15,7 @@ The sweep prompts are the corrective arm of the prompt system. Their existence a
 
 ** [AS-SSPS] - The structural sweep's precondition is section sequence, not content presence.** A coherent draft means the eight sections have been populated in order: Problem before Assumptions, Landscape before Options, Options before Chosen Direction. Content can be sparse. What cannot be missing is the sequence. A structural sweep invoked before the sequence is honored has no architecture to review against. It produces noise, not findings.
 
-** [AS-OPNS] - Operational documents have no fixed structure to sweep against.** Reasoning documents share the eight-section spine across every domain because reasoning has a universal shape. Operational documents carry whatever a domain's execution requires: a business plan, a questionnaire analysis, a planting plan. No sweep that anchors to a fixed structure can be applied to them. This assumption breaks if RFM ever adopts a mandatory structure for operational documents, which would require revisiting the operational sweep's design from scratch.
+** [AS-OPNS] - Operational documents have no fixed structure to sweep against.** Reasoning documents share the eight-section spine across every domain because reasoning has a universal shape. Operational documents carry whatever a domain's execution requires: a business plan, a questionnaire analysis, a planting plan. No sweep that anchors to a fixed structure can be applied to them. This assumption breaks if RFM ever adopts a mandatory structure for operational documents, which would require revisiting the relational sweep's design from scratch.
 
 ---
 
@@ -61,9 +61,9 @@ The section sequence is fixed. It is the structural anchor. The criteria adapt t
 
 The structural sweep requires section sequence to be honored because it reviews architecture, and architecture requires something to be built. The language sweep can run on partial content because wording failures are local. Entry conditions differ by design, not convention.
 
-**Why the operational sweep output uses a two-field location rather than a single location field**
+**Why the relational sweep output uses a two-field location rather than a single location field**
 
-A finding in the structural or language sweep has one location: a section, and optionally an entry, within a single document. A finding in the operational sweep is relational. It names a gap between two documents: an announced need on the reasoning side with no coverage on the operational side, or a specification on the operational side with no announced need on the reasoning side. A single location field cannot represent both sides of that gap without requiring the reviewer to parse a prefix convention at the moment of ruling. Two fields, one per document, make the directionality of the finding visible directly. Either field may be blank when the finding is one-sided.
+A finding in the structural or language sweep has one location: a section, and optionally an entry, within a single document. A finding in the relational sweep names a gap between two documents: an announced need on the reasoning side with no coverage on the operational side, or a specification on the operational side with no announced need on the reasoning side. A single location field cannot represent both sides of that gap without requiring the reviewer to parse a prefix convention at the moment of ruling. Two fields, one per document, make the directionality of the finding visible directly. Either field may be blank when the finding is one-sided.
 
 **Why findings are surfaced one per exchange**
 
@@ -89,7 +89,7 @@ When an LLM running the structural sweep evaluates whether a finding belongs, th
 
 A sweep question that asks what is missing has no natural stopping point. Any commitment in a document can be described as the one that survived an alternative nobody wrote down. So a check that asks the reviewer to infer from silence lets the reviewer invent findings. The invented finding looks like a real one: both name something the document does not contain, and the reviewer cannot test either against the document. An absence check must therefore say what would have to be true for the missing thing to belong in that section. For Options Considered, the missing alternative must have been pursued as a competing way to resolve the Problem. A supporting commitment inside the Chosen Direction does not qualify, because it was never a path the work took and rejected. Stating the test keeps the finding the check exists to catch, an option that was considered and dropped without record, and stops the reviewer inferring the rest.
 
-**Why the operational sweep checks both directions across the reasoning-to-operational boundary**
+**Why the relational sweep checks both directions across the reasoning-to-operational boundary**
 
 Reasoning documents announce needs without specifying them: a concrete value, threshold, interface, or procedure that derivation will require. Specifying them in the reasoning document pulls implementation detail where it does not belong. The operational document covers those needs. Checking only forward, whether the operational document covers every announced need, trusts that the reasoning document announced every need. An unannounced need is invisible to that pass and falls through, leaving the LLM to invent the specification during derivation rather than read it. Checking only in reverse, whether every specification in the operational document traces to an announced need, catches a different failure: a specification with no announced need means either the reasoning failed to announce it, now made visible, or a decision was made at the operational level that belongs in reasoning first. A specification that traces to a broader reasoning commitment, a chosen direction or design principle, is grounded. The reverse-direction finding is the absence of any grounding in the reasoning document, not the absence of a one-to-one announced need. A reasoning document that commits to a direction at a level of abstraction that produces multiple operational specifications has announced a need at the appropriate level. Requiring a separate announced need for each downstream specification would pull implementation specificity into the reasoning document. Both directions check the same boundary. Neither catches what the other misses. This also closes the boundary the methodology already guards from one side: wrong content present in the operational document is reasoning-leak; required content absent is a specification gap. Same boundary, two violations.
 
@@ -103,7 +103,7 @@ Scanning for announced needs and verifying each is covered in the operational do
 
 **Why the corrective arm organizes by cognitive mode, not document type**
 
-Labeling the sweeps by document type creates a trap. A reasoning sweep and an operational sweep sounds tidy, but it puts the language job in an impossible position: language failures, session residue, opaque wording, compressed reasoning, appear in both document types equally. Tie the label to document type and the language catalog either splits across two artifacts or gets duplicated. Both outcomes mean two people maintaining the same list. Mode-based organization avoids this. Architectural judgment goes in one sweep, relational checking in another, close reading for language quality in a third. The language catalog stays one object with one source.
+Labeling the sweeps by document type creates a trap. A reasoning sweep and an operational sweep sounds tidy, but it puts the language job in an impossible position: language failures, session residue, opaque wording, compressed reasoning, appear in both document types equally. Tie the label to document type and the language catalog either splits across two artifacts or gets duplicated. Both outcomes mean two people maintaining the same list. Mode-based organization avoids this. Architectural judgment goes in one sweep, relational checking in another, close reading for language quality in a third. A sweep named for a document type reintroduces the trap at the label even where the design underneath is mode-based. The language catalog stays one object with one source.
 
 **Why the language catalog transfers across document types but the architecture jobs do not share one**
 

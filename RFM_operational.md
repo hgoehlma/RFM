@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.4.1` // `operational` // [living]
+`v0.5.0` // `operational` // [living]
 
 ---
 
@@ -20,9 +20,13 @@ Where `type` is one of:
 - `traveling_prompt`
 - `sweep_prompt_language`
 - `sweep_prompt_structural`
+- `sweep_prompt_relational`
 - `operational`
 - `human_prompt`
 - `glossary`
+- `map`
+
+Each sweep prompt is named for the cognitive mode it runs in, not for the document type it reads.
 
 Project files drop the version suffix; the file in the project is always current. The version is visible in the document header.
 
@@ -41,6 +45,14 @@ Execution artifacts (the traveling prompt, sweep prompts, and human prompt) carr
 The document map is `RFM_map.md`. It must be updated in the same session as any document version bump. Version numbers in the map must be real, no wildcards.
 
 The README carries orientation for public readers without version numbers. It is not a substitute for the document map.
+
+**The map check.** Run it in any session that changes a document's version, adds a document, or removes one.
+
+Compare every map row's version against the header of the file the row names. Compare the file set against the map in both directions: a document file with no row is a finding, and a row naming no file is a finding. The map does not list itself, so its own file is never a finding.
+
+Read each version from the file itself. A version the session believes it set is not evidence.
+
+Report the check as done only after showing its output.
 
 ---
 

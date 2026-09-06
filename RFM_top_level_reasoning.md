@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.6.0` // `top_level_reasoning` // [living]
+`v0.7.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -182,6 +182,14 @@ A second requirement is legibility. Behavioral patterns common to LLM-generated 
 Em dashes are the highest-signal typographic marker of LLM-generated prose, recognizable to readers who cannot say why, and they are the one suppressed pattern in RFM output enforced mechanically. Instruction does not hold them. Models told to remove an em dash commonly remove the named one and insert another in the same sentence, satisfying the instruction locally while violating it globally. The likeliest explanation available is token economy, the character costing one token where its alternatives cost two or three, so the training objective favors it and no prompt reaches that. That explanation rests on one analysis of one model family and is not settled. The commitment rests on the observed behavior, which holds whichever explanation is right.
 
 A check is possible here because a character either appears or it does not. Throat-clearing, importance inflation, and epistemic flatness are judgments about prose that no search settles. A pattern earns a check when it reduces to a search, not when it matters most. The check and its scope are in `RFM_operational.md`.
+
+**Why map integrity is checked mechanically rather than maintained by instruction**
+
+The map restates two facts held elsewhere: a document's version, which is in its own header, and a document's existence, which is in the file set. A restated fact drifts when one side moves, and nothing errors when it does. `RFM_operational.md` already requires the map to be updated in the same session as a version bump. That requirement is an instruction with nothing behind it, which is the configuration `[HL-UNCHK]` says will not hold.
+
+The comparison reduces to a search. Each map row names a file whose header carries the version, and each file in the project either appears in the map or does not. It earns a check on the same test that gave em dashes one.
+
+A check that lives in a project's session tooling protects that project alone. The methodology installs `RFM_operational.md`, so a check placed there travels with it and a check placed anywhere else does not. The map is the document a session reads first to orient, which makes it the worst place for a silent inaccuracy.
 
 **Why prevention and correction share a failure taxonomy but not their questions**
 
@@ -411,3 +419,7 @@ The map file design was taken from a project using RFM at larger scale. The firs
 **[HL-ADJCHK] A failure type named correctly in the taxonomy still fires, when the checks derived from it test something adjacent to what the type says.**
 
 The language family names text written for the session that produced it rather than for a future reader. The drafting pre-check derived from that family asked whether a reader outside the session would understand the content. A sentence explaining why a section was left out passes that question. A later reader understands it, and it is still addressed to the person reviewing the draft rather than the person reading the document. Comprehension was tested where audience was the failure. A derived check has to be read back against the type it derives from, not only against the content it will run on.
+
+**[HL-DEFOWN] A deferred item that names its owner is read by the next session as having ruled on it.**
+
+An item deferred at the end of one session recorded that the sweep prompts might need a replacement entry condition, and named the check to put in them. The gap was real. The placement was a design decision no session had ruled. The next session opened the item and began drafting into the sweep module, because an item that arrives with a destination presents the destination as part of the problem rather than as the first thing to decide. The check belonged in the operational document that installs with the methodology, and the sweeps took no entry condition at all. A deferred item states the gap; where the fix goes is work the receiving session has to do.

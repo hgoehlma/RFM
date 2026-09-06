@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.1.0` // `map` // [living]
+`v0.2.0` // `map` // [living]
 
 ---
 
@@ -40,7 +40,7 @@ RFM
 │  │  ├─ RFM_sweep_module_operational.md
 │  │  ├─ RFM_sweep_prompt_structural.md
 │  │  ├─ RFM_sweep_prompt_language.md
-│  │  └─ RFM_sweep_prompt_operational.md
+│  │  └─ RFM_sweep_prompt_relational.md
 │  │
 │  ├─ Human prompt module
 │  │  ├─ RFM_human_prompt_reasoning.md
@@ -83,18 +83,18 @@ RFM
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.6.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
-| `RFM_operational.md` | Operational | v0.4.1 | File naming conventions, document map maintenance, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
-| `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.7.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_operational.md` | Operational | v0.5.0 | File naming conventions, document map maintenance and the map check, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
+| `RFM_glossary.md` | Glossary | v0.1.6 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.2.1 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.1 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.2.0 | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.5 | The system prompt that carries the methodology into every LLM conversation |
-| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.4.0 | The reasoning document governing sweep prompt design decisions |
-| `RFM_sweep_module_operational.md` | Operational | v0.4.0 | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
+| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.5.0 | The reasoning document governing sweep prompt design decisions |
+| `RFM_sweep_module_operational.md` | Operational | v0.5.0 | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.5.0 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.2.0 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
-| `RFM_sweep_prompt_operational.md` | Operational sweep prompt | v0.2.0 | The prompt artifact that activates the operational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
+| `RFM_sweep_prompt_relational.md` | Relational sweep prompt | v0.3.0 | The prompt artifact that activates the relational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.2 | Reasoning document governing human prompt design decisions |
 | `RFM_human_prompt.md` | Human prompt | v0.1.2 | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.1.1 | Reasoning document governing guided drafting prompt design decisions |
@@ -116,9 +116,3 @@ RFM
 | `README.md` | Entry point | unversioned | Public-facing orientation for a reader encountering RFM for the first time, carrying no version numbers by design |
 | `RFM_incubating.md` | Capture file | unversioned | Ideas captured at session close that are not yet ready to enter a document |
 | `examples/` | Examples | unversioned | Reasoning documents from projects using RFM, kept as worked examples |
-
----
-
-## Strain signals
-
-`RFM_sweep_prompt_operational.md` is a prompt artifact and `RFM_sweep_module_operational.md` is the sweep module's operational document. They sit adjacent in the tree and the names read as a matched pair they are not.

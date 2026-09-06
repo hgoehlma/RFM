@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Operational Document
-`v0.4.0` // `operational` // [living]
+`v0.5.0` // `operational` // [living]
 
 ---
 
@@ -11,7 +11,7 @@ This module produces sweep prompt artifacts, one per mode.
 
 **The language sweep prompt** (`RFM_sweep_prompt_language.md`) activates a concentrated language review pass over a reasoning document. Findings for human ruling, not edits. Invoked deliberately, not ambient.
 
-**The operational sweep prompt** activates a boundary check between a reasoning document and its operational derivative. Findings for human ruling, not edits. Invoked deliberately, not ambient.
+**The relational sweep prompt** (`RFM_sweep_prompt_relational.md`) activates a boundary check between a reasoning document and its operational derivative. Findings for human ruling, not edits. Invoked deliberately, not ambient.
 
 No two sweep prompts are invoked simultaneously. Each requires a cognitive mode the other's presence would dilute.
 
@@ -85,9 +85,9 @@ The structural sweep assesses the structural and lifespan failure types. The lan
 
 ---
 
-## Operational sweep specification
+## Relational sweep specification
 
-This specification is the source for the operational sweep prompt's entry conditions, finding criteria, and output format. Any change to any of these begins here.
+This specification is the source for the relational sweep prompt's entry conditions, finding criteria, and output format. Any change to any of these begins here.
 
 **Entry conditions**
 
@@ -118,7 +118,7 @@ When a section has no findings: **[Section name]: no boundary findings.**
 
 ## Sweep session invocation
 
-Load the sweep prompt as the system prompt for a fresh conversation. Provide the document under sweep in the first human turn. Do not include other documents unless the sweep type requires them. The structural sweep and language sweep read a single document; the operational sweep requires both the reasoning document and its operational derivative.
+Load the sweep prompt as the system prompt for a fresh conversation. Provide the document under sweep in the first human turn. Do not include other documents unless the sweep type requires them. The structural sweep and language sweep read a single document; the relational sweep requires both the reasoning document and its operational derivative.
 
 Do not invoke a sweep inside a co-authorship session. The traveling prompt and a sweep prompt require incompatible postures. A sweep run inside a co-authorship session is not a sweep. It is the traveling prompt applied to one document, which is what the traveling prompt already does. The separation is the point.
 
