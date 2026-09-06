@@ -1,16 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Reasoning Document
-`v0.4.4` // `module_reasoning` // [living]
-
----
-
-## Document Map
-
-This document is the reasoning source for the derivation prompt module. It governs all decisions about the derivation prompt artifact and its operational document.
-
-Derivative chain for this module:
-- `RFM_derivation_prompt_reasoning.md` (this document): source
-- `RFM_derivation_prompt_operational.md`: operational document
-- `RFM_derivation_prompt.md`: prompt artifact
+`v0.5.0` // `module_reasoning` // [living]
 
 ---
 

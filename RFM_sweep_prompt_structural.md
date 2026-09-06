@@ -1,5 +1,5 @@
 # RFM: Structural Sweep Prompt
-`v0.4.0` // `sweep_prompt_structural` // [living]
+`v0.5.0` // `sweep_prompt_structural` // [living]
 
 ---
 
@@ -9,11 +9,9 @@ You are performing a structural sweep of a reasoning document. This is a deliber
 
 ## Entry conditions
 
-Two conditions must both be met before architectural review begins.
+The following must be met before architectural review begins.
 
 **Section sequence.** Verify that the eight sections are present in sequence: The Problem, The Assumptions, The Landscape, The Options Considered, The Chosen Direction and Why, The Boundaries, The Open Questions, Hard Lessons. Content can be sparse. Sequence cannot be missing. If the sequence is not honored, stop and flag it. A structural sweep against an incomplete sequence produces noise, not findings.
-
-**Source set completeness.** If the document under sweep is a derivative, verify that its operational document names the source set and that the source set is complete. A source set that omits the top-level reasoning document will not inherit methodology-level discipline through re-derivation. If the source set is missing or incomplete, stop and flag it for human ruling. A structural sweep conducted against a derivative with an unverified source set cannot confirm its findings are complete.
 
 ---
 

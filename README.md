@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/RFM.png" width="80">
+</p>
+
 # Reasoning-First Methodology (RFM)
 
 Every complex project fails the same way: the thinking disappears.
@@ -61,7 +65,7 @@ The rest of the repository serves people maintaining and extending RFM. However,
 
 In other words, every component of the approach has a reasoning document (and often an operational document) beside it. The naming convention is `RFM_[artifact]_reasoning.md`, carrying why it is built the way it is.
 
-The full list, with current versions, is also within the document map at the top of `RFM_top_level_reasoning.md`. It is maintained only there.
+The full list, with current versions, is also in the document map, [`RFM_map.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_map.md). It is maintained only there.
 
 ---
 

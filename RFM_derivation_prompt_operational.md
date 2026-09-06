@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Operational Document
-`v0.2.6` // `operational` // [living]
+`v0.3.0` // `operational` // [living]
 
 ---
 
@@ -13,11 +13,7 @@ This module produces one derivative artifact:
 
 ## Derivation procedure
 
-**Source documents, load all three before drafting:**
-
-1. `RFM_prompts_reasoning.md`: the reasoning governing the prompt system architecture
-2. `RFM_derivation_prompt_reasoning.md`: the reasoning governing derivation prompt design decisions specifically
-3. `RFM_derivation_prompt_operational.md`: the operational specification for what the prompt must produce and how
+**Load this document's sources before drafting.** They are its branch of the hierarchy in `RFM_map.md`, read upward.
 
 **Instruction to the LLM for the derivation session:**
 

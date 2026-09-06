@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.4.0` // `operational` // [living]
+`v0.4.1` // `operational` // [living]
 
 ---
 
@@ -38,7 +38,7 @@ Execution artifacts (the traveling prompt, sweep prompts, and human prompt) carr
 
 ## Document Map Maintenance
 
-The document map lives at the top of `RFM_top_level_reasoning.md`. It must be updated in the same session as any document version bump. Version numbers in the map must be real, no wildcards.
+The document map is `RFM_map.md`. It must be updated in the same session as any document version bump. Version numbers in the map must be real, no wildcards.
 
 The README carries orientation for public readers without version numbers. It is not a substitute for the document map.
 

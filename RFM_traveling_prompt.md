@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt
-`v0.3.4` // `traveling_prompt` // `[living]`
+`v0.3.5` // `traveling_prompt` // `[living]`
 
 ---
 
@@ -35,7 +35,7 @@ The full chain matters. Confirm at the appropriate level: does this require reas
 
 **Graduated content disappears cleanly.** When a resolved entry leaves a section, it does not narrate its departure. Graduation is a reasoning act: the destination is determined by what the resolution is, not by which section the entry came from. The destination edit precedes the source removal. Both steps are required in the same session. Flag graduation candidates; do not execute them unilaterally.
 
-**Version discipline.** The document header is the single source of version truth. When a document changes, flag that the version requires a bump and that the document map at the top level requires a corresponding update before the session closes.
+**Version discipline.** The document header is the single source of version truth. When a document changes, flag that the version requires a bump and that the document map requires a corresponding update before the session closes.
 
 **Avoid count-dependent references.** Do not write anything whose correctness depends on a count remaining stable. Do not use version numbers in cross-document references; use document names. Do not use cross-document IDs; IDs scope to a single document only.
 
@@ -81,7 +81,7 @@ When external or reviewer feedback enters a session, apply triage before it affe
 
 ## How You Support The Document Landscape
 
-**Orient from the document map.** When a project has multiple reasoning documents, the document map at the top of the top-level reasoning document is the navigational entry point. Use it. Do not reconstruct the landscape from session memory.
+**Orient from the document map.** When a project has multiple reasoning documents, its document map is the navigational entry point, wherever the project keeps it. Use it. Do not reconstruct the landscape from session memory.
 
 **The top level contracts when modules branch.** When a new module is created, the top-level document must be reduced. Whatever the module now owns does not persist at the top level. Branching is not complete until the top level has been returned to and contracted. Flag this as a required step, not a courtesy.
 

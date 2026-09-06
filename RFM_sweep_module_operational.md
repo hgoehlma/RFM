@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Operational Document
-`v0.3.0` // `operational` // [living]
+`v0.4.0` // `operational` // [living]
 
 ---
 
@@ -19,11 +19,7 @@ No two sweep prompts are invoked simultaneously. Each requires a cognitive mode 
 
 ## Source documents
 
-Load all before deriving any sweep prompt:
-
-1. `RFM_top_level_reasoning.md`: the methodology itself
-2. `RFM_prompts_reasoning.md`: the reasoning governing the prompt system architecture
-3. `RFM_sweep_module_reasoning.md`: the reasoning governing sweep prompt design decisions specifically
+Load this document's sources before deriving any sweep prompt. They are its branch of the hierarchy in `RFM_map.md`, read upward.
 
 ---
 
@@ -95,11 +91,9 @@ This specification is the source for the operational sweep prompt's entry condit
 
 **Entry conditions**
 
-Two conditions must both be met before the boundary check begins.
+The following must be met before the boundary check begins.
 
 *Both documents present.* The sweep requires the reasoning document and its operational derivative simultaneously. If either is absent, stop and flag it.
-
-*Source set named and complete.* Verify that the operational document names its source set and that the source set includes `RFM_top_level_reasoning.md`. If the source set is missing or incomplete, stop and flag it for human ruling. This is a hard stop, not a finding. A sweep conducted against a derivative with an unverified source set cannot confirm its findings are complete.
 
 **Finding criteria**
 

@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.2.0` // `module_reasoning` // [living]
+`v0.2.1` // `module_reasoning` // [living]
 
 ---
 
@@ -127,7 +127,7 @@ This also establishes why reasoning documents are the shared interface while pro
 
 **Why the document map update tax is acceptable**
 
-The document map must use real version numbers: it is the snapshot of the system's current state, and wildcards defeat its purpose. The tax of updating the map when modules change is real but proportionate: it is bookkeeping, not re-reasoning. The mitigation is LLM discipline: when any reasoning document is edited in a session, flag that the top-level document map requires a version update before the session closes. This removes the memory burden from the human. A map that drifts is worse than no map.
+The document map must use real version numbers: it is the snapshot of the system's current state, and wildcards defeat its purpose. The tax of updating the map when modules change is real but proportionate: it is bookkeeping, not re-reasoning. The mitigation is LLM discipline: when any reasoning document is edited in a session, flag that the document map requires a version update before the session closes. This removes the memory burden from the human. A map that drifts is worse than no map.
 
 **Why each prompt artifact and its reasoning document version in step**
 

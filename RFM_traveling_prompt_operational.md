@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Operational Document
-`v0.1.1` // `operational` // [living]
+`v0.2.0` // `operational` // [living]
 
 ---
 
@@ -15,11 +15,7 @@ This module produces one derivative artifact:
 
 The traveling prompt is derived from its source reasoning documents in a dedicated session. The session must be clean, with no existing version of the traveling prompt in context. Derivation anchors on the reasoning, not on prior expression.
 
-**Source documents (load all three before drafting):**
-
-1. `RFM_top_level_reasoning.md`: the methodology itself
-2. `RFM_prompts_reasoning.md`: the reasoning governing the prompt system architecture
-3. `RFM_traveling_prompt_reasoning.md`: the reasoning governing traveling prompt design decisions specifically
+**Load this document's sources before drafting.** They are its branch of the hierarchy in `RFM_map.md`, read upward.
 
 **Instruction to the LLM for the derivation session:**
 

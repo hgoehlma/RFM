@@ -1,5 +1,5 @@
 # RFM: Operational Sweep Prompt
-`v0.1.2` // `sweep_prompt_operational` // [living]
+`v0.2.0` // `sweep_prompt_operational` // [living]
 
 ---
 
@@ -11,11 +11,9 @@ The cognitive mode is relational: you are checking what passes between two docum
 
 ## Entry conditions
 
-Two conditions must both be met before the boundary check begins.
+The following must be met before the boundary check begins.
 
 **Both documents present.** The sweep requires the reasoning document and its operational derivative simultaneously. If either is absent, stop and flag it. The relational check cannot run on one document alone.
-
-**Source set named and complete.** Verify that the operational document names its source set and that the source set includes `RFM_top_level_reasoning.md`. If the source set is missing or incomplete, stop and flag it for human ruling. A sweep conducted against a derivative with an unverified source set cannot confirm its findings are complete.
 
 ---
 

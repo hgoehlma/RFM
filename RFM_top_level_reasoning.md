@@ -1,41 +1,9 @@
 # Reasoning-First Methodology
-`v0.5.0` // `top_level_reasoning` // [living]
+`v0.6.0` // `top_level_reasoning` // [living]
 
 ---
 
-## Document Map
-
-| Document | Type | Version | What it carries |
-|---|---|---|---|
-| `RFM_operational.md` | Operational | v0.4.0 | File naming conventions, document map maintenance, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
-| `RFM_glossary.md` | Glossary | v0.1.5 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.2.0 | The reasoning document governing all system prompt decisions |
-| `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.1 | The reasoning document governing traveling prompt design decisions |
-| `RFM_traveling_prompt_operational.md` | Operational | v0.1.1 | Derivation procedure and coverage check discipline for the traveling prompt |
-| `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.4 | The system prompt that carries the methodology into every LLM conversation |
-| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.3.1 | The reasoning document governing sweep prompt design decisions |
-| `RFM_sweep_module_operational.md` | Operational | v0.3.0 | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
-| `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.4.0 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
-| `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.2.0 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
-| `RFM_sweep_prompt_operational.md` | Operational sweep prompt | v0.1.2 | The prompt artifact that activates the operational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
-| `RFM_human_prompt_reasoning.md` | Module reasoning | v0.1.2 | Reasoning document governing human prompt design decisions |
-| `RFM_human_prompt.md` | Human prompt | v0.1.2 | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
-| `RFM_guided_drafting_prompt_reasoning.md` | Module reasoning | v0.1.1 | Reasoning document governing guided drafting prompt design decisions |
-| `RFM_guided_drafting_prompt_operational.md` | Operational | v0.1.1 | Deployment and artifact inventory for the guided drafting prompt module |
-| `RFM_guided_drafting_prompt.md` | Guided drafting prompt | v0.1.1 | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
-| `RFM_first_session_guidance.md` | First session guidance | v0.1.3 | Practical preparation for a newcomer's first guided drafting session: what to bring, what to expect, what to watch for |
-| `RFM_derivation_prompt_reasoning.md` | Module reasoning | v0.4.4 | The reasoning document governing derivation prompt design decisions |
-| `RFM_derivation_prompt_operational.md` | Operational | v0.2.6 | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
-| `RFM_derivation_prompt.md` | Derivation prompt | v0.2.0 | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
-| `RFM_derivation_session_guidance.md` | Derivation session guidance | v0.1.1 | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
-| `RFM_skill_unslop_reasoning.md` | Skill reasoning | v0.3.0 | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
-| `RFM_skill_unslop_operational.md` | Skill operational | v0.2.1 | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
-| `RFM_skill_rfm_ripple_check_reasoning.md` | Skill reasoning | v0.1.2 | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
-| `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.2.0 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
-| `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.4.0 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
-| `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.4.0 | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
-| `RFM_skills_module_reasoning.md` | Module reasoning | v0.4.0 | The reasoning document governing skill design decisions across skills |
-| `RFM_skills_module_operational.md` | Operational | v0.1.1 | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
+The document map for RFM, including the hierarchy this document sits in, is `RFM_map.md`.
 
 ---
 
@@ -327,17 +295,25 @@ The most robust design decision in the methodology was to derive the eight secti
 
 **Document discipline**
 
-**[HL-DMAP] The document map belongs at the top of every top-level reasoning document when a document landscape exists to navigate.**
+**[HL-DMAP] A document set needs a map once a reader cannot tell from the documents themselves which one to read first.**
 
-A reader or LLM encountering a project for the first time cannot orient from the top-level reasoning document alone. The map is only meaningful when a document landscape exists to navigate; a single-document system has nothing to map. Navigation is not reasoning, but it is a prerequisite for reasoning about the right thing. The document map and the public-facing entry point for new readers serve different audiences and must not be conflated: the map carries real version numbers for practitioners detecting drift; the entry point carries orientation without versions for readers encountering the project fresh. Neither substitutes for the other.
+A reader or LLM encountering a project for the first time cannot orient from the top-level reasoning document alone. Navigation is not reasoning, but it is a prerequisite for reasoning about the right thing. The map and the README serve different readers and must not be merged. The map carries real version numbers, so a practitioner can detect drift between a document and what the project believes that document to be. The README carries orientation without versions, so a first-time reader is not asked to track state. A README that grows version numbers becomes a second map that drifts against the first. A map that drops them stops being able to detect drift at all.
 
-**[HL-SELFREF] The top-level reasoning document must not appear as a row in its own document map.**
+**[HL-SELFREF] A map does not list the file it lives in.**
 
-When `RFM_top_level_reasoning.md` was included as a map row, sessions updated the document header version without updating the corresponding map entry. The mismatch was invisible during the session and surfaced only at the next version check, where it had to be traced and corrected rather than having never existed. Excluding the containing document from the map it governs removes that maintenance surface. This applies while the map lives inside the top-level reasoning document. Once the map is extracted into its own file, see HL-MAPSCALE, self-listing is safe: the map and the document being edited are no longer the same file.
+When `RFM_top_level_reasoning.md` was included as a map row, sessions updated the document header version without updating the corresponding map entry. The mismatch was invisible during the session and surfaced only at the next version check, where it had to be traced and corrected rather than having never existed. Excluding the containing document from the map it governs removes that maintenance surface. The same reasoning holds once a map moves into its own file. A file cannot record its own version twice without one copy going stale, and the copy in a standalone map would be its highest-churn row, bumped every session that touches any document in the set.
 
-**[HL-MAPSCALE] At sufficient project scale, the document map outgrows the top-level reasoning document and must become its own governed file.**
+**[HL-MAPSCALE] A map moves into its own file when it needs structure that a list inside another document cannot carry.**
 
-A large-scale deployment of RFM extracted its document map into a standalone file with its own version, independent of the top-level reasoning document it once lived inside. The map's own growth, not the surrounding document's content, was the presenting symptom of strain. Two additions followed naturally once the map had its own space: a category for maintained inputs that modules consume but do not own as descendants in the reasoning-to-execution chain, and a set of task-specific read pathways naming which documents to read for which kind of work. Extraction is not required at every scale. It becomes warranted when the map itself, not the reasoning it navigates, is what strains.
+A large-scale deployment of RFM extracted its document map into a standalone file with its own version. Two additions followed: a category for maintained inputs that modules consume but do not own, and a set of task-specific read pathways naming which documents to read for which kind of work. The map's growth was the presenting symptom, but what the additions have in common is structure the embedded form could not hold. In RFM the same trigger fired at a much smaller size and for a different structure. The flat table records each document's level but not its parent, so sessions reconstructed the hierarchy by hand inside individual documents and the copies drifted. Row count was not the signal in either case. An embedded map is a tolerated exception to the rule that a reasoning document carries no procedure, and the exception holds only while the map stays a plain list.
+
+**[HL-MAPCOPY] A document does not restate its own position in the hierarchy.**
+
+Six operational documents carried a list of the documents to load before deriving from them. Every entry but one was the document's own branch read upward, which the map already states. The copies drifted, and three of them omitted the top-level document. A sweep entry condition existed to catch exactly that omission, which made the copies look load-bearing and kept attention on completing them. Two sessions repaired the lists before anyone asked whether the lists should exist. A document names a source in its own text only where the edge leaves its branch.
+
+**[HL-RETIRE] Retiring reasoning needs evidence that its situation cannot recur, not an argument that it should not.**
+
+A Hard Lesson recording how to keep an embedded document map safe was proposed for retirement, on the grounds that a map should never sit inside a reasoning document at all. Those grounds were inferred from the reason the map was being extracted, and nothing tested them. The counter-case was immediate: RFM ran an embedded map for five minor versions and that was the right call at that size. The lesson was narrowed rather than retired. The same gap had already spread once before it was caught, because a later design decision had been built on a clause inside the lesson under review and treated that clause as settled.
 
 **[HL-TLOR] Once a module exists, top-level ownership must be actively reduced.**
 

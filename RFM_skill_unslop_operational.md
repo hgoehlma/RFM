@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Operational Document
-`v0.2.1` // `skill_unslop_operational` // `[living]`
+`v0.3.0` // `skill_unslop_operational` // `[living]`
 
 ---
 
@@ -27,10 +27,9 @@ This declaration is the trigger mechanism. Without it, the skill does not fire. 
 
 ---
 
-## Source documents: load before editing the skill
+## Source documents
 
-1. `RFM_skill_unslop_reasoning.md`: the reasoning governing all design decisions
-2. `RFM_operational.md`: formatting conventions and naming rules
+Load this document's sources before editing the skill. They are its branch of the hierarchy in `RFM_map.md`, read upward.
 
 ---
 

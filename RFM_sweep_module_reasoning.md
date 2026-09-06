@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.3.1` // `module_reasoning` // [living]
+`v0.4.0` // `module_reasoning` // [living]
 
 ---
 
@@ -60,18 +60,6 @@ The section sequence is fixed. It is the structural anchor. The criteria adapt t
 **Why the sweeps have different entry conditions**
 
 The structural sweep requires section sequence to be honored because it reviews architecture, and architecture requires something to be built. The language sweep can run on partial content because wording failures are local. Entry conditions differ by design, not convention.
-
-**Why the structural sweep verifies source set completeness as an entry condition**
-
-A derivative whose operational document omits its source set, or whose source set excludes `RFM_top_level_reasoning.md`, will not inherit methodology-level discipline through re-derivation. That gap is invisible from inside a single session and will not surface as a section-level finding. It must be caught before the sweep proceeds, not during it.
-
-Source set completeness is therefore an entry condition for the structural sweep, not a section-level finding. If the document under sweep is a derivative, the sweep verifies that its operational document names the source set and that the source set is complete before architectural review begins. An incomplete source set stops the sweep and surfaces as a flag for human ruling. A structural sweep conducted against a derivative with an unverified source set cannot confirm that its findings are complete.
-
-**Why source set completeness is an entry condition for the operational sweep**
-
-The operational sweep checks what passes between two documents. If the operational document does not name its source set, or if the source set is incomplete, the sweep cannot verify that the boundary it is checking is the right one. The failure is the same as in the structural sweep: a gap invisible from inside the session that will not surface as a relational finding. It must be caught before the check begins, not during it.
-
-Source set completeness is therefore a hard stop for the operational sweep, not a finding. If the operational document does not name its source set, or the source set excludes `RFM_top_level_reasoning.md`, the sweep stops and flags it for human ruling.
 
 **Why the operational sweep output uses a two-field location rather than a single location field**
 

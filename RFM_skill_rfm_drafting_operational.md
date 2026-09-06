@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.4.0` // `skill_rfm_drafting_operational` // `[living]`
+`v0.5.0` // `skill_rfm_drafting_operational` // `[living]`
 
 ---
 
@@ -17,11 +17,11 @@ The skill source is `rfm-drafting/SKILL.md`. Delivery is environment-specific: s
 
 ---
 
-## Source documents: load before editing the skill
+## Source documents
 
-1. `RFM_skill_rfm_drafting_reasoning.md`: the reasoning governing all design decisions
-2. `RFM_operational.md`: formatting conventions and document structure rules
-3. `RFM_skill_unslop_operational.md`: language compliance conventions delegated to rfm-unslop
+Load this document's sources before editing the skill. They are its branch of the hierarchy in `RFM_map.md`, read upward.
+
+This skill also depends on `RFM_skill_unslop_operational.md` for the language compliance conventions it delegates, an edge that leaves its own branch.
 
 ---
 

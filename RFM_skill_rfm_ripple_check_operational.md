@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Ripple Check Skill Operational Document
-`v0.2.0` // `skill_rfm_ripple_check_operational` // `[living]`
+`v0.3.0` // `skill_rfm_ripple_check_operational` // `[living]`
 
 ---
 
@@ -30,10 +30,9 @@ When adding or changing trigger conditions, update the skill description first. 
 
 ---
 
-## Source documents: load before editing the skill
+## Source documents
 
-1. `RFM_skill_rfm_ripple_check_reasoning.md`: the reasoning governing all design decisions
-2. `RFM_operational.md`: formatting conventions and naming rules
+Load this document's sources before editing the skill. They are its branch of the hierarchy in `RFM_map.md`, read upward.
 
 ---
 
