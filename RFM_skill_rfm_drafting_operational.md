@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.5.0` // `skill_rfm_drafting_operational` // `[living]`
+`v0.6.0` // `skill_rfm_drafting_operational` // [living]
 
 ---
 
@@ -42,9 +42,9 @@ The pre-check is Layer 4 of the skill body. It runs after Layers 1 to 3 and befo
 
 **The questions.** One per failure family in the Failure Taxonomy in `RFM_operational.md`. Any change to a question begins here.
 
-*Structural:* Does every part of this content belong at this level, in this section, and to this document rather than another?
+*Structural:* Does every part of this content, and every reference it makes, belong at this level, in this section, and to this document rather than another?
 
-*Language:* Would a reader who was not in this session understand this content and see the reasoning behind each claim it makes?
+*Language:* Would a reader who was not in this session understand this content, see the reasoning behind each claim, and find nothing in it written to the reviewer of the draft?
 
 *Lifespan:* Will work already planned make any part of this content false or redundant?
 

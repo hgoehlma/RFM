@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.7.0` // `top_level_reasoning` // [living]
+`v0.8.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -423,3 +423,7 @@ The language family names text written for the session that produced it rather t
 **[HL-DEFOWN] A deferred item that names its owner is read by the next session as having ruled on it.**
 
 An item deferred at the end of one session recorded that the sweep prompts might need a replacement entry condition, and named the check to put in them. The gap was real. The placement was a design decision no session had ruled. The next session opened the item and began drafting into the sweep module, because an item that arrives with a destination presents the destination as part of the problem rather than as the first thing to decide. The check belonged in the operational document that installs with the methodology, and the sweeps took no entry condition at all. A deferred item states the gap; where the fix goes is work the receiving session has to do.
+
+**[HL-ENUM] A list that names its members is a count-dependent reference with no number in it.**
+
+`RFM_operational.md` bars statements whose correctness depends on a count remaining stable, and every form it named at the time carried a numeral or an ID. A sentence introducing the execution artifacts as "the traveling prompt, sweep prompts, and human prompt" carried neither, and was wrong by two: the derivation prompt and the guided drafting prompt had been added since it was written. The list had gone stale in place while the rule that covers it stayed satisfied on its face. The test that catches this is whether adding a member to the set would falsify the sentence, which is the same test the count forms fail, applied to enumeration rather than to a number.

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Skills Module Operational Document
-`v0.1.1` // `module_operational` // `[living]`
+`v0.1.2` // `module_operational` // [living]
 
 ---
 

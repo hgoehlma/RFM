@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.5.0` // `operational` // [living]
+`v0.6.0` // `operational` // [living]
 
 ---
 
@@ -36,7 +36,9 @@ Some artifacts are unique (produced once for a specific purpose with no repeatin
 
 - `RFM_first_session_guidance.md`: practical preparation document for a newcomer's first guided drafting session
 
-Execution artifacts (the traveling prompt, sweep prompts, and human prompt) carry a version number in their header only. They do not carry a document type tag or `[living]` marker. These artifacts sit at the end of the derivative chain: they are regenerated from their source reasoning documents, not curated independently. The version number is sufficient to detect drift against the source. A patch-level fix to an execution artifact is legitimate only when the source reasoning document changed first.
+Execution artifacts, such as the traveling prompt, the sweep prompts and the human prompt, carry the same header as the documents they derive from: a version number, a document type tag and a `[living]` marker. They sit at the end of the derivative chain and are curated over time rather than regenerated wholesale, because a prompt that drifts keeps running and catches less. Curation begins at the source: a change to an execution artifact is legitimate only when the source reasoning document changed first.
+
+Outputs sit below execution artifacts in the chain and are not covered by this convention.
 
 ---
 
@@ -50,7 +52,11 @@ The README carries orientation for public readers without version numbers. It is
 
 Compare every map row's version against the header of the file the row names. Compare the file set against the map in both directions: a document file with no row is a finding, and a row naming no file is a finding. The map does not list itself, so its own file is never a finding.
 
+A file that carries no version header is not a document and is outside the map. Its absence from the map is not a finding.
+
 Read each version from the file itself. A version the session believes it set is not evidence.
+
+While reading each header, check its form against the header convention. A header that does not match is a finding.
 
 Report the check as done only after showing its output.
 
@@ -70,18 +76,21 @@ Rules:
 
 ## Count-Dependent References
 
-Reasoning documents must not contain statements whose correctness depends on a count remaining stable. Four specific forms are excluded:
+Reasoning documents must not contain statements whose correctness depends on a count remaining stable. The excluded forms:
 
 - Version numbers in cross-document references: the document name is the stable identifier; the document map carries the version snapshot
 - Numerical counts of entries (assumptions, options, hard lessons): adding or removing one entry silently invalidates the count
 - Cross-document ID references: they imply a shared registry that does not exist and would signal the entry is in the wrong place
 - IDs scoped beyond a single document: IDs are per-document only
+- Lists that name their members: adding a member to the set falsifies the sentence, and no numeral appears in it to mark the dependency
 
 ---
 
 ## Version Number Discipline
 
 Version numbers appear in the document header. The header is the single source of version truth. An unbumped header mid-session is expected, not drift. Drift is a header and document map that still disagree after the close-out bump step has run.
+
+The header is the second line of the file and takes the form `vX.X.X` // `document_type` // [living]. Backticks enclose the version and the document type. The marker carries none.
 
 Version numbers follow the format vX.X.X (major.minor.patch). The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or structural changes. The major digit increments for fundamental methodology changes.
 
@@ -212,6 +221,8 @@ LLM-generated text carries recognizable behavioral patterns. Readers detect them
 
 Draft for Layer 1 first, get the reasoning character right. Then read for Layer 2, remove the patterns that would make the derivative read as machine-generated. A draft that passes Layer 1 but fails Layer 2 has the right content and will not be read. A draft that passes Layer 2 but fails Layer 1 is legible and says nothing worth reading.
 
+---
+
 ## Em Dash Check
 
 Em dashes are barred from every file in the project. Conversation is out of scope.
@@ -222,6 +233,8 @@ Verify by grep, not by rereading. Write the candidate text to a scratch file out
 
 Replace an em dash with a comma, a period, or a recast sentence. Parentheses are not a substitute. They carry the same tell, and a sweep that used them as the default replacement is recorded as a hard lesson in `RFM_skill_unslop_reasoning.md`.
 
+---
+
 ## Skill Count Working Band
 
 A well-triggered skill is one whose description is written from the vocabulary a practitioner uses at the moment the skill is needed.
@@ -229,8 +242,6 @@ A well-triggered skill is one whose description is written from the vocabulary a
 Tens of well-triggered skills sit inside the range where selection holds. Low hundreds sit past the point where degradation is reported. Use the band as the starting point when deciding whether a family of related behavior becomes one skill or several, not as a limit to fill up to.
 
 The band is inferred from published tool-selection results and has not been measured on this project. Revise it when better evidence arrives. Why a band is the right form, and why it is likely conservative for this project, is in `RFM_skills_module_reasoning.md`.
-
----
 
 ---
 

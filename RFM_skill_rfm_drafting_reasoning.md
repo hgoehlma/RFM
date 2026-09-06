@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.4.0` // `skill_rfm_drafting_reasoning` // `[living]`
+`v0.4.1` // `skill_rfm_drafting_reasoning` // [living]
 
 ---
 

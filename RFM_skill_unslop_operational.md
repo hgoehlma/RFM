@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Unslop Skill Operational Document
-`v0.3.0` // `skill_unslop_operational` // `[living]`
+`v0.3.1` // `skill_unslop_operational` // [living]
 
 ---
 

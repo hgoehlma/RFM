@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt
-`v0.3.5` // `traveling_prompt` // `[living]`
+`v0.3.6` // `traveling_prompt` // [living]
 
 ---
 
