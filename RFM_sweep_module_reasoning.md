@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.3.0` // `module_reasoning` // [living]
+`v0.3.1` // `module_reasoning` // [living]
 
 ---
 
@@ -139,7 +139,7 @@ A third sweep was rejected on cost rather than on principle. It would add an inv
 
 **Not a substitute for the traveling prompt.** The sweep corrects failures that slipped through ambient discipline. It cannot compensate for absent discipline. A document produced without the traveling prompt will accumulate failures faster than the sweep can reliably catch them.
 
-**Not a validator of the reasoning itself.** The sweeps find structural, language and lifespan failures. They do not assess whether the reasoning is correct, whether the chosen direction is the right one, or whether the assumptions will hold. That judgment belongs to the human. A document that passes both sweeps may still contain wrong thinking.
+**Not a validator of the reasoning itself.** The sweeps find structural, language and lifespan failures. They do not assess whether the reasoning is correct, whether the chosen direction is the right one, or whether the assumptions will hold. That judgment belongs to the human. A document that passes every sweep may still contain wrong thinking.
 
 ---
 

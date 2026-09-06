@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.4.0` // `top_level_reasoning` // [living]
+`v0.5.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -13,7 +13,7 @@
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.1 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.1.1 | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.4 | The system prompt that carries the methodology into every LLM conversation |
-| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.3.0 | The reasoning document governing sweep prompt design decisions |
+| `RFM_sweep_module_reasoning.md` | Module reasoning | v0.3.1 | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_module_operational.md` | Operational | v0.3.0 | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
 | `RFM_sweep_prompt_structural.md` | Structural sweep prompt | v0.4.0 | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | Language sweep prompt | v0.2.0 | The prompt artifact that activates the language sweep: findings for ruling, not edits |
@@ -424,3 +424,14 @@ A writer drafting inside a document works from what is in front of them and from
 
 A convention that reduces to a search gets the search, run at the moment the convention applies rather than at review. A convention that does not reduce to a search is guidance, and naming it a convention claims an enforcement that does not exist.
 
+**[HL-REPAIR] Work framed as defect repair skips the reasoning step, because repair appears to carry no design decision.**
+
+Six documents were edited in one session to add a missing entry to their source lists. The lists themselves were the defect. Each edit made the copied content more complete, and the copy was what should not have existed. Repair presents as restoring a known-good state, so nothing in the framing prompted the question of whether the artifact being repaired should exist at all. The discipline that reasoning precedes execution was not overridden by a decision. It never engaged, because no one recognised that a change to a system was being made.
+
+**[HL-BORVOC] A structure adopted from another project carries that project's vocabulary, and the vocabulary encodes that project's problem.**
+
+The map file design was taken from a project using RFM at larger scale. The first draft arrived carrying governance, governed registry, version authority, read pathways and watchpoints. RFM uses none of those words. Each named a concern the other project has and RFM does not, and taking them would have installed those concerns without anyone deciding to. Adopting a structure requires re-deriving its terms in the adopting project's own vocabulary before any of it is written.
+
+**[HL-ADJCHK] A failure type named correctly in the taxonomy still fires, when the checks derived from it test something adjacent to what the type says.**
+
+The language family names text written for the session that produced it rather than for a future reader. The drafting pre-check derived from that family asked whether a reader outside the session would understand the content. A sentence explaining why a section was left out passes that question. A later reader understands it, and it is still addressed to the person reviewing the draft rather than the person reading the document. Comprehension was tested where audience was the failure. A derived check has to be read back against the type it derives from, not only against the content it will run on.
