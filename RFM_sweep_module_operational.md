@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Operational Document
-`v0.5.0` // `operational` // [living]
+`v0.6.0` // `operational` // [living]
 
 ---
 
@@ -33,13 +33,13 @@ The language sweep assesses the language failure types only. The structural fail
 
 *The Problem:* Does this section use any terms carrying project-specific meaning without a glossary pointer or inline definition? Is the problem statement legible to a domain-agnostic reader?
 
-*The Assumptions:* Does each entry read as a testable belief to a first-time reader, or does the wording make it sound like a description or instruction? Has any session-born shorthand been captured without being spelled out?
+*The Assumptions:* Does each entry read as a testable belief to a first-time reader, or does the wording make it sound like a description or instruction? Has any session-born shorthand been captured without being spelled out? Does any entry defend its evidence rather than state it, qualifying against a challenger rather than recording what is believed?
 
 *The Landscape:* Does each row use consistent language across entries? Has any cell absorbed insider shorthand a fresh reader cannot parse? Does the closing paragraph use domain-legible wording or process-internal shorthand?
 
 *The Options Considered:* Is each option's rejection reasoning legible without the session context that produced it? Does any entry assume the reader knows what was tried before the option was named?
 
-*The Chosen Direction and Why:* Does each entry separate observation from interpretation cleanly? Has any entry compressed reasoning into a conclusion without showing the path? Is any claim present that outruns its evidence without being flagged?
+*The Chosen Direction and Why:* Does each entry separate observation from interpretation cleanly? Has any entry compressed reasoning into a conclusion without showing the path? Is any claim present that outruns its evidence without being flagged? Does any entry defend its evidence rather than state it, qualifying against a challenger rather than recording what is believed?
 
 *The Boundaries:* Is each boundary stated in terms a first-time reader can apply, or does any entry require prior session context to understand what is being excluded?
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.6.0` // `operational` // [living]
+`v0.7.0` // `operational` // [living]
 
 ---
 
@@ -140,7 +140,7 @@ One intro sentence naming the specific question this landscape must answer. Tabl
 
 ## Failure Taxonomy
 
-This section is the single source for the failure classes RFM recognizes. Both arms retrieve from here: the sweep prompts through `RFM_sweep_module_operational.md`, and the drafting-moment check through the drafting skill. Neither restates the classes in its own words. Each derives its own questions from them.
+This section is the single source for the failure classes RFM recognizes. Both arms retrieve from here: the sweep prompts through `RFM_sweep_module_operational.md`, and the drafting-moment check through the drafting skill. Neither restates the classes in its own words. Each derives its own questions from them. Adding or changing a class here is not complete until each arm's derived questions have been updated to reach it. A class that no arm asks about is not in force.
 
 **Structural failure types**
 
@@ -159,6 +159,7 @@ This section is the single source for the failure classes RFM recognizes. Both a
 - Reasoning compressed to a conclusion without showing the path
 - Observation and interpretation conflated in one sentence
 - Wording that implies uncertainty that no longer exists
+- Evidence defended rather than stated: qualification written to pre-empt a challenger rather than to record what is believed. Qualification that feeds a break condition or blocks a design move is not this failure; it is the record of how firmly something is believed
 - Curation failures: text that does not earn its place, language written for the session that produced it rather than for a future reader, repetition of reasoning stated elsewhere that adds no signal
 
 **Lifespan failure types**

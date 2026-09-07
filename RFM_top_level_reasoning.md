@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.11.0` // `top_level_reasoning` // [living]
+`v0.12.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -174,6 +174,14 @@ To avoid vocabulary drift, the vocabulary stance of the collaboration team needs
 **Why the operational document is domain-specific while the methodology stays universal**
 
 The methodology is universal: the same eight sections, the same discipline, applicable across any domain where complex reasoning precedes execution. But some domains have hard execution contracts: software being the primary example, where constants, interfaces, and procedures must be explicitly specified for execution to be reliable. In those domains, the reasoning document is accompanied by an operational document that carries those contracts. The operational document is a derivative of the reasoning, created from it, not loosely connected to it. The methodology stays universal. The operational document is domain-specific. This is a design decision, not a concession: keeping implementation contracts out of the reasoning document is what allows the reasoning to stay portable across domains and across time.
+
+**Why a reasoning document states a belief instead of defending it**
+
+A reasoning document is read by someone deciding what to do next. Qualification written to anticipate a challenger is addressed to a different reader, one who is judging whether the author was careful. That reader does not exist for these documents, and writing for them costs the real reader twice: the claim gets longer, and it sits underneath the apparatus defending it rather than in front.
+
+The alternative is to hedge as insurance. Soften the claim, and being wrong later costs less. This is rejected because RFM already handles being wrong, and handles it better. An assumption carries the conditions under which it breaks. That is a designated exit: when the world moves, the entry names what to check and the document changes. Hedging duplicates that function and degrades it, because a claim qualified into safety is harder to falsify, and a claim that cannot be falsified cannot trigger the revision the break condition exists to trigger.
+
+Defensive qualification survives review because it reads as care. That is why it needs a named failure class rather than good intentions. The class is in the Failure Taxonomy in `RFM_operational.md`.
 
 **Why prose derivatives carry a distinct prose style**
 
