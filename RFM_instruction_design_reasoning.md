@@ -1,0 +1,128 @@
+# Reasoning-First Methodology: Instruction Design Reasoning Document
+`v0.1.0` // `module_reasoning` // [living]
+
+---
+
+## The Problem
+
+An instruction meant to change how an LLM behaves has to be carried by something. Each carrier loads at particular moments: once at the start of a session, when a procedure is opened, when a trigger matches, or once at deployment and never again. An instruction reaches only the moments its carrier reaches. Everywhere else it is silent, and nothing errors when it is.
+
+Silence is invisible from inside the instruction. Read on its own, an instruction that never fires is indistinguishable from one that fires every time. The evidence that it did not fire is a behaviour that did not change, in a session nobody is reviewing.
+
+`RFM_top_level_reasoning.md` establishes that co-authorship is a condition maintained against a default pull rather than a fact established by asserting it. It does not reach the question of how any instruction, that one included, arrives at the moment where it would apply. That question has been answered one instruction at a time, at the moment each was written, by whoever was writing it. The Hard Lessons below record what it has cost: a convention stated plainly and violated fifty-two times across five documents is one instance, and an override that bound inside the procedure carrying it and nowhere else is another.
+
+---
+
+## The Assumptions
+
+**[AS-FORM] - The form an instruction takes moves an LLM between the tool role and the co-author role.** An instruction reduced to a trigger and a required action is a command, and obeying it is the tool behaviour. An instruction carrying the reasoning behind itself asks for judgment, which is the co-author behaviour. The belief rests on one project's session record, where rules rewritten as triggers began firing after the same content in prose had not. That is a small sample, and the trigger and the register changed together, so their effects were never separated. It breaks if activation reliability and role effect are independent, because form could then be chosen for reliability at no cost to role.
+
+**[AS-SBND] - The session boundary is a permanent condition of LLM collaboration, not a temporary platform limitation.** Work begins, work ends, and no instruction survives the gap on its own. What makes an instruction current is that it is presented again, not that it is stored. The assumption breaks if models come to hold and act on instructions indefinitely without re-presentation, at which point carriers that load at the start of work stop being a distinct class.
+
+---
+
+## The Landscape
+
+*No Landscape at this time.*
+
+---
+
+## The Options Considered
+
+*No Options Considered at this time.*
+
+---
+
+## The Chosen Direction and Why
+
+**Why instructions are allocated by two properties at once**
+
+Declaring the role at the start of a session and relying on it was rejected: the declaration is one instruction competing with the training behind every other, and its weight falls as the session fills. Writing every instruction in the form that fires most reliably was rejected: that form is a command, so the methodology would buy activation by reinforcing the role it exists to counter. Writing every instruction in reasoning register was rejected: an instruction that does not fire at the moment it applies changes no behaviour at all, whatever role its form implies.
+
+The committed path is to allocate each instruction across the mechanisms that carry the methodology into a session, such as prompt artifacts, standing rule sets, and skills, by two properties at once: how reliably the instruction activates, and which role its form reinforces. Neither property alone decides where an instruction goes.
+
+That allocation is a balance, not a result. It depends on conditions that change: how models are trained, how much context they hold, where in that context each mechanism sits, which mechanisms the platform offers. RFM commits to the two properties and to revisiting the allocation when those conditions change, not to any particular assignment of instructions to mechanisms.
+
+**Why the same failure mode must be addressed at the appropriate level in each relevant component**
+
+The prompt components were designed sequentially, not as a system. That sequence creates a coherence risk: a failure mode identified in one component may not be named in the others at the level appropriate to each. The symptom is asymmetry: a failure the human prompt asks the human to catch, the traveling prompt does not prevent, and the sweep prompts do not detect.
+
+Curation discipline is the clearest example. The right balance in a reasoning document is completeness without wordiness, journaling residue, or redundancy. Wordiness is text that does not earn its place. Journaling residue is language written for the session that produced it rather than for a future reader. Redundancy is reasoning restated across entries without adding signal. All three are language failures: they enter documents gradually and are invisible from inside the session that produces them.
+
+This failure mode is named in the human prompt as something the human must catch in AI output. That is necessary but insufficient. The traveling prompt must name it as a prevention posture: flag these failures before they enter the document. The language sweep must name it as a detection criterion: entries that are wordy, journal-mode, or redundant are language failures subject to findings for ruling. The same failure mode, addressed at the appropriate level in each component, is what system coherence requires.
+
+**Why em dashes are enforced by a check rather than by instruction**
+
+Em dashes are the highest-signal typographic marker of LLM-generated prose, recognizable to readers who cannot say why, and they are the one suppressed pattern in RFM output enforced mechanically. Instruction does not hold them. Models told to remove an em dash commonly remove the named one and insert another in the same sentence, satisfying the instruction locally while violating it globally. The likeliest explanation available is token economy, the character costing one token where its alternatives cost two or three, so the training objective favors it and no prompt reaches that. That explanation rests on one analysis of one model family and is not settled. The commitment rests on the observed behavior, which holds whichever explanation is right.
+
+A check is possible here because a character either appears or it does not. Throat-clearing, importance inflation, and epistemic flatness are judgments about prose that no search settles. A pattern earns a check when it reduces to a search, not when it matters most. The check and its scope are in `RFM_operational.md`.
+
+**Why map integrity is checked mechanically rather than maintained by instruction**
+
+The map restates two facts held elsewhere: a document's version, which is in its own header, and a document's existence, which is in the file set. A restated fact drifts when one side moves, and nothing errors when it does. `RFM_operational.md` already requires the map to be updated in the same session as a version bump. That requirement is an instruction with nothing behind it, which is the configuration `[HL-UNCHK]` says will not hold.
+
+The comparison reduces to a search. Each map row names a file whose header carries the version, and each file in the project either appears in the map or does not. It earns a check on the same test that gave em dashes one.
+
+A check that lives in a project's session tooling protects that project alone. The methodology installs `RFM_operational.md`, so a check placed there travels with it and a check placed anywhere else does not. The map is the document a session reads first to orient, which makes it the worst place for a silent inaccuracy.
+
+---
+
+## The Boundaries
+
+*No Boundaries at this time.*
+
+---
+
+## The Open Questions
+
+**[OQ-ATTN] Where an instruction sits in the context window.**
+
+The allocation committed to in the Chosen Direction depends partly on where in a session's context each mechanism sits. That dependency rests on a belief RFM has not tested: that an LLM attends unevenly across a long context, so the same instruction fires more or less reliably depending on its position. The belief is widely repeated and RFM has carried it as background rather than examining it. If it is wrong, position drops out of the allocation and placement reduces to a question of form. If it is right, the size of the effect still matters, because a small effect does not justify putting an instruction where its form is wrong for the role it should reinforce. Neither the direction nor the size of the effect is known here. Grounding research on the allocation must answer this before any instruction is moved on positional grounds.
+
+**[OQ-PULL] What decides which role an instruction pulls toward.**
+
+[AS-FORM] claims the form of an instruction moves an LLM between the tool role and the co-author role, without saying which part of form does the moving. A candidate emerged from a close-out step worded as an instruction to ask the user and name candidates. The step could be completed by asking, so it was completed by asking, and the judgment it existed to produce was handed back to the human. Reworded so that stating a view was the completion condition, it produced the view. The candidate is that the completion condition rather than the tone decides the role, because an instruction that can be finished without judgment will be finished without it. Against the candidate: "challenge weak reasoning" carries judgment in its completion condition and still fires unevenly, so the completion condition cannot be the whole account. Whether it is the dominant part is unresolved. It is a question for the grounding research that [OQ-ATTN] triggers.
+
+---
+
+## Hard Lessons
+
+**[HL-GENSC] A test stated for one artifact does not reach content of another kind, even when both parties know the test.**
+
+RFM requires that an instruction in the traveling prompt make sense to a practitioner working on an unrelated project. The same standard applies to any content the methodology ships, but it is written only for that one artifact. A module's Problem section was drafted, reviewed and agreed by both co-authors while opening with a list of RFM's own prompt artifacts, standing rules and skills, which describes no other project. Neither party applied the test, because the content was not a traveling prompt. The failure was caught later in the same session by reading the content against the project's own instruction, not by the review that had already passed it. A scoping test belongs with the property it tests, not with the artifact where it was first needed.
+
+**[HL-INAD] An instruction restated in a second artifact dilutes the rule instead of reinforcing it.**
+
+Em dashes were barred in nine places across the document set: the traveling prompt, the top-level operational document, four skill operational documents, and the skill body. Every mention was written by someone trying to make the rule hold, and the character kept appearing anyway. One of the nine instructed the writer to replace an em dash with parentheses, which the skill governing that rule explicitly forbids. Nobody wrote a contradiction. It appeared because no artifact owned the rule, so each copy aged on its own and nothing reconciled them. The count also priced every later fix at nine edits instead of one. The corrective is ownership: one artifact carries the rule, and every other mention is a reference or is deleted.
+
+**[HL-FLAGEX] A model reading an always-on instruction takes the action instead of flagging it.**
+
+An instruction in an always-on artifact fires every time its condition is met. When that instruction names an action a later step owns, the action gets taken at the moment of reading rather than recorded for that step. Flagging and acting cost about the same at that moment, and the procedure that owns the moment sits in a different artifact that is not open.
+
+The worked example is version bumps. The traveling prompt instructed that a document change required a bump to be flagged, and the close-out sequence owned when bumps actually happen. Across several sessions the bump was performed mid-session instead. On one occasion it was folded into the same write as the content that triggered it, which put it past review entirely. Both artifacts were correct read alone.
+
+An instruction naming an action that a later step performs belongs with that step. An always-on artifact should carry only what gets acted on where it is read.
+
+**[HL-LOADPT] An instruction that overrides a standing default binds only where the artifact carrying it is loaded.**
+
+An artifact loaded at a defined moment carries its instructions into that moment only. When one of those instructions overrides a default that applies more widely than the artifact does, the override holds inside the moment and the default holds everywhere else. Nothing errors. The instruction is correct, it is present in the project, and it does not fire.
+
+The worked example is the commit attribution footer. `session-closeout` states that commit messages carry no attribution footer, and states it explicitly against the live system instruction requiring one. Five commits were made this session outside the close sequence, during a repository migration. The close-out skill was loaded at none of them, so the system instruction applied unopposed and all five carried a footer the project's own convention bars. They were pushed to a public repository before the skill was read.
+
+An override belongs with the default it overrides, or in an artifact loaded wherever that default applies. Putting it inside a procedure narrows its reach to that procedure.
+
+**[HL-UNCHK] A convention that nothing checks drifts, however plainly it is stated.**
+
+A writer drafting inside a document works from what is in front of them and from the nearest existing example. A convention held in another document only reaches that moment if the writer goes and reads it. When the nearest example already departs from the convention, the departure is what gets copied, and nothing errors at any point.
+
+`RFM_operational.md` carries two conventions of the same kind. Em dashes are barred, with a grep behind the rule that runs before every write. Chosen Direction headings were specified without a trailing colon, with no check behind them. Measured together, the em dash count across the project was zero and the heading violations were fifty-two, spread over five documents including the top-level reasoning document.
+
+A convention that reduces to a search gets the search, run at the moment the convention applies rather than at review. A convention that does not reduce to a search is guidance, and naming it a convention claims an enforcement that does not exist.
+
+**[HL-AUTHLD] Reasoning written in a session does not bind the session that wrote it.**
+
+A session committed in writing to allocating instructions by two named properties, then proposed installing a check one turn later without applying either. Nothing re-reads a document between the moment a session writes into it and the moment that session acts next, so a commitment reaches its own author as a conclusion rather than as an instruction. That is the weakest form the commitment will ever have. Every later session meets it as document content read at session open, while the authoring session holds it only as something it happens to have concluded. The session most invested in a piece of reasoning is therefore the least reliable at applying it. This sits beside [HL-LOADPT], which governs where an artifact is loaded. This one governs the gap between writing and loading.
+
+**[HL-DEPCOPY] A deployed copy of an artifact drifts where no check is looking.**
+
+An execution artifact was copied into the platform that loads it at the start of every session. The copy was taken before the document map moved into its own file, and it still described the map as sitting at the top of the top-level reasoning document. A session running on that copy would look for the map where it no longer was. Every check in the project compares files inside the project, so nothing compared the deployed copy against its source, and the divergence was invisible from inside the repository. Deploying an artifact creates a second location for it, and that location is outside the reach of any check the project runs on itself.

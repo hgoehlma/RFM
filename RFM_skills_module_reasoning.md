@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: Skills Module Reasoning Document
-`v0.4.1` // `module_reasoning` // [living]
+`v0.5.0` // `module_reasoning` // [living]
 
 ---
 
 ## The Problem
 
-RFM uses skills to carry behavior that fires at a specific moment in a session. A skill differs from always-on instruction in that nobody invokes it: it matches its own trigger description or it does not run, and nothing reports the sessions where it did not. Each skill reasoning document carries the design of its own skill. What none of them carries is the design that decides whether a skill fires at all: what makes a behavior a skill rather than always-on instruction, how a trigger description is written so the skill matches when it should, and how a skill reaches the environment that runs it.
+RFM uses skills to carry behavior that fires at a specific moment in a session. A skill differs from always-on instruction in that nobody invokes it: it matches its own trigger description or it does not run, and nothing reports the sessions where it did not. Each skill reasoning document carries the design of its own skill. What none of them carries is the design that decides whether a skill fires at all: how a trigger description is written so the skill matches when it should, and how a skill reaches the environment that runs it. The prior choice, whether a behaviour belongs in a skill rather than in another carrier, is in `RFM_instruction_design_reasoning.md`.
 
 ---
 

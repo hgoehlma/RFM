@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.2.2` // `map` // [living]
+`v0.3.0` // `map` // [living]
 
 ---
 
@@ -26,6 +26,9 @@ RFM
 ├─ RFM_incubating.md
 ├─ README.md
 ├─ examples/
+│
+├─ Instruction design module
+│  └─ RFM_instruction_design_reasoning.md
 │
 ├─ Prompts module
 │  ├─ RFM_prompts_reasoning.md
@@ -83,10 +86,11 @@ RFM
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.9.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.10.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | Operational | v0.6.0 | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | Glossary | v0.1.6 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.2.1 | The reasoning document governing all system prompt decisions |
+| `RFM_instruction_design_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
+| `RFM_prompts_reasoning.md` | Prompts reasoning | v0.3.0 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.1 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.2.0 | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | Traveling system prompt | v0.3.6 | The system prompt that carries the methodology into every LLM conversation |
@@ -111,7 +115,7 @@ RFM
 | `RFM_skill_rfm_ripple_check_operational.md` | Skill operational | v0.3.1 | Derivation procedure and retirement steps for the rfm-ripple-check skill |
 | `RFM_skill_rfm_drafting_reasoning.md` | Skill reasoning | v0.4.1 | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
 | `RFM_skill_rfm_drafting_operational.md` | Skill operational | v0.6.0 | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
-| `RFM_skills_module_reasoning.md` | Module reasoning | v0.4.1 | The reasoning document governing skill design decisions across skills |
+| `RFM_skills_module_reasoning.md` | Module reasoning | v0.5.0 | The reasoning document governing skill design decisions across skills |
 | `RFM_skills_module_operational.md` | Operational | v0.1.2 | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 | `README.md` | Entry point | unversioned | Public-facing orientation for a reader encountering RFM for the first time, carrying no version numbers by design |
 | `RFM_incubating.md` | Capture file | unversioned | Ideas captured at session close that are not yet ready to enter a document |
