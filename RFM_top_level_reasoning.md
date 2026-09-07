@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.12.0` // `top_level_reasoning` // [living]
+`v0.13.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -56,6 +56,8 @@ The assumptions above are beliefs about the domain: why the problem exists and w
 **[AS-ADSR] - The reasoning discipline is self-reinforcing when held.** A well-reasoned document improves LLM execution. Better execution produces richer joint reasoning. Richer reasoning produces better documents. The loop degrades when either party breaks the discipline.
 
 **[AS-TDEF] - An LLM's default pull is the tool role.** Instruction-following is what LLMs are trained and rewarded for, so the tool role is the behaviour available without effort. Co-authorship is not. Stating the role at session open does not install it, because that statement is one instruction competing with the training behind every other instruction in the session. The assumption breaks if models are trained such that collaboration rather than compliance is the default behaviour.
+
+**[AS-EVID] - What RFM records generalises beyond the practitioner who recorded it.** Every pattern in these documents was observed by one person working with LLMs across several domains. The domains vary. The collaborator does not. The generality is believed on two grounds: patterns that recur across unrelated domains are unlikely to be properties of any one of them, and each pattern is stated with the reasoning that produced it, so a reader who was not present can test it against their own work rather than take it on report. Neither ground is observation by someone else. The assumption breaks when a practitioner working independently from the published documents reports that a recorded pattern does not hold in their practice, or hits a failure the documents do not predict.
 
 ---
 
@@ -154,6 +156,20 @@ The graduation act requires two steps: place the resolved reasoning at its desti
 When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default. It states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption, the evidence, the path, the conditions, must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader to test it honestly rather than inherit it blindly.
 
 Every change to a derivative (code, prompt, operational document) begins with a change to its source reasoning document. Derivatives don't merely stay connected to the reasoning; they are created from it. That is the right order, and maintaining it is what curation means in practice.
+
+**Why RFM carries a curated improvement loop**
+
+The methodology improves its documents through curation. It also has to improve the collaboration that produces them, and that is a different object with a different test. Curation asks whether an entry's reasoning still has a recipient. This asks whether something that went wrong once will go wrong again. A practice that answers only the first question can hold a perfect document set while repeating the same working failure every session.
+
+So RFM carries a recurring step in which the collaboration reviews its own conduct, and a small number of observed patterns become standing rules or recorded lessons. Most candidates are refused. The refusal is the part that does the work, and it is the part that looks like waste from outside, because a review that writes nothing appears to have skipped its turn.
+
+The loop's object is the project it runs in. It improves how this team reasons about this problem, and it produces rules that hold for this collaboration. What it does not do is edit RFM from inside the deployment. A methodology each deployment revises locally forks on first contact, and the reasoning that makes RFM portable would hold only until someone used it. An observation that looks general rather than local travels the other way instead, as input to the methodology's own project, where it meets the same refusal gate as anything else. That return path is how RFM receives evidence from outside itself without forking.
+
+The alternative of letting practice improve when someone notices was rejected because noticing happens inside a session. Whatever is not written down while the session is open goes when the session goes, and the methodology is then unable to learn from its own use while remaining able to reason about everything else.
+
+The alternative of promoting every candidate was rejected on the reasoning in `RFM_instruction_design_reasoning.md`. An instruction competes for adherence with every other instruction present, and adherence to any one of them falls as work continues. A rule set that grows without a refusal gate therefore buys each new rule by weakening all of them, including the rules that were earning their place. Accumulation degrades the thing it was meant to improve, which is why the gate is the design and the writing is the output.
+
+The loop currently fires when a session ends, because that is the point at which a session's evidence is complete and still in view. That is where it fires, not what it is. If work with an LLM ever stopped being bounded by sessions, the loop would need a different trigger and would still be needed.
 
 **Why the glossary travels with RFM regardless of domain**
 
@@ -404,3 +420,7 @@ An item deferred at the end of one session recorded that the sweep prompts might
 **[HL-CFSRCH] A grounding search assembled from the claim returns confirmation and cannot return a null.**
 
 A module's central mechanism was grounded by searching for degradation, drift, instruction decay and lost in the middle. Every term presupposed the effect, so the pass returned work that had found it and no work that had not, and the result read as evidence rather than as the shape of the query. The document was written on a paper two years old testing a model three generations old, stated without qualification, and it passed the author's own review. The failure surfaced only when the human asked whether recency had been over-weighted, which is a question about a different bias, and answering it required going back to publication dates rather than to findings. Search terms for a grounding pass belong to the break condition of the belief being tested, not to the belief. A search assembled from the belief contains none of the words a contrary result would be written in, so finding no contrary result carries no information.
+
+**[HL-PARTRUL] A ruling executed in part reads as executed in whole.**
+
+A joint decision usually carries more than one obligation, and the obligations land in different documents. Executing the most visible one changes the document a reader would check first, so the decision looks done from every later vantage point, while the remainder has no owner and produces no error anywhere. The worked example is the decision to treat session-boundary delivery as belonging to the methodology rather than as a workaround for a limitation. The assumption admitting it was written and the affected Problem section was made generic, which is what any review would have looked at. Three obligations went unwritten: the grounding sentence naming where the module's evidence came from, the question of whether the methodology ships an artifact type for that class, and the header of the file that still described itself in the terms the ruling had overturned. The debt then moved out of sight, because the reasoning it attached to migrated to a different assumption entry and the unpaid part travelled with it unremarked. What closes this is naming every obligation a ruling creates at the moment of the ruling, in the session record, rather than trusting that executing the ruling will surface them.
