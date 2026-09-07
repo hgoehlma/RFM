@@ -1,11 +1,11 @@
-# Reasoning-First Methodology: Skills Module Operational Document
-`v0.1.2` // `module_operational` // [living]
+# Reasoning-First Methodology: Skill Design Operational Document
+`v0.1.3` // `module_operational` // [living]
 
 ---
 
 ## What this document covers
 
-Shared derivation rules for all RFM skills. The reasoning behind every decision here is in `RFM_skills_module_reasoning.md`. Each skill operational document carries what is specific to that skill and references this document for what is shared.
+Shared derivation rules for all RFM skills. The reasoning behind every decision here is in `RFM_skill_design_reasoning.md`. Each skill operational document carries what is specific to that skill and references this document for what is shared.
 
 ---
 

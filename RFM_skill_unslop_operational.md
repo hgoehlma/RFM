@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: RFM Unslop Skill Operational Document
-`v0.3.1` // `skill_unslop_operational` // [living]
+`v0.3.2` // `skill_operational` // [living]
 
 ---
 
 ## What this document covers
 
-Derivation procedure for the `rfm-unslop` skill and the traveling prompt declaration that activates it. The reasoning behind every decision here is in `RFM_skill_unslop_reasoning.md`. Rules shared by all RFM skills are in `RFM_skills_module_operational.md`. This document carries what is specific to `rfm-unslop`.
+Derivation procedure for the `rfm-unslop` skill and the traveling prompt declaration that activates it. The reasoning behind every decision here is in `RFM_skill_unslop_reasoning.md`. Rules shared by all RFM skills are in `RFM_skill_design_operational.md`. This document carries what is specific to `rfm-unslop`.
 
 ---
 
@@ -68,7 +68,7 @@ The register-specific rules at the bottom of the skill body are a separate secti
 
 ## Coverage check: after derivation
 
-Apply the shared coverage check in `RFM_skills_module_operational.md` first. In addition, verify the skill:
+Apply the shared coverage check in `RFM_skill_design_operational.md` first. In addition, verify the skill:
 - Description front-loads "RFM approach"
 - Body opens directly on the pattern list
 - Register rules section present at the end
@@ -79,5 +79,5 @@ Verify the traveling prompt:
 
 ---
 
-*skill_unslop_operational // [living]*
+*skill_operational // [living]*
 *carries what; the reasoning documents carry why*

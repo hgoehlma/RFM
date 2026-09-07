@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.4.0` // `module_reasoning` // [living]
+`v0.5.0` // `module_reasoning` // [living]
 
 ---
 
@@ -20,6 +20,8 @@ Silence is invisible from inside the instruction. Read on its own, an instructio
 **[AS-SBND] - The session boundary is a permanent condition of LLM collaboration, not a temporary platform limitation.** Work begins, work ends, and no instruction survives the gap on its own. What makes an instruction current is that it is presented again, not that it is stored. The assumption breaks if models come to hold and act on instructions indefinitely without re-presentation, at which point carriers that load at the start of work stop being a distinct class.
 
 **[AS-DECAY] - Adherence to an instruction falls as a conversation continues, whether or not the instruction is still present.** The effect has been measured across three model generations. A single standing constraint loses 26% of its adherence over fifty turns, and where constraints accumulate the loss runs from 38% to 63%. Retention of a first-turn instruction was 58.57% for the strongest model of an earlier frontier set and below 35% for most of the rest. The current frontier generation was tested in 2026 and shows the same shape: constraint adherence falls from 3.63 in single-shot use to 3.31 under multi-turn pressure, failures cluster at particular conversation depths rather than accumulating smoothly, and recovery after a failure stays below 30% for every model tested. The assumption breaks if a model is shown holding a standing constraint flat across a long conversation, because the load point of the carrier would then be the only variable and an instruction delivered once would stay live. Why adherence falls is not settled. One 2026 result finds models restating a constraint correctly 97.3% of the time while violating it, with five of seven models violating a constraint they could state at better than even odds. If that holds, the instruction is still available at the moment it is broken, and putting an instruction in front of the model at the right moment is necessary without being sufficient. This is one study and it has not been replicated. Until it is, a design that treats decay as an availability problem rests on a mechanism nobody has confirmed.
+
+**[AS-SRCH] - A convention is enforceable only where compliance reduces to a search.** A search returns the same answer on every run and reaches the writer at the moment of writing rather than at review. Where compliance is a judgment about prose, no search settles it, and both substitutes fail. A pattern match loose enough to catch the failure also catches text that complies. A pattern match tight enough to spare compliant text misses the failure. The third substitute is a model judging compliance, which returns the question to the judgment the convention exists to correct: a benchmark of seven models from five providers in April 2026 ran an automated judge over the same outputs human raters scored, and the judge found 7 of the 34 violations the humans found. The criterion that follows is that a pattern earns a check when it reduces to a search, not when it matters most. A convention that fails the test is guidance, and calling it a convention claims an enforcement nobody built. The assumption breaks if a model judge reaches human agreement on prose conventions, because the enforceable class would then cover most of what RFM cares about and mechanical checking would stop being the narrow instrument this module treats it as.
 
 ---
 
@@ -59,7 +61,7 @@ Write every instruction with its reasoning attached, so that each one asks for j
 
 **4. Checking every convention vs. checking only what reduces to a search**
 
-Put a mechanical check behind every convention the methodology states, on the reasoning that a check is the only mechanism that does not depend on reaching the model at all. Rejected because most of what RFM cares about does not reduce to a search. Throat-clearing, importance inflation and epistemic flatness are judgments about prose that no pattern match settles. Attempting a check anyway produces one of two failures: a check that passes text it should catch, or a check whose findings a human must adjudicate individually, which is a review step wearing a check's name. The criterion adopted instead is that a pattern earns a check when it reduces to a search, not when it matters most.
+Put a mechanical check behind every convention the methodology states, on the reasoning that a check is the only mechanism that does not depend on reaching the model at all. Rejected because most of what RFM cares about does not reduce to a search. Throat-clearing, importance inflation and epistemic flatness are judgments about prose that no pattern match settles. Attempting a check anyway produces one of two failures: a check that passes text it should catch, or a check whose findings a human must adjudicate individually, which is a review step wearing a check's name. The criterion adopted instead is `[AS-SRCH]`.
 
 ---
 
@@ -83,13 +85,13 @@ This failure mode is named in the human prompt as something the human must catch
 
 Em dashes are the highest-signal typographic marker of LLM-generated prose, recognizable to readers who cannot say why, and they are the one suppressed pattern in RFM output enforced mechanically. Instruction does not hold them. Models told to remove an em dash commonly remove the named one and insert another in the same sentence, satisfying the instruction locally while violating it globally. The likeliest explanation available is token economy, the character costing one token where its alternatives cost two or three, so the training objective favors it and no prompt reaches that. That explanation rests on one analysis of one model family and is not settled. The commitment rests on the observed behavior, which holds whichever explanation is right.
 
-A check is possible here because a character either appears or it does not. Throat-clearing, importance inflation, and epistemic flatness are judgments about prose that no search settles. A pattern earns a check when it reduces to a search, not when it matters most. The check and its scope are in `RFM_operational.md`.
+A check is possible here because a character either appears or it does not, which is the condition `[AS-SRCH]` sets. The check and its scope are in `RFM_operational.md`.
 
 **Why map integrity is checked mechanically rather than maintained by instruction**
 
 The map restates two facts held elsewhere: a document's version, which is in its own header, and a document's existence, which is in the file set. A restated fact drifts when one side moves, and nothing errors when it does. `RFM_operational.md` already requires the map to be updated in the same session as a version bump. That requirement is an instruction with nothing behind it, which is the configuration `[HL-UNCHK]` says will not hold.
 
-The comparison reduces to a search. Each map row names a file whose header carries the version, and each file in the project either appears in the map or does not. It earns a check on the same test that gave em dashes one.
+The comparison reduces to a search. Each map row names a file whose header carries the version, and each file in the project either appears in the map or does not. It earns a check under `[AS-SRCH]`.
 
 A check that lives in a project's session tooling protects that project alone. The methodology installs `RFM_operational.md`, so a check placed there travels with it and a check placed anywhere else does not. The map is the document a session reads first to orient, which makes it the worst place for a silent inaccuracy.
 
@@ -155,7 +157,7 @@ A writer drafting inside a document works from what is in front of them and from
 
 `RFM_operational.md` carries two conventions of the same kind. Em dashes are barred, with a grep behind the rule that runs before every write. Chosen Direction headings were specified without a trailing colon, with no check behind them. Measured together, the em dash count across the project was zero and the heading violations were fifty-two, spread over five documents including the top-level reasoning document.
 
-A convention that reduces to a search gets the search, run at the moment the convention applies rather than at review. A convention that does not reduce to a search is guidance, and naming it a convention claims an enforcement that does not exist.
+The split between the two is `[AS-SRCH]`: a convention that reduces to a search gets the search, and one that does not is guidance wearing a convention's name.
 
 **[HL-AUTHLD] Reasoning written in a session does not bind the session that wrote it.**
 

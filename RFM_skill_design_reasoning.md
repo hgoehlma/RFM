@@ -1,5 +1,5 @@
-# Reasoning-First Methodology: Skills Module Reasoning Document
-`v0.5.0` // `module_reasoning` // [living]
+# Reasoning-First Methodology: Skill Design Reasoning Document
+`v0.5.1` // `module_reasoning` // [living]
 
 ---
 

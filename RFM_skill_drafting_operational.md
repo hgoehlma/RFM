@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.6.0` // `skill_rfm_drafting_operational` // [living]
+`v0.6.1` // `skill_operational` // [living]
 
 ---
 
 ## What this document covers
 
-Derivation procedure for the `rfm-drafting` skill. The reasoning behind every decision here is in `RFM_skill_rfm_drafting_reasoning.md`. Rules shared by all RFM skills are in `RFM_skills_module_operational.md`. This document carries what is specific to `rfm-drafting`.
+Derivation procedure for the `rfm-drafting` skill. The reasoning behind every decision here is in `RFM_skill_drafting_reasoning.md`. Rules shared by all RFM skills are in `RFM_skill_design_operational.md`. This document carries what is specific to `rfm-drafting`.
 
 ---
 
@@ -60,7 +60,7 @@ When a new drafting failure class is identified in practice:
 
 1. Determine which layer it belongs to: placement (Layer 1), writing rules (Layer 2), derivative chain (Layer 3), or the pre-check (Layer 4).
 2. Add it to the skill body under the appropriate layer.
-3. Update `RFM_skill_rfm_drafting_reasoning.md` if the addition reflects a new assumption or hard lesson. If the addition is a new failure class rather than new guidance, it belongs in the Failure Taxonomy in `RFM_operational.md` first.
+3. Update `RFM_skill_drafting_reasoning.md` if the addition reflects a new assumption or hard lesson. If the addition is a new failure class rather than new guidance, it belongs in the Failure Taxonomy in `RFM_operational.md` first.
 4. Reinstall the updated skill in the user's environment.
 5. Bump the version on this operational document. Skills carry no version number.
 
@@ -68,7 +68,7 @@ When a new drafting failure class is identified in practice:
 
 ## Coverage check: after derivation
 
-Apply the shared coverage check in `RFM_skills_module_operational.md` first. In addition, verify the skill:
+Apply the shared coverage check in `RFM_skill_design_operational.md` first. In addition, verify the skill:
 - Description front-loads "RFM sessions only"
 - Body opens directly on Layer 1
 - rfm-unslop is referenced in Layer 2, not duplicated
@@ -76,5 +76,5 @@ Apply the shared coverage check in `RFM_skills_module_operational.md` first. In 
 
 ---
 
-*skill_rfm_drafting_operational // [living]*
+*skill_operational // [living]*
 *carries what; the reasoning documents carry why*

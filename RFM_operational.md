@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.7.0` // `operational` // [living]
+`v0.7.1` // `operational` // [living]
 
 ---
 
@@ -140,7 +140,7 @@ One intro sentence naming the specific question this landscape must answer. Tabl
 
 ## Failure Taxonomy
 
-This section is the single source for the failure classes RFM recognizes. Both arms retrieve from here: the sweep prompts through `RFM_sweep_module_operational.md`, and the drafting-moment check through the drafting skill. Neither restates the classes in its own words. Each derives its own questions from them. Adding or changing a class here is not complete until each arm's derived questions have been updated to reach it. A class that no arm asks about is not in force.
+This section is the single source for the failure classes RFM recognizes. Both arms retrieve from here: the sweep prompts through `RFM_sweep_operational.md`, and the drafting-moment check through the drafting skill. Neither restates the classes in its own words. Each derives its own questions from them. Adding or changing a class here is not complete until each arm's derived questions have been updated to reach it. A class that no arm asks about is not in force.
 
 **Structural failure types**
 
@@ -167,7 +167,7 @@ This section is the single source for the failure classes RFM recognizes. Both a
 - A claim conditioned on something already planned, which that plan will make false
 - A note or placeholder describing work that a scheduled step will perform
 
-**Boundary between the families.** A failure is structural when it concerns where content sits. A failure is language when it concerns how content reads. A failure is lifespan when the content sits correctly and reads clearly today and planned work will make it false or redundant. A well-written sentence in the wrong section is structural. A correctly placed sentence carrying session residue is language. A correctly placed, clearly written sentence describing a condition already scheduled for removal is lifespan. A conditional whose trigger is uncertain is not a lifespan failure, because no plan holds that condition and the document is the only place it is recorded. When a failure meets more than one description, the artifact that invoked the taxonomy applies its own ordering rule; the sweep ordering is in `RFM_sweep_module_operational.md`.
+**Boundary between the families.** A failure is structural when it concerns where content sits. A failure is language when it concerns how content reads. A failure is lifespan when the content sits correctly and reads clearly today and planned work will make it false or redundant. A well-written sentence in the wrong section is structural. A correctly placed sentence carrying session residue is language. A correctly placed, clearly written sentence describing a condition already scheduled for removal is lifespan. A conditional whose trigger is uncertain is not a lifespan failure, because no plan holds that condition and the document is the only place it is recorded. When a failure meets more than one description, the artifact that invoked the taxonomy applies its own ordering rule; the sweep ordering is in `RFM_sweep_operational.md`.
 
 ---
 
@@ -242,7 +242,7 @@ A well-triggered skill is one whose description is written from the vocabulary a
 
 Tens of well-triggered skills sit inside the range where selection holds. Low hundreds sit past the point where degradation is reported. Use the band as the starting point when deciding whether a family of related behavior becomes one skill or several, not as a limit to fill up to.
 
-The band is inferred from published tool-selection results and has not been measured on this project. Revise it when better evidence arrives. Why a band is the right form, and why it is likely conservative for this project, is in `RFM_skills_module_reasoning.md`.
+The band is inferred from published tool-selection results and has not been measured on this project. Revise it when better evidence arrives. Why a band is the right form, and why it is likely conservative for this project, is in `RFM_skill_design_reasoning.md`.
 
 ---
 

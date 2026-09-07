@@ -1,5 +1,5 @@
 # RFM: Language Sweep Prompt
-`v0.2.0` // `sweep_prompt_language` // [living]
+`v0.2.1` // `sweep_prompt_language` // [living]
 
 ---
 
@@ -75,6 +75,6 @@ Do not edit the document. Do not summarize sections. Do not produce a quality sc
 ---
 
 *language sweep prompt // [living]*
-*the language failure types in `RFM_operational.md` and the per-section questions in `RFM_sweep_module_operational.md` are the source for "What you are looking for"*
+*the language failure types in `RFM_operational.md` and the per-section questions in `RFM_sweep_operational.md` are the source for "What you are looking for"*
 *this prompt is the derivative*
 *findings for ruling, not edits*

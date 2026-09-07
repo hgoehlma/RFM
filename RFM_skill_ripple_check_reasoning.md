@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Ripple Check Skill Reasoning Document
-`v0.1.3` // `skill_rfm_ripple_check_reasoning` // [living]
+`v0.1.4` // `skill_reasoning` // [living]
 
 ---
 

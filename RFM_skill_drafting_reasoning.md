@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.4.1` // `skill_rfm_drafting_reasoning` // [living]
+`v0.4.2` // `skill_reasoning` // [living]
 
 ---
 
@@ -45,7 +45,7 @@ Nothing currently fires at the moment of drafting to encode: where does this bel
 The operational doc carries formatting conventions. Drafting guidance is behavioral: it needs to fire at the moment of production, not be consulted after the fact. A skill fires; a document section does not.
 
 **Why one skill covers the concerns that arise at the drafting moment**
-These concerns arise at the same moment, when a practitioner is about to write content into a document. The module's rule groups a family that shares one moment, and its reasoning is in `RFM_skills_module_reasoning.md`. The rule applies cleanly here because no member of the family has a moment of its own to fire at.
+These concerns arise at the same moment, when a practitioner is about to write content into a document. The module's rule groups a family that shares one moment, and its reasoning is in `RFM_skill_design_reasoning.md`. The rule applies cleanly here because no member of the family has a moment of its own to fire at.
 
 **Why language compliance is delegated to rfm-unslop rather than duplicated.**
 `rfm-unslop` is already always-on for all RFM session output. Duplicating its coverage in this skill creates two sources of truth for language rules. Delegation keeps language rules in one place and makes this skill's scope structurally distinct.

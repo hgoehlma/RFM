@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: RFM Ripple Check Skill Operational Document
-`v0.3.1` // `skill_rfm_ripple_check_operational` // [living]
+`v0.3.2` // `skill_operational` // [living]
 
 ---
 
 ## What this document covers
 
-Derivation procedure for the `rfm-ripple-check` skill. The reasoning behind every decision here is in `RFM_skill_rfm_ripple_check_reasoning.md`. Rules shared by all RFM skills are in `RFM_skills_module_operational.md`. This document carries what is specific to `rfm-ripple-check`.
+Derivation procedure for the `rfm-ripple-check` skill. The reasoning behind every decision here is in `RFM_skill_ripple_check_reasoning.md`. Rules shared by all RFM skills are in `RFM_skill_design_operational.md`. This document carries what is specific to `rfm-ripple-check`.
 
 ---
 
@@ -61,12 +61,12 @@ The general `/ripple-check` skill is retired when `rfm-ripple-check` is installe
 
 ## Coverage check: after derivation
 
-Apply the shared coverage check in `RFM_skills_module_operational.md` first. In addition, verify the skill:
+Apply the shared coverage check in `RFM_skill_design_operational.md` first. In addition, verify the skill:
 - Description front-loads "RFM sessions only"
 - Body opens directly on the procedure
 - Behavioral constraints section present at the end
 
 ---
 
-*skill_rfm_ripple_check_operational // [living]*
+*skill_operational // [living]*
 *carries what; the reasoning documents carry why*
