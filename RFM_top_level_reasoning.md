@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.10.0` // `top_level_reasoning` // [living]
+`v0.11.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -392,3 +392,7 @@ An item deferred at the end of one session recorded that the sweep prompts might
 **[HL-ENUM] A list that names its members is a count-dependent reference with no number in it.**
 
 `RFM_operational.md` bars statements whose correctness depends on a count remaining stable, and every form it named at the time carried a numeral or an ID. A sentence introducing the execution artifacts as "the traveling prompt, sweep prompts, and human prompt" carried neither, and was wrong by two: the derivation prompt and the guided drafting prompt had been added since it was written. The list had gone stale in place while the rule that covers it stayed satisfied on its face. The test that catches this is whether adding a member to the set would falsify the sentence, which is the same test the count forms fail, applied to enumeration rather than to a number.
+
+**[HL-CFSRCH] A grounding search assembled from the claim returns confirmation and cannot return a null.**
+
+A module's central mechanism was grounded by searching for degradation, drift, instruction decay and lost in the middle. Every term presupposed the effect, so the pass returned work that had found it and no work that had not, and the result read as evidence rather than as the shape of the query. The document was written on a paper two years old testing a model three generations old, stated without qualification, and it passed the author's own review. The failure surfaced only when the human asked whether recency had been over-weighted, which is a question about a different bias, and answering it required going back to publication dates rather than to findings. Search terms for a grounding pass belong to the break condition of the belief being tested, not to the belief. A search assembled from the belief contains none of the words a contrary result would be written in, so finding no contrary result carries no information.

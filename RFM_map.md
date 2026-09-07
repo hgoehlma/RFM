@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.3.0` // `map` // [living]
+`v0.3.1` // `map` // [living]
 
 ---
 
@@ -86,10 +86,10 @@ RFM
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.10.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.11.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | Operational | v0.6.0 | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | Glossary | v0.1.6 | Disambiguation of terms that carry different meanings across reader contexts |
-| `RFM_instruction_design_reasoning.md` | Module reasoning | v0.1.0 | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
+| `RFM_instruction_design_reasoning.md` | Module reasoning | v0.2.0 | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.3.0 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | Module reasoning | v0.2.1 | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | Operational | v0.2.0 | Derivation procedure and coverage check discipline for the traveling prompt |

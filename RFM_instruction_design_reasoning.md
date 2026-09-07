@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.1.0` // `module_reasoning` // [living]
+`v0.2.0` // `module_reasoning` // [living]
 
 ---
 
@@ -15,7 +15,7 @@ Silence is invisible from inside the instruction. Read on its own, an instructio
 
 ## The Assumptions
 
-**[AS-FORM] - The form an instruction takes moves an LLM between the tool role and the co-author role.** An instruction reduced to a trigger and a required action is a command, and obeying it is the tool behaviour. An instruction carrying the reasoning behind itself asks for judgment, which is the co-author behaviour. The belief rests on one project's session record, where rules rewritten as triggers began firing after the same content in prose had not. That is a small sample, and the trigger and the register changed together, so their effects were never separated. It breaks if activation reliability and role effect are independent, because form could then be chosen for reliability at no cost to role.
+**[AS-FORM] - The form an instruction takes moves an LLM between the tool role and the co-author role.** An instruction reduced to a trigger and a required action is a command, and obeying it is the tool behaviour. An instruction carrying the reasoning behind itself asks for judgment, which is the co-author behaviour. The activation half of the claim has support beyond this project: rephrasing an instruction without changing its intent moves whether its constraint is satisfied, from 95.9% on the original wording to 78.4% under rephrasing for the strongest model tested and to 22.2% for the weakest, so form changes whether an instruction fires while content is held constant. The role half has no comparable support and one result works against it. Requiring a model to reason before answering reduces how often it adopts a view the user has already stated, and the same work finds the model then constructing coherent justifications with one-sided arguments and calculation errors for the deferential answer anyway. Reasoning register can therefore be satisfied in appearance while the deference it was meant to counter survives underneath. The project's own grounding remains one session record, where rules rewritten as triggers began firing after the same content in prose had not, which is a small sample in which the trigger and the register changed together so their effects were never separated. The assumption breaks in two ways. It breaks if activation reliability and role effect are independent, because form could then be chosen for reliability at no cost to role. It breaks differently if reasoning register reliably produces the appearance of judgment without the behaviour, because form would then move the output without moving the role, and the output is the only place anyone looks.
 
 **[AS-SBND] - The session boundary is a permanent condition of LLM collaboration, not a temporary platform limitation.** Work begins, work ends, and no instruction survives the gap on its own. What makes an instruction current is that it is presented again, not that it is stored. The assumption breaks if models come to hold and act on instructions indefinitely without re-presentation, at which point carriers that load at the start of work stop being a distinct class.
 
@@ -23,13 +23,41 @@ Silence is invisible from inside the instruction. Read on its own, an instructio
 
 ## The Landscape
 
-*No Landscape at this time.*
+Prior work on instruction design asks how an instruction reaches the model at the moment it applies. This landscape surveys the mechanisms that have been built to answer that, and asks of each whether it also decides what the instruction does to the collaborator's posture once it arrives.
+
+| Approach | What it does | Why it's insufficient |
+|---|---|---|
+| Always-loaded context file | A file is injected into context at the start of every session, whole. `AGENTS.md` and a project-root `CLAUDE.md` work this way, as does a platform's project instruction field. | Reaches every moment in principle. Adherence to an instruction presented early falls as the conversation continues, measured at a 26% drop from first to last turn for a single constraint across fifty turns, and 38% to 63% where constraints accumulate. Measured separately as retention of an instruction given in the first turn, the strongest frontier model tested scored 58.57% and most scored below 35%. The instruction is present and does not fire, and nothing errors. |
+| Path-triggered attachment | A rule declares file patterns and is attached when the agent touches a matching file. Cursor's glob rules and path-scoped rule files work this way. | The trigger is a filesystem event. It fires reliably and it fires on the wrong thing: an instruction about how to reason has no file pattern, and an instruction about a document type attaches when the file is opened rather than when the judgment is made. |
+| Model-judged retrieval by description | A rule or skill carries a description, and the model decides from that description whether the current moment calls for it. Cursor's intelligently-applied rules and skill files work this way. | Activation depends on the model recognizing the moment, which returns the problem to the model's judgment at exactly the moment the instruction exists to correct. A description that does not match how the moment presents itself produces silence. |
+| Manual invocation | A human names the rule or procedure at the moment it applies. | Reliable given a human who remembers. That relocates the failure to the human rather than removing it, and the moments an instruction most needs to reach are the ones nobody notices. |
+| Re-presentation at intervals | The instruction is presented again during the session rather than once at its start. Prompt repetition is the baseline mitigation in the instruction stability work, and re-injection of a root context file after compaction ships in at least one agent. | Addresses decay directly and is the only mitigation available to a practitioner. Costs context on every repetition, and nothing establishes how often is enough. The interval is chosen by guess. |
+| Inference-time attention control | The weight the model places on the instruction is amplified during decoding rather than through the text. Split-softmax is the worked example. | Outperformed the text-level mitigations it was compared against. Requires access to decoding, which a practitioner working through a product does not have. |
+| Validation outside the model | A check runs on the artifact and fails it. Linters, schema validators and output guardrails work this way. | Does not need to reach the model at all, which makes it the most reliable mechanism available and the reason RFM uses it where it can. Applies only where the property reduces to a search. It cannot carry an instruction about how to think, only reject a result. |
+| Role declaration | The instruction asserts an identity, on the belief that the identity carries behaviour with it. | The aggregate result replicates: across 162 personas and 2,410 questions, and again across 38 roles and 1,140 questions, role injection produced no significant net change in answer quality, and selecting a role automatically performed no better than random. Decomposing the later result shows the assertion doing real and opposing work, raising rated expertise depth and lowering rated clarity. Every measurement scores task quality. None scores the posture the collaborator holds, so the null result is not evidence about the property this module is designing for, in either direction. |
+| Human procedural carriers | A procedure is carried by an artifact consulted at a defined moment. Aviation checklists are the mature instance, with read-do and challenge-response as distinct designs for who speaks the item and who confirms it. | The only prior art with a long failure record, and the record is that correct procedures carried by well-designed artifacts are still not followed. Procedural non-compliance is treated there as a standing condition to be designed against rather than a defect to be fixed by better wording. |
+
+**The gap:** Every mechanism above decides activation. The field frames instruction design as a compliance problem and scores it as a compliance rate, and the strongest results in it are results about getting an instruction followed more often. Rephrasing an instruction without changing its intent moves compliance by tens of percentage points, which establishes that form matters and says nothing about which direction any particular form pulls. Where posture has been measured at all, it has been measured as a confound: requiring a model to reason reduces its deference to a user's stated view, and the same work finds the model then constructing coherent justifications with one-sided arguments for the deferential answer anyway, so the reasoning register can be satisfied in appearance while the deference survives underneath. No approach surveyed treats the posture an instruction reinforces as a property to be designed. RFM needs that property because the behaviour it is trying to prevent is maximum compliance.
 
 ---
 
 ## The Options Considered
 
-*No Options Considered at this time.*
+**1. Declaring the role vs. allocating each instruction**
+
+Establish co-authorship by stating it at the start of the session and rely on it thereafter. The appeal is that one instruction then covers every moment, and the posture RFM wants is named directly rather than approximated through the placement of individual rules. It was rejected on two grounds. The declaration is one instruction competing against the training behind every other instruction, and its weight falls as the session fills. Independently, asserting an identity does not produce the effect the option assumes. Two studies, one covering 162 personas and 2,410 questions and one covering 38 roles and 1,140 questions, both find no significant net change in answer quality from role injection, and automatic selection of a role performs no better than random. The assertion is not inert, since decomposition shows it raising rated expertise depth and lowering rated clarity, but nothing establishes that it moves posture, which is the only thing this option was reaching for. The failure mode is that the declaration reads as satisfied the moment it is made, so nothing later in the session registers that it stopped holding.
+
+**2. Uniform command form vs. form chosen per instruction**
+
+Write every instruction in the form that fires most reliably, on the reasoning that an instruction which does not activate is worth nothing whatever else is true of it. The form that fires most reliably is a trigger paired with a required action, which is a command. Rejected because the methodology would then buy activation by reinforcing the exact role it exists to counter. Every instruction would arrive as something to be executed, including the ones whose whole purpose is to ask for judgment. The failure mode is invisible in any single instruction and shows up only in the aggregate posture of the collaborator.
+
+**3. Uniform reasoning register vs. form chosen per instruction**
+
+Write every instruction with its reasoning attached, so that each one asks for judgment rather than compliance. Rejected because an instruction that does not fire at the moment it applies changes no behaviour at all, whatever role its form implies. Reasoning-bearing prose has no trigger, so nothing marks the moment at which it should be brought to bear. The failure mode is silent: the instruction is present, correctly written, and never reached, and the evidence of its absence is a behaviour that did not change in a session nobody reviews.
+
+**4. Checking every convention vs. checking only what reduces to a search**
+
+Put a mechanical check behind every convention the methodology states, on the reasoning that a check is the only mechanism that does not depend on reaching the model at all. Rejected because most of what RFM cares about does not reduce to a search. Throat-clearing, importance inflation and epistemic flatness are judgments about prose that no pattern match settles. Attempting a check anyway produces one of two failures: a check that passes text it should catch, or a check whose findings a human must adjudicate individually, which is a review step wearing a check's name. The criterion adopted instead is that a pattern earns a check when it reduces to a search, not when it matters most.
 
 ---
 
@@ -37,11 +65,9 @@ Silence is invisible from inside the instruction. Read on its own, an instructio
 
 **Why instructions are allocated by two properties at once**
 
-Declaring the role at the start of a session and relying on it was rejected: the declaration is one instruction competing with the training behind every other, and its weight falls as the session fills. Writing every instruction in the form that fires most reliably was rejected: that form is a command, so the methodology would buy activation by reinforcing the role it exists to counter. Writing every instruction in reasoning register was rejected: an instruction that does not fire at the moment it applies changes no behaviour at all, whatever role its form implies.
-
 The committed path is to allocate each instruction across the mechanisms that carry the methodology into a session, such as prompt artifacts, standing rule sets, and skills, by two properties at once: how reliably the instruction activates, and which role its form reinforces. Neither property alone decides where an instruction goes.
 
-That allocation is a balance, not a result. It depends on conditions that change: how models are trained, how much context they hold, where in that context each mechanism sits, which mechanisms the platform offers. RFM commits to the two properties and to revisiting the allocation when those conditions change, not to any particular assignment of instructions to mechanisms.
+That allocation is a balance, not a result. It depends on conditions that change: how models are trained, how much context they hold, how much accumulates between an instruction being presented and the moment it applies, which mechanisms the platform offers. RFM commits to the two properties and to revisiting the allocation when those conditions change, not to any particular assignment of instructions to mechanisms.
 
 **Why the same failure mode must be addressed at the appropriate level in each relevant component**
 
@@ -69,19 +95,19 @@ A check that lives in a project's session tooling protects that project alone. T
 
 ## The Boundaries
 
-*No Boundaries at this time.*
+**Not an account of where in the context window an instruction sits.** The widely repeated finding that models attend unevenly across a long context, best at the beginning and end and worst in the middle, was established on a retrieval task and on models three generations old. Tested again across eighteen models and eleven placements, position produced no notable variation. This module excludes position from allocation on that evidence, and treats the amount accumulated between an instruction being presented and the moment it applies as the live variable instead. The exclusion rests on measurement rather than on scope, which makes it the boundary most likely to move.
 
 ---
 
 ## The Open Questions
 
-**[OQ-ATTN] Where an instruction sits in the context window.**
+**[OQ-INTV] How often an instruction must be presented again.**
 
-The allocation committed to in the Chosen Direction depends partly on where in a session's context each mechanism sits. That dependency rests on a belief RFM has not tested: that an LLM attends unevenly across a long context, so the same instruction fires more or less reliably depending on its position. The belief is widely repeated and RFM has carried it as background rather than examining it. If it is wrong, position drops out of the allocation and placement reduces to a question of form. If it is right, the size of the effect still matters, because a small effect does not justify putting an instruction where its form is wrong for the role it should reinforce. Neither the direction nor the size of the effect is known here. Grounding research on the allocation must answer this before any instruction is moved on positional grounds.
+Re-presentation is the only decay mitigation a practitioner can apply, and the decay it answers is measured: adherence to a constraint stated early falls by a quarter to two thirds over a long conversation. Nothing establishes the interval. Every carrier RFM uses presents once at the start of work or presents on a trigger, and neither of those is an interval. The cost of choosing a short one is context spent on every repetition. The cost of choosing a long one is silence nobody observes. The question is whether an interval can be derived from anything measurable, such as tokens accumulated, turns elapsed, or a property of the instruction itself, or whether an interval is the wrong instrument and the only reliable answer is a trigger that fires at the moment the instruction applies, which would make this a question about carriers rather than about frequency.
 
 **[OQ-PULL] What decides which role an instruction pulls toward.**
 
-[AS-FORM] claims the form of an instruction moves an LLM between the tool role and the co-author role, without saying which part of form does the moving. A candidate emerged from a close-out step worded as an instruction to ask the user and name candidates. The step could be completed by asking, so it was completed by asking, and the judgment it existed to produce was handed back to the human. Reworded so that stating a view was the completion condition, it produced the view. The candidate is that the completion condition rather than the tone decides the role, because an instruction that can be finished without judgment will be finished without it. Against the candidate: "challenge weak reasoning" carries judgment in its completion condition and still fires unevenly, so the completion condition cannot be the whole account. Whether it is the dominant part is unresolved. It is a question for the grounding research that [OQ-ATTN] triggers.
+[AS-FORM] claims the form of an instruction moves an LLM between the tool role and the co-author role, without saying which part of form does the moving. A candidate emerged from a close-out step worded as an instruction to ask the user and name candidates. The step could be completed by asking, so it was completed by asking, and the judgment it existed to produce was handed back to the human. Reworded so that stating a view was the completion condition, it produced the view. The candidate is that the completion condition rather than the tone decides the role, because an instruction that can be finished without judgment will be finished without it. Against the candidate: "challenge weak reasoning" carries judgment in its completion condition and still fires unevenly, so the completion condition cannot be the whole account. Whether it is the dominant part is unresolved. Grounding research has since been run and did not settle it: it establishes that rephrasing an instruction changes whether the instruction fires, without isolating which property of the rephrasing does the work.
 
 ---
 
