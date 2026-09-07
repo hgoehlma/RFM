@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.2.1` // `map` // [living]
+`v0.2.2` // `map` // [living]
 
 ---
 
@@ -83,7 +83,7 @@ RFM
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.8.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_top_level_reasoning.md` | Top-level reasoning | v0.9.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | Operational | v0.6.0 | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | Glossary | v0.1.6 | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_prompts_reasoning.md` | Prompts reasoning | v0.2.1 | The reasoning document governing all system prompt decisions |

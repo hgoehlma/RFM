@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.8.0` // `top_level_reasoning` // [living]
+`v0.9.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -54,6 +54,8 @@ The assumptions above are beliefs about the domain: why the problem exists and w
 **[AS-DWHC] - Hard-contract domains require an operational document.** In domains where execution has hard contracts (software being the primary example), the reasoning document is accompanied by an operational document that carries constants, interfaces, procedures, and known values. It is a derivative of the reasoning, not a replacement for it.
 
 **[AS-ADSR] - The reasoning discipline is self-reinforcing when held.** A well-reasoned document improves LLM execution. Better execution produces richer joint reasoning. Richer reasoning produces better documents. The loop degrades when either party breaks the discipline.
+
+**[AS-TDEF] - An LLM's default pull is the tool role, and the form an instruction takes moves it along that axis.** Instruction-following is what LLMs are trained and rewarded for, so the tool role is the behaviour available without effort. Co-authorship is not. Stating the role at session open does not install it, because that statement is one instruction competing with the training behind every other instruction in the session. The form of an instruction is a second lever on the same axis. An instruction reduced to a literal trigger and a required action is a command, and obeying it is the tool behaviour. An instruction that carries the reasoning behind itself asks the reader to judge, which is the co-author behaviour. The belief rests on one project's session record, where rules rewritten as triggers began firing after the same content in prose had not. That is a small sample, and the trigger and the register changed together, so their effects were never separated. The assumption breaks if models are trained such that collaboration rather than compliance is the default behaviour. The claim about form breaks separately: if activation reliability and role effect are independent properties of an instruction, form can be chosen for reliability at no cost to role.
 
 ---
 
@@ -112,6 +114,16 @@ The goal is facilitated joint reasoning between human and LLM. Everything that f
 The methodology places the reasoning artifact at the center of any practice where complex reasoning precedes execution. Not the code. Not the tests. Not the documentation. The reasoning: explicit, hierarchical, curated, and designed from the outset to serve both humans and LLMs simultaneously.
 
 The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM: the exasperated instruction issued when someone acts without reading first. That resonance is not accidental and is kept. The reasoning document is not a record of decisions. It is where decisions are made. A record is written after the fact and drifts. A decision-making interface is consulted before action and stays alive because it must. Every change to a system begins with a change to the reasoning document at the appropriate level. The execution artifact is the derivative. The document is the source.
+
+**Why co-authorship is held against a pull rather than declared**
+
+[AS-TDEF] states that the tool role is what an LLM reaches for without effort and that co-authorship is not. RFM treats the co-author posture as a condition maintained across a session, not a fact established by asserting it once.
+
+Declaring the role at the start of a session and relying on it was rejected: the declaration is one instruction competing with the training behind every other, and its weight falls as the session fills. Writing every instruction in the form that fires most reliably was rejected: that form is a command, so the methodology would buy activation by reinforcing the role it exists to counter. Writing every instruction in reasoning register was rejected: an instruction that does not fire at the moment it applies changes no behaviour at all, whatever role its form implies.
+
+The committed path is to allocate each instruction across the mechanisms that carry the methodology into a session, such as prompt artifacts, standing rule sets, and skills, by two properties at once: how reliably the instruction activates, and which role its form reinforces. Neither property alone decides where an instruction goes.
+
+That allocation is a balance, not a result. It depends on conditions that change: how models are trained, how much context they hold, where in that context each mechanism sits, which mechanisms the platform offers. RFM commits to the two properties and to revisiting the allocation when those conditions change, not to any particular assignment of instructions to mechanisms.
 
 **Why the co-authorship sequence governs joint reasoning**
 
@@ -291,6 +303,14 @@ Execution mode requires minimal capture: a record of deviations, deferrals, and 
 
 The methodology names derivation-legibility as a design requirement for phase two: the reasoning documents must be complete and internally sufficient for autonomous LLM execution without the human present. What that threshold looks like in practice is partially known. One protocol has been tested: ask the LLM iteratively whether it could derive cleanly from the current documents alone, surface the assumptions it would have to make, reason through each one, adjust the documents accordingly, and repeat until the answer is yes. This protocol works: it surfaces undocumented assumptions, forces them into the documents, and produces a genuine readiness signal. What remains open is whether this protocol generalises across domains and document types, what makes some assumption-surfacing rounds more productive than others, and how derivation-legibility degrades as the system evolves and documents drift from it. The threshold has a working operationalisation; its reliability and generalisation remain to be tested.
 
+**[OQ-ATTN] Where an instruction sits in the context window.**
+
+The allocation committed to in the Chosen Direction depends partly on where in a session's context each mechanism sits. That dependency rests on a belief RFM has not tested: that an LLM attends unevenly across a long context, so the same instruction fires more or less reliably depending on its position. The belief is widely repeated and RFM has carried it as background rather than examining it. If it is wrong, position drops out of the allocation and placement reduces to a question of form. If it is right, the size of the effect still matters, because a small effect does not justify putting an instruction where its form is wrong for the role it should reinforce. Neither the direction nor the size of the effect is known here. Grounding research on the allocation must answer this before any instruction is moved on positional grounds.
+
+**[OQ-PULL] What decides which role an instruction pulls toward.**
+
+[AS-TDEF] claims the form of an instruction moves a model between the tool role and the co-author role, without saying which part of form does the moving. A candidate emerged from a close-out step worded as an instruction to ask the user and name candidates. The step could be completed by asking, so it was completed by asking, and the judgment it existed to produce was handed back to the human. Reworded so that stating a view was the completion condition, it produced the view. The candidate is that the completion condition rather than the tone decides the role, because an instruction that can be finished without judgment will be finished without it. Against the candidate: "challenge weak reasoning" carries judgment in its completion condition and still fires unevenly, so the completion condition cannot be the whole account. Whether it is the dominant part is unresolved. It is a question for the grounding research that [OQ-ATTN] triggers.
+
 ---
 
 ## Hard Lessons
@@ -427,3 +447,12 @@ An item deferred at the end of one session recorded that the sweep prompts might
 **[HL-ENUM] A list that names its members is a count-dependent reference with no number in it.**
 
 `RFM_operational.md` bars statements whose correctness depends on a count remaining stable, and every form it named at the time carried a numeral or an ID. A sentence introducing the execution artifacts as "the traveling prompt, sweep prompts, and human prompt" carried neither, and was wrong by two: the derivation prompt and the guided drafting prompt had been added since it was written. The list had gone stale in place while the rule that covers it stayed satisfied on its face. The test that catches this is whether adding a member to the set would falsify the sentence, which is the same test the count forms fail, applied to enumeration rather than to a number.
+
+
+**[HL-AUTHLD] Reasoning written in a session does not bind the session that wrote it.**
+
+A session committed in writing to allocating instructions by two named properties, then proposed installing a check one turn later without applying either. Nothing re-reads a document between the moment a session writes into it and the moment that session acts next, so a commitment reaches its own author as a conclusion rather than as an instruction. That is the weakest form the commitment will ever have. Every later session meets it as document content read at session open, while the authoring session holds it only as something it happens to have concluded. The session most invested in a piece of reasoning is therefore the least reliable at applying it. This sits beside [HL-LOADPT], which governs where an artifact is loaded. This one governs the gap between writing and loading.
+
+**[HL-DEPCOPY] A deployed copy of an artifact drifts where no check is looking.**
+
+An execution artifact was copied into the platform that loads it at the start of every session. The copy was taken before the document map moved into its own file, and it still described the map as sitting at the top of the top-level reasoning document. A session running on that copy would look for the map where it no longer was. Every check in the project compares files inside the project, so nothing compared the deployed copy against its source, and the divergence was invisible from inside the repository. Deploying an artifact creates a second location for it, and that location is outside the reach of any check the project runs on itself.
