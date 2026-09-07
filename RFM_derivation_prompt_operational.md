@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Operational Document
-`v0.3.0` // `operational` // [living]
+`v0.3.0` // `module_operational` // [living]
 
 ---
 

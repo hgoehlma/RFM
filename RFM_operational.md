@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.7.1` // `operational` // [living]
+`v0.8.0` // `top_level_operational` // [living]
 
 ---
 
@@ -7,38 +7,48 @@
 
 Documents follow this naming pattern:
 
-`[project]_[type]_[descriptor].md`
+`[project]_[subject]_[category].md`
 
 `project` is the tag for whichever project is applying the RFM approach. This project's tag is `RFM`, since the project's subject is the methodology itself. A different project applying the RFM approach uses its own tag there instead.
 
-Where `type` is one of:
-- `top_level_reasoning`
-- `module_reasoning`
-- `prompts_reasoning`
-- `skill_reasoning`
-- `skill_operational`
-- `traveling_prompt`
-- `sweep_prompt_language`
-- `sweep_prompt_structural`
-- `sweep_prompt_relational`
-- `operational`
-- `human_prompt`
-- `glossary`
-- `map`
+`subject` is what the document is about, in as many words as it takes to distinguish it from its siblings: `sweep`, `skill_drafting`, `traveling_prompt`. It is a free slot. No closed list governs it.
+
+`category` is `reasoning`, `operational`, or omitted. It is omitted on artifacts, which are named for what they are rather than for what they carry: `RFM_traveling_prompt.md`, `RFM_glossary.md`, `RFM_sweep_prompt_structural.md`.
 
 Each sweep prompt is named for the cognitive mode it runs in, not for the document type it reads.
 
-Project files drop the version suffix; the file in the project is always current. The version is visible in the document header.
+The filename is checkable at its ends and not in its middle. The project prefix and the category suffix are searchable; the subject slot is not, by design.
 
-Archive files carry the version suffix: `RFM_prompts_reasoning_v0.0.5.md`
+The filename carries no version. The file in the project is always current, and its version is in the header.
 
-Some artifacts are unique (produced once for a specific purpose with no repeating instances). These follow the same naming pattern but are not listed as reusable types:
+---
 
-- `RFM_first_session_guidance.md`: practical preparation document for a newcomer's first guided drafting session
+## Document Type and Header Convention
 
-Execution artifacts, such as the traveling prompt, the sweep prompts and the human prompt, carry the same header as the documents they derive from: a version number, a document type tag and a `[living]` marker. They sit at the end of the derivative chain and are curated over time rather than regenerated wholesale, because a prompt that drifts keeps running and catches less. Curation begins at the source: a change to an execution artifact is legitimate only when the source reasoning document changed first.
+Every document carries a type. The type is the document's position in the hierarchy, not its subject: the filename already carries the subject, and a type that repeats the subject has one value per file and cannot be checked against anything.
 
-Outputs sit below execution artifacts in the chain and are not covered by this convention.
+A type is a level crossed with a category.
+
+Levels: `top_level`, `module`, `skill`.
+Categories: `reasoning`, `operational`, `artifact`.
+
+The nine resulting values are the closed list:
+
+`top_level_reasoning`, `top_level_operational`, `top_level_artifact`, `module_reasoning`, `module_operational`, `module_artifact`, `skill_reasoning`, `skill_operational`, `skill_artifact`.
+
+`skill_artifact` currently has no instances. A type with no instances is still a type; the list is produced by the grid, not by enumerating what exists. Which types are occupied is recorded in `RFM_map.md`, not here.
+
+Documents that can carry a header carry it on line 2, in this form:
+
+`` `vX.Y.Z` // `type` // [living] ``
+
+`[living]` is carried by every document. It is not a status that some documents have and others lack, and there is no counterpart marker. It stands in the header of every document as a standing reminder that documents in RFM change continuously by design. The reasoning is the curation entry in `RFM_top_level_reasoning.md`.
+
+Where an artifact's file format cannot carry that line, the type is recorded in the map's Type column and nowhere else. A skill bundle is the known case: it is a folder, and the second line of its `SKILL.md` is frontmatter owned by the skill loader. An artifact that cannot carry the header still has a type.
+
+Execution artifacts carry the same header as the documents they derive from. They sit at the end of the derivative chain and are curated over time rather than regenerated wholesale, because a prompt that drifts keeps running and catches less. Curation begins at the source: a change to an execution artifact is legitimate only when the source reasoning document changed first.
+
+Outputs sit below execution artifacts in the chain and are covered by neither convention.
 
 ---
 
@@ -50,9 +60,11 @@ The README carries orientation for public readers without version numbers. It is
 
 **The map check.** Run it in any session that changes a document's version, adds a document, or removes one.
 
-Compare every map row's version against the header of the file the row names. Compare the file set against the map in both directions: a document file with no row is a finding, and a row naming no file is a finding. The map does not list itself, so its own file is never a finding.
+Compare every map row's version against the header of the file the row names. Compare the file set against the map in both directions: a header-bearing file with no row is a finding, and a row naming no file is a finding. The map does not list itself, so its own file is never a finding.
 
-A file that carries no version header is not a document and is outside the map. Its absence from the map is not a finding.
+A version header does not decide whether a file is a document. Some documents cannot carry one, and the header convention names the case. The map's Type column decides: a row carrying a type is a document, and a row carrying none is navigation. A document carrying no version has `unversioned` in its version cell. `README.md` and `RFM_incubating.md` are the current instances. `examples/` has a row and no type: it holds other projects' reasoning documents, which RFM neither derives nor curates.
+
+Only header-bearing files are discoverable. A document with no header cannot be found by searching for one, so its row is added by hand when the document is created and its absence produces no finding anywhere. This is the limit the check cannot cross, and it is why the map rather than the check is the record of what exists.
 
 Read each version from the file itself. A version the session believes it set is not evidence.
 

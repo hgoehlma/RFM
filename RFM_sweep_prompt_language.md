@@ -1,5 +1,5 @@
 # RFM: Language Sweep Prompt
-`v0.2.1` // `sweep_prompt_language` // [living]
+`v0.2.1` // `module_artifact` // [living]
 
 ---
 

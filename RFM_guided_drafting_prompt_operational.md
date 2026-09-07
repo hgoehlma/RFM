@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Guided Drafting Prompt Operational Document
-`v0.1.1` // `operational` // [living]
+`v0.1.1` // `module_operational` // [living]
 
 ---
 

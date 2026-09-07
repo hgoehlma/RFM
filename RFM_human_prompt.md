@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt
-`v0.1.2` // `human_prompt` // [living]
+`v0.1.2` // `module_artifact` // [living]
 
 ---
 

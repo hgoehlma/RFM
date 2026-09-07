@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Operational Document
-`v0.6.0` // `operational` // [living]
+`v0.6.0` // `module_operational` // [living]
 
 ---
 

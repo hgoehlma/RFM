@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: First Session Guidance
-`v0.1.3` // `first_session_guidance` // [living]
+`v0.1.3` // `module_artifact` // [living]
 
 ---
 

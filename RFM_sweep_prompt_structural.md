@@ -1,5 +1,5 @@
 # RFM: Structural Sweep Prompt
-`v0.5.1` // `sweep_prompt_structural` // [living]
+`v0.5.1` // `module_artifact` // [living]
 
 ---
 

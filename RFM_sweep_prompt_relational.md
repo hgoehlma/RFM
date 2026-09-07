@@ -1,5 +1,5 @@
 # RFM: Relational Sweep Prompt
-`v0.3.0` // `sweep_prompt_relational` // [living]
+`v0.3.0` // `module_artifact` // [living]
 
 ---
 

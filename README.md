@@ -63,7 +63,7 @@ Two documents.
 
 The rest of the repository serves people maintaining and extending RFM. However, if you want to go deeper, do read the glossary. As mentioned before, operational documents hold the what, the procedures, the specifications. Review prompts have been designed to sweep completed documents for structural, language and lifespan failures, but also for operational problems. Documents in RFM are living, so you change them often. The review prompts are what keep them in shape as they change. A set of skills has been developed that the LLM loads at the moments they apply. They also have their own reasoning documents. Furthermore, there is a shared failure taxonomy that both the sweeps and the skills draw on to check and detect problems.
 
-In other words, every component of the approach has a reasoning document (and often an operational document) beside it. The naming convention is `RFM_[artifact]_reasoning.md`, carrying why it is built the way it is.
+In other words, every component of the approach has a reasoning document (and often an operational document) beside it. Files are named `RFM_[subject]_[category].md`, so the reasoning behind the sweep prompts sits in `RFM_sweep_reasoning.md` and the procedures derived from it in `RFM_sweep_operational.md`.
 
 The full list, with current versions, is also in the document map, [`RFM_map.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_map.md). It is maintained only there.
 

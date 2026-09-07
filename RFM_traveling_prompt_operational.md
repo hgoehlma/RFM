@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Operational Document
-`v0.2.0` // `operational` // [living]
+`v0.2.0` // `module_operational` // [living]
 
 ---
 

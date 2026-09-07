@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Session Guidance
-`v0.1.2` // `derivation_session_guidance` // [living]
+`v0.1.2` // `module_artifact` // [living]
 
 ---
 

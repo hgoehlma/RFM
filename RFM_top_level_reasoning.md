@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.13.0` // `top_level_reasoning` // [living]
+`v0.14.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -229,6 +229,16 @@ Each family costs a question in every artifact that derives from the taxonomy, s
 
 Anything in a reasoning document whose correctness depends on a count remaining stable becomes a maintenance liability the moment the count changes. The failure is silent: the reference still reads as valid while the document has already drifted. The specific design decisions that follow from this principle are in `RFM_operational.md`.
 
+**Why a filename and a type tag carry different facts**
+
+Every RFM document is identified twice, once by its filename and once by the type tag in its header. The two are not one fact written in two places.
+
+A filename identifies a document among its siblings in a directory listing, so it spends its middle on the subject: ripple check, unslop, human prompt. A type tag positions a document in the hierarchy for a reader who already has the file open and already knows its subject, so it spends itself on level and category: module reasoning, skill operational, top level reasoning.
+
+Neither can absorb the other. Filenames built from a closed type list collapse to a handful of values that repeat across unrelated documents, and the directory listing stops distinguishing anything. Type tags built from the subject produce one value per file, which is a label rather than a type, and a tag set whose every value is unique cannot be checked against anything.
+
+Separating the two is also what makes either one checkable. A closed type list can be searched for; the criterion that a convention is enforceable only where compliance reduces to a search is stated in `RFM_instruction_design_reasoning.md`. A filename pattern with a free subject slot is checkable at its ends, on the project prefix and the category suffix, and not in its middle. Two conventions, two checks.
+
 **Why terminological discipline is a structural requirement when the object is unsettled**
 
 When [AS-PLHD] applies (when the problem is still being shaped and the language used to describe it is itself forming), terminological discipline becomes a structural requirement, not a stylistic preference. Three practices follow from this. First, words actively used to describe an unsettled problem are shorthand candidates: each one should find its way into the glossary with explicit reasoning, not just a definition. Second, the research that builds the Landscape is where terminological maturity gets assessed: where established vocabulary exists across prior approaches, the object is more settled; where the research surfaces sparse, contested, or session-invented terminology, that is the moment to name the condition and raise the glossary discipline for this project. Third, the traveling prompt carries the instruction to watch for this signal during Landscape research: when the joint work is generating new vocabulary to describe a problem that isn't yet fully known, name it and treat each new term as a glossary candidate before it hardens.
@@ -424,3 +434,7 @@ A module's central mechanism was grounded by searching for degradation, drift, i
 **[HL-PARTRUL] A ruling executed in part reads as executed in whole.**
 
 A joint decision usually carries more than one obligation, and the obligations land in different documents. Executing the most visible one changes the document a reader would check first, so the decision looks done from every later vantage point, while the remainder has no owner and produces no error anywhere. The worked example is the decision to treat session-boundary delivery as belonging to the methodology rather than as a workaround for a limitation. The assumption admitting it was written and the affected Problem section was made generic, which is what any review would have looked at. Three obligations went unwritten: the grounding sentence naming where the module's evidence came from, the question of whether the methodology ships an artifact type for that class, and the header of the file that still described itself in the terms the ruling had overturned. The debt then moved out of sight, because the reasoning it attached to migrated to a different assumption entry and the unpaid part travelled with it unremarked. What closes this is naming every obligation a ruling creates at the moment of the ruling, in the session record, rather than trusting that executing the ruling will surface them.
+
+**[HL-RECFACT] A record of a fact is not a definition of it.**
+
+The map records which files are documents. That record was then written as the rule for what a document is: "a file with a row is a document". A directory holding other projects' reasoning documents has a row for navigation, and the rule turned it into a document. The same inversion from the other side: a skill bundle has nowhere to write the version header, and the missing line was read as the type having no instances. The pull is that the record is searchable and the fact is not, so a rule stated in terms of the record looks like the more precise one. It is the less precise one, and it is wrong at the first case where the record and the fact come apart. The tell is a rule that starts from where something is written rather than from what it is.

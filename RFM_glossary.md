@@ -1,5 +1,5 @@
 # RFM: Glossary
-`v0.1.6` // `glossary` // [living]
+`v0.1.6` // `top_level_artifact` // [living]
 
 ---
 
