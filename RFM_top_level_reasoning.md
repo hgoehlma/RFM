@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.15.0` // `top_level_reasoning` // [living]
+`v0.16.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -165,9 +165,15 @@ To avoid vocabulary drift, the vocabulary stance of the collaboration team needs
 
 `RFM_top_level_reasoning.md` is the entry point for a first-time reader arriving from GitHub. A practitioner reaches it after reading only the README; nothing else has prepared them for RFM's vocabulary. Every other reasoning document is read by someone who has already committed enough to work through the methodology, and for that reader a glossary pointer alone is sufficient. This asymmetry justifies a deliberate exception: this document defines a term inline at first use, in addition to pointing to the glossary, where doing so helps a cold reader continue without leaving the document. The exception is scoped to this document only. It is not a general license to duplicate the glossary, and it does not apply anywhere else in the document landscape.
 
-**Why the operational document is domain-specific while the methodology stays universal**
+**Why the methodology's operational document is separate from a project's**
 
-The methodology is universal: the same eight sections, the same discipline, applicable across any domain where complex reasoning precedes execution. But some domains have hard execution contracts: software being the primary example, where constants, interfaces, and procedures must be explicitly specified for execution to be reliable. In those domains, the reasoning document is accompanied by an operational document that carries those contracts. The operational document is a derivative of the reasoning, created from it, not loosely connected to it. The methodology stays universal. The operational document is domain-specific. This is a design decision, not a concession: keeping implementation contracts out of the reasoning document is what allows the reasoning to stay portable across domains and across time.
+Some domains have hard execution contracts. Software is the clearest case: constants, interfaces and named procedures have to be specified before execution is reliable. Those contracts are kept out of the reasoning document and carried in an operational derivative, which is what lets the reasoning stay portable across domains and across time.
+
+There are two operational documents and they answer to different owners. The methodology's operational document carries the conventions every project inherits: the header convention, the ID scheme, version discipline, the formatting conventions, the failure taxonomy, the em dash check. It belongs to RFM and arrives with it. A project's operational document carries that project's execution contracts and belongs to the project. Where an inherited convention needs a project's value, the convention arrives and the value is set by the project.
+
+RFM holds both roles, being the methodology and a project applying it, so it is the one place where the two documents describe the same practitioner. Every other project receives the first and writes the second.
+
+The alternative was to let each project write its own conventions. That fails on retrieval rather than on principle. The sweep prompts and the skill operational documents name the operational document by filename, so a check reaches a session only if the convention it checks arrived with it. A project that wrote its own conventions would be running RFM's checks against a document those checks cannot describe.
 
 **Why a reasoning document states a belief instead of defending it**
 
@@ -245,6 +251,16 @@ Autonomy raises the stakes for clarity. It does not lower them.
 
 The reasoning document is the deterministic anchor: the fixed, explicitly reasoned reference point against which agentic execution is measured. Agentic execution is where probabilistic reasoning is permitted, but within boundaries that have been explicitly reasoned, not assumed. At the execution level the deterministic/probabilistic split is largely resolved: structure and guarantees are owned by deterministic code, meaning and language by probabilistic LLM reasoning.
 
+
+**Why readiness is decided by a first external trial rather than by a standard set in advance**
+
+`[AS-EVID]` holds that what these documents record generalises beyond the one practitioner who recorded it, and it breaks when a practitioner working independently reports that a pattern does not hold. Nothing has been handed to anyone, so the assumption the document set rests on is the one assumption with no route to being tested.
+
+The alternative was to define what a release must satisfy and build until it does. That designs from aspiration, which is the failure `[HL-DFMD]` warns against, and it fails on its own terms: the criteria would be written by the practitioner whose generality is in question. A standard reasoned out in advance cannot discover what a second person needs, because it is composed entirely of what the first person already knows.
+
+So the release condition is a person. One practitioner, working from a handed-over set, with the documents doing the onboarding. RFM is worked with an LLM from the first session, so what is handed over must be sufficient for a model reading only the published set, not for a human reading cold. A model that infers past a gap produces a confident session that departs from the reasoning, and a newcomer has nothing to check it against.
+
+What that person cannot do is the finding. The set they were handed is the release set, and it is defined by the trial rather than before it.
 ---
 
 ## The Boundaries
@@ -402,3 +418,7 @@ A joint decision usually carries more than one obligation, and the obligations l
 **[HL-RECFACT] A record of a fact is not a definition of it.**
 
 The map records which files are documents. That record was then written as the rule for what a document is: "a file with a row is a document". A directory holding other projects' reasoning documents has a row for navigation, and the rule turned it into a document. The same inversion from the other side: a skill bundle has nowhere to write the version header, and the missing line was read as the type having no instances. The pull is that the record is searchable and the fact is not, so a rule stated in terms of the record looks like the more precise one. It is the less precise one, and it is wrong at the first case where the record and the fact come apart. The tell is a rule that starts from where something is written rather than from what it is.
+
+**[HL-DUAL] A project that is also its own methodology cannot see the boundary between them in its own documents.**
+
+The Chosen Direction entry on operational documents said they are domain-specific. That was written about a project's operational document and read for months as covering every operational document, including RFM's own, which carries the header convention, the ID scheme, version discipline, the formatting conventions and the failure taxonomy. None of that belongs to a domain. The error stayed invisible because RFM's single operational file legitimately answers to both readings: it is the methodology's, and it is also this project's. A worked example that is also the thing being exemplified satisfies a claim about either role, so a claim true of one and false of the other reads as true. What surfaced it was a question from outside the document set, asking what a different practitioner would receive.

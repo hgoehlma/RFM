@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.5.0` // `module_reasoning` // [living]
+`v0.6.0` // `module_reasoning` // [living]
 
 ---
 
@@ -113,7 +113,7 @@ Re-presentation is the only decay mitigation a practitioner can apply, and the d
 
 [AS-SBND] puts carriers that load at the start of work into a distinct class and treats the boundary they answer as permanent. RFM currently ships nothing for that class. It ships a prompt system, a glossary and an operational document, and leaves each project to invent whatever it re-presents at the start of work.
 
-The project has precedent in both directions and neither settles this. The glossary travels with RFM regardless of domain, because the methodology generates its own disambiguation need. The operational document has its form specified and its content left to the deployment, because execution contracts are domain-specific. A third pattern exists in the vocabulary stance, where naming the stance is required and the artifact carrying it is a deployment decision.
+The project has precedent in both directions and neither settles this. The glossary travels with RFM regardless of domain, because the methodology generates its own disambiguation need. The operational document splits by owner: the methodology's ships with its content and is curated, and a project's is written by the project. A third pattern exists in the vocabulary stance, where naming the stance is required and the artifact carrying it is a deployment decision.
 
 Two sub-questions have to be answered together. The first is whether the split this project arrived at is a property of the problem or an accident of one deployment: standing behavioural rules that persist across sessions and are edited one diff at a time, held separately from session state that is replaced wholesale at every close. The second is what specifying an artifact type obliges. An artifact RFM ships is versioned, appears in the document map and is subject to curation. The artifacts this project uses are none of those things, and the reason given for excluding them was that they are workarounds for a limitation rather than components answering a condition. [AS-SBND] removes that reason.
 
@@ -166,3 +166,7 @@ A session committed in writing to allocating instructions by two named propertie
 **[HL-DEPCOPY] A deployed copy of an artifact drifts where no check is looking.**
 
 An execution artifact was copied into the platform that loads it at the start of every session. The copy was taken before the document map moved into its own file, and it still described the map as sitting at the top of the top-level reasoning document. A session running on that copy would look for the map where it no longer was. Every check in the project compares files inside the project, so nothing compared the deployed copy against its source, and the divergence was invisible from inside the repository. Deploying an artifact creates a second location for it, and that location is outside the reach of any check the project runs on itself.
+
+**[HL-NOSRC] An artifact with no source in the document set can lose content without anything registering it.**
+
+A paragraph disappeared from the close sequence in a deployed skill, and it was found only when a repository hit the failure the paragraph described. Nothing in RFM could have caught it. The map carries a reasoning and operational pair for each skill derived from the document set, and none for the skills that maintain the session boundary. Every check RFM runs compares a document against its source or against its derivative, so an artifact with neither is outside all of them, and its content is held only by whichever copy was edited last. This is not `[HL-DEPCOPY]`, where a deployed copy diverges from a source that still exists and could be compared. Here there is nothing to compare against, so the loss leaves no trace to find.
