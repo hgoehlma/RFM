@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Operational Document
-`v0.3.0` // `module_operational` // [living]
+`v0.3.1` // `module_operational` // [living]
 
 ---
 
@@ -39,7 +39,7 @@ The prompt must include a version header in the format: `vX.X.X` // `derivation_
 
 Once the derivation is complete, compare against the previous version of the derivative. If no prior version exists, skip this step. The derivation is accepted if it is structurally better or equivalent. If the prior version carried something the fresh derivation omitted, that item must trace back to the source documents: if it traces and belongs, add it; if the source changed and the omission reflects that change, the omission is correct. If an item neither traces nor reflects a source change, flag it as a source document gap and return to phase one. The prior version is never the authority. The source documents are.
 
-Do not loop the derivation. One pass, one coverage check, one reconciliation. See `[HL-PDLR]` in `RFM_prompts_reasoning.md`.
+Do not loop the derivation. One pass, one coverage check, one reconciliation. `RFM_prompts_reasoning.md` names the failure: derivation loops optimize expression instead of converging.
 
 ---
 

@@ -107,7 +107,7 @@ A possible distinguishing test: does verifying that an instruction was followed 
 
 **Why not captured yet:** the distinction is sharp, but its implication, that a class of existing traveling prompt instructions may be permanently unreliable rather than temporarily under-specified, is large enough to need testing against the rest of the prompt system before it reshapes anything. One session, one set of examples.
 
-**Possible home when ready:** a new Open Question in `RFM_prompts_reasoning.md`, adjacent to the existing fresh-LLM test and trigger-conditions questions, since both already probe the limits of what instruction alone can guarantee. Could also sharpen `[HL-CCNS]` in the same document if the generalization holds: not just co-author drift, but a named category of disposition-dependent instructions across the whole prompt system.
+**Possible home when ready:** a new Open Question in `RFM_prompts_reasoning.md`, adjacent to the existing fresh-LLM test and trigger-conditions questions, since both already probe the limits of what instruction alone can guarantee. Could also sharpen `RFM_prompts_reasoning.md`'s Hard Lesson on the two directions of co-author drift, if the generalization holds: not just co-author drift, but a named category of disposition-dependent instructions across the whole prompt system.
 
 **Signal count: 1** *(this session, RFM-on-RFM derivation work)*
 

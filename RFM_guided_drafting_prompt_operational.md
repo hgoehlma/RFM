@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Guided Drafting Prompt Operational Document
-`v0.1.1` // `module_operational` // [living]
+`v0.1.2` // `module_operational` // [living]
 
 ---
 
@@ -41,7 +41,7 @@ The markdown block is the artifact the newcomer saves. It is not a summary. It i
 
 ## What this module does not yet have
 
-The First Session Guidance document has not been drafted. It depends on [OQ-ONSQ] being sufficiently resolved to know what a willing newcomer needs to hold before their first session. Until that question has been tested in practice, the First Session Guidance remains a named but unproduced artifact.
+The First Session Guidance document has not been drafted. `RFM_guided_drafting_prompt_reasoning.md` leaves open what a willing newcomer needs to hold before their first session, and the First Session Guidance depends on that question being resolved. Until it has been tested in practice, the First Session Guidance remains a named but unproduced artifact.
 
 ---
 

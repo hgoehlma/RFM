@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.17.0` // `top_level_reasoning` // [living]
+`v0.17.1` // `top_level_reasoning` // [living]
 
 ---
 
@@ -381,12 +381,6 @@ A reasoning document can be internally correct and still produce derivation fail
 
 One entry closed by saying it could not be settled while another remained open. The dependency was accurate and the entry claimed nothing about priority. It did not need to. A session deciding what to work on finds the only sequencing claim in the section and follows it, so the wording set the agenda, and the work that followed was measurement of a quantity that did not need measuring. Say what one question needs from another, and say whether anything actually waits on it.
 
----
-
-*top_level_document // [living]*
-*the reasoning arrived before the structure did*
-*that was the right order*
-
 **[HL-REPAIR] Work framed as defect repair skips the reasoning step, because repair appears to carry no design decision.**
 
 Six documents were edited in one session to add a missing entry to their source lists. The lists themselves were the defect. Each edit made the copied content more complete, and the copy was what should not have existed. Repair presents as restoring a known-good state, so nothing in the framing prompted the question of whether the artifact being repaired should exist at all. The discipline that reasoning precedes execution was not overridden by a decision. It never engaged, because no one recognised that a change to a system was being made.
@@ -425,3 +419,9 @@ The Chosen Direction entry on operational documents said they are domain-specifi
 **[HL-SETMEM] A claim about which documents carry or name something is asserted from memory, because it reads as a description of the set rather than as a claim about it.**
 
 The document set is searchable, so the check costs one search, and that is not what stops it being run. What stops it is that the sentence does not present itself as evidence-bearing. Two forms recur. Content is held to be unhomed when `RFM_map.md` already carries it in its own rows, which turns a separation into a fork where a subtraction was correct. And a hardcoded filename is held to be load-bearing because several documents name it, when those documents are outside the scope being reasoned about, which preserves a dependency for a reader who never receives it. Both assertions are usually right, and being usually right is what keeps them unchecked. The tell is a sentence that says how many documents do something with no search behind it. This is not `[HL-ENUM]`, where a list already written into a document goes stale as the set changes. Here nothing is written down: the set is reasoned about and never counted.
+
+---
+
+*top_level_reasoning // [living]*
+*the reasoning arrived before the structure did*
+*that was the right order*

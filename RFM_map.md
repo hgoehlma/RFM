@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.7.0` // `top_level_artifact` // [living]
+`v0.8.0` // `top_level_artifact` // [living]
 
 ---
 
@@ -70,15 +70,18 @@ RFM
    │
    ├─ rfm-unslop skill module
    │  ├─ RFM_skill_unslop_reasoning.md
-   │  └─ RFM_skill_unslop_operational.md
+   │  ├─ RFM_skill_unslop_operational.md
+   │  └─ rfm-unslop.skill
    │
    ├─ rfm-ripple-check skill module
    │  ├─ RFM_skill_ripple_check_reasoning.md
-   │  └─ RFM_skill_ripple_check_operational.md
+   │  ├─ RFM_skill_ripple_check_operational.md
+   │  └─ rfm-ripple-check.skill
    │
    └─ rfm-drafting skill module
       ├─ RFM_skill_drafting_reasoning.md
-      └─ RFM_skill_drafting_operational.md
+      ├─ RFM_skill_drafting_operational.md
+      └─ rfm-drafting.skill
 ```
 
 `RFM_map.md` appears in the tree because the tree states position and the map has one. It carries no row in the table below because that would be a second copy of its own version.
@@ -93,14 +96,14 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
-| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.17.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.17.1 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | `top_level_operational` | v0.9.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.2.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
-| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.7.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
+| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.7.1 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.3.0 | stays | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | The reasoning document governing traveling prompt design decisions |
-| `RFM_traveling_prompt_operational.md` | `module_operational` | v0.2.0 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
+| `RFM_traveling_prompt_operational.md` | `module_operational` | v0.2.1 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | `module_artifact` | v0.3.6 | travels | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_operational.md` | `module_operational` | v0.6.0 | stays | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
@@ -110,19 +113,22 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_human_prompt_reasoning.md` | `module_reasoning` | v0.1.2 | stays | Reasoning document governing human prompt design decisions |
 | `RFM_human_prompt.md` | `module_artifact` | v0.1.2 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | `module_reasoning` | v0.1.1 | stays | Reasoning document governing guided drafting prompt design decisions |
-| `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.1.1 | stays | Deployment and artifact inventory for the guided drafting prompt module |
+| `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.1.2 | stays | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | `module_artifact` | v0.1.1 | travels | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
 | `RFM_first_session_guidance.md` | `module_artifact` | v0.1.3 | travels | Practical preparation for a newcomer's first guided drafting session: what to bring, what to expect, what to watch for |
 | `RFM_derivation_prompt_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing derivation prompt design decisions |
-| `RFM_derivation_prompt_operational.md` | `module_operational` | v0.3.0 | stays | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
+| `RFM_derivation_prompt_operational.md` | `module_operational` | v0.3.1 | stays | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
 | `RFM_derivation_prompt.md` | `module_artifact` | v0.2.1 | travels | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
 | `RFM_derivation_session_guidance.md` | `module_artifact` | v0.1.2 | travels | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
 | `RFM_skill_unslop_reasoning.md` | `skill_reasoning` | v0.3.2 | stays | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
 | `RFM_skill_unslop_operational.md` | `skill_operational` | v0.3.2 | stays | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |
+| `rfm-unslop.skill` | `skill_artifact` | unversioned | travels | The packaged skill: strips LLM tells from session output before it leaves the model, applied to every response |
 | `RFM_skill_ripple_check_reasoning.md` | `skill_reasoning` | v0.1.4 | stays | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
 | `RFM_skill_ripple_check_operational.md` | `skill_operational` | v0.3.2 | stays | Derivation procedure and retirement steps for the rfm-ripple-check skill |
+| `rfm-ripple-check.skill` | `skill_artifact` | unversioned | travels | The packaged skill: the grep-then-read procedure for checking whether a rename, retirement, or graduation ripples into other documents |
 | `RFM_skill_drafting_reasoning.md` | `skill_reasoning` | v0.4.2 | stays | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
 | `RFM_skill_drafting_operational.md` | `skill_operational` | v0.6.1 | stays | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
+| `rfm-drafting.skill` | `skill_artifact` | unversioned | travels | The packaged skill: section placement, language discipline, and the pre-check run before a reasoning-document draft is shown |
 | `RFM_skill_design_reasoning.md` | `module_reasoning` | v0.5.1 | stays | The reasoning document governing skill design decisions across skills |
 | `RFM_skill_design_operational.md` | `module_operational` | v0.1.3 | stays | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 | `README.md` | `top_level_artifact` | unversioned | stays | Public-facing orientation for a reader encountering RFM for the first time, carrying no version numbers by design |

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Operational Document
-`v0.2.0` // `module_operational` // [living]
+`v0.2.1` // `module_operational` // [living]
 
 ---
 
@@ -42,7 +42,7 @@ The prompt must include a version header in the format: `vX.X.X` // `traveling_p
 
 Once the derivation is complete, compare against the previous version of the traveling prompt. The derivation is accepted if it is structurally better or equivalent and loses no load-bearing behavioral instructions. If the previous version carried something the derivation missed, assess whether it was present in the source reasoning documents. If yes: the derivation missed it, add it to the derived version. If no: the previous version carried reasoning its source did not hold; that is a source document gap requiring a reasoning document addition before the next derivation cycle.
 
-Do not loop the derivation. One pass, one coverage check, one reconciliation. See `[HL-PDLR]` in `RFM_prompts_reasoning.md`.
+Do not loop the derivation. One pass, one coverage check, one reconciliation. `RFM_prompts_reasoning.md` names the failure: derivation loops optimize expression instead of converging.
 
 ---
 
