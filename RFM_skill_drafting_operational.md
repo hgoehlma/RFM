@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.6.1` // `skill_operational` // [living]
+`v0.6.2` // `skill_operational` // [living]
 
 ---
 
@@ -46,7 +46,7 @@ The pre-check is Layer 4 of the skill body. It runs after Layers 1 to 3 and befo
 
 *Language:* Would a reader who was not in this session understand this content, see the reasoning behind each claim, and find nothing in it written to the reviewer of the draft?
 
-*Lifespan:* Will work already planned make any part of this content false or redundant?
+*Lifespan:* Does every part of this content still hold against work already planned, or will some of it become false or redundant?
 
 **On a hit.** Revise before presenting. When the hit cannot be resolved without a ruling, present the draft with the concern named rather than silently resolving it.
 

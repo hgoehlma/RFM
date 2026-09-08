@@ -153,7 +153,7 @@ The confirmation gate verifies fidelity to source. The coverage check verifies n
 
 This is `[AS-SDCM]` failing silently rather than loudly. The assumption states that each sweep's mode requires concentration the other's presence would dilute. A single misplaced question does not look like a foreign sweep prompt has appeared inside the current one. It looks like one clean sentence, sourced correctly, sitting where it does not belong. The dilution `[AS-SDCM]` warns against does not require modes to be merged wholesale: one sentence in the wrong register is sufficient to reintroduce the failure the mode-separation design exists to prevent.
 
-**[HL-LCAD] The Problem gets pulled toward the session's own material.**
+**[HL-PROBPULL] The Problem gets pulled toward the session's own material.**
 
 When a session adds new reasoning to a document, the new content feels like the point and the Problem feels like it should reflect that. It should not. The Problem states why the document exists. That question does not change when the answer grows. Rewriting the Problem to absorb session content loses the original gap statement and makes the document harder to re-derive from. The fix is simple: leave the Problem alone unless the gap itself has changed, not just the reasoning that fills it.
 

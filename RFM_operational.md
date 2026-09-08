@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.9.0` // `top_level_operational` // [living]
+`v0.10.0` // `top_level_operational` // [living]
 
 ---
 
@@ -106,6 +106,8 @@ The header is the second line of the file and takes the form `vX.X.X` // `docume
 
 Version numbers follow the format vX.X.X (major.minor.patch). The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or structural changes. The major digit increments for fundamental methodology changes.
 
+A version tracks what a document says, not where it lives or how it is labeled. A rename or a type-tag change made with no other edit does not bump the version. If the same commit also changes content, the bump follows the content, not the metadata change.
+
 ---
 
 ## Empty Section Placeholder Convention
@@ -146,7 +148,7 @@ One intro sentence naming the specific question this landscape must answer. Tabl
 `**[OQ-XXXX] Title of the question.**` as bold line, prose body as separate paragraph below.
 
 **The Hard Lessons**
-`**[HL-XXXX] Title.**` as bold line, prose body as separate paragraph below. Category subheadings permitted when lesson count warrants grouping.
+`**[HL-XXXX] Title.**` as bold line. Prose body opens with one paragraph stating the mechanism. A second or third paragraph is added only when it carries a claim the first doesn't: a worked example, a mirrored failure direction, a named distinction from a neighboring entry, or its resolution. Not elaboration or restatement of the same point. Category subheadings permitted when lesson count warrants grouping.
 
 ---
 

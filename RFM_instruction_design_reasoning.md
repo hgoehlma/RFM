@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.8.0` // `module_reasoning` // [living]
+`v0.9.0` // `module_reasoning` // [living]
 
 ---
 
@@ -173,6 +173,10 @@ A paragraph disappeared from the close sequence in a deployed skill, and it was 
 **[HL-CHKAIM] A check is aimed at the failure that can be detected rather than the failure that occurs.**
 
 When the Travels column was added to `RFM_map.md`, the check first written for it tested whether a row's cell was filled. An empty cell almost never happens, because a session adding a row sees the gap in the table it is typing. What happens is a cell filled plausibly by a session that never had the reasoning the value records, and a completeness check passes that silently. Detectability selects the target: absence can be found by search and a wrong ruling cannot, so the check that is writable displaces the check that is needed. The result costs maintenance every session and catches nothing. The fix was not a better check but a sentence beside the column saying the value is a ruling rather than a judgment made while editing, which puts the decision where a session notices it is missing. This is not the neighbouring failure where a check derived from a named failure type asks about something adjacent to what the type says. Here no failure type is consulted: detectability chooses the target.
+
+**[HL-BLOCKRES] Contraction work conflates "nothing to do now" with "resolved."**
+
+Closing carry-forward items to satisfy `[R-CARRYCAP]`, three genuinely resolved items and six blocked-or-waiting items were proposed for removal together, because both read as inactionable under the same pressure to shrink a list. The waiting items were tracking a real, still-open condition: a second occurrence, a dependency, a trigger. Deleting them would have dropped the only place that condition was being watched. The distinguishing check: does the item still need tracking if nobody looks at it again? A resolved item doesn't. A waiting item does.
 
 ---
 

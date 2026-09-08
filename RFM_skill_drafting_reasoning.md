@@ -23,7 +23,7 @@ Nothing currently fires at the moment of drafting to encode: where does this bel
 
 **[AS-HOME]** As RFM drafting practice accumulates insight, that insight needs a canonical home. The drafting skill is that home. It is explicitly extensible.
 
-**[AS-SCOPE]** The skill covers reasoning documents, operational documents, and glossary entries. Execution artifacts sit at the end of the derivative chain and are regenerated, not drafted independently. They are out of scope.
+**[AS-COVERAGE]** The skill covers reasoning documents, operational documents, and glossary entries. Execution artifacts sit at the end of the derivative chain and are regenerated, not drafted independently. They are out of scope.
 
 ---
 

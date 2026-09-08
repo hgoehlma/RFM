@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.17.1` // `top_level_reasoning` // [living]
+`v0.18.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -183,6 +183,14 @@ The alternative is to hedge as insurance. Soften the claim, and being wrong late
 
 Defensive qualification survives review because it reads as care. That is why it needs a named failure class rather than good intentions. The class is in the Failure Taxonomy in `RFM_operational.md`.
 
+**Why RFM does not require traceable citations**
+
+A citation chain is a defense mechanism with the same shape as hedging: it answers a challenger asking whether the claim can be checked, not the reader deciding what to do next. Requiring one on every stated number would build the apparatus the entry above already rejects for qualifying language.
+
+What a claim needs instead is what an assumption already carries: the belief and its break condition. A reference to a foundational publication is kept where it names a concept economically, the way a field name stands in for the argument behind it, not as evidence backing the claim. A full citation, author, identifier, date, is added only while a topic is under active work, where it serves the person doing that work: finding the source again, handing the topic to the next session, looking at it with fresh eyes later. Once the active work ends, the citation has done its job. It is not maintained, and its absence from older entries is not a defect to fix.
+
+This does not weaken the claims. It removes an apparatus the claims never needed. A claim that turns out wrong is corrected by revising the entry, the same way any other belief in these documents is corrected.
+
 **Why prose derivatives carry a distinct prose style**
 
 When RFM produces text-facing derivatives (public documentation, onboarding guides, worked examples), those artifacts carry a prose character that follows from the methodology's own epistemic commitments. That character is not imposed stylistically. It is derivable: reasoning-first methodology produces argument-first prose. Explicit uncertainty in the reasoning document produces explicit uncertainty in the derivative. Failure-mode orientation produces prose that names what could go wrong rather than what is hoped to be true. One committed position, honestly reasoned, produces a conclusion that can be tested, not five hedged alternatives that cannot.
@@ -197,7 +205,7 @@ RFM corrects document failures with sweeps and prevents them at the drafting mom
 
 The questions built on that taxonomy are not shared. A sweep asks whether a finished document contains a failure. A drafting check asks whether the content about to be written will introduce one. A single shared phrasing forces one arm to work with wording built for the other. That arm then re-derives its own version privately, which is the dilution the single owner was meant to prevent.
 
-The owner is `RFM_operational.md` rather than a module operational document. Every project using RFM installs `RFM_operational.md`, because `RFM_traveling_prompt.md` and every skill operational document name it. No module operational document is named by any artifact a consuming project runs. Placing the taxonomy in a module operational document would add a file that a consuming project must deploy before it can draft.
+The owner is `RFM_operational.md` rather than a module operational document; why that document specifically carries this is argued in the entry "Why the top-level operational document may carry procedure derived from a module."
 
 **Why the top-level operational document may carry procedure derived from a module**
 
