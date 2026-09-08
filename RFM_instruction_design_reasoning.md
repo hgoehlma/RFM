@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.6.0` // `module_reasoning` // [living]
+`v0.7.0` // `module_reasoning` // [living]
 
 ---
 
@@ -170,3 +170,6 @@ An execution artifact was copied into the platform that loads it at the start of
 **[HL-NOSRC] An artifact with no source in the document set can lose content without anything registering it.**
 
 A paragraph disappeared from the close sequence in a deployed skill, and it was found only when a repository hit the failure the paragraph described. Nothing in RFM could have caught it. The map carries a reasoning and operational pair for each skill derived from the document set, and none for the skills that maintain the session boundary. Every check RFM runs compares a document against its source or against its derivative, so an artifact with neither is outside all of them, and its content is held only by whichever copy was edited last. This is not `[HL-DEPCOPY]`, where a deployed copy diverges from a source that still exists and could be compared. Here there is nothing to compare against, so the loss leaves no trace to find.
+**[HL-CHKAIM] A check is aimed at the failure that can be detected rather than the failure that occurs.**
+
+When the Travels column was added to `RFM_map.md`, the check first written for it tested whether a row's cell was filled. An empty cell almost never happens, because a session adding a row sees the gap in the table it is typing. What happens is a cell filled plausibly by a session that never had the reasoning the value records, and a completeness check passes that silently. Detectability selects the target: absence can be found by search and a wrong ruling cannot, so the check that is writable displaces the check that is needed. The result costs maintenance every session and catches nothing. The fix was not a better check but a sentence beside the column saying the value is a ruling rather than a judgment made while editing, which puts the decision where a session notices it is missing. This is not the neighbouring failure where a check derived from a named failure type asks about something adjacent to what the type says. Here no failure type is consulted: detectability chooses the target.

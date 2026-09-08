@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.8.1` // `top_level_operational` // [living]
+`v0.9.0` // `top_level_operational` // [living]
 
 ---
 
@@ -9,7 +9,7 @@ Documents follow this naming pattern:
 
 `[project]_[subject]_[category].md`
 
-`project` is the tag for whichever project is applying the RFM approach. This project's tag is `RFM`, since the project's subject is the methodology itself. A different project applying the RFM approach uses its own tag there instead.
+`project` is the tag for whichever project is applying the RFM approach.
 
 `subject` is what the document is about, in as many words as it takes to distinguish it from its siblings: `sweep`, `skill_drafting`, `traveling_prompt`. It is a free slot. No closed list governs it.
 
@@ -36,7 +36,7 @@ The nine resulting values are the closed list:
 
 `top_level_reasoning`, `top_level_operational`, `top_level_artifact`, `module_reasoning`, `module_operational`, `module_artifact`, `skill_reasoning`, `skill_operational`, `skill_artifact`.
 
-`skill_artifact` currently has no instances. A type with no instances is still a type; the list is produced by the grid, not by enumerating what exists. Which types are occupied is recorded in `RFM_map.md`, not here.
+A type with no instances is still a type. The list is produced by the grid, not by enumerating what exists. Which types are occupied is recorded in the document map, not here.
 
 Documents that can carry a header carry it on line 2, in this form:
 
@@ -54,7 +54,7 @@ Outputs sit below execution artifacts in the chain and are covered by neither co
 
 ## Document Map Maintenance
 
-The document map is `RFM_map.md`. It must be updated in the same session as any document version bump. Version numbers in the map must be real, no wildcards.
+The document map is named `[project]_map.md`. It must be updated in the same session as any document version bump. Version numbers in the map must be real, no wildcards.
 
 The README carries orientation for public readers without version numbers. It is not a substitute for the document map.
 
@@ -62,7 +62,7 @@ The README carries orientation for public readers without version numbers. It is
 
 Compare every map row's version against the header of the file the row names. Compare the file set against the map in both directions: a header-bearing file with no row is a finding, and a row naming no file is a finding. The map does not list itself, so its own file is never a finding.
 
-A version header does not decide whether a file is a document. Some documents cannot carry one, and the header convention names the case. The map's Type column decides: a row carrying a type is a document, and a row carrying none is navigation. A document carrying no version has `unversioned` in its version cell. `README.md` and `RFM_incubating.md` are the current instances. `examples/` has a row and no type: it holds other projects' reasoning documents, which RFM neither derives nor curates.
+A version header does not decide whether a file is a document. Some documents cannot carry one, and the header convention names the case. The map's Type column decides: a row carrying a type is a document, and a row carrying none is navigation. A document carrying no version has `unversioned` in its version cell.
 
 Only header-bearing files are discoverable. A document with no header cannot be found by searching for one, so its row is added by hand when the document is created and its absence produces no finding anywhere. This is the limit the check cannot cross, and it is why the map rather than the check is the record of what exists.
 

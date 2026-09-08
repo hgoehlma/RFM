@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.16.0` // `top_level_reasoning` // [living]
+`v0.17.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -422,3 +422,6 @@ The map records which files are documents. That record was then written as the r
 **[HL-DUAL] A project that is also its own methodology cannot see the boundary between them in its own documents.**
 
 The Chosen Direction entry on operational documents said they are domain-specific. That was written about a project's operational document and read for months as covering every operational document, including RFM's own, which carries the header convention, the ID scheme, version discipline, the formatting conventions and the failure taxonomy. None of that belongs to a domain. The error stayed invisible because RFM's single operational file legitimately answers to both readings: it is the methodology's, and it is also this project's. A worked example that is also the thing being exemplified satisfies a claim about either role, so a claim true of one and false of the other reads as true. What surfaced it was a question from outside the document set, asking what a different practitioner would receive.
+**[HL-SETMEM] A claim about which documents carry or name something is asserted from memory, because it reads as a description of the set rather than as a claim about it.**
+
+The document set is searchable, so the check costs one search, and that is not what stops it being run. What stops it is that the sentence does not present itself as evidence-bearing. Two forms recur. Content is held to be unhomed when `RFM_map.md` already carries it in its own rows, which turns a separation into a fork where a subtraction was correct. And a hardcoded filename is held to be load-bearing because several documents name it, when those documents are outside the scope being reasoned about, which preserves a dependency for a reader who never receives it. Both assertions are usually right, and being usually right is what keeps them unchecked. The tell is a sentence that says how many documents do something with no search behind it. This is not `[HL-ENUM]`, where a list already written into a document goes stale as the set changes. Here nothing is written down: the set is reasoned about and never counted.
