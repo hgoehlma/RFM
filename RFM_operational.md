@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.8.0` // `top_level_operational` // [living]
+`v0.8.1` // `top_level_operational` // [living]
 
 ---
 
@@ -42,7 +42,7 @@ Documents that can carry a header carry it on line 2, in this form:
 
 `` `vX.Y.Z` // `type` // [living] ``
 
-`[living]` is carried by every document. It is not a status that some documents have and others lack, and there is no counterpart marker. It stands in the header of every document as a standing reminder that documents in RFM change continuously by design. The reasoning is the curation entry in `RFM_top_level_reasoning.md`.
+`[living]` is carried by every document. It is not a status that some documents have and others lack, and there is no counterpart marker. It stands in the header of every document as a standing reminder that documents in RFM change continuously by design. The reasoning is in `RFM_curation_reasoning.md`.
 
 Where an artifact's file format cannot carry that line, the type is recorded in the map's Type column and nowhere else. A skill bundle is the known case: it is a folder, and the second line of its `SKILL.md` is frontmatter owned by the skill loader. An artifact that cannot carry the header still has a type.
 
@@ -184,6 +184,8 @@ This section is the single source for the failure classes RFM recognizes. Both a
 ---
 
 ## Graduation and Expiry Procedure
+
+The reasoning for this procedure is in `RFM_curation_reasoning.md`.
 
 **Graduation**: an entry whose reasoning still has a recipient:
 1. Identify the destination: the section and document where a practitioner needs to encounter this reasoning for it to do its work.

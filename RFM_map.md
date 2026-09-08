@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.5.0` // `top_level_artifact` // [living]
+`v0.6.0` // `top_level_artifact` // [living]
 
 ---
 
@@ -26,6 +26,9 @@ RFM
 ├─ RFM_incubating.md
 ├─ README.md
 ├─ examples/
+│
+├─ Curation module
+│  └─ RFM_curation_reasoning.md
 │
 ├─ Instruction design module
 │  └─ RFM_instruction_design_reasoning.md
@@ -86,9 +89,10 @@ RFM
 
 | Document | Type | Version | What it carries |
 |---|---|---|---|
-| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.14.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
-| `RFM_operational.md` | `top_level_operational` | v0.8.0 | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
+| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.15.0 | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_operational.md` | `top_level_operational` | v0.8.1 | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.1.6 | Disambiguation of terms that carry different meanings across reader contexts |
+| `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
 | `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.5.0 | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.3.0 | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | The reasoning document governing traveling prompt design decisions |

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.14.0` // `top_level_reasoning` // [living]
+`v0.15.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -40,8 +40,6 @@ The following are believed to be true. They cannot all be fully proven yet. If a
 **[AS-QEUP] - Quality of execution, human or AI, is upstream of the reasoning investment.** Thinking first is not overhead. It is the highest leverage point in the entire development process.
 
 The assumptions above are beliefs about the domain: why the problem exists and why it persists. The assumptions below are beliefs about what the methodology itself must do to address it.
-
-**[AS-CDNO] - Curation must be deliberate, not optional.** A reasoning document that is only visited when something forces it gradually stops being true. Deliberate return, coming back without a specific trigger, is as necessary as triggered curation. A time-triggered cadence risks becoming performative rather than genuine. Both modes must be practiced as discipline, not suggestion.
 
 **[AS-RDHL] - A reasoning document designed explicitly for both humans and LLMs simultaneously outperforms one designed for either alone.** This is not a natural default. It requires conscious design.
 
@@ -133,29 +131,9 @@ The methodology travels through a prompt system of artifacts, each with a distin
 
 The same eight sections, the same discipline, the same navigational practice, whether you are at the top of the hierarchy or deep inside a single module. Think of a geographic map: a country map and a street map use identical discipline at different resolution. The street map is a module of the country map, each complete at its own resolution, each connected to the level above it. This property (the same structure governing at every level) is what mathematicians call fractal. The term is precise and worth keeping: a fractal is not just a pattern that repeats, it is a pattern whose rules apply at every level. That is exactly what the reasoning document hierarchy is.
 
-**Why curation requires both addition and reduction**
+**Why the document is kept alive by curation**
 
-The document is kept alive through enforced curation. Not just addition but reduction. What has evolved? What can be removed? What needs replacing? A document that only grows is a document that is already dying. The pressure of constraint is a feature, not a limitation.
-
-A healthy document expands when new signal arrives and contracts when old signal has run its course. Contraction has two legitimate forms: graduation, where an entry's reasoning still has work to do and travels to the appropriate destination; and expiry, where it no longer does and is honestly removed. Both are curation. Neither is loss.
-
-Hard lessons earn a dedicated section, not an appendix, not an afterthought.
-
-**Why graduation and expiry are reasoning acts, not mechanical procedures**
-
-Graduation and expiry are reasoning acts, not mechanical procedures. The discipline cannot be reduced to a lookup table ("hard lessons graduate to assumptions" or "open questions graduate to Chosen Direction") because the destination depends on what the resolution is, not on what section the entry came from.
-
-The prior test is the same for both: does this entry's reasoning still have a recipient? Would a practitioner encountering it change how they think or act somewhere in the current system? If yes, the reasoning must travel; that is graduation. If no, the entry expires. Version history holds the record; the active document holds only live reasoning. A document that retains entries the version history already preserves is hoarding, not curating.
-
-For entries that graduate, the destination is determined by what the resolution is. A resolution that settles a belief about the domain becomes an assumption. One that commits the methodology to a direction belongs in Chosen Direction. One that constrains scope belongs in Boundaries. One whose reasoning is operative only within a specific module travels to that module's reasoning document. The routing question is: where does a practitioner need to encounter this reasoning for it to do its work?
-
-The graduation act requires two steps: place the resolved reasoning at its destination, then remove the source entry. Both steps are required. An entry that has been resolved but not removed annotates the document rather than curating it, and annotation blurs the boundary between what is settled and what is not. The procedure for executing graduation is carried in `RFM_operational.md`.
-
-**Why a graduated entry must carry its reasoning, not just its conclusion**
-
-When an open question graduates into an assumption, the conclusion alone is not enough. A conclusion-only assumption is indistinguishable from an unexamined default. It states what is believed without explaining why it is believed or under what conditions it would break. The reasoning that produced the assumption, the evidence, the path, the conditions, must travel with it. That is what makes the entry an assumption rather than received wisdom, and what allows a future reader to test it honestly rather than inherit it blindly.
-
-Every change to a derivative (code, prompt, operational document) begins with a change to its source reasoning document. Derivatives don't merely stay connected to the reasoning; they are created from it. That is the right order, and maintaining it is what curation means in practice.
+A reasoning document that only grows becomes the thing it was designed to replace. A reasoning document visited only when something forces it stops being true. Curation answers both conditions. It does so by giving reduction the same standing as addition. The reasoning for how curation works is in `RFM_curation_reasoning.md`.
 
 **Why RFM carries a curated improvement loop**
 
@@ -215,11 +193,17 @@ The questions built on that taxonomy are not shared. A sweep asks whether a fini
 
 The owner is `RFM_operational.md` rather than a module operational document. Every project using RFM installs `RFM_operational.md`, because `RFM_traveling_prompt.md` and every skill operational document name it. No module operational document is named by any artifact a consuming project runs. Placing the taxonomy in a module operational document would add a file that a consuming project must deploy before it can draft.
 
+**Why the top-level operational document may carry procedure derived from a module**
+
+An operational document normally derives from the reasoning document at its own level. `RFM_operational.md` departs from that where a consuming project needs the content. Every project deploying RFM installs `RFM_operational.md`, because `RFM_traveling_prompt.md` and every skill operational document name it. No module operational document is named by any artifact a consuming project runs. Placing content a project needs in a module operational document would add a file that project must deploy before it can work.
+
+The cost is that the derivation edge leaves the branch. Where it does, the operational section names its source, per the convention that a document states a source only where the edge leaves its branch.
+
 **Why lifespan is a separate failure family**
 
 The failure families divide by the property a reviewer checks. Structural failures concern where content sits. Language failures concern how content reads. Both are properties of the document in front of the reviewer, and both can be judged from it alone.
 
-How long content stays true is not such a property. It depends on what is planned elsewhere. A sentence that will be falsified by scheduled work is correctly placed and clearly written, so a reviewer holding only the document has nothing to catch it with. `[HL-KNEXP]` records what that costs when it is not caught.
+How long content stays true is not such a property. It depends on what is planned elsewhere. A sentence that will be falsified by scheduled work is correctly placed and clearly written, so a reviewer holding only the document has nothing to catch it with. The hard lesson in `RFM_curation_reasoning.md` on content written with a known expiry records what that costs when it is not caught.
 
 Folding the failure into the language family was considered and fails on the language arm's own question. That arm asks whether a claim outruns its evidence. A forward-looking clause does not: it is accurate when written, and its evidence is the plan it names. Folding it into the structural family fails for the same kind of reason, since the sentence is in the section where its subject belongs.
 
@@ -345,18 +329,6 @@ A large-scale deployment of RFM extracted its document map into a standalone fil
 
 Six operational documents carried a list of the documents to load before deriving from them. Every entry but one was the document's own branch read upward, which the map already states. The copies drifted, and three of them omitted the top-level document. A sweep entry condition existed to catch exactly that omission, which made the copies look load-bearing and kept attention on completing them. Two sessions repaired the lists before anyone asked whether the lists should exist. A document names a source in its own text only where the edge leaves its branch.
 
-**[HL-RETIRE] Retiring reasoning needs evidence that its situation cannot recur, not an argument that it should not.**
-
-A Hard Lesson recording how to keep an embedded document map safe was proposed for retirement, on the grounds that a map should never sit inside a reasoning document at all. Those grounds were inferred from the reason the map was being extracted, and nothing tested them. The counter-case was immediate: RFM ran an embedded map for five minor versions and that was the right call at that size. The lesson was narrowed rather than retired. The same gap had already spread once before it was caught, because a later design decision had been built on a clause inside the lesson under review and treated that clause as settled.
-
-**[HL-TLOR] Once a module exists, top-level ownership must be actively reduced.**
-
-Branching to a new module does not automatically contract the top level. Without deliberate reduction, both layers accumulate entries about the same content; the top level drifts toward restating what the module now owns. The discipline after branching is not just creating the new module; it is returning to the top level and removing whatever the module now carries. This is a distinct step, not an automatic consequence of branching. See [AS-DSDH] for the branching signal itself; this lesson names what must happen after that signal is acted on.
-
-**[HL-CPSC] Compressing a reasoning document feels like curation; it is structural change.**
-
-Removing or condensing articulated reasoning can present as tidying up. None of those framings change what is actually happening. When reasoning is compressed, signal is lost that cannot be recovered. The distinctions that felt obvious in the session that produced them are precisely what a future reader or a fresh LLM cannot reconstruct. The danger is that compression is invisible from inside the session that performs it: the compressor holds the missing context and cannot perceive the gap they are creating.
-
 **[HL-DRIFT] The drift problem is not solved by the methodology; it is the methodology's greatest vulnerability.**
 
 The methodology was designed to prevent documentation drift. But the reasoning document itself can drift from the system it describes. Naming this problem is not solving it. This lesson must stay visible until a genuine answer exists. The methodology's own curation discipline (triggered and deliberate return) addresses drift in principle but cannot guarantee it in practice. No structural mechanism yet exists to detect that failure from inside the system. One asymmetry is known: applying the methodology from inception is the only reliable prevention: reconstructed reasoning produces plausible documents, but not necessarily true ones. The sweep prompts, deliberately invoked corrective artifacts, reduce the risk of undetected drift, but require honest and regular application to do so. A team that invokes them performatively rather than genuinely will produce documents that appear current while describing a past state. Structural mechanisms for detecting that failure from inside the system remain an open question.
@@ -398,14 +370,6 @@ One entry closed by saying it could not be settled while another remained open. 
 *top_level_document // [living]*
 *the reasoning arrived before the structure did*
 *that was the right order*
-
-**[HL-KNEXP] Content written when its expiry is already known schedules maintenance work rather than avoiding it.**
-
-A claim can be accurate when written and false by the next session, because the work that falsifies it was already planned when it was written. The common shape is a forward-looking clause: a sentence stating what a thing does not yet do, or what it will require, where the requirement is already on the plan. It reads as careful. It passes review as true, correctly placed and clearly written. Review lets it through for those reasons, not despite them.
-
-The worked example is a drafting session where the LLM produced clauses of the form "this will only work once X is in place." They were accepted as sensible caution. Work on X began a few hours later. A following session reported those paragraphs as stale and needing maintenance, which pulled ripple checks into documents that only referenced them, and one compression made during that cleanup removed content that had to be reconstructed from an earlier version. Nothing in the chain was wrong on its own. The first sentence was true when written.
-
-A condition that planned work will satisfy belongs in the plan, not in the document the plan will change. Writing it in both places makes the document a second record of the plan, and the ripple work is the price of keeping the two agreeing until the plan lands.
 
 **[HL-REPAIR] Work framed as defect repair skips the reasoning step, because repair appears to carry no design decision.**
 
