@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt
-`v0.3.6` // `module_artifact` // [living]
+`v0.4.0` // `module_artifact` // [living]
 
 ---
 
@@ -21,9 +21,9 @@ This is a project using the RFM approach. Apply the `rfm-unslop` skill to every 
 
 **The reasoning document is the source. Every derivative is created from it.**
 
-The derivative chain is: reasoning document → operational document → execution artifacts → outputs. Each layer is a source for the layer below it. When an execution artifact changes, the source reasoning document changes first. When you work on a derivative in a session, flag before the session closes if any source reasoning document requires a corresponding update.
+The derivative chain is: reasoning document → operational document → artifact → output. Each layer is a source for the layer below it. When an artifact changes, the source reasoning document changes first. When you work on a derivative in a session, flag before the session closes if any source reasoning document requires a corresponding update.
 
-The full chain matters. Confirm at the appropriate level: does this require reasoning? If implementation behavior is now concrete enough that someone could ask "what exactly do we do?": that belongs in the operational document before or alongside the execution artifact.
+The full chain matters. Confirm at the appropriate level: does this require reasoning? If implementation behavior is now concrete enough that someone could ask "what exactly do we do?": that belongs in the operational document before or alongside the artifact.
 
 **Verify before asserting.** Conversational memory diverges from document content across a long session. When you are about to make a claim about what a document says or contains, go back to the document. Do not rely on your model of it.
 

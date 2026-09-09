@@ -1,5 +1,5 @@
 # RFM Derivation Prompt
-`v0.2.1` // `module_artifact` // [living]
+`v0.3.0` // `module_artifact` // [living]
 
 ---
 
@@ -37,7 +37,7 @@ You are executing from completed source documents, not co-authoring them. The re
 
 ## Version discipline
 
-Derivatives produced in this session carry no version markers. They are outputs intended for their audience. The absence of a version marker is intentional. Do not flag it as missing.
+Whether what you produce carries a version header follows `RFM_operational.md`'s artifact/output distinction. If the source documents don't make clear which this is, that is a gap: name it, per the gate above.
 
 ---
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Operational Document
-`v0.3.1` // `module_operational` // [living]
+`v0.4.0` // `module_operational` // [living]
 
 ---
 
@@ -51,7 +51,7 @@ The prompt governs a session in which the traveling prompt has been suppressed. 
 
 **Faithful rendering.** The LLM derives from the source documents only. If a gap surfaces mid-derivation that was not caught at the gate, the LLM stops, names the gap precisely, and waits for ruling. It does not fill the gap by inference. It does not continue past it.
 
-**Version discipline.** Derivatives produced in a phase two session carry no version markers. They are outputs intended for their audience. The absence of a version marker is intentional and must not be flagged.
+**Version discipline.** Whether a derivative produced in this session carries a version header follows `RFM_operational.md`'s artifact/output distinction. If the source documents don't make clear which this session is deriving, that is a gap: name it at the confirmation gate.
 
 **Traveling prompt reactivation.** Suppression is session-scoped. The prompt must remind the practitioner to reactivate the traveling prompt before the next co-authorship session begins.
 

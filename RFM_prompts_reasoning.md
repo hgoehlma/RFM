@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.3.0` // `module_reasoning` // [living]
+`v0.4.0` // `module_reasoning` // [living]
 
 ---
 
@@ -149,7 +149,7 @@ The traveling prompt is developed and refined primarily through use with a singl
 
 **Why the traveling prompt must name the full derivative chain, not only the reasoning/derivative distinction**
 
-The reasoning/derivative binary, does this require reasoning, is necessary but insufficient. An LLM holding only that binary will ask the question, find no reasoning gap, and proceed to execution. The question it must also ask is whether the implementation behavior is now concrete enough that a practitioner could ask "what exactly do we do?", and if so, that behavior belongs in the operational document before or alongside execution artifacts. The full chain is: reasoning document → operational document → execution artifacts → outputs. Each layer is a source for the layer below it. A behavioral instruction that names only the first link leaves the middle link invisible, and the operational document gets bypassed silently under execution pressure.
+The reasoning/derivative binary, does this require reasoning, is necessary but insufficient. An LLM holding only that binary will ask the question, find no reasoning gap, and proceed to execution. The question it must also ask is whether the implementation behavior is now concrete enough that a practitioner could ask "what exactly do we do?", and if so, that behavior belongs in the operational document before or alongside artifacts. The full chain is: reasoning document → operational document → artifact → output. Each layer is a source for the layer below it. A behavioral instruction that names only the first link leaves the middle link invisible, and the operational document gets bypassed silently under execution pressure.
 
 **Why reasoning compression must be named as structural change, regardless of how it presents**
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.20.0` // `top_level_reasoning` // [living]
+`v0.21.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -33,7 +33,7 @@ The following are believed to be true. They cannot all be fully proven yet. If a
 
 **[AS-MOSA] - Modularity is the only sustainable architecture.** Monolithic systems resist change, learning, and maintenance. The reasoning document hierarchy should mirror and enforce modular thinking from the start.
 
-**[AS-CACM] - Execution artifacts alone will never carry their own motivation.** The gap between what an artifact does and why it exists cannot be closed by improving the artifact itself. It requires a separate, connected reasoning document maintained proactively. In software, this gap is most visible: code can be read but not interrogated for intent. But the same gap exists in any domain where complex reasoning precedes execution.
+**[AS-CACM] - Artifacts alone will never carry their own motivation.** The gap between what an artifact does and why it exists cannot be closed by improving the artifact itself. It requires a separate, connected reasoning document maintained proactively. In software, this gap is most visible: code can be read but not interrogated for intent. But the same gap exists in any domain where complex reasoning precedes execution.
 
 **[AS-PLHD] - Premature language hardens the object before it is fully known.** In domains where the problem itself is still being shaped, the words used to describe it carry a specific risk: they harden into reality before the object is fully understood. What gets named gets treated as settled. RFM's explicit, curated reasoning discipline is most valuable here, not because it prevents naming, but because it keeps the reasoning behind the names visible and contestable. The condition is not binary: it scales with how unsettled the object is and how consequential premature closure would be.
 
@@ -43,7 +43,7 @@ The assumptions above are beliefs about the domain: why the problem exists and w
 
 **[AS-RDHL] - A reasoning document designed explicitly for both humans and LLMs simultaneously outperforms one designed for either alone.** This is not a natural default. It requires conscious design.
 
-**[AS-TPAS] - The reasoning document hierarchy serves two structurally distinct phases, each with different design requirements.** In the first phase, human and LLM collaborate to build the reasoning documents: all eight sections, at every level of the hierarchy. Both parties must be able to read, contribute to, and challenge them. The design requirement is joint legibility. In the second phase, the completed documents are the source from which the LLM derives and executes across the artifact landscape: operational documents, glossary, code, and other domain-specific derivatives, without the human present at derivation time. The design requirement shifts to derivation-legibility: the documents must be complete and internally sufficient for autonomous execution. Documents optimised only for joint legibility will underperform at derivation. Documents designed only for derivation may be illegible to the human maintaining them. Both phases must be held simultaneously as design constraints.
+**[AS-TPAS] - The reasoning document hierarchy serves two structurally distinct phases, each with different design requirements.** In the first phase, human and LLM collaborate to build the reasoning documents: all eight sections, at every level of the hierarchy. Both parties must be able to read, contribute to, and challenge them. The design requirement is joint legibility. In the second phase, the completed documents are the source from which the LLM derives and executes across the derivative landscape: operational documents, glossary, code, and other domain-specific derivatives, without the human present at derivation time. The design requirement shifts to derivation-legibility: the documents must be complete and internally sufficient for autonomous execution. Documents optimised only for joint legibility will underperform at derivation. Documents designed only for derivation may be illegible to the human maintaining them. Both phases must be held simultaneously as design constraints.
 
 **[AS-HLVS] - Hard lessons are as valuable as successes.** What failed, and why, carries as much reasoning value as what worked. A methodology that doesn't capture failure will repeat it.
 
@@ -103,7 +103,7 @@ Enough tests and guardrails to control output without understanding internals. R
 
 The methodology serves two structurally distinct goals. The first is joint reasoning: human and LLM collaborate to build the reasoning documents, each contributing across all eight sections at every level of the hierarchy. Neither can do this well alone. The collaboration is the point. The goal is a document hierarchy complete enough to act as the source for derivation.
 
-The second is autonomous execution: once the reasoning documents are sufficiently complete, the LLM derives from them without the human present at derivation time. The full artifact landscape follows: operational documents, glossary, code, and other domain-specific derivatives. The quality of each derivative is determined entirely by the quality of its source document. The human-LLM collaboration produces the source. The LLM executes from it. This is the design intent the entire methodology is built to serve.
+The second is autonomous execution: once the reasoning documents are sufficiently complete, the LLM derives from them without the human present at derivation time. The full derivative landscape follows: operational documents, glossary, code, and other domain-specific derivatives. The quality of each derivative is determined entirely by the quality of its source document. The human-LLM collaboration produces the source. The LLM executes from it. This is the design intent the entire methodology is built to serve.
 
 These two phases have different design requirements. The first requires joint legibility: both parties must be able to read, contribute to, and challenge the documents. The second requires derivation-legibility: the documents must be complete and internally sufficient for autonomous execution. Holding both simultaneously is the founding constraint of the methodology.
 
@@ -113,7 +113,11 @@ The goal is facilitated joint reasoning between human and LLM. Everything that f
 
 The methodology places the reasoning artifact at the center of any practice where complex reasoning precedes execution. Not the code. Not the tests. Not the documentation. The reasoning: explicit, hierarchical, curated, and designed from the outset to serve both humans and LLMs simultaneously.
 
-The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM: the exasperated instruction issued when someone acts without reading first. That resonance is not accidental and is kept. The reasoning document is not a record of decisions. It is where decisions are made. A record is written after the fact and drifts. A decision-making interface is consulted before action and stays alive because it must. Every change to a system begins with a change to the reasoning document at the appropriate level. The execution artifact is the derivative. The document is the source.
+The methodology is called Reasoning-First Methodology, abbreviated RFM. The abbreviation carries a deliberate resonance with RTFM: the exasperated instruction issued when someone acts without reading first. That resonance is not accidental and is kept. The reasoning document is not a record of decisions. It is where decisions are made. A record is written after the fact and drifts. A decision-making interface is consulted before action and stays alive because it must. Every change to a system begins with a change to the reasoning document at the appropriate level. The artifact is the derivative. The document is the source.
+
+**Why artifact and output name different things**
+
+A derivative is anything phase two produces from the source documents, in any domain. An artifact is a derivative produced directly from those documents: a README, a skill, a prompt, a business plan, a slide deck, an agent built to analyze interview transcripts. An output is what an artifact that is itself meant to be run again produces on a specific occasion: one transcript's analysis, one filled report, one generated deck for one meeting. Not every artifact produces outputs. A README does not get run against an input; it is the deliverable. An agent built to analyze transcripts does get run against an input, repeatedly, and each run's result is an output rather than a new artifact. The distinguishing question is whether the thing is meant to be run again against new input, not whether it once involved the source documents. Whether a given artifact carries a version header and is curated from its source over time is a property some artifacts have and others may not; it does not decide artifact-versus-output.
 
 **Why co-authorship is held against a pull rather than declared**
 
@@ -414,6 +418,10 @@ Six documents were edited in one session to add a missing entry to their source 
 **[HL-BORVOC] A structure adopted from another project carries that project's vocabulary, and the vocabulary encodes that project's problem.**
 
 The map file design was taken from a project using RFM at larger scale. The first draft arrived carrying governance, governed registry, version authority, read pathways and watchpoints. RFM uses none of those words. Each named a concern the other project has and RFM does not, and taking them would have installed those concerns without anyone deciding to. Adopting a structure requires re-deriving its terms in the adopting project's own vocabulary before any of it is written.
+
+**[HL-SELFVOC] A methodology's first self-application supplies its only vocabulary, and that vocabulary reads as general until tested against a second case.**
+
+RFM's own build was the first project run under it. The only artifacts that build produced were prompts and skills, things versioned, curated over time, and run again by a session. "Execution artifact" was written to describe the derivative chain's third link from that one case. Nothing in the source documents distinguished the property, versioned and run again, from the category, anything derived directly from the source documents, because RFM had never derived anything else. The gap surfaced only when a business plan, a slide deck, and a transcript-analysis agent were named as candidate domains. None of them fit the header-and-curation description. All of them are exactly what the chain's third link is supposed to name. This is `[HL-BORVOC]` with the donor project set to itself: a structure needs no outside donor to carry a narrow vocabulary, its own first instance is donor enough.
 
 **[HL-ADJCHK] A failure type named correctly in the taxonomy still fires, when the checks derived from it test something adjacent to what the type says.**
 

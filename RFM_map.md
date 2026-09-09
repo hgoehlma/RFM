@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.8.1` // `top_level_artifact` // [living]
+`v0.8.2` // `top_level_artifact` // [living]
 
 ---
 
@@ -96,15 +96,15 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
-| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.20.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
-| `RFM_operational.md` | `top_level_operational` | v0.11.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
+| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.21.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_operational.md` | `top_level_operational` | v0.12.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.2.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
 | `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.9.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
-| `RFM_prompts_reasoning.md` | `module_reasoning` | v0.3.0 | stays | The reasoning document governing all system prompt decisions |
+| `RFM_prompts_reasoning.md` | `module_reasoning` | v0.4.0 | stays | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | `module_operational` | v0.2.1 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
-| `RFM_traveling_prompt.md` | `module_artifact` | v0.3.6 | travels | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_traveling_prompt.md` | `module_artifact` | v0.4.0 | travels | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_operational.md` | `module_operational` | v0.6.0 | stays | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
 | `RFM_sweep_prompt_structural.md` | `module_artifact` | v0.5.1 | travels | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
@@ -117,8 +117,8 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_guided_drafting_prompt.md` | `module_artifact` | v0.1.1 | travels | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
 | `RFM_first_session_guidance.md` | `module_artifact` | v0.1.3 | travels | Practical preparation for a newcomer's first guided drafting session: what to bring, what to expect, what to watch for |
 | `RFM_derivation_prompt_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing derivation prompt design decisions |
-| `RFM_derivation_prompt_operational.md` | `module_operational` | v0.3.1 | stays | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
-| `RFM_derivation_prompt.md` | `module_artifact` | v0.2.1 | travels | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
+| `RFM_derivation_prompt_operational.md` | `module_operational` | v0.4.0 | stays | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
+| `RFM_derivation_prompt.md` | `module_artifact` | v0.3.0 | travels | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
 | `RFM_derivation_session_guidance.md` | `module_artifact` | v0.1.2 | travels | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
 | `RFM_skill_unslop_reasoning.md` | `skill_reasoning` | v0.3.2 | stays | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
 | `RFM_skill_unslop_operational.md` | `skill_operational` | v0.3.2 | stays | Derivation procedure, traveling prompt declaration, and pattern list maintenance for the rfm-unslop skill |

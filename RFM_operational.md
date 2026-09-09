@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.11.0` // `top_level_operational` // [living]
+`v0.12.0` // `top_level_operational` // [living]
 
 ---
 
@@ -46,9 +46,9 @@ Documents that can carry a header carry it on line 2, in this form:
 
 Where an artifact's file format cannot carry that line, the type is recorded in the map's Type column and nowhere else. A skill bundle is the known case: it is a folder, and the second line of its `SKILL.md` is frontmatter owned by the skill loader. An artifact that cannot carry the header still has a type. A skill bundle carries no version for the same reason: the format has no line for one. The map's version cell reads `unversioned`. A coverage-check requirement keeps the packaged file in sync with its source instead.
 
-Execution artifacts carry the same header as the documents they derive from. They sit at the end of the derivative chain and are curated over time rather than regenerated wholesale, because a prompt that drifts keeps running and catches less. Curation begins at the source: a change to an execution artifact is legitimate only when the source reasoning document changed first.
+Artifact is the general term for anything derived directly from the source documents: a README, a skill, a prompt, a business plan, a slide deck, an agent's code, or any other domain-specific derivative. Output is what an artifact meant to be run again against new input produces on a specific occasion; an output carries neither the header line nor the curation rule below, because it is a derivative of running an artifact, not a derivative of the source documents.
 
-Outputs sit below execution artifacts in the chain and are covered by neither convention.
+An artifact meant to be run again against new input carries the same header as the documents it derives from, sits at the end of the derivative chain, and is curated over time rather than regenerated wholesale, because a drifted copy keeps running and catches less. Curation begins at the source: a change to such an artifact is legitimate only when the source reasoning document changed first. Whether a one-off artifact, delivered once for a specific decision, carries this same discipline is a project-level choice, not fixed by this convention.
 
 ---
 
