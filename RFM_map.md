@@ -96,7 +96,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
-| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.18.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.19.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | `top_level_operational` | v0.10.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.2.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |

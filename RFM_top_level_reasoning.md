@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.18.0` // `top_level_reasoning` // [living]
+`v0.19.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -374,6 +374,14 @@ Theory without ground truth is hypothesis. Applying the methodology from incepti
 **[HL-DIHQ] Deferred items must carry their context, not just their topic.**
 
 When an item is parked as future work, the handover note captures what was deferred but not the context that surrounded it: what was understood, what was tried, what specifically remains open, and why the item stopped where it did. That context disappears with the session that produced it. The next session reopens the item cold and must reconstruct what was present but not captured. The fix is not a longer handover. It is a richer deferral record: each deferred item carries enough context that a fresh session can proceed without reconstruction. A topic label is not a deferral record.
+
+**[HL-PARKROT] A deferred item rots at the session boundary, not from a missing check.**
+
+A session parks an item when its own confidence in resolving it right now is low, which is the correct reason to stop rather than push a fix through on shaky footing. The next session opens with confidence restored and a new request already in view, and the parked item does not compete for attention on equal terms: a fresh task pulls the model in, a paragraph written by a different session does not. An item already resolved can sit unremoved for sessions. A separate item's factual claim can stop matching the documents it describes. Both survive because nothing forces a look at either until a count threshold trips. A count threshold catches volume. It does not catch one item going stale early.
+
+**[HL-COSTSCALE] A check's cost should scale with what changed, not with what already exists.**
+
+A rule can be enforceable, in the sense that it reduces to a search. It can still be badly scoped, in the sense that the search runs across an entire backlog before any item in it can be acted on. That cost grows with the size of the backlog the rule exists to manage, so the rule gets more expensive exactly as the problem it is protecting against gets larger. The corrected version checks only what changed since the rule last ran, the newest entry, the newest claim, not the accumulated total. A cheap check gets run under pressure. An expensive one gets skipped, which is precisely when a check is needed most.
 
 **Execution practice**
 
