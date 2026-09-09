@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.8.0` // `top_level_artifact` // [living]
+`v0.8.1` // `top_level_artifact` // [living]
 
 ---
 
@@ -7,7 +7,7 @@
 
 Where every document in RFM sits, what version it currently carries, and whether it travels in a release. This is the navigational entry point for the document set. A reader arriving at RFM starts here to find which document to open. `README.md` is the entry point for a reader deciding whether RFM is worth reading at all, and carries no versions.
 
-This document does not list itself. A file cannot record its own version twice without one copy going stale. The reasoning is recorded as a hard lesson in `RFM_top_level_reasoning.md`.
+This document does not list itself. A file cannot record its own version twice without one copy going stale.
 
 The rules for maintaining this file, including when a version bumps and what a bump requires, live in `RFM_operational.md`.
 
@@ -96,8 +96,8 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
-| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.19.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
-| `RFM_operational.md` | `top_level_operational` | v0.10.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
+| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.20.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_operational.md` | `top_level_operational` | v0.11.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.2.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
 | `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.9.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
@@ -130,7 +130,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_skill_drafting_operational.md` | `skill_operational` | v0.6.2 | stays | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
 | `rfm-drafting.skill` | `skill_artifact` | unversioned | travels | The packaged skill: section placement, language discipline, and the pre-check run before a reasoning-document draft is shown |
 | `RFM_skill_design_reasoning.md` | `module_reasoning` | v0.5.1 | stays | The reasoning document governing skill design decisions across skills |
-| `RFM_skill_design_operational.md` | `module_operational` | v0.1.3 | stays | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
+| `RFM_skill_design_operational.md` | `module_operational` | v0.2.0 | stays | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 | `README.md` | `top_level_artifact` | unversioned | stays | Public-facing orientation for a reader encountering RFM for the first time, carrying no version numbers by design |
 | `RFM_incubating.md` | `top_level_artifact` | unversioned | stays | Ideas captured at session close that are not yet ready to enter a document |
 | `examples/` |  | unversioned | stays | Reasoning documents from projects using RFM, kept as worked examples |

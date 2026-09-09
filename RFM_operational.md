@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.10.0` // `top_level_operational` // [living]
+`v0.11.0` // `top_level_operational` // [living]
 
 ---
 
@@ -42,9 +42,9 @@ Documents that can carry a header carry it on line 2, in this form:
 
 `` `vX.Y.Z` // `type` // [living] ``
 
-`[living]` is carried by every document. It is not a status that some documents have and others lack, and there is no counterpart marker. It stands in the header of every document as a standing reminder that documents in RFM change continuously by design. The reasoning is in `RFM_curation_reasoning.md`.
+`[living]` is carried by every document. It is not a status that some documents have and others lack, and there is no counterpart marker. It stands in the header of every document as a standing reminder that documents in RFM change continuously by design.
 
-Where an artifact's file format cannot carry that line, the type is recorded in the map's Type column and nowhere else. A skill bundle is the known case: it is a folder, and the second line of its `SKILL.md` is frontmatter owned by the skill loader. An artifact that cannot carry the header still has a type.
+Where an artifact's file format cannot carry that line, the type is recorded in the map's Type column and nowhere else. A skill bundle is the known case: it is a folder, and the second line of its `SKILL.md` is frontmatter owned by the skill loader. An artifact that cannot carry the header still has a type. A skill bundle carries no version for the same reason: the format has no line for one. The map's version cell reads `unversioned`. A coverage-check requirement keeps the packaged file in sync with its source instead.
 
 Execution artifacts carry the same header as the documents they derive from. They sit at the end of the derivative chain and are curated over time rather than regenerated wholesale, because a prompt that drifts keeps running and catches less. Curation begins at the source: a change to an execution artifact is legitimate only when the source reasoning document changed first.
 
@@ -187,8 +187,6 @@ This section is the single source for the failure classes RFM recognizes. Both a
 
 ## Graduation and Expiry Procedure
 
-The reasoning for this procedure is in `RFM_curation_reasoning.md`.
-
 **Graduation**: an entry whose reasoning still has a recipient:
 1. Identify the destination: the section and document where a practitioner needs to encounter this reasoning for it to do its work.
 2. Draft the resolved reasoning in the destination document and confirm it is complete without the source entry. Complete the destination edit before returning to remove the source entry, one document at a time, in that order.
@@ -248,7 +246,7 @@ Anything destined for a file is written without em dashes from the first draft, 
 
 Verify by grep, not by rereading. Write the candidate text to a scratch file outside the project and grep it for the character. The destination document is never the file grepped. Report the check as done only after the grep returns clean.
 
-Replace an em dash with a comma, a period, or a recast sentence. Parentheses are not a substitute. They carry the same tell, and a sweep that used them as the default replacement is recorded as a hard lesson in `RFM_skill_unslop_reasoning.md`.
+Replace an em dash with a comma, a period, or a recast sentence. Parentheses are not a substitute. They carry the same tell.
 
 ---
 
@@ -258,7 +256,7 @@ A well-triggered skill is one whose description is written from the vocabulary a
 
 Tens of well-triggered skills sit inside the range where selection holds. Low hundreds sit past the point where degradation is reported. Use the band as the starting point when deciding whether a family of related behavior becomes one skill or several, not as a limit to fill up to.
 
-The band is inferred from published tool-selection results and has not been measured on this project. Revise it when better evidence arrives. Why a band is the right form, and why it is likely conservative for this project, is in `RFM_skill_design_reasoning.md`.
+The band is inferred from published tool-selection results and has not been measured on this project. Revise it when better evidence arrives.
 
 ---
 

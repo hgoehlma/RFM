@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.19.0` // `top_level_reasoning` // [living]
+`v0.20.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -171,7 +171,7 @@ Some domains have hard execution contracts. Software is the clearest case: const
 
 There are two operational documents and they answer to different owners. The methodology's operational document carries the conventions every project inherits: the header convention, the ID scheme, version discipline, the formatting conventions, the failure taxonomy, the em dash check. It belongs to RFM and arrives with it. A project's operational document carries that project's execution contracts and belongs to the project. Where an inherited convention needs a project's value, the convention arrives and the value is set by the project.
 
-RFM holds both roles, being the methodology and a project applying it, so it is the one place where the two documents describe the same practitioner. Every other project receives the first and writes the second.
+RFM holds both roles, being the methodology and a project applying it, so it is the one place where the two documents describe the same practitioner. Every other project receives the first and writes the second. That single-file arrangement holds only while RFM's own project-specific operational content stays incidental, small enough to fold into an existing document as a sentence rather than needing a section of its own. The moment RFM-specific operational content earns a section rather than a sentence, it belongs in a dedicated project-level operational document instead.
 
 The alternative was to let each project write its own conventions. That fails on retrieval rather than on principle. The sweep prompts and the skill operational documents name the operational document by filename, so a check reaches a session only if the convention it checks arrived with it. A project that wrote its own conventions would be running RFM's checks against a document those checks cannot describe.
 
@@ -357,6 +357,12 @@ Six operational documents carried a list of the documents to load before derivin
 
 The methodology was designed to prevent documentation drift. But the reasoning document itself can drift from the system it describes. Naming this problem is not solving it. This lesson must stay visible until a genuine answer exists. The methodology's own curation discipline (triggered and deliberate return) addresses drift in principle but cannot guarantee it in practice. No structural mechanism yet exists to detect that failure from inside the system. One asymmetry is known: applying the methodology from inception is the only reliable prevention: reconstructed reasoning produces plausible documents, but not necessarily true ones. The sweep prompts, deliberately invoked corrective artifacts, reduce the risk of undetected drift, but require honest and regular application to do so. A team that invokes them performatively rather than genuinely will produce documents that appear current while describing a past state. Structural mechanisms for detecting that failure from inside the system remain an open question.
 
+**[HL-CITEHDG] A citation added because a claim 'should' have one is defensive hedging, not support.**
+
+Four sentences in `RFM_operational.md` cited another document as a claim's backing: a graduation procedure, an em dash rule, a skill-count band, and the `[living]` marker, each pointing at 'the reasoning is in X.' None of the four gave the reader anything they needed to act on the claim. The test that found this: remove the citation, and ask whether the reader loses something needed right there, not whether the claim feels less supported. All four failed to justify their presence once someone thought to run that test. The mechanism is a training reflex toward citing a source as reassurance that a claim was checked, independent of whether the reader needs the source to act on the claim.
+
+A citation that supplies content the sentence depends on, a term or constraint defined elsewhere, passes the same test by failing it: removing it costs the reader something. That is the discriminator. Whether the cited document is real and the claim is true never enters it.
+
 **Human-LLM collaboration**
 
 **[HL-ERTA] Enthusiasm without red teaming produces fragile thinking.**
@@ -382,6 +388,10 @@ A session parks an item when its own confidence in resolving it right now is low
 **[HL-COSTSCALE] A check's cost should scale with what changed, not with what already exists.**
 
 A rule can be enforceable, in the sense that it reduces to a search. It can still be badly scoped, in the sense that the search runs across an entire backlog before any item in it can be acted on. That cost grows with the size of the backlog the rule exists to manage, so the rule gets more expensive exactly as the problem it is protecting against gets larger. The corrected version checks only what changed since the rule last ran, the newest entry, the newest claim, not the accumulated total. A cheap check gets run under pressure. An expensive one gets skipped, which is precisely when a check is needed most.
+
+**[HL-CHKNARR] A check that states its verdict without showing its reasoning against the specific content did not run.**
+
+A pre-check drafted for a new Boundaries entry reported 'stands alone,' 'no defensive qualification,' 'clean,' while the draft itself carried the same defensive-citation pattern already identified and removed elsewhere in the same session. The verdict was written before the scrutiny that would have produced it. A check that outputs only a conclusion gives no evidence it was applied to the content in front of it, and produces none of the friction that would have caught this instance.
 
 **Execution practice**
 

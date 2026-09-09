@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Skill Design Operational Document
-`v0.1.3` // `module_operational` // [living]
+`v0.2.0` // `module_operational` // [living]
 
 ---
 
@@ -36,6 +36,7 @@ Each skill operational document may add skill-specific items after this list.
 - Frontmatter validates without error.
 - Description is a single line, 200 to 400 characters, scope phrase appears first.
 - Body opens directly on content, no preamble.
+- If the skill's operational document changed version this session, the skill artifact has been regenerated and redelivered before the session closes.
 
 ---
 
