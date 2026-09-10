@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.5.0` // `skill_reasoning` // [living]
+`v0.6.0` // `skill_reasoning` // [living]
 
 ---
 
@@ -23,7 +23,7 @@ Nothing currently fires at the moment of drafting to encode: where does this bel
 
 **[AS-HOME]** As RFM drafting practice accumulates insight, that insight needs a canonical home. The drafting skill is that home. It is explicitly extensible.
 
-**[AS-COVERAGE]** The skill covers reasoning documents, operational documents, and glossary entries. Execution artifacts sit at the end of the derivative chain and are regenerated, not drafted independently. They are out of scope.
+**[AS-COVERAGE]** The skill covers reasoning documents, operational documents, and glossary entries, a skill's own reasoning and operational documents included. Execution artifacts sit at the end of the derivative chain: a change to one is legitimate only when its source reasoning document changed first, and the change is curated into the existing artifact rather than drafted as new content. The rendered artifact itself, a skill's packaged `SKILL.md` included, is out of scope.
 
 ---
 
@@ -71,7 +71,7 @@ The cost is that a question this coarse may catch nothing. That cost is accepted
 
 **Not a substitute for the language sweep.** `rfm-unslop` is the production-time language corrective. The language sweep catches what gets through.
 
-**Not applicable to execution artifacts.** Traveling prompt, sweep prompts, and human prompt are regenerated from their sources. Drafting guidance does not apply to regeneration.
+**Not applicable to execution artifacts.** Traveling prompt, sweep prompts, and human prompt are curated, not regenerated. Each change edits the existing artifact once its source reasoning document has already changed. Drafting guidance governs producing new content section by section, which curation is not.
 
 **Not applicable to non-RFM projects.** The section-type conventions and document structure rules are RFM-specific. The skill description front-loads this scope restriction.
 

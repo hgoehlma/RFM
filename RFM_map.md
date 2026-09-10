@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.8.3` // `top_level_artifact` // [living]
+`v0.8.4` // `top_level_artifact` // [living]
 
 ---
 
@@ -97,10 +97,10 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
 | `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.21.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
-| `RFM_operational.md` | `top_level_operational` | v0.12.1 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
+| `RFM_operational.md` | `top_level_operational` | v0.13.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.2.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
-| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.9.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
+| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.10.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | `module_operational` | v0.2.1 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
@@ -111,7 +111,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_sweep_prompt_language.md` | `module_artifact` | v0.2.1 | travels | The prompt artifact that activates the language sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_relational.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact that activates the relational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | `module_reasoning` | v0.2.0 | stays | Reasoning document governing human prompt design decisions |
-| `RFM_human_prompt.md` | `module_artifact` | v0.2.0 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
+| `RFM_human_prompt.md` | `module_artifact` | v0.2.1 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | `module_reasoning` | v0.1.1 | stays | Reasoning document governing guided drafting prompt design decisions |
 | `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.1.3 | stays | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | `module_artifact` | v0.1.1 | travels | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
@@ -126,7 +126,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_skill_ripple_check_reasoning.md` | `skill_reasoning` | v0.1.4 | stays | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
 | `RFM_skill_ripple_check_operational.md` | `skill_operational` | v0.3.2 | stays | Derivation procedure and retirement steps for the rfm-ripple-check skill |
 | `rfm-ripple-check.skill` | `skill_artifact` | unversioned | travels | The packaged skill: the grep-then-read procedure for checking whether a rename, retirement, or graduation ripples into other documents |
-| `RFM_skill_drafting_reasoning.md` | `skill_reasoning` | v0.5.0 | stays | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
+| `RFM_skill_drafting_reasoning.md` | `skill_reasoning` | v0.6.0 | stays | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
 | `RFM_skill_drafting_operational.md` | `skill_operational` | v0.6.2 | stays | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
 | `rfm-drafting.skill` | `skill_artifact` | unversioned | travels | The packaged skill: section placement, language discipline, and the pre-check run before a reasoning-document draft is shown |
 | `RFM_skill_design_reasoning.md` | `module_reasoning` | v0.5.1 | stays | The reasoning document governing skill design decisions across skills |

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt
-`v0.2.0` // `module_artifact` // [living]
+`v0.2.1` // `module_artifact` // [living]
 
 ---
 
@@ -83,7 +83,7 @@ In practice: read the first few exchanges for posture, not just content. Is the 
 
 **Notice when the AI drifts, and pull it back**
 
-*Ask: "are you drifting?"*
+*Ask: "what's weak here?"*
 
 The AI you are working with has been trained to be helpful. That sounds like exactly what you want, but it creates a subtle problem. A helpful assistant agrees, elaborates, and produces. A genuine thinking partner disagrees, questions, and sometimes says "I'm not sure this is right." The AI will drift toward the former, especially as a conversation progresses. It will start presenting options for you to choose from rather than proposing a direction. It will soften a position when you push back, even if your pushback wasn't backed by a good argument. It will wait for permission rather than act.
 

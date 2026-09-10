@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.9.0` // `module_reasoning` // [living]
+`v0.10.0` // `module_reasoning` // [living]
 
 ---
 
@@ -177,6 +177,10 @@ When the Travels column was added to `RFM_map.md`, the check first written for i
 **[HL-BLOCKRES] Contraction work conflates "nothing to do now" with "resolved."**
 
 Closing carry-forward items to satisfy `[R-CARRYCAP]`, three genuinely resolved items and six blocked-or-waiting items were proposed for removal together, because both read as inactionable under the same pressure to shrink a list. The waiting items were tracking a real, still-open condition: a second occurrence, a dependency, a trigger. Deleting them would have dropped the only place that condition was being watched. The distinguishing check: does the item still need tracking if nobody looks at it again? A resolved item doesn't. A waiting item does.
+
+**[HL-CONTRA] Two reasoning documents can assert opposite claims about the same practice, and nothing but noticing the contradiction catches it.**
+
+`RFM_operational.md`'s artifact convention states that an artifact meant to run again is curated over time, not regenerated wholesale. `RFM_skill_drafting_reasoning.md`'s Boundaries entry said the opposite about the same three artifacts, the traveling prompt, sweep prompts, and human prompt: that they are regenerated from their sources. Git history settled which claim was true. Every commit touching those three files, across the project's full history, changed a handful of lines and never the whole file, which matches curation, not regeneration. The wrong claim was not a drift from something once true; nothing in the commit history supports it ever having been true. No sweep compares one reasoning document's claim against another document's claim about the same subject. The structural sweep checks a document's own placement, and the language sweep checks a document's own prose; neither reads two documents against each other. The disagreement surfaced only because an earlier session's ripple check happened to notice it while working on unrelated vocabulary, and it then sat unresolved for two sessions before being investigated.
 
 ---
 

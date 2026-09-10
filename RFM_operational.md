@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.12.1` // `top_level_operational` // [living]
+`v0.13.0` // `top_level_operational` // [living]
 
 ---
 
@@ -20,6 +20,8 @@ Each sweep prompt is named for the cognitive mode it runs in, not for the docume
 The filename is checkable at its ends and not in its middle. The project prefix and the category suffix are searchable; the subject slot is not, by design.
 
 The filename carries no version. The file in the project is always current, and its version is in the header.
+
+**The filename check.** Every filename begins with the project prefix. Grep for it; a filename that doesn't match is a finding. Separately, grep every filename for `reason` or `operat`: a hit that isn't exactly `_reasoning.md` or `_operational.md` at the end is a finding, a near-miss suffix. Run it in any session that adds or renames a file.
 
 ---
 
@@ -68,7 +70,7 @@ Only header-bearing files are discoverable. A document with no header cannot be 
 
 Read each version from the file itself. A version the session believes it set is not evidence.
 
-While reading each header, check its form against the header convention. A header that does not match is a finding.
+While reading each header, check its form against the header convention. A header that does not match is a finding. In the same pass, check the type field against the nine-value closed list; a value outside the list is a finding independent of whether the header's form is otherwise correct.
 
 Report the check as done only after showing its output.
 
@@ -84,6 +86,10 @@ Rules:
 - Cross-references use the ID, never the position number
 - IDs are unique within their section type within a single document; they do not form a shared registry across documents
 
+**The citation-scope check.** Grep each document for every bracketed ID of the form `[XX-YYYY]`, excluding the literal placeholder `XXXX` used above to describe the format itself. Compare the remaining set against the IDs the same document actually declares, the ones sitting on a bold entry line, not merely mentioned in prose. An ID appearing in a document that does not also declare it is a finding: either a reference to another document's ID, which the scoping rule above bars, or a stale reference to an ID that was renamed or removed.
+
+**The duplicate-definition check.** In the same pass, count how many times each declared ID appears as a bold entry line within its own document. A count above one is a finding: the same ID assigned to two different entries, most often from copying an existing entry as the starting point for a new one.
+
 ---
 
 ## Count-Dependent References
@@ -95,6 +101,8 @@ Reasoning documents must not contain statements whose correctness depends on a c
 - Cross-document ID references: they imply a shared registry that does not exist and would signal the entry is in the wrong place
 - IDs scoped beyond a single document: IDs are per-document only
 - Lists that name their members: adding a member to the set falsifies the sentence, and no numeral appears in it to mark the dependency
+
+**The version-reference check.** Of the forms above, version numbers in cross-document references reduce to a search: grep the body of each document, excluding its own header line, for a version-shaped string. A match is a finding. Cross-document ID references reduce to a search too; that check is not written here. Numerical counts of entries and lists that name their members are judgments about prose; no search settles them, and they stay guidance rather than enforced convention.
 
 ---
 
@@ -140,6 +148,8 @@ One intro sentence naming the specific question this landscape must answer. Tabl
 
 **The Chosen Direction and Why**
 `**Why X**` or `**Why X over Y**` as bold subheading per entry, prose body. No IDs. No numbering.
+
+**The heading check.** Grep each Chosen Direction section for a colon before the closing bold marker in its subheading line. A match is a finding regardless of the entry's content.
 
 **The Boundaries**
 `**Not X.**` as bold lead phrase, prose body in same paragraph. No IDs. No numbering.
