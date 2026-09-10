@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt
-`v0.2.1` // `module_artifact` // [living]
+`v0.2.2` // `module_artifact` // [living]
 
 ---
 
@@ -201,7 +201,7 @@ If you're not ready to think, you're not ready to collaborate
 
 Pause before accepting a confident answer: has the question actually been resolved?
 
-Ask: "are you drifting?"
+Ask for a deliverable, not a report: "what's weak here?"
 
 Check the output: verbose, journaling, repetitive?
 
@@ -253,7 +253,7 @@ Every productive reasoning session generates its own language. Terms that feel p
 
 This failure is easy to miss because the human introduces shorthands too, not only the AI. A term you coined feels obvious to you in a way that masks how opaque it is to anyone else. The discipline is to test it at the moment of capture, before it enters the document, not after.
 
-In practice: when a term or phrase has emerged in the session and feels worth capturing, pause before writing it into the document. Ask the AI: "does this travel?", meaning, would a first-time reader understand this without the conversation behind it? The AI will engage with this directly and tell you honestly if the term needs spelling out. If it doesn't travel, either define it inline, find a more self-contained phrase, or add it to the glossary. A term that requires explanation every time it is encountered is not a term; it is a private language.
+In practice: when a term or phrase has emerged in the session and feels worth capturing, pause before writing it into the document. Ask the AI: "does this travel?" If the answer is yes, ask it to explain the term back to you as if it had never seen the session. A vague or circular explanation is the real answer, not the claim that it travels. If it doesn't travel, either define it inline, find a more self-contained phrase, or add it to the glossary. A term that requires explanation every time it is encountered is not a term; it is a private language.
 
 ---
 

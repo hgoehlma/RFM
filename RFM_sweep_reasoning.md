@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.6.0` // `module_reasoning` // [living]
+`v0.7.0` // `module_reasoning` // [living]
 
 ---
 
@@ -136,6 +136,10 @@ A third sweep was rejected on cost rather than on principle. It would add an inv
 **[OQ-GRND] The grounding sweep.**
 
 The three existing sweeps check a document against itself or against a sibling document: structure against structure, language against language, reasoning against its operational derivative. None checks a claim against what has changed outside the document since it was written: a model generation shifting, a prompt-engineering practice advancing, a piece of grounding aging. Two candidate inputs for such a check have been named: verifying publication dates and model generations before applying a finding, and deriving search terms from what would falsify a claim rather than from the claim's own wording. Whether this becomes a fourth sweep, folds into an existing sweep's remit, or stays a periodic manual check outside the sweep system entirely, is open.
+
+**[OQ-ARTCV] Whether the relational sweep's reach should extend from reasoning-to-operational derivation to reasoning-to-artifact derivation.**
+
+The relational sweep already checks whether a derivative covers what its source announced, and whether the derivative contains anything ungrounded in the source. `[AS-OPNS]` excludes operational documents from the structural sweep's reach because they have no fixed structure to check architecture against, but a boundary check doesn't need fixed structure on the derivative side, only a source to compare it against, so that same reasoning doesn't obviously justify excluding prompt artifacts from the relational sweep. A correction-script failure already recorded as a Hard Lesson in `RFM_human_prompt_reasoning.md` is exactly the shape of defect a boundary check would catch: the reasoning behind it was sound, and the specific wording chosen during derivation was not, a derivation-boundary failure rather than a reasoning failure. Whether the relational sweep's current restriction to `module_operational` derivatives is a deliberate scope decision or an accident of the map's type taxonomy is open. If the latter, extending the relational sweep is not a type-filter change: the sweep's one-to-one protocol would need to handle the sweep prompts' own one-reasoning-to-three-artifacts shape first.
 
 ---
 

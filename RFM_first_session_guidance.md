@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: First Session Guidance
-`v0.1.3` // `module_artifact` // [living]
+`v0.1.4` // `module_artifact` // [living]
 
 ---
 
@@ -37,11 +37,11 @@ After the Landscape section, the session pauses and returns to what you wrote ea
 
 As the session lengthens, the LLM may drift from asking questions toward producing answers. When responses feel like answers rather than questions, name it directly:
 
-*"You are in tool mode, not co-author mode."*
+*"You are in tool mode, not co-author mode. Ask me a question about what I just said, not a restatement of it."*
 
 At each section boundary, before moving forward, say:
 
-*"Hold your co-author role."*
+*"Hold your co-author role. Tell me one thing about this section you'd push back on."*
 
 These are not politeness rituals. They are the recalibration moves that keep the session honest.
 

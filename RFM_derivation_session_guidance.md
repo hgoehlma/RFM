@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Session Guidance
-`v0.1.2` // `module_artifact` // [living]
+`v0.1.3` // `module_artifact` // [living]
 
 ---
 
@@ -43,7 +43,7 @@ If a gap surfaces mid-derivation that the gate did not catch, the LLM stops, nam
 
 The LLM will not challenge decisions made in the source documents. If it does, name it:
 
-*"You are in co-author mode. Return to faithful rendering."*
+*"You are in co-author mode. Point to the specific place in the source documents that led you to challenge this, then return to faithful rendering."*
 
 ---
 
