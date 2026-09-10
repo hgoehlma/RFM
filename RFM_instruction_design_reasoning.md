@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.10.0` // `module_reasoning` // [living]
+`v0.11.0` // `module_reasoning` // [living]
 
 ---
 
@@ -178,9 +178,23 @@ When the Travels column was added to `RFM_map.md`, the check first written for i
 
 Closing carry-forward items to satisfy `[R-CARRYCAP]`, three genuinely resolved items and six blocked-or-waiting items were proposed for removal together, because both read as inactionable under the same pressure to shrink a list. The waiting items were tracking a real, still-open condition: a second occurrence, a dependency, a trigger. Deleting them would have dropped the only place that condition was being watched. The distinguishing check: does the item still need tracking if nobody looks at it again? A resolved item doesn't. A waiting item does.
 
+**[HL-DIHQ] Deferred items must carry their context, not just their topic.**
+
+When an item is parked as future work, the handover note captures what was deferred but not the context that surrounded it: what was understood, what was tried, what specifically remains open, and why the item stopped where it did. That context disappears with the session that produced it. The next session reopens the item cold and must reconstruct what was present but not captured. The fix is not a longer handover. It is a richer deferral record: each deferred item carries enough context that a fresh session can proceed without reconstruction. A topic label is not a deferral record.
+
+The lesson recurred after being written. One later carry-forward item named an ID trace with no record of which boundary it was checking. Another named a pattern, a derivative saved before its source finished changing, that had already been confirmed by two separate instances, with no record of which artifact or session it came from. Both went stale on reaching a fresh session, the same failure this lesson already describes. Writing the reasoning down once did not stop it from recurring.
+
 **[HL-CONTRA] Two reasoning documents can assert opposite claims about the same practice, and nothing but noticing the contradiction catches it.**
 
 `RFM_operational.md`'s artifact convention states that an artifact meant to run again is curated over time, not regenerated wholesale. `RFM_skill_drafting_reasoning.md`'s Boundaries entry said the opposite about the same three artifacts, the traveling prompt, sweep prompts, and human prompt: that they are regenerated from their sources. Git history settled which claim was true. Every commit touching those three files, across the project's full history, changed a handful of lines and never the whole file, which matches curation, not regeneration. The wrong claim was not a drift from something once true; nothing in the commit history supports it ever having been true. No sweep compares one reasoning document's claim against another document's claim about the same subject. The structural sweep checks a document's own placement, and the language sweep checks a document's own prose; neither reads two documents against each other. The disagreement surfaced only because an earlier session's ripple check happened to notice it while working on unrelated vocabulary, and it then sat unresolved for two sessions before being investigated.
+
+**[HL-VOCGAP] A pointer between documents can be accurate and still undiscoverable, when the two sides don't share a vocabulary.**
+
+`RFM_handover_rules.md` pointed to `RFM_instruction_design_reasoning.md` for whether RFM specifies an artifact type for the files and skills that maintain the session boundary. The module had already answered the question in full: an assumption stating the boundary is permanent, not a platform limitation, and an open question naming exactly what remains undecided. Neither used the word the pointer was written around. The module spoke of carriers that load at the start of work; the pointer spoke of session handover. A search for the pointer's own subject across the project found nothing, and the natural conclusion was that the question had never been taken up. Both documents were correct read alone. The gap was between them, and nothing that reads one document at a time can catch it: not the structural sweep, which checks a document's own placement, not the language sweep, which checks a document's own prose, not a search, which only finds what it's told to look for. The fix was one clause naming the module's actual term inside the pointer, not a change to either document's substance.
+
+**[HL-RELOAD] Re-invoking an already-loaded skill by name does not re-deliver its content.**
+
+A skill invoked once in a session and invoked again later by explicit name returned "already loaded above; instructions unchanged" instead of the skill's text. The check that followed ran against memory of the first load, not a fresh read. Whether content held from memory is reliable is a separate, still-open question; what this establishes is only that naming a skill again is not itself a mechanism for forcing a fresh read.
 
 ---
 

@@ -43,14 +43,6 @@ They may belong together. Both describe the LLM and the reasoning document as th
 
 ---
 
-## C. The prompt system has no mechanism for grounding against evolving prompt engineering practice
-
-The reasoning documents govern why the prompts are designed the way they are. But prompt engineering practice evolves: LLM behavior changes across model generations, optimal activation patterns shift, new evidence emerges. Nothing in the current methodology triggers a periodic check: do the derived prompts still reflect the state of the art given what the reasoning documents prescribe? The concept: a grounding sweep, not a structural or language sweep, but a research-first pass asking whether the prompt artifacts are still optimally designed given current practice. May be lightweight (an operational note) or substantial (a new sweep type). Not yet sharp enough to place.
-
-**Signal count: 1** *(this session)*
-
----
-
 ## D. Dreaming (Anthropic Managed Agents) as external validation of the curation problem
 
 Anthropic's "dreaming" feature for Managed Agents (May 2026) is a scheduled process that reviews past agent sessions, extracts patterns, and curates memory between sessions, including automatic memory updates. The diagnosis behind it is identical to RFM's founding curation assumption: memory left to accumulate without periodic review degrades. The solution differs sharply (automated vs. deliberate) and that difference is where RFM's position must stay sharp. Automated curation is the failure mode RFM names, not a solution, because compression is always structural and requires human judgment. But the fact that Anthropic built infrastructure around this problem is meaningful external signal that AS-CDNO is pointing at something real and generalizable, not a preference of its authors.
@@ -126,6 +118,18 @@ This is not a fit for either existing sweep. The structural sweep asks whether c
 **Possible home when ready:** `RFM_prompts_reasoning.md`, as a fourth landscape entry or a new option in the Options Considered, evaluated against the existing two-sweep design the same way any new corrective artifact would be. Should be read alongside G; if G's Open Question resolves toward "yes, a distinct unreliable-instruction category exists," H is the corrective mechanism that question would point toward. If G resolves the other way, H may not be needed at all.
 
 **Signal count: 1** *(this session, RFM-on-RFM derivation work)*
+
+---
+
+## I. Splitting a claim's evidentiary support by sub-claim, not by claim
+
+When an assumption or claim bundles two sub-claims with different evidentiary strength, writing one confidence level across both produces epistemic flatness even when the words are hedged correctly for the claim as a whole. `[AS-FORM]` in `RFM_instruction_design_reasoning.md` splits its own claim (instruction form moves role) into an activation half, grounded in outside research, and a role half, grounded only in the project's own session record, and states each separately rather than writing one blended sentence. This reads as a general drafting technique rather than an incident specific to that entry: name the sub-claim, then its evidence, repeated for each sub-claim, instead of one summary confidence statement for the whole.
+
+**Why not captured yet:** single instance, drafted once inside one assumption. Not yet tested as a deliberate technique applied on purpose to a different entry.
+
+**Possible home when ready:** `RFM_skill_drafting_operational.md`'s language-compliance guidance, or a new discriminator alongside the existing epistemic-flatness failure type in `RFM_operational.md`'s Failure Taxonomy.
+
+**Signal count: 1** *(this session, `[AS-FORM]` in `RFM_instruction_design_reasoning.md`)*
 
 ---
 

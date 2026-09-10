@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.5.0` // `module_reasoning` // [living]
+`v0.6.0` // `module_reasoning` // [living]
 
 ---
 
@@ -133,7 +133,9 @@ A third sweep was rejected on cost rather than on principle. It would add an inv
 
 ## The Open Questions
 
-*No open questions at this time.*
+**[OQ-GRND] The grounding sweep.**
+
+The three existing sweeps check a document against itself or against a sibling document: structure against structure, language against language, reasoning against its operational derivative. None checks a claim against what has changed outside the document since it was written: a model generation shifting, a prompt-engineering practice advancing, a piece of grounding aging. Two candidate inputs for such a check have been named: verifying publication dates and model generations before applying a finding, and deriving search terms from what would falsify a claim rather than from the claim's own wording. Whether this becomes a fourth sweep, folds into an existing sweep's remit, or stays a periodic manual check outside the sweep system entirely, is open.
 
 ---
 

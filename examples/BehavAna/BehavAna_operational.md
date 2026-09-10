@@ -1,5 +1,5 @@
 # Project — Operational Document
-`v0.1.1` // `operational` // [living]
+`v0.1.1` // `top_level_operational` // [living]
 
 ---
 

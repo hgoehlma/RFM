@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Document Map
-`v0.8.4` // `top_level_artifact` // [living]
+`v0.9.0` // `top_level_artifact` // [living]
 
 ---
 
@@ -86,6 +86,8 @@ RFM
 
 `RFM_map.md` appears in the tree because the tree states position and the map has one. It carries no row in the table below because that would be a second copy of its own version.
 
+This deployment also runs five artifacts the tree above does not include: `RFM_handover_rules.md`, `RFM_handover_session.md`, and the `session-startup`, `session-closeout`, and `rules-file-editing` skills. `RFM_instruction_design_reasoning.md` carries an open question on whether RFM specifies an artifact type for carriers that load at the start of work; until it resolves, these five stay one deployment's instantiation of that class rather than mapped documents.
+
 ---
 
 ## Document Map
@@ -96,16 +98,16 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
-| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.21.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.22.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | `top_level_operational` | v0.13.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.2.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
-| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.10.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
+| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.11.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | `module_operational` | v0.2.1 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | `module_artifact` | v0.4.0 | travels | The system prompt that carries the methodology into every LLM conversation |
-| `RFM_sweep_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing sweep prompt design decisions |
+| `RFM_sweep_reasoning.md` | `module_reasoning` | v0.6.0 | stays | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_operational.md` | `module_operational` | v0.6.0 | stays | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
 | `RFM_sweep_prompt_structural.md` | `module_artifact` | v0.5.2 | travels | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | `module_artifact` | v0.2.1 | travels | The prompt artifact that activates the language sweep: findings for ruling, not edits |

@@ -1,5 +1,5 @@
 # Project — Top-Level Reasoning Document
-`v0.1.1` // `top_level_document` // [living]
+`v0.1.1` // `top_level_reasoning` // [living]
 
 ---
 

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.21.0` // `top_level_reasoning` // [living]
+`v0.22.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -380,10 +380,6 @@ Even a disciplined LLM develops bias over a long conversation: toward ideas that
 **[HL-WENO] The worked example is never optional, at any stage of the methodology's development.**
 
 Theory without ground truth is hypothesis. Applying the methodology from inception, before any execution artifacts exist, proves the chain in both directions: reasoning document to derivative, with traceability at every step and no undocumented judgment calls made during implementation. Applying it to an existing project, where decisions have already been made without explicit reasoning, reveals that reconstructed reasoning produces plausible documents but not necessarily true ones. Both directions of experience are necessary.
-
-**[HL-DIHQ] Deferred items must carry their context, not just their topic.**
-
-When an item is parked as future work, the handover note captures what was deferred but not the context that surrounded it: what was understood, what was tried, what specifically remains open, and why the item stopped where it did. That context disappears with the session that produced it. The next session reopens the item cold and must reconstruct what was present but not captured. The fix is not a longer handover. It is a richer deferral record: each deferred item carries enough context that a fresh session can proceed without reconstruction. A topic label is not a deferral record.
 
 **[HL-PARKROT] A deferred item rots at the session boundary, not from a missing check.**
 

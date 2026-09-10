@@ -1,5 +1,5 @@
 # PiMem — Operational Document
-`v0.1.0` // `operational` // [living]
+`v0.1.0` // `top_level_operational` // [living]
 
 ---
 
