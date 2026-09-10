@@ -98,11 +98,11 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
-| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.22.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
+| `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.23.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | `top_level_operational` | v0.13.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.2.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
-| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.12.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
+| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.13.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.5.0 | stays | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | `module_operational` | v0.2.1 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
@@ -129,9 +129,9 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_skill_ripple_check_operational.md` | `skill_operational` | v0.3.2 | stays | Derivation procedure and retirement steps for the rfm-ripple-check skill |
 | `rfm-ripple-check.skill` | `skill_artifact` | unversioned | travels | The packaged skill: the grep-then-read procedure for checking whether a rename, retirement, or graduation ripples into other documents |
 | `RFM_skill_drafting_reasoning.md` | `skill_reasoning` | v0.6.0 | stays | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
-| `RFM_skill_drafting_operational.md` | `skill_operational` | v0.6.2 | stays | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
+| `RFM_skill_drafting_operational.md` | `skill_operational` | v0.7.0 | stays | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
 | `rfm-drafting.skill` | `skill_artifact` | unversioned | travels | The packaged skill: section placement, language discipline, and the pre-check run before a reasoning-document draft is shown |
-| `RFM_skill_design_reasoning.md` | `module_reasoning` | v0.5.1 | stays | The reasoning document governing skill design decisions across skills |
+| `RFM_skill_design_reasoning.md` | `module_reasoning` | v0.6.0 | stays | The reasoning document governing skill design decisions across skills |
 | `RFM_skill_design_operational.md` | `module_operational` | v0.2.0 | stays | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
 | `README.md` | `top_level_artifact` | unversioned | stays | Public-facing orientation for a reader encountering RFM for the first time, carrying no version numbers by design |
 | `RFM_incubating.md` | `top_level_artifact` | unversioned | stays | Ideas captured at session close that are not yet ready to enter a document |

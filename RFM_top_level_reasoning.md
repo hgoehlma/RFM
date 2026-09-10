@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.22.0` // `top_level_reasoning` // [living]
+`v0.23.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -273,6 +273,11 @@ The alternative was to define what a release must satisfy and build until it doe
 So the release condition is a person. One practitioner, working from a handed-over set, with the documents doing the onboarding. RFM is worked with an LLM from the first session, so what is handed over must be sufficient for a model reading only the published set, not for a human reading cold. A model that infers past a gap produces a confident session that departs from the reasoning, and a newcomer has nothing to check it against.
 
 What that person cannot do is the finding. The set they were handed is the release set, and it is defined by the trial rather than before it.
+
+The repository being fully public does not relax this. A human practitioner who notices a gap can go look at the wider repository, which costs that person an afternoon rather than the trial itself. A session works from the handed set alone and has no occasion to go looking beyond it. The model-sufficiency requirement above binds exactly as stated, public repository or not. No travelling document should point a model at the source repository as a fallback for a gap: a session that fills its own gaps this way turns a genuine packing failure into silence, and the finding the trial exists to produce never surfaces.
+
+One practitioner is not a sample. The trial can show whether a model reading only the handed set works from it without drifting into invented reasoning; it cannot show how RFM performs across practitioners, domains, or model families. That generalization is a separate, later question this trial is not positioned to answer.
+
 ---
 
 ## The Boundaries

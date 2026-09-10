@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Skill Design Reasoning Document
-`v0.5.1` // `module_reasoning` // [living]
+`v0.6.0` // `module_reasoning` // [living]
 
 ---
 
@@ -105,6 +105,10 @@ Forcing assumes the instruction is followed where the description was not. The i
 
 A skill body is written as procedure: named steps, imperatives, checks. That register is what makes it take effect once loaded. It is also the register of an instruction handed to a tool, and RFM depends on the model holding a posture that questions and pushes back. Whether loading procedural text at a moment shifts that posture, and whether a skill can be written to act without paying that cost, is unknown.
 
+**[OQ-SKCHECK] Does the project need a way to check an installed skill against the operational document it's derived from?**
+
+`[HL-SKDRIFT]` was found by manual comparison, prompted by unrelated work, not by any check run on a schedule. The map check compares a document's version header against `RFM_map.md`; nothing plays that role between a skill body and its operational source. Skill files in this environment are a read-only cache rather than something the project's own tooling reads on demand, so what such a check would even compare, and whether it's checkable at all outside a session that happens to open both files, is unresolved.
+
 ---
 
 ## Hard Lessons
@@ -116,6 +120,10 @@ A description has to be supplied at the moment a skill is saved, which is the mo
 **[HL-BODYC] A skill body is not documentation. It is text loaded into the context of the response it governs.**
 
 Language failures in a reasoning document cost a future reader some clarity. The same failures in a skill body sit inside the context of the response being written while that response is being written, so the skill's own prose is an input to the work it is meant to improve. Skill bodies were treated as documents that describe behavior, and were held to the standard that applies to documents someone reads later.
+
+**[HL-SKDRIFT] An installed skill can carry content its own operational source doesn't, with nothing to surface the gap.**
+
+`rfm-drafting`'s installed body asked a four-clause Language question with two supporting sentences; `RFM_skill_drafting_operational.md`, the document the skill is supposed to be curated from, specified three clauses and no supporting sentences for the same question. The derivation runs operational document to skill body, never the other direction, so an installed skill ahead of its source is drift running backward. Nothing reported the mismatch. It surfaced only because reconciling an unrelated carry-forward item required reading both files side by side, not because any check compares them.
 
 ---
 

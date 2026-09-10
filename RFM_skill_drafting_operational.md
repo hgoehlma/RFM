@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Operational Document
-`v0.6.2` // `skill_operational` // [living]
+`v0.7.0` // `skill_operational` // [living]
 
 ---
 
@@ -42,11 +42,11 @@ The pre-check is Layer 4 of the skill body. It runs after Layers 1 to 3 and befo
 
 **The questions.** One per failure family in the Failure Taxonomy in `RFM_operational.md`. Any change to a question begins here.
 
-*Structural:* Does every part of this content, and every reference it makes, belong at this level, in this section, and to this document rather than another?
+*Structural:* Does every part of this content, and every reference it makes, belong at this level, in this section, and to this document rather than another? Content can belong where a reference inside it does not: an ID scopes to the document that defines it, so a reference to an ID defined elsewhere fails even when the content around it is correctly placed.
 
-*Language:* Would a reader who was not in this session understand this content, see the reasoning behind each claim, and find nothing in it written to the reviewer of the draft?
+*Language:* Would a reader who was not in this session understand this content, see the reasoning behind each claim, find nothing in it written to the reviewer of the draft, find nothing written to an imagined challenger of its evidence, keep observation and interpretation apart in every claim, and imply no uncertainty about anything the record has already settled? Layer 2 covers surface patterns; this asks whether the reasoning survives without the session. Qualification defending a claim's evidence reads as care and passes a review that only asks whether the reasoning is sound. Before cutting any qualification, apply the discriminator in the Failure Taxonomy: qualification that feeds a break condition or blocks a design move is the record of how firmly something is believed, and cutting it produces the opposite failure. The same caution applies to settled uncertainty: a hedge on something still genuinely open is not this failure, only wording that keeps hedging after the record has resolved it.
 
-*Lifespan:* Does every part of this content still hold against work already planned, or will some of it become false or redundant?
+*Lifespan:* Does every part of this content still hold against work already planned, or will some of it become false or redundant? A condition that planned work will satisfy is already recorded in the plan; writing it into the document makes a second copy that a later session has to find and remove.
 
 **On a hit.** Revise before presenting. When the hit cannot be resolved without a ruling, present the draft with the concern named rather than silently resolving it.
 

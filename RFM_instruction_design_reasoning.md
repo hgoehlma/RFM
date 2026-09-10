@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.12.0` // `module_reasoning` // [living]
+`v0.13.0` // `module_reasoning` // [living]
 
 ---
 
@@ -207,6 +207,10 @@ The lesson recurred after being written. One later carry-forward item named an I
 **[HL-RELOAD] Re-invoking an already-loaded skill by name does not re-deliver its content.**
 
 A skill invoked once in a session and invoked again later by explicit name returned "already loaded above; instructions unchanged" instead of the skill's text. The check that followed ran against memory of the first load, not a fresh read. Whether content held from memory is reliable is a separate, still-open question; what this establishes is only that naming a skill again is not itself a mechanism for forcing a fresh read.
+
+**[HL-TSDUP] A count mismatch between two entries reads as evidence of separate incidents, and commit-timestamp adjacency where one agent writes both is evidence against that, not noise.**
+
+`RFM_prompts_reasoning.md`'s Hard Lesson on co-author drift's ceiling failure and a carry-forward item's self-correction-lag entry described what turned out to be the same observation, one naming three files written in a pass, the other naming four. The mismatch alone was read as evidence the two entries tracked different incidents. What settled it was checking when each was committed: three seconds apart, across two separate repositories, both written by the same agent at the same close-out. An agent that commits on a human's behalf produces exactly that signature for two records of one realization captured back to back, and a wider gap for two records of genuinely separate events. The count was never checked against anything; the timing was, and only after being pointed at directly.
 
 ---
 
