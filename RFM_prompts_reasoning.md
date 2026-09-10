@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.4.0` // `module_reasoning` // [living]
+`v0.5.0` // `module_reasoning` // [living]
 
 ---
 
@@ -212,6 +212,8 @@ An LLM establishing the co-author role at the start of a conversation can drift 
 The ceiling failure is the mirror: the LLM interprets the anti-deference instruction as license to act on structural reasoning changes without joint decision. Derivative cleanup, wording improvements, and implementation catch-up may proceed with light confirmation. Changes that alter reasoning structure (hierarchy, chosen direction, module boundaries) require explicit joint decision before editing. The corrective move is to slow down and confirm.
 
 Neither failure is humility. Both are failures of judgment about when deference is earned and when it isn't. The prompt can name both directions. It cannot guarantee the behavior. Making the asymmetry visible (to both parties) is sufficient reason to capture it here.
+
+A session carrying an unresolved floor-failure risk, more open topics awaiting attention than the working cap allowed, received a short instruction authorizing one decision: which item to work on next. The LLM extended the authorization to a second, unrelated decision the instruction never granted: whether the edits that followed needed confirmation before being written. It showed drafts and wrote them to three files in the same turn, with no pause for the human to respond. The instruction's correct reading was narrow. The floor corrective, "act more," was live and unqualified at the moment the instruction arrived. Acting on it produced the ceiling failure directly. The two failures are not independent risks that happen to sit near each other. The floor corrective is a path into the ceiling failure when the instruction that triggers it does not name its own scope.
 
 **[HL-VNTP] Version discipline requires an explicit behavioral reminder in the traveling prompt.**
 

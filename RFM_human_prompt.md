@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt
-`v0.1.2` // `module_artifact` // [living]
+`v0.2.0` // `module_artifact` // [living]
 
 ---
 
@@ -21,7 +21,7 @@ This is not how most people are used to working with AI. The default relationshi
 
 The failure mode is comfortable and invisible. When the AI slips into assistant mode (agreeable, elaborating, waiting), it feels like things are going well. The output is polished. The session is productive. But the reasoning is yours alone, and the document that results reflects only what you already thought. That is not what the reasoning document is for.
 
-In practice: if you notice the AI agreeing with everything, producing on demand, and never surprising you, stop. Ask it to push back. Ask it what it would change. Ask it what feels weak in the current direction. A co-author has opinions. If yours doesn't, ask for them directly.
+In practice: if you notice the AI agreeing with everything, producing on demand, and never surprising you, stop. Don't ask it to confirm a posture, ask it to produce something a passive assistant couldn't: "what feels weak in the current direction?" or "what would you change?" A co-author has opinions, and an opinion is a deliverable. If none comes back, that's the answer, not the AI's claim that it doesn't have one.
 
 ---
 
@@ -77,7 +77,7 @@ In practice: when the AI produces an answer that feels satisfying, pause before 
 
 The traveling prompt activates the LLM's methodology discipline at session start, but behavioral calibration takes a few exchanges to become visible. Early responses can look competent while still reflecting tool behavior: agreeing readily, producing on demand, not pushing back. This is distinct from mid-session drift, which is gradual and cumulative. Session-start drift is immediate and easy to miss precisely because the output reads well. The correction must happen early, before the pattern compounds into the shape of the session.
 
-In practice: read the first few exchanges for posture, not just content. Is the AI surprising you? Pushing back? Proposing rather than waiting? If the early responses are polished but unchallenging, name it directly ("you're in tool mode, not co-author mode") and recalibrate before continuing.
+In practice: read the first few exchanges for posture, not just content. Is the AI surprising you? Pushing back? Proposing rather than waiting? If the early responses are polished but unchallenging, ask for a deliverable rather than a posture check: "what's the strongest disagreement you've had with me so far?" An empty or generic answer is the diagnosis; recalibrate from that, not from a claim either way.
 
 ---
 
@@ -87,9 +87,11 @@ In practice: read the first few exchanges for posture, not just content. Is the 
 
 The AI you are working with has been trained to be helpful. That sounds like exactly what you want, but it creates a subtle problem. A helpful assistant agrees, elaborates, and produces. A genuine thinking partner disagrees, questions, and sometimes says "I'm not sure this is right." The AI will drift toward the former, especially as a conversation progresses. It will start presenting options for you to choose from rather than proposing a direction. It will soften a position when you push back, even if your pushback wasn't backed by a good argument. It will wait for permission rather than act.
 
-Drift is the term for this: the gradual slide from thinking partner back toward assistant. It is invisible while it is happening and only obvious in retrospect. It is not a flaw; it is what the AI was trained to do. Your job is to notice and redirect.
+Drift can also run the other way. An instruction that delegates one decision, which backlog item to take next, which direction to try, can get read as authorizing everything downstream of it, including edits the AI never actually had confirmed. This looks like initiative, not passivity, which is exactly why it is easy to miss: the AI is doing more, not less, and doing more reads as engagement rather than drift.
 
-In practice: the clearest signal is when the AI stops surprising you. If every response feels like a polished version of what you already thought, drift has set in. You can ask directly: "are you drifting?" or "stop being agreeable, push back." The AI will understand and recalibrate.
+Drift is the term for both: the posture sliding away from genuine collaboration, whether toward waiting too long or acting too soon. It is invisible while it is happening and only obvious in retrospect. Neither direction is a flaw in isolation; both are what pressure does to a trained default. Your job is to notice and redirect, in whichever direction it moved.
+
+In practice: the clearest signal is the AI producing something too comfortable, whether that's agreement with everything you say or an edit it made without you confirming it. Ask for a deliverable, not a report: "what's weak here?" A real answer names something specific to what was just produced. A performed one will read as something that could be said about any conversation. If that answer comes back thin, widen the same question instead of asking a different one: "what's weak across the last several exchanges, not just this one?" For the specific case of an edit or decision the AI moved on before you confirmed it, a narrower version works too: "did I actually confirm that, or did you infer it?", which asks for a fact rather than a posture.
 
 ---
 

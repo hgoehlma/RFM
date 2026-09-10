@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.4.2` // `skill_reasoning` // [living]
+`v0.5.0` // `skill_reasoning` // [living]
 
 ---
 
@@ -17,7 +17,7 @@ Nothing currently fires at the moment of drafting to encode: where does this bel
 
 **[AS-PRODLOAD]** Production load is the highest-risk moment for structural misplacement. The practitioner holds the reasoning and writes simultaneously. Checking placement requires stepping out of that mode. Without a forcing function, the check does not happen.
 
-**[AS-DISTINCT]** Failure families do not cover each other. Content that passes one family's test can fail another's, so a check asking a single question catches a single family. The taxonomy in `RFM_operational.md` names the families and the boundaries between them.
+**[AS-DISTINCT]** Failure families do not cover each other. Content that passes one family's test can fail another's, so a check asking a single question catches a single family. The taxonomy in `RFM_operational.md` names the families and the boundaries between them. The assumption breaks if evidence shows one check question reliably catching content from more than one family. That would mean the taxonomy's family boundaries do not track distinct failures.
 
 **[AS-UNSLOP]** `rfm-unslop` already handles language compliance for all RFM session output. The drafting skill does not replicate that coverage. It references it and covers what it does not.
 

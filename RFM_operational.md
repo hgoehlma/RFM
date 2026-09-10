@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.12.0` // `top_level_operational` // [living]
+`v0.12.1` // `top_level_operational` // [living]
 
 ---
 
@@ -130,7 +130,7 @@ These conventions apply to all RFM reasoning documents. They are not methodology
 Plain prose. Bold subheading only when a structurally distinct second argument would otherwise read as continuation of the first.
 
 **The Assumptions**
-`**[AS-XXXX] -**` bold claim, body follows in the same paragraph. Hyphen after the ID, not em dash. Grouping sentence permitted when assumptions genuinely divide into distinct registers.
+`**[AS-XXXX] -**` bold claim, body follows in the same paragraph. The body states the break condition, the condition under which the claim would no longer hold. Hyphen after the ID, not em dash. Grouping sentence permitted when assumptions genuinely divide into distinct registers.
 
 **The Landscape**
 One intro sentence naming the specific question this landscape must answer. Table with three columns: Approach | What it does | Why it's insufficient. Closing paragraph opened with **The gap:** in bold.

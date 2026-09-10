@@ -1,5 +1,5 @@
 # RFM: Structural Sweep Prompt
-`v0.5.1` // `module_artifact` // [living]
+`v0.5.2` // `module_artifact` // [living]
 
 ---
 
@@ -33,7 +33,7 @@ Work through each section in sequence. For each section, apply the primary quest
 Primary question: Has this section absorbed scope that belongs at a lower level, or has it drifted from the original statement without a flag?
 
 **The Assumptions**
-Primary question: Does each entry state a testable belief, or has implementation detail leaked in? Are any assumptions now contradicted by the Chosen Direction?
+Primary question: Does each entry state a testable belief, or has implementation detail leaked in? Does each entry name the condition under which it would break? Are any assumptions now contradicted by the Chosen Direction?
 
 **The Landscape**
 Primary question: Does each row distinguish its approach clearly from its neighbors? Does the closing paragraph name the gap without beginning to choose? Has early option selection absorbed work that belongs in Options Considered?

@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Guided Drafting Prompt Operational Document
-`v0.1.2` // `module_operational` // [living]
+`v0.1.3` // `module_operational` // [living]
 
 ---
 
@@ -27,7 +27,7 @@ The First Session Guidance is read by the newcomer before pasting the LLM prompt
 
 The session is longer and more cognitively demanding than a typical RFM session. The newcomer has not yet internalized the drift-correction practices from the human prompt. Under that combination, the LLM will drift from Socratic questioning toward producing answers (agreeable, elaborating, filling sections rather than drawing reasoning out). This is the primary failure mode of the guided drafting session.
 
-The newcomer's counter-move: when responses feel like answers rather than questions, name it directly ("you are in tool mode, not co-author mode") and ask the LLM to return to questions. At each section boundary, before moving forward, say explicitly: "hold your co-author role."
+The newcomer's counter-move: when responses feel like answers rather than questions, ask rather than declare: "you're answering, not asking, what happened to Socratic mode?" and let the LLM return to questions from there. At each section boundary, before moving forward, say explicitly: "hold your co-author role."
 
 ---
 

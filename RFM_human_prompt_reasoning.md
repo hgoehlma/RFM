@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.1.2` // `module_reasoning` // [living]
+`v0.2.0` // `module_reasoning` // [living]
 
 ---
 
@@ -149,6 +149,14 @@ When the LLM's response contains several observations and ends with one question
 This is distinct from `[HL-SSDM]`, the lesson that the LLM's collaborative posture is not fully settled in the opening exchanges of a session and the human must read early output for posture, not just content. This failure is about the structure of a single turn, and can occur at any point in a session, including well after the posture has settled. The corrective move differs accordingly: where `[HL-SSDM]` asks the human to watch the opening of a session, this asks the human to scan any multi-point turn for items that did not receive their own ruling, regardless of where in the session it lands.
 
 The human is the one who catches what the instruction alone does not. Before replying to a turn that contains more than a single point, a brief scan for what else was raised, and whether it actually got a ruling, catches what the closing question alone would let slide.
+
+**[HL-VRDCT] A correction script that asks for a self-report can be satisfied without the state it asks about.**
+
+"Notice when the AI drifts, and pull it back" offered two in-practice scripts as equivalent: a question, "are you drifting?", and a command, "stop being agreeable, push back." Both ask the AI to characterize its own state rather than produce anything checkable. A denial of drift is exactly as cheap to generate as a claim of having pushed back, so grammatical mood does not look like what made the command version worse. The actual failure is that neither script demands a deliverable, something specific enough that its absence, not a denial, is the evidence. "Correct with a question, not a verdict" in the same artifact already gives the working version: "I still don't see why this matters" cannot be answered with a claim about the AI's own state, it requires the AI to produce a justification. "Red team this," used elsewhere in the same artifact, is grammatically a command and has the same property: it asks for named weaknesses, not a report on posture, so a command asking for a deliverable does not fit the failure mode this entry needed to name. This distinction is drawn from two examples in one session, not tested against a wider set; it may not hold as cleanly elsewhere.
+
+The same entry named drift in one direction only: presenting options instead of proposing, softening under pushback, waiting for permission. Its in-practice line told the human to push the AI to act more. Applied to the opposite direction, treating a narrow delegation as authorization for everything downstream of it and moving straight to unconfirmed execution, that corrective is not neutral. Pushing an AI that has already over-extended one authorization adds pressure in the wrong direction. An entry that names drift in a single direction cannot catch the other, and its corrective can actively worsen the direction it does not name.
+
+The corrective this suggests: a light, default check that asks for a deliverable scoped to the immediate output, "what's weak here?", escalating, when the answer comes back thin, to the same question scoped across several exchanges rather than switching to a different phrase. The escalation widens what has to be accounted for. It does not introduce a second script standing as an equal alternative to the first, the same design error the two co-equal scripts at the start of this entry already made once.
 
 ---
 
