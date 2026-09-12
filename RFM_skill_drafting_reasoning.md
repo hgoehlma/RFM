@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.6.0` // `skill_reasoning` // [living]
+`v0.7.0` // `skill_reasoning` // [living]
 
 ---
 
@@ -92,3 +92,7 @@ Practice will surface failure classes not yet anticipated. This question tracks 
 **[HL-NSWP] Nothing checks a draft against the sweeps at the moment it is drafted.**
 
 A Chosen Direction entry was drafted for the top-level reasoning document and presented as ready. Checked afterward against the two sweep prompts, it failed three times: a procedure had leaked into an entry that carries only why, a claim about model behavior was written as settled when it rested on a single analysis, and the entry ran to three paragraphs where two carried the argument. The check ran only because the human asked for it. The drafting skill was loaded at the moment the entry was written, carries placement and section-type rules, and caught none of the three. The sweeps catch them by design and run only when invoked, which is after the content is already in the document. A draft that passes the checks that happened to run says nothing about the checks that did not.
+
+**[HL-PCSKIP] A pre-check's "clean" verdict does not distinguish between the check being genuinely applied and missing something, and the check never being applied to the content at all.**
+
+An earlier skill load standing in for a fresh application of its check produced a verdict indistinguishable from a genuine pass: nothing shown to support it either way. Showing what a check found against the specific content, not its verdict alone, is what separates a real miss from a skipped check. This failure sits outside the three families this project's Failure Taxonomy currently defines, since it concerns whether a check ran at all, not where content sits, how it reads, or whether time will date it.
