@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.7.0` // `skill_reasoning` // [living]
+`v0.8.0` // `skill_reasoning` // [living]
 
 ---
 
@@ -96,3 +96,5 @@ A Chosen Direction entry was drafted for the top-level reasoning document and pr
 **[HL-PCSKIP] A pre-check's "clean" verdict does not distinguish between the check being genuinely applied and missing something, and the check never being applied to the content at all.**
 
 An earlier skill load standing in for a fresh application of its check produced a verdict indistinguishable from a genuine pass: nothing shown to support it either way. Showing what a check found against the specific content, not its verdict alone, is what separates a real miss from a skipped check. This failure sits outside the three families this project's Failure Taxonomy currently defines, since it concerns whether a check ran at all, not where content sits, how it reads, or whether time will date it.
+
+This does not become a fourth Failure Taxonomy family. The three existing families divide by a property of the content itself, checkable from the document alone. This failure leaves no trace there: the document reads the same whether the check ran or not. No content-facing question could test it, so a fourth family would cost every derived artifact a question nothing could answer. Showing what the check found against the specific content is what closes the gap.

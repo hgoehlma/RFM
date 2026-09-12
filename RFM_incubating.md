@@ -139,5 +139,31 @@ G names a problem: some instructions ask for something that does not survive a s
 
 ---
 
+## K. Verifying a claimed absence or precedent against git history, not just current file content
+
+Checking git log, log -S for term additions or removals, log --all -p for full history including discarded commits, log -p on a specific commit, before asserting a document lacks something or that a pattern is established, caught two real findings this session that current-file grepping alone would have gotten wrong. A claimed stale cross-reference turned out to exist under a different word form ("dilutes" rather than "dilution") and wasn't stale at all. A genuine version-bump precedent contradicting a stated convention (a module branch bumped minor, not major) was found only by checking history, and it grounded the rename that followed. Current-state search tells you what exists now; it can't distinguish "never happened" from "happened and was worded differently," or show how a convention has actually been applied over time.
+
+**Why not captured yet:** single session, three uses. No evidence yet that this is a deliberately reused technique across sessions rather than this session's own approach.
+
+**Possible home when ready:** an extension to `[R-VERIFY]`'s failure-shape list in the handover rules file, or a new discriminator in `RFM_instruction_design_reasoning.md` if it generalizes beyond this one project's git-backed handover structure.
+
+**Signal count: 1** *(this session, RFM-on-RFM work)*
+
+---
+
+## J. Citation as hedging: a reference to another document added to justify a claim that was already true without it
+
+Recalled across multiple past drafting sessions, not pinned to one instance: a reasoning or operational document states a claim, then adds a pointer to a sibling document, most often the glossary, as if the citation is what makes the claim hold. The claim was already correct. The citation performs support rather than providing it.
+
+Whether this is a distinct failure or already covered by the Language family's existing curation-failure type, "text that does not earn its place... repetition of reasoning stated elsewhere that adds no signal," in `RFM_operational.md`, is unresolved. A citation added purely as decoration may already be that bullet's territory, not a gap next to it.
+
+**Why not captured yet:** no grounding incident. What exists is a recalled impression across unspecified past sessions, not a caught instance with the actual before-and-after in hand. The taxonomy's own families are added on demonstrated failure, not argument; the same bar should apply here before this becomes a Hard Lesson.
+
+**Possible home when ready:** `RFM_skill_drafting_reasoning.md`, near `[HL-PCSKIP]`, as a Hard Lesson, if a real instance is caught and the overlap question above resolves toward distinct. Otherwise may fold into the existing curation-failure type with no new entry needed.
+
+**Signal count: 1** *(recalled pattern, unspecified prior sessions, not yet caught in the act)*
+
+---
+
 *Not versioned. This is a working note, not a methodology artifact.*
 *Discard once the ideas have found their home or been consciously dismissed.*

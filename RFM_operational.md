@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.13.0` // `top_level_operational` // [living]
+`v0.13.1` // `top_level_operational` // [living]
 
 ---
 
@@ -112,7 +112,7 @@ Version numbers appear in the document header. The header is the single source o
 
 The header is the second line of the file and takes the form `vX.X.X` // `document_type` // [living]. Backticks enclose the version and the document type. The marker carries none.
 
-Version numbers follow the format vX.X.X (major.minor.patch). The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or structural changes. The major digit increments for fundamental methodology changes.
+Version numbers follow the format vX.X.X (major.minor.patch). The patch digit increments for small edits and language fixes. The minor digit increments for meaningful content additions or reorganization of existing content. The major digit increments for fundamental methodology changes.
 
 A version tracks what a document says, not where it lives or how it is labeled. A rename or a type-tag change made with no other edit does not bump the version. If the same commit also changes content, the bump follows the content, not the metadata change.
 

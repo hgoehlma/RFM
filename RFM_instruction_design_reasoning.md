@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.15.0` // `module_reasoning` // [living]
+`v0.16.0` // `module_reasoning` // [living]
 
 ---
 
@@ -80,6 +80,14 @@ The prompt components were designed sequentially, not as a system. That sequence
 Curation discipline is the clearest example. The right balance in a reasoning document is completeness without wordiness, journaling residue, or redundancy. Wordiness is text that does not earn its place. Journaling residue is language written for the session that produced it rather than for a future reader. Redundancy is reasoning restated across entries without adding signal. All three are language failures: they enter documents gradually and are invisible from inside the session that produces them.
 
 This failure mode is named in the human prompt as something the human must catch in AI output. That is necessary but insufficient. The traveling prompt must name it as a prevention posture: flag these failures before they enter the document. The language sweep must name it as a detection criterion: entries that are wordy, journal-mode, or redundant are language failures subject to findings for ruling. The same failure mode, addressed at the appropriate level in each component, is what system coherence requires.
+
+**Why the same failure mode in two carriers is not automatically [HL-INAD]'s dilution**
+
+[HL-INAD] found nine identical restatements of one instruction, barring em dashes, with no owner among them. One copy drifted into open contradiction with the rest. The corrective adopted there is ownership: one artifact carries the rule, every other mention is a reference or is deleted. The curation-discipline entry above names the same failure mode in three carriers at once and treats that as correct design, not as the failure [HL-INAD] describes. The difference is not the number of carriers naming the failure mode. It is whether each carrier does the same job or a different one. The nine em-dash instances were nine restatements of one enforcement job, catch the character, with no carrier doing anything the others did not. The curation-discipline instances are three different jobs: the human catches it, the traveling prompt prevents it, the sweep detects it. Each job needs its own presentation, since neither the moment it fires nor the reader it addresses is shared across the three.
+
+A failure mode named in more than one carrier is healthy allocation when each naming does a job none of the others do. It is [HL-INAD]'s dilution when two or more carriers do the identical job with no carrier owning it. A restatement that only sharpens wording or adds enforcement precision without changing the job is the dilution case, not the healthy one, however sharper its wording reads on its own.
+
+This test is not yet applied to RFM's own standing rule set, where several rules restate a traveling-prompt principle with added trigger and failure-shape detail. Whether that detail is a different job, enforcement precision at a point in a session the traveling prompt's ambient framing does not reach, or the same job restated more sharply, is unresolved. Resolving it also depends on [OQ-SBART], since the rules file's status as a legitimate carrier type is itself still open.
 
 **Why em dashes are enforced by a check rather than by instruction**
 
