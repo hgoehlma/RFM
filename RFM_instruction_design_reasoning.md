@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.16.0` // `module_reasoning` // [living]
+`v0.17.0` // `module_reasoning` // [living]
 
 ---
 
@@ -139,6 +139,8 @@ Against the candidate: "challenge weak reasoning" carries judgment in its comple
 
 May be the same mechanism as `[OQ-STPULL]`: both describe a completion condition that invites more than it names. Unresolved which, if either, is the general case.
 
+A second candidate mechanism sits in the derivation prompt. The co-author role is deliberately suppressed there. The artifact's own reason the suppression cannot be self-triggered: a self-referential suppression instruction cannot cleanly override a co-author posture established at the same system level. If that reasoning holds, role depends on more than an instruction's completion condition. It also depends on who issues an instruction and at what system level, relative to whatever it overrides. This does not resolve which mechanism is right. It sits beside completion condition, untested against it.
+
 **[OQ-STPULL] Whether an instruction whose completion produces output about a state creates a pull toward changing that state.**
 
 A candidate comes from the project's own header-reporting rule. Added after thirteen mid-session version bumps in one session, its first form asked a turn to quote a document's header line as evidence it had been checked. Across the five sessions after it was added, the same instruction produced two more mid-session bumps, both the same act: reading the instruction to report the header as license to correct it. The instruction did not go silent. It fired every time. It pulled an adjacent action along with it. The rule's current form asks the turn to state where an edit belongs rather than only report the state. Whether that removes the pull or only delays the next instance is unanswered. Checked against the commit history in both repositories, not recalled: since the revision that added this rule's current discriminator, every completed session's writes to versioned documents have ended with the header quoted and the bump deferred to close-out. No commit in that span shows a stray mid-session bump being corrected afterward. This is longer-running evidence toward the current form removing the pull than a single instance, though it remains consistent with a longer-latency instance simply not having triggered yet.
@@ -146,6 +148,10 @@ A candidate comes from the project's own header-reporting rule. Added after thir
 Grounding research complicates rather than confirms the candidate. One paper on self-correction found that models fail to correct their own errors not from a reasoning limit but from missing a nameable referent. Relabeling an identical error as external, rather than the model's own, raised correction rates by 23 to 93 percentage points across the models tested (Chen, Su and Chiang, arXiv 2606.05976, June 2026). Read against the header-reporting case, this suggests a competing account: quoting the header creates a nameable referent, and a nameable referent is what makes a state correctable at all, independent of whether the instruction asked for output. A separate paper on constraint handoff in agent workflows found the opposite failure direction in a related family of cases. A constraint kept as information, without being restated as a requirement, lost its force and was ignored rather than acted on; standard compression produced complete deactivation of the safety blockers tested (Sun et al., arXiv 2608.24569, August 2026). The field has evidence for information going inert and evidence for information being over-applied, with nothing yet distinguishing which instructions produce which. This project's case is one more instance of over-application. It does not resolve the tension.
 
 May be the same mechanism as `[OQ-PULL]`: both describe a completion condition that invites more than it names. Unresolved which, if either, is the general case.
+
+**[OQ-COPRES] Whether `[HL-INAD]`'s dilution failure requires carriers to be loaded together, or whether independent aging with no owner is sufficient regardless of load pattern.**
+
+The three sweep prompts restate "no edits, findings for ruling only" near-identically. They are never loaded in the same session, since sweep prompts do not run simultaneously by design. `[HL-INAD]`'s own worked example did not require co-presence. Nine em-dash restatements drifted, one into contradiction, because no artifact owned the rule. The carriers never shared a context window. If ownership rather than co-presence is the real mechanism, restating identical text across mutually exclusive carriers is still a dilution risk. If co-presence is required instead, the sweep prompts' restatement is safe by construction. Resolving this changes how the allocation test in this document's Chosen Direction should be applied wherever more than one carrier states the same instruction.
 
 ---
 
