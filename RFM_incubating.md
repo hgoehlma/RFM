@@ -165,5 +165,29 @@ Whether this is a distinct failure or already covered by the Language family's e
 
 ---
 
+## L. An approved removal carries content the approval never named
+
+A session proposed removing an open question that had been answered, and the human approved. The open question's entry also held a survey of precedent, three cases of RFM specifying an artifact at different strengths, which was reasoning in its own right and was deleted along with the question it sat under. The approval was for removing the question. Nothing in it ruled whether the survey graduated to a destination or expired, which the ripple-check skill requires before a removal. The shape is that an approval names a target and the target has contents, and the contents travel with it silently because the removal is executed as one act.
+
+**Why not captured yet:** one occurrence. Whether this is a distinct failure or an instance of the ripple-check skill simply not being followed is unresolved. It would be distinct if the approval itself is what makes the contents invisible, rather than the model skipping a step it knew about.
+
+**Possible home when ready:** an extension to the ripple-check skill's step 3, or a Hard Lesson in `RFM_top_level_reasoning.md` if it recurs outside removals.
+
+**Signal count: 1** *(this session, removal of an answered open question)*
+
+---
+
+## M. Red team aimed at the session's own conduct rather than its content
+
+The human asked for a red team of the session's thinking at the point the drafting was finished. Three of the four findings were about the reasoning just written. The fourth was that the session had executed a removal without ruling graduation against expiry, which is a procedural violation by the model rather than a flaw in any document. That finding is the one that produced a fix in the same session. The candidate is that pointing a red team at how the session conducted itself, not only at what it produced, reaches failures no content review asks about.
+
+**Why not captured yet:** one occurrence. The prior session's red team was checked before naming this a pattern; it was aimed at the plan's content, and the self-correction in it was about a finding rather than about conduct. So there is no second instance.
+
+**Possible home when ready:** `RFM_sweep_reasoning.md`, if it turns out to be a distinct sweep target, or the traveling prompt if it belongs as an ambient posture at the end of drafting.
+
+**Signal count: 1** *(this session, RFM-on-RFM work)*
+
+---
+
 *Not versioned. This is a working note, not a methodology artifact.*
 *Discard once the ideas have found their home or been consciously dismissed.*
