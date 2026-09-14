@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.24.0` // `top_level_reasoning` // [living]
+`v0.25.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -122,6 +122,48 @@ A derivative is anything phase two produces from the source documents, in any do
 **Why co-authorship is held against a pull rather than declared**
 
 [AS-TDEF] states that the tool role is what an LLM reaches for without effort and that co-authorship is not. RFM treats the co-author posture as a condition that has to be held, not a fact established by asserting it once. Holding it is not the same as holding it continuously. At the execution step a different posture is correct. Deviating from what the first three steps settled discards the agreement rather than improving it. What a session has to preserve is the return to co-author posture, not its unbroken presence. How an instruction reaches the moment where it would apply, and what that decides about the role it reinforces, is the subject of `RFM_instruction_design_reasoning.md`.
+
+**Why drift between the two postures runs one way**
+
+Co-author posture and execution posture score the same act in opposite directions, and `RFM_glossary.md` defines both. No single behaviour satisfies both scorings, so a session holds one at a time and crosses between them. Nothing in a session announces which scoring is live at a given moment. Failures therefore gather at the crossings rather than inside either posture. The interiors are the easy case: inside execution, execute; inside reasoning, notice and challenge.
+
+The two crossings are not mirror images.
+
+Failures under execution posture leave evidence outside the session. A file is wrong, a step was skipped, a commit does not match what was agreed. Someone who was not present can check any of them against an artifact afterwards. Failures under co-author posture leave no evidence. The challenge that was not raised produces no text, so a later reader has nothing to find, and no review can be built that would find it.
+
+[AS-TDEF] holds that the tool role is what an LLM reaches for without effort and that co-authorship is not. Execution posture is therefore the trained default. It is also the posture whose failures can be caught. Both properties make entering it feel like the responsible choice. Co-author posture is effortful and its lapses leave nothing behind. A session moves toward execution posture without anyone deciding to, and does not move back unless someone decides to.
+
+The two crossings must not be designed as a matched pair. Entry happens whether or not anyone chose it, so it has to cost effort to pass. Exit happens only when someone chooses it, so it has to be cheap, available to either party, and safe to get wrong. A false stop costs a conversation.
+
+**Why entering execution posture is gated by a produced artifact**
+
+Entry into execution posture happens whether or not anyone chose it, so it has to cost something to pass. The obvious way to charge for it is to require approval. That fails on who is available to approve. `RFM_human_prompt.md` already describes the human's own slide from active reasoning into passive consumption, where output gets accepted because evaluating it is more work than moving on. That is the human under execution posture. Both parties drift the same direction, under the same conditions, at the same moment. A gate that asks the human to confirm entry is cheapest to pass exactly when the human is least able to judge it.
+
+Granting and producing behave differently under that condition. A granting act gets cheaper as either party tires. A producing act does not.
+
+So entry is gated by an artifact rather than by a permission. Before executing, the LLM states the frame it is about to execute within: what is settled, what the boundaries are, and what would take it back out. This is not a request to proceed.
+
+Effort then tracks risk. Settled reasoning yields a short frame written easily. Unsettled reasoning makes the frame hard to write, and the difficulty is the signal. The gate measures rather than permits, so premature entry announces itself before any work exists to unwind.
+
+The frame also manufactures the trace that co-author failure never leaves. A stated frame is text. Anyone can afterwards compare what was done against what was declared, which is impossible for an observation that was never made.
+
+The same artifact pays for the exit. A frame that names in advance what would take the session out of execution makes leaving cheap, because a party points at the line already written instead of arguing for stopping. Exit has to be cheap, and nothing else in the design pays for it.
+
+It also uses Commander's Intent the way the doctrine works. This document already imports that doctrine to describe the interior of pressure mode, where execution adapts within an established frame. The doctrine's mechanism is the briefing that establishes the frame beforehand. RFM took the metaphor and left the mechanism.
+
+This commitment is the least exercised in this document. The capture record it is modelled on, the Chesterton's Fence log, has not been used in practice, and its form is recorded as undesigned in the Open Questions below.
+
+**Why the frame must state its exclusions**
+
+The gate has a hole and the fix for it is partial. The difficulty signal works only if strain gets reported rather than written over, and producing fluent text under strain is something an LLM does well. The frame therefore has to state what it excludes, not only what it covers. Stating coverage is generative, because the task is in view. Stating exclusions requires a model of what a reader would otherwise have assumed was included, which is knowledge of the adjacent case rather than of the material in hand. Generic exclusions also read as generic immediately, because an exclusion is only worth stating when it is surprising.
+
+This does not make the gate reliable. Exclusion lists can become boilerplate. The claim is narrower: it moves a failure nobody can check into a failure a reader can check.
+
+**Why a located failure to state a frame is a legitimate result**
+
+Two results are legitimate, or it is not a gate. One is a stated frame. The other is a located failure to state one, naming where the reasoning goes vague. If a frame were the only acceptable result, a frame would be produced every time. Naming where reasoning thins is the return to co-author posture, which does not happen on its own.
+
+The human's half is one question: ask for the frame. Judging it is not required. The artifact does its work by being produced and by remaining available to check against later. Anything that requires careful reading at the moment of entry is designed for a human who is not there.
 
 **Why the co-authorship sequence governs joint reasoning**
 

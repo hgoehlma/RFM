@@ -242,3 +242,15 @@ Run twice by the human in one session, against different targets. Checking execu
 ## T. A check or search assembled from the model's own recollection of a closed list fails silently by producing a plausible finding.
 
 The close-out map check was written with a nine-value type list recalled rather than read, wrong in two places, and reported a finding against `RFM_operational.md`'s own type. Re-running with the list read from the file returned none. Second instance in the same session of building a search from a model of the source rather than the source, after Q.
+
+## U. A new glossary definition can contradict the ordinary use of the same word across the document set, and the drafting check does not ask about that.
+
+Pairs with R, from the other direction. R is a reserved sense broken by ordinary use. This is a first definition breaking ordinary use. "Posture" was defined for the argument that needed it, scoped to a single act, and the ripple check then found roughly forty uses across ten documents meaning a stance held at session scale: the traveling prompt calibrates it, `[HL-SSDM]` says it is not established at session start, two prompts require incompatible ones. The definition was widened rather than the documents changed. Second item, same session: the glossary clause added to `rfm-drafting`'s Language pre-check asks whether a term carries a definition or a pointer, not whether a new definition agrees with existing use, so the pre-check passed the wrong entry. Both belong with whatever resolves R.
+
+## V. `rfm-ripple-check` does not trigger on a term being defined for the first time.
+
+Its trigger names a term renamed, retired, or redefined. Defining a word the document set already used undefined is none of the three. It ran this session because the session judged it should, and it caught the error in U. One occurrence.
+
+## W. Content whose parts carry different confirmation standing should not share a heading.
+
+The entry gate material was drafted as one eleven-paragraph subsection. Its core, the producing-act gate, was confirmed in session 5; the exclusion requirement, the two-legitimate-outputs rule and the human's half were put to the human after that confirmation and never separately confirmed. Under one heading all four read as equally settled. No sweep question catches it, because every sentence is individually fine and the flatness is structural rather than in the wording. Split into three subsections on the human's prompting. One occurrence.
