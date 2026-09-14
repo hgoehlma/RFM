@@ -191,7 +191,7 @@ The human asked for a red team of the session's thinking at the point the drafti
 
 ## N. A reasoning document can teach a later session the error it contains, which the session then produces as its own reasoning
 
-This session proposed that instructions be delivered coarsely by default and finely only where the partner cannot be relied on to notice. The human rejected the framing: it makes execution a tolerated concession and collaboration the real work, when both parties execute constantly. Reading afterwards found `RFM_top_level_reasoning.md` asserting that execution mode is "not a degraded version of the methodology" and then defining it as what is invoked when the full discipline becomes "locally unacceptable". The document claims parity and encodes concession. The model produced the same error earlier in the session without having read that passage in this session.
+This session proposed that instructions be delivered coarsely by default and finely only where the partner cannot be relied on to notice. The human rejected the framing: it makes execution a tolerated concession and collaboration the real work, when both parties execute constantly. Reading afterwards found `RFM_top_level_reasoning.md` asserting that pressure mode is "not a degraded version of the methodology" and then defining it as what is invoked when the full discipline becomes "locally unacceptable". The document claims parity and encodes concession. The model produced the same error earlier in the session without having read that passage in this session.
 
 The candidate is a direction of contamination the derivative chain does not describe. The chain assumes a reasoning document is a source a session derives from well or badly. Here the document is the source of a specific wrong belief, and the session reproduces it with no sense of having read it anywhere. An error in a reasoning document is not only wrong on the page. It is instruction for whoever reads it next.
 
@@ -221,3 +221,24 @@ What the mechanism protects is new framing, before it has vocabulary of its own,
 
 *Not versioned. This is a working note, not a methodology artifact.*
 *Discard once the ideas have found their home or been consciously dismissed.*
+
+
+## P. A pre-check finding can meet two failure families, and filing it under the later one reads as a pass.
+
+The pressure mode glossary entry carried journaling. The lifespan question caught it and classified it as a future archaeology risk, so the draft went out reading as checked. It was a present language failure, "language written for the session that produced it rather than for a future reader", whose remedy is now rather than later. `RFM_operational.md` requires each artifact invoking the Failure Taxonomy to supply its own ordering rule for a failure meeting more than one description. The sweep arm has one in `RFM_sweep_operational.md`. The drafting arm, through `rfm-drafting`, has none. The incident occurred once; the missing ordering rule is verifiable in the files independently of it.
+
+## Q. A rename's grep pattern built from the full term cannot see the collision's variant forms.
+
+Renaming execution mode to pressure mode, the ripple check searched "execution mode" and the mode phrases. Two live hits survived in the form "execution pressure", found only when a post-write verification widened the pattern. `rfm-ripple-check` step 1 currently says to search "the changed element's name and its core subject terms". Candidate corrective: search the head word alone, so variant compounds surface.
+
+## R. Reserving a term in the glossary does not stop its ordinary-English use in the same document set, and nothing checks for that.
+
+"The pair" is reserved for a reasoning document and its operational counterpart. It was used this session for the human and the LLM, and stood in `RFM_human_prompt_reasoning.md` for two prompts until a grep found it. Three senses, one fenced.
+
+## S. After a rename, sweeping the neighbouring vocabulary catches what sweeping the renamed term cannot.
+
+Run twice by the human in one session, against different targets. Checking execution against derivation caught a false claim in a draft, that producing an artifact is execution, when the glossary assigns that to derivation. Checking "pair" caught a live document error. Candidate extension to `rfm-ripple-check` rather than a new mechanism. Evidence is one session, two instances, no prior use found in the documents.
+
+## T. A check or search assembled from the model's own recollection of a closed list fails silently by producing a plausible finding.
+
+The close-out map check was written with a nine-value type list recalled rather than read, wrong in two places, and reported a finding against `RFM_operational.md`'s own type. Re-running with the list read from the file returned none. Second instance in the same session of building a search from a model of the source rather than the source, after Q.

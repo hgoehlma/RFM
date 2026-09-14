@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.2.0` // `module_reasoning` // [living]
+`v0.2.1` // `module_reasoning` // [living]
 
 ---
 
@@ -114,7 +114,7 @@ Every other artifact in the RFM document landscape was preceded by its reasoning
 
 **Not a compliance document.** The human prompt cannot enforce the posture it describes. It makes the practices explicit and repeatable; what happens with them depends entirely on the reader. A reader who treats it as a requirement to satisfy has already misread it.
 
-**Not a substitute for the traveling prompt.** The traveling prompt calibrates the LLM's collaborative posture. The human prompt calibrates the human's. They are a pair, not alternatives. Collapsing one into the other would leave one collaborator uncalibrated.
+**Not a substitute for the traveling prompt.** The traveling prompt calibrates the LLM's collaborative posture. The human prompt calibrates the human's. They are complements, not alternatives. Collapsing one into the other would leave one collaborator uncalibrated.
 
 **Not a one-time read.** A single reading produces familiarity, not internalization. The cultivation design depends on repeated return: the reference card only earns its function after the entries have been read enough times that the phrases carry weight on their own.
 

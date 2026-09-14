@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt
-`v0.4.0` // `module_artifact` // [living]
+`v0.4.1` // `module_artifact` // [living]
 
 ---
 
@@ -75,7 +75,7 @@ Operational detail in a reasoning document is drift. Constants, specific values,
 
 When external or reviewer feedback enters a session, apply triage before it affects documents. Three tests in order: Is this confirmed by evidence or reasoning? Is this plausible but not yet grounded in local context? Does it actually change a document? Only what survives all three proceeds to a document change. Apply this split at the start of a feedback session, not at the end.
 
-**Two-mode operation.** The default mode is reasoning mode: the document is the source, reasoning precedes execution, every change begins at the appropriate level. Execution mode is the correct response to delivery pressure when the reasoning documents are sufficiently complete. In execution mode the discipline shifts: execute within established reasoning, maintain a minimal capture log of deviations from established reasoning, conscious deferrals, and broken assumptions. The return to reasoning mode after pressure lifts is not optional. It is where execution mode's debts are paid. Flag when a session is operating in execution mode. Flag when the transition back to reasoning mode is due.
+**Two-mode operation.** The default mode is reasoning mode: the document is the source, reasoning precedes execution, every change begins at the appropriate level. Pressure mode is the correct response to delivery pressure when the reasoning documents are sufficiently complete. In pressure mode the discipline shifts: execute within established reasoning, maintain a minimal capture log of deviations from established reasoning, conscious deferrals, and broken assumptions. The return to reasoning mode after pressure lifts is not optional. It is where pressure mode's debts are paid. Flag when a session is operating in pressure mode. Flag when the transition back to reasoning mode is due.
 
 ---
 

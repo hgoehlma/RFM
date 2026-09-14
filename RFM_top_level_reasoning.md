@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.23.0` // `top_level_reasoning` // [living]
+`v0.24.0` // `top_level_reasoning` // [living]
 
 ---
 
@@ -121,7 +121,7 @@ A derivative is anything phase two produces from the source documents, in any do
 
 **Why co-authorship is held against a pull rather than declared**
 
-[AS-TDEF] states that the tool role is what an LLM reaches for without effort and that co-authorship is not. RFM treats the co-author posture as a condition maintained across a session, not a fact established by asserting it once. How an instruction reaches the moment where it would apply, and what that decides about the role it reinforces, is the subject of `RFM_instruction_design_reasoning.md`.
+[AS-TDEF] states that the tool role is what an LLM reaches for without effort and that co-authorship is not. RFM treats the co-author posture as a condition that has to be held, not a fact established by asserting it once. Holding it is not the same as holding it continuously. At the execution step a different posture is correct. Deviating from what the first three steps settled discards the agreement rather than improving it. What a session has to preserve is the return to co-author posture, not its unbroken presence. How an instruction reaches the moment where it would apply, and what that decides about the role it reinforces, is the subject of `RFM_instruction_design_reasoning.md`.
 
 **Why the co-authorship sequence governs joint reasoning**
 
@@ -247,11 +247,11 @@ When [AS-PLHD] applies (when the problem is still being shaped and the language 
 
 **Why the methodology operates in two modes**
 
-The methodology operates in two modes. Reasoning mode is the default: reasoning precedes execution, the document is the source, every change begins at the appropriate level of the hierarchy. Execution mode is invoked when delivery pressure makes the full reasoning discipline locally unacceptable: a deadline, a sprint, a time-boxed commitment. Execution mode is not a degraded version of the methodology. It is the correct response to a specific condition, provided the reasoning documents are sufficiently complete before pressure hits.
+The methodology operates in two modes. Reasoning mode is the default: reasoning precedes execution, the document is the source, every change begins at the appropriate level of the hierarchy. Pressure mode is invoked when delivery pressure makes the full reasoning discipline locally unacceptable: a deadline, a sprint, a time-boxed commitment. Pressure mode is not a degraded version of the methodology. It is the correct response to a specific condition, provided the reasoning documents are sufficiently complete before pressure hits.
 
-The reasoning documents then function as Commander's Intent, a military doctrine principle designed precisely for execution under pressure without communication up the chain: the commander's direction, boundaries, and assumptions are established in advance so that execution can adapt within that frame without stopping to re-reason at every decision point. The discipline shifts from reasoning before every action to executing within established reasoning. What execution mode requires is minimal capture: a running record of deviations from established reasoning, conscious deferrals, and broken assumptions, enough to make the return to reasoning mode honest rather than reconstructed from code.
+The reasoning documents then function as Commander's Intent, a military doctrine principle designed precisely for execution under pressure without communication up the chain: the commander's direction, boundaries, and assumptions are established in advance so that execution can adapt within that frame without stopping to re-reason at every decision point. The discipline shifts from reasoning before every action to executing within established reasoning. What pressure mode requires is minimal capture: a running record of deviations from established reasoning, conscious deferrals, and broken assumptions, enough to make the return to reasoning mode honest rather than reconstructed from code.
 
-This running record is a Chesterton's Fence log; see the glossary for the full definition. Chesterton's Fence is the principle that you should not remove a fence until you understand why it was built. Under execution pressure, fences do get removed; the log ensures that each removal is noted and why. The return to reasoning mode after pressure lifts is not optional. It is where execution mode's debts are paid.
+This running record is a Chesterton's Fence log; see the glossary for the full definition. Chesterton's Fence is the principle that you should not remove a fence until you understand why it was built. Under delivery pressure, fences do get removed; the log ensures that each removal is noted and why. The return to reasoning mode after pressure lifts is not optional. It is where pressure mode's debts are paid.
 
 **Why increasing autonomy raises the stakes for reasoning documents**
 
@@ -294,7 +294,7 @@ This methodology is explicitly not:
 
 **Designed to impose discipline on a team that won't bring it.** The deliberate return mode of curation requires a human who has a natural affinity for this kind of reflection. That is a people constraint, not a process gap. A team without such a person can follow the triggered mode but will gradually stop returning deliberately. The methodology will technically persist but quietly degrade. This is not a failure of the methodology. It is a boundary condition of its use.
 
-**Designed to maintain full discipline under acute delivery pressure.** Delivery pressure is a specific, common condition under which the methodology's full discipline is at risk, not because teams stop believing in it, but because the local cost of the reasoning step becomes unacceptable when deadlines are close. This is distinct from the people constraint above: it affects willing teams in adverse conditions. The two-mode design (reasoning mode as default, execution mode under pressure) is the methodology's working hypothesis for this condition.
+**Designed to maintain full discipline under acute delivery pressure.** Delivery pressure is a specific, common condition under which the methodology's full discipline is at risk, not because teams stop believing in it, but because the local cost of the reasoning step becomes unacceptable when deadlines are close. This is distinct from the people constraint above: it affects willing teams in adverse conditions. The two-mode design (reasoning mode as default, pressure mode under that condition) is the methodology's working hypothesis for this condition.
 
 ---
 
@@ -328,7 +328,7 @@ The methodology is currently designed and validated at genesis stage: a single p
 
 **[OQ-MCDC] The minimal capture discipline.**
 
-Execution mode requires minimal capture: a record of deviations, deferrals, and broken assumptions sufficient to make the return to reasoning mode honest. What this looks like in practice is undesigned. How short can it be and still serve its purpose? What is the right artifact? A section appended to the reasoning document, a separate log, something else? How does a team distinguish a deviation worth capturing from noise? And what does the return-to-reasoning-mode session actually look like: what is its protocol, its output, its quality gate? These questions are unresolved. The two-mode design is a working hypothesis, not a tested practice.
+Pressure mode requires minimal capture: a record of deviations, deferrals, and broken assumptions sufficient to make the return to reasoning mode honest. What this looks like in practice is undesigned. How short can it be and still serve its purpose? What is the right artifact? A section appended to the reasoning document, a separate log, something else? How does a team distinguish a deviation worth capturing from noise? And what does the return-to-reasoning-mode session actually look like: what is its protocol, its output, its quality gate? These questions are unresolved. The two-mode design is a working hypothesis, not a tested practice.
 
 **[OQ-DLTQ] The derivation-legibility threshold.**
 

@@ -48,7 +48,7 @@ Therefore the output of phase two depends on how well the documents of phase one
 
 The reasoning mode is the default setting. The document drafting, refining, and curation precedes execution. Every change starts with the corresponding document at the appropriate level of the hierarchy.
 
-You switch into execution mode under delivery pressure. However, this requires that the reasoning and operational documents are established far enough. Then the human and the LLM can execute within existing reasoning. However, you keep a minimal log: deviations from the thinking, deferrals, but also assumptions that broke. That log keeps the return to reasoning mode honest and is intended to avoid reconstruction afterwards.
+You switch into pressure mode when delivery pressure hits. However, this requires that the reasoning and operational documents are established far enough. Then the human and the LLM can execute within existing reasoning. However, you keep a minimal log: deviations from the thinking, deferrals, but also assumptions that broke. That log keeps the return to reasoning mode honest and is intended to avoid reconstruction afterwards.
 
 You do return to reasoning mode. Eventually. And then the log is what you will have to work through.
 

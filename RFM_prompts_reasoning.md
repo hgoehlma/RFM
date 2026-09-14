@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.5.0` // `module_reasoning` // [living]
+`v0.5.1` // `module_reasoning` // [living]
 
 ---
 
@@ -11,7 +11,7 @@ This creates two failure modes. First, an LLM working without the traveling prom
 
 The traveling prompt is the mechanism by which the methodology travels. It is what makes the discipline ambient rather than effortful. Without it, the methodology is a set of documents. With it, the methodology is a practice.
 
-But the traveling prompt is preventive, not sufficient. Reasoning compression slips through under execution pressure. Session-born shorthands pass the capture moment untested. Version drift accumulates across edits. A practice that relies on prevention alone has no mechanism for detecting what prevention missed. Correction requires separate, deliberately invoked artifacts: ones that operate after the fact, with concentrated attention, against a stable draft. Without them, the methodology has a preventive arm and no corrective one. The sweep prompts are that corrective arm: each targets a distinct class of failure, each is invoked deliberately rather than running as ambient discipline. The human prompt completes the system by calibrating the human collaborator's posture, the one side of the collaboration the traveling prompt cannot reach.
+But the traveling prompt is preventive, not sufficient. Reasoning compression slips through under delivery pressure. Session-born shorthands pass the capture moment untested. Version drift accumulates across edits. A practice that relies on prevention alone has no mechanism for detecting what prevention missed. Correction requires separate, deliberately invoked artifacts: ones that operate after the fact, with concentrated attention, against a stable draft. Without them, the methodology has a preventive arm and no corrective one. The sweep prompts are that corrective arm: each targets a distinct class of failure, each is invoked deliberately rather than running as ambient discipline. The human prompt completes the system by calibrating the human collaborator's posture, the one side of the collaboration the traveling prompt cannot reach.
 
 ---
 
@@ -27,7 +27,7 @@ But the traveling prompt is preventive, not sufficient. Reasoning compression sl
 
 **[AS-PSGZ] - The prompt system cannot resolve grey zones; it can only name them.** The prompt system should instruct the LLM to flag grey zones explicitly, describe the tension, and require a conscious human decision. Attempting to resolve grey zones with rules produces false precision.
 
-**[AS-PSHE] - The prompt system must be honest about what it cannot enforce.** Some principles require human discipline to work: the prompt system can nudge, flag, and remind, but it cannot force a human to capture while sharp, invoke a sweep deliberately, or return to reasoning mode after execution pressure lifts. The artifacts should be clear about where their authority ends and human discipline begins.
+**[AS-PSHE] - The prompt system must be honest about what it cannot enforce.** Some principles require human discipline to work: the prompt system can nudge, flag, and remind, but it cannot force a human to capture while sharp, invoke a sweep deliberately, or return to reasoning mode after delivery pressure lifts. The artifacts should be clear about where their authority ends and human discipline begins.
 
 **[AS-SWTD] - The sweep prompts have a timing dependency the traveling prompt does not.** The traveling prompt runs in any conversation regardless of document state. The structural sweep requires a coherent draft to work against, coherent meaning the section sequence has been honored, not merely that content is present. Invoked earlier, it produces noise rather than signal. The language sweep can run on partial drafts but requires content to exist. Timing is a design constraint, not an implementation detail: it belongs in the sweep prompt design and must be carried explicitly in the prompts themselves.
 
@@ -149,7 +149,7 @@ The traveling prompt is developed and refined primarily through use with a singl
 
 **Why the traveling prompt must name the full derivative chain, not only the reasoning/derivative distinction**
 
-The reasoning/derivative binary, does this require reasoning, is necessary but insufficient. An LLM holding only that binary will ask the question, find no reasoning gap, and proceed to execution. The question it must also ask is whether the implementation behavior is now concrete enough that a practitioner could ask "what exactly do we do?", and if so, that behavior belongs in the operational document before or alongside artifacts. The full chain is: reasoning document → operational document → artifact → output. Each layer is a source for the layer below it. A behavioral instruction that names only the first link leaves the middle link invisible, and the operational document gets bypassed silently under execution pressure.
+The reasoning/derivative binary, does this require reasoning, is necessary but insufficient. An LLM holding only that binary will ask the question, find no reasoning gap, and proceed to execution. The question it must also ask is whether the implementation behavior is now concrete enough that a practitioner could ask "what exactly do we do?", and if so, that behavior belongs in the operational document before or alongside artifacts. The full chain is: reasoning document → operational document → artifact → output. Each layer is a source for the layer below it. A behavioral instruction that names only the first link leaves the middle link invisible, and the operational document gets bypassed silently under delivery pressure.
 
 **Why reasoning compression must be named as structural change, regardless of how it presents**
 

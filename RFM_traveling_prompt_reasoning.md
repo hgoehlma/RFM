@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.2.1` // `module_reasoning` // [living]
+`v0.2.2` // `module_reasoning` // [living]
 
 ---
 
@@ -105,7 +105,7 @@ A third Landscape failure mode belongs in the same instruction: when the joint w
 
 **Not specific to any project, including RFM itself.** The traveling prompt carries methodology discipline into any project where complex reasoning precedes execution. It must not contain instructions that only make sense when working on the RFM methodology itself. When session history is dominated by RFM development work, fresh derivations face a specific risk: RFM-specific framings harden into the prompt as if they were generic methodology instructions. The genericity constraint must be held explicitly: if an instruction would not apply to a practitioner using RFM on an unrelated project, it does not belong in the traveling prompt.
 
-**Not a Commander's Intent anchor until reasoning documents are established.** In execution mode the prompt functions as the ambient discipline layer while reasoning documents serve as Commander's Intent. This only holds when those documents are sufficiently complete before execution pressure arrives. A traveling prompt deployed ahead of established reasoning documents provides discipline without substance: it enforces a standard against material that does not yet exist.
+**Not a Commander's Intent anchor until reasoning documents are established.** In pressure mode the prompt functions as the ambient discipline layer while reasoning documents serve as Commander's Intent. This only holds when those documents are sufficiently complete before delivery pressure arrives. A traveling prompt deployed ahead of established reasoning documents provides discipline without substance: it enforces a standard against material that does not yet exist.
 
 ---
 
