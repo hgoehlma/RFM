@@ -233,7 +233,7 @@ Renaming execution mode to pressure mode, the ripple check searched "execution m
 
 ## R. Reserving a term in the glossary does not stop its ordinary-English use in the same document set, and nothing checks for that.
 
-"The pair" is reserved for a reasoning document and its operational counterpart. It was used this session for the human and the LLM, and stood in `RFM_human_prompt_reasoning.md` for two prompts until a grep found it. Three senses, one fenced.
+"The pair" is reserved for a reasoning document and its operational counterpart. It was used this session for the human and the LLM, and stood in `RFM_human_prompt_reasoning.md` for two prompts until a grep found it. Three senses, one fenced. Fourth sense, a later session: used in conversation for the two terms delivery occasion and binding condition, while proposing where to define them. The reserved sense now sits against three ordinary ones, and the one document instance was the only one any check reached.
 
 ## S. After a rename, sweeping the neighbouring vocabulary catches what sweeping the renamed term cannot.
 
@@ -254,3 +254,15 @@ Its trigger names a term renamed, retired, or redefined. Defining a word the doc
 ## W. Content whose parts carry different confirmation standing should not share a heading.
 
 The entry gate material was drafted as one eleven-paragraph subsection. Its core, the producing-act gate, was confirmed in session 5; the exclusion requirement, the two-legitimate-outputs rule and the human's half were put to the human after that confirmation and never separately confirmed. Under one heading all four read as equally settled. No sweep question catches it, because every sentence is individually fine and the flatness is structural rather than in the wording. Split into three subsections on the human's prompting. One occurrence.
+
+## X. A pre-check reports on the content the session is attending to, not on the content in front of it.
+
+One draft, two symptoms. The Language question was reported as passing because the two terms being coined carried inline definitions, while two glossary-defined terms in the same paragraph carried neither definition nor pointer. The Structural question reported a finding, parent reasoning restated in a child, that corresponds to no type in the Failure Taxonomy, and then cleared it; the concern was invented and resolved inside a check that reports against a fixed list. `[R-SHOWCHECK]` does not reach either: content was shown against the check both times. Both were caught by the human. Candidate corrective: a reported hit names the taxonomy type it corresponds to, which would have refused the second and is silent about the first. Belongs with whatever resolves the Structural family's coverage.
+
+## Y. The Failure Taxonomy names reasoning a child module owns still carried by the parent, and nothing for the reverse.
+
+A module restating its parent's reasoning rather than pointing at it is the mirror image and has no type. The instance: a module's Chosen Direction entry restating the parent's posture reasoning, resolved by attribution, on judgment rather than on a check. Adding a class is not complete until both arms' derived questions reach it, per that section's own rule, so this is work rather than an edit.
+
+## Z. Naming a term from a word the target document already uses unnamed, rather than coining one.
+
+Working mechanism, one clean instance. The module used "binding" eight times for the state an instruction is in when it governs behaviour, and nowhere else in the document set, without ever declaring it. The new term was taken from that rather than invented, so the definition ratified existing use instead of competing with it, which is the failure U records. History shows the concept had precedent, commit `d44f1da` re-derived the module's carrier taxonomy around bindingness; it does not show the mechanism had any. One instance, tracked rather than named a mechanism.

@@ -1,11 +1,13 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.18.0` // `module_reasoning` // [living]
+`v0.19.0` // `module_reasoning` // [living]
 
 ---
 
 ## The Problem
 
 An instruction meant to change how an LLM behaves has to be carried by something. Each carrier presents an instruction at particular moments: once at the start of a session, when a procedure is opened, when a trigger matches, or once at deployment and never again. Under a stateless architecture that resends the full history on every turn, an instruction presented once stays present in every turn after it. What a carrier's load point controls is not whether the instruction is there but whether a given appearance of it is read as a binding requirement or carried forward as background the model can discount. An instruction can lose its hold while still sitting in context, and nothing errors when it does.
+
+Two different things are at work in that list, and they come apart. A *delivery occasion* is a point at which text can enter the LLM's view. The medium supplies these rather than any platform: before the first turn, at a turn boundary, or not at all. They are finite, and they stay finite when the tooling is unrecognisable. A *binding condition* is the state of affairs under which an instruction should be governing behaviour, not a condition that is itself binding. Being about to compress reasoning that is already written is one. Binding conditions are unbounded, and recognising one is something a reader does rather than something a schedule does. An instruction delivered before the first turn may not be needed until the hundredth.
 
 Losing that hold is invisible from inside the instruction. Read on its own, an instruction that is present but discounted is indistinguishable from one actively governing behaviour. The evidence that it lost its hold is a behaviour that did not change, in a session nobody is reviewing.
 
@@ -73,13 +75,17 @@ Take the carriers a deployment has already built and allocate each instruction a
 
 ## The Chosen Direction and Why
 
-**Why the carrier set is designed from moments rather than taken as given**
+**Why the carrier set is designed from posture transitions rather than taken as given**
 
-A behaviour needs to be live at a particular moment. The moment decides what can deliver it. RFM designs the carrier set from the moments, so the carriers are an output of that design rather than an input to it. When a behaviour needs to be live at a moment no existing carrier reaches, the answer is a carrier that reaches it rather than the closest available fit.
+A behaviour has to be live where it is needed, and what can put it there is limited. RFM designs the carrier set from that constraint, so the carriers are an output of the design rather than an input to it. When a behaviour has to be live somewhere no existing carrier reaches, the answer is a carrier that reaches it rather than the closest available fit.
 
-Two properties decide what each carrier holds once the moments are known: how reliably an instruction activates at the moment it applies, and which role its form reinforces. Neither alone decides where an instruction goes.
+Binding conditions cannot serve as the unit that design runs from. A design taking them as its unit has to decide where one ends and the next begins before it can start. The one rule this project tried, separating them by what detects a condition's arrival, collapsed into the same continuum as choosing the most specific English phrasing for it. Whether some other rule would hold is not known. What is known is that the unit has to come from somewhere other than the binding conditions themselves.
 
-That design is a balance, not a result. It depends on conditions that change: how models are trained, how much context they hold, how much accumulates between an instruction being presented and the moment it applies, which mechanisms the platform offers. RFM commits to designing from the moments and to the two properties, and to revisiting the design when those conditions change, not to any particular carrier set or any particular assignment of instructions to carriers.
+`RFM_top_level_reasoning.md` establishes that co-author posture and execution posture score the same act in opposite directions, so a session holds one at a time and crosses between them, and that failures gather at the crossings rather than inside either posture. Inside either posture nothing needs designing: under execution, execute, and under co-author posture, notice and challenge. What needs a carrier is the crossing. The two crossings do not need the same one, because entry into execution posture happens whether or not anyone chose it and exit happens only when someone chooses it. The design therefore runs in one direction: name the transitions that have to be governed, ask which delivery occasions can reach them, and let the carrier set follow.
+
+Two properties decide what each carrier holds once that is known: how reliably an instruction activates at the condition it applies to, and which role its form reinforces. Neither alone decides where an instruction goes.
+
+That design is a balance, not a result. It depends on conditions that change: how models are trained, how much context they hold, how much accumulates between an instruction being delivered and the condition it binds at, which mechanisms the platform offers. RFM commits to designing from the transitions and to the two properties, and to revisiting the design when those conditions change, not to any particular carrier set or any particular assignment of instructions to carriers.
 
 **Why an artifact's obligations are decided per carrier**
 
