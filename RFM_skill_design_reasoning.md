@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: Skill Design Reasoning Document
-`v0.6.0` // `module_reasoning` // [living]
+`v0.7.0` // `module_reasoning` // [living]
 
 ---
 
 ## The Problem
 
-RFM uses skills to carry behavior that fires at a specific moment in a session. A skill differs from always-on instruction in that nobody invokes it: it matches its own trigger description or it does not run, and nothing reports the sessions where it did not. Each skill reasoning document carries the design of its own skill. What none of them carries is the design that decides whether a skill fires at all: how a trigger description is written so the skill matches when it should, and how a skill reaches the environment that runs it. The prior choice, whether a behaviour belongs in a skill rather than in another carrier, is in `RFM_instruction_design_reasoning.md`.
+RFM uses skills to carry behaviour that has to be governing only under a particular condition. `RFM_instruction_design_reasoning.md` separates delivery occasions from binding conditions and holds that the two do not coincide. A skill is the carrier that attempts to join them: delivered at a turn boundary, it asks the model to recognise from a description whether the binding condition holds. A skill differs from always-on instruction in that nobody invokes it: it matches its own trigger description or it does not run, and nothing reports the sessions where it did not. That silence is the attempted join failing, and no description can be written well enough to close it. Each skill reasoning document carries the design of its own skill. What none of them carries is the design that decides whether a skill fires at all: how a trigger description is written so the skill matches when it should, and how a skill reaches the environment that runs it. The prior choice, whether a behaviour belongs in a skill rather than in another carrier, is in `RFM_instruction_design_reasoning.md`.
 
 ---
 

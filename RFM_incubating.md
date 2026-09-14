@@ -263,6 +263,8 @@ One draft, two symptoms. The Language question was reported as passing because t
 
 A module restating its parent's reasoning rather than pointing at it is the mirror image and has no type. The instance: a module's Chosen Direction entry restating the parent's posture reasoning, resolved by attribution, on judgment rather than on a check. Adding a class is not complete until both arms' derived questions reach it, per that section's own rule, so this is work rather than an edit.
 
+Second instance: a Problem section draft for `RFM_skill_design_reasoning.md` redefined the parent's two terms inline. The drafting skill's three derived questions passed it. Reading the taxonomy's type list directly found it, along with two other hits the derived questions missed. The type list is the only thing that caught it, and the type it should have matched is the one that does not exist.
+
 ## Z. Naming a term from a word the target document already uses unnamed, rather than coining one.
 
 Working mechanism, one clean instance. The module used "binding" eight times for the state an instruction is in when it governs behaviour, and nowhere else in the document set, without ever declaring it. The new term was taken from that rather than invented, so the definition ratified existing use instead of competing with it, which is the failure U records. History shows the concept had precedent, commit `d44f1da` re-derived the module's carrier taxonomy around bindingness; it does not show the mechanism had any. One instance, tracked rather than named a mechanism.
