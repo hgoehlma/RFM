@@ -189,5 +189,35 @@ The human asked for a red team of the session's thinking at the point the drafti
 
 ---
 
+## N. A reasoning document can teach a later session the error it contains, which the session then produces as its own reasoning
+
+This session proposed that instructions be delivered coarsely by default and finely only where the partner cannot be relied on to notice. The human rejected the framing: it makes execution a tolerated concession and collaboration the real work, when both parties execute constantly. Reading afterwards found `RFM_top_level_reasoning.md` asserting that execution mode is "not a degraded version of the methodology" and then defining it as what is invoked when the full discipline becomes "locally unacceptable". The document claims parity and encodes concession. The model produced the same error earlier in the session without having read that passage in this session.
+
+The candidate is a direction of contamination the derivative chain does not describe. The chain assumes a reasoning document is a source a session derives from well or badly. Here the document is the source of a specific wrong belief, and the session reproduces it with no sense of having read it anywhere. An error in a reasoning document is not only wrong on the page. It is instruction for whoever reads it next.
+
+A distinguishing test, if this is looked at again: does the session reproducing the error cite the document, or produce it as its own reasoning? Citation is ordinary derivation and normal review catches it. Uncited reproduction is this candidate, and nothing currently looks for it.
+
+**Why not captured yet:** one session. The second instance, that an earlier session took the framing from the document, is inferred from the match rather than observed. Entry E covers derivative-chain failure on translation to a new environment and may be the same phenomenon running the other way; that relationship is unexamined.
+
+**Possible home when ready:** Hard Lessons in `RFM_top_level_reasoning.md`, or the curation module if it becomes an argument about what an uncorrected error costs over time.
+
+**Signal count: 1** *(this session, RFM-on-RFM toolkit work)*
+
+---
+
+## O. Writing the session's framing to a scratch note before reading the document set
+
+The human stopped the session before a planned read and asked that the reasoning be written to a scratch file first, on the grounds that reading would compress what had just been arrived at. The note was written. The documents were then read with contradictions recorded as contradictions rather than resolved toward the document, and the read produced a correction to the session's own conclusion rather than an absorption of it.
+
+What the mechanism protects is new framing, before it has vocabulary of its own, against vocabulary that already exists in the document set. The failure it prevents is not forgetting. It is recognition. An idea that resembles something already written down gets filed under the written thing, and the difference between them is what disappears. This session has a named instance: the distinction between execution posture as a condition and execution posture as a property of an act would have been lost to the existing two-mode design, which covers only the condition.
+
+**Why not captured yet:** one occurrence, and it was the human's intervention rather than a mechanism the project had. Whether it earns its cost on an ordinary session, or only when a session has produced framing that exists in no document yet, is untested.
+
+**Possible home when ready:** `RFM_sweep_reasoning.md` if it becomes a named practice, or the human prompt, since the intervention came from the human and the judgment of when it is needed may be the human's to make.
+
+**Signal count: 1** *(this session, RFM-on-RFM toolkit work)*
+
+---
+
 *Not versioned. This is a working note, not a methodology artifact.*
 *Discard once the ideas have found their home or been consciously dismissed.*
