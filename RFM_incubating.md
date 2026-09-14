@@ -268,3 +268,8 @@ Second instance: a Problem section draft for `RFM_skill_design_reasoning.md` red
 ## Z. Naming a term from a word the target document already uses unnamed, rather than coining one.
 
 Working mechanism, one clean instance. The module used "binding" eight times for the state an instruction is in when it governs behaviour, and nowhere else in the document set, without ever declaring it. The new term was taken from that rather than invented, so the definition ratified existing use instead of competing with it, which is the failure U records. History shows the concept had precedent, commit `d44f1da` re-derived the module's carrier taxonomy around bindingness; it does not show the mechanism had any. One instance, tracked rather than named a mechanism.
+
+
+## AA. A reasoning document that compresses its source reproduces the same wrong objection in every fresh reader.
+
+Three independent fresh reads of `RFM_instruction_design_reasoning.md`'s Chosen Direction produced the same two objections to the posture-transition axis: that two crossings cannot home 55 behaviours, and that binding conditions return to do allocation. Both are answered in `_private/posture_gate_raw_session2.md`, which the document does not carry. The traveling prompt names a fresh LLM reading only the documents as RFM's own quality check. That check has now run three times and failed three times, and nothing reported it, because a fresh read produces a confident objection rather than a gap. The response is not a new instruction but a move: the raw reasoning goes into the document, already scheduled. Captured because the pattern is about compression generally, not about this one document. First instance.
