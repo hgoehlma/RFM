@@ -102,7 +102,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_operational.md` | `top_level_operational` | v0.13.1 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.6.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
-| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.19.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
+| `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.20.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.5.1 | stays | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.2.2 | stays | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | `module_operational` | v0.2.1 | stays | Derivation procedure and coverage check discipline for the traveling prompt |

@@ -273,3 +273,11 @@ Working mechanism, one clean instance. The module used "binding" eight times for
 ## AA. A reasoning document that compresses its source reproduces the same wrong objection in every fresh reader.
 
 Three independent fresh reads of `RFM_instruction_design_reasoning.md`'s Chosen Direction produced the same two objections to the posture-transition axis: that two crossings cannot home 55 behaviours, and that binding conditions return to do allocation. Both are answered in `_private/posture_gate_raw_session2.md`, which the document does not carry. The traveling prompt names a fresh LLM reading only the documents as RFM's own quality check. That check has now run three times and failed three times, and nothing reported it, because a fresh read produces a confident objection rather than a gap. The response is not a new instruction but a move: the raw reasoning goes into the document, already scheduled. Captured because the pattern is about compression generally, not about this one document. First instance.
+
+## BB. A row-by-row review of existing text makes that text the default.
+
+A reduction pass was run as a walk through an inventory of what exists, one row at a time. The procedure asks for a reason to remove each line and never for a reason to keep it, so the model produced keep-arguments, and a behaviour with a real incident behind it always has one. Four rows in, two had been ruled keep and one of those on a reason later withdrawn. The alternative tried instead was to fix the carrier's capacity first and let the number force the removals. First instance, and the alternative is untested.
+
+## CC. Challenging the justification rather than the conclusion reverses the work faster than challenging the conclusion.
+
+Twice in one session the human asked whether the model was hedging, without disputing the position itself. Both times the model dropped the position within the same turn, and the second time it withdrew a ruling the human had already accepted. Disputing the conclusion in the same session produced defence of the conclusion instead. The human prompt already asks the human to probe for performed reasoning, so this is not new; the narrower form, naming the hedge in the justification and saying nothing about the claim, is sharper than what is written there. One session.

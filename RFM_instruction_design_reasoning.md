@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Instruction Design Reasoning Document
-`v0.19.0` // `module_reasoning` // [living]
+`v0.20.0` // `module_reasoning` // [living]
 
 ---
 
@@ -109,6 +109,14 @@ A failure mode named in more than one carrier is healthy allocation when each na
 
 This test is not yet applied to RFM's own standing rule set, where several rules restate a traveling-prompt principle with added trigger and failure-shape detail. Whether that detail is a different job, enforcement precision at a point in a session the traveling prompt's ambient framing does not reach, or the same job restated more sharply, is unresolved. Resolving it depends on what the carrier design makes of the standing rules artifact. `[AS-SBART]` places an artifact of that kind in the carrier class. It does not decide what that artifact owns.
 
+**Why each carrier has a fixed capacity**
+
+Allocation decides where a behaviour goes. It does not decide what leaves. Under allocation alone, RFM's own always-on prompt and standing rule set grew steadily and never contracted, while the one carrier holding a stated maximum, the list of unfinished threads handed from one session to the next, stayed at its number.
+
+A cap changes what a session argues about. Without one, each candidate is judged alone, and a behaviour with a real incident behind it survives that judgment every time. With one, a full carrier takes a new behaviour only by displacing a named one. Which of two behaviours earns the slot is a question a session can answer. Whether a behaviour is worth having is not, and that is the question that was always answered yes.
+
+A carrier is capped when its cost is paid by every session rather than by the session that consults it. A carrier read only when someone goes looking charges its growth to that reader alone, and takes a test in place of a number: an entry names a trigger and an action, and content that fails the test is reasoning sitting in the wrong document.
+
 **Why em dashes are enforced by a check rather than by instruction**
 
 Em dashes are the highest-signal typographic marker of LLM-generated prose, recognizable to readers who cannot say why, and they are the one suppressed pattern in RFM output enforced mechanically. Instruction does not hold them. Models told to remove an em dash commonly remove the named one and insert another in the same sentence, satisfying the instruction locally while violating it globally. The likeliest explanation available is token economy, the character costing one token where its alternatives cost two or three, so the training objective favors it and no prompt reaches that. That explanation rests on one analysis of one model family and is not settled. The commitment rests on the observed behavior, which holds whichever explanation is right.
@@ -166,6 +174,10 @@ The three sweep prompts restate "no edits, findings for ruling only" near-identi
 ---
 
 ## Hard Lessons
+
+**[HL-FRAME] With no fixed criterion, the model takes one from how the turn is framed and argues that direction competently.**
+
+Ten sessions asked where a behaviour belongs and never fixed what decides it. A session framing the question as allocation received a case for allocation. A session framing it as delivery pressure received a case for discarding the allocation work and rewriting from scratch. Both cases were sound and they pointed opposite ways, so neither was produced by the argument in it. The human reads agreement in whichever direction he asked as collaboration, and nothing in the exchange marks that the criterion came from his own framing. The apparatus grew under this for ten sessions, because a framing arriving from a session that just hit a failure is a framing in which adding an instruction is the answer. The same shape appears at small scale: a line was defended in this session by invoking a practitioner on an unrelated project who does not exist. The corrective is a criterion the model does not select per turn.
 
 **[HL-GENSC] A test stated for one artifact does not reach content of another kind, even when both parties know the test.**
 
