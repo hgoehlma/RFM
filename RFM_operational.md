@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.13.1` // `top_level_operational` // [living]
+`v0.14.0` // `top_level_operational` // [living]
 
 ---
 
@@ -183,7 +183,7 @@ This section is the single source for the failure classes RFM recognizes. Both a
 - Reasoning compressed to a conclusion without showing the path
 - Observation and interpretation conflated in one sentence
 - Wording that implies uncertainty that no longer exists
-- Evidence defended rather than stated: qualification written to pre-empt a challenger rather than to record what is believed. Qualification that feeds a break condition or blocks a design move is not this failure; it is the record of how firmly something is believed
+- Evidence defended rather than stated: qualification written to pre-empt a challenger rather than to record what is believed, or a citation added to show a claim was checked rather than because the reader needs the source at that point. Qualification that feeds a break condition or blocks a design move is not this failure; it is the record of how firmly something is believed. A citation that supplies content the sentence depends on, such as a term or constraint defined elsewhere, is not this failure either. The test for a citation: remove it and ask whether the reader loses something needed right there.
 - Curation failures: text that does not earn its place, language written for the session that produced it rather than for a future reader, repetition of reasoning stated elsewhere that adds no signal
 
 **Lifespan failure types**

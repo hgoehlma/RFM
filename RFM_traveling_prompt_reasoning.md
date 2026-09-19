@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.2.2` // `module_reasoning` // [living]
+`v0.3.0` // `module_reasoning` // [living]
 
 ---
 
@@ -96,6 +96,30 @@ The derivation instruction tells the LLM what to produce, not what the result sh
 Section-type awareness, how to engage differently with Boundaries vs. Open Questions vs. The Problem, governs every interaction with a reasoning document. It is ambient discipline, not corrective review. The same applies to Landscape drift detection: both drift modes (loose prose, early option selection) are caught best in the moment, not in a dedicated corrective pass. Placing this guidance in the sweep prompts would restrict it to deliberate invocation. Placing it in the traveling prompt makes it always present.
 
 A third Landscape failure mode belongs in the same instruction: when the joint work generates new vocabulary for a problem not yet fully known, that vocabulary hardens into reality before the object is understood. Terms coined in a session feel self-evident to the parties who coined them, and opaque to every subsequent reader, including a fresh LLM. Each new term is a glossary candidate until it has been tested on a cold read. This failure mode is caught best in the moment of coinage, which is why it belongs in ambient discipline rather than corrective review.
+
+**Why the settled-state statement is ambient**
+
+Before executing, the LLM should state what's settled, the boundaries, and what would end it. The difficulty of writing that statement is itself the signal of whether reasoning is settled enough to proceed. That's the design already, settled elsewhere. What's missing is something that makes the LLM produce the statement at the moment execution begins. A reasoning document is read once, then relied on from memory. Session pressure erodes memory-based application. The traveling prompt is the one carrier present every turn. It's the only place the LLM states it at the moment of use. Without that, a session under real pressure skips the statement rather than remembering to make it.
+
+**Why a narrow reading, not a recalled principle**
+
+Anti-deference needs a ceiling: unbounded initiative treats structural change as covered by the same license as derivative cleanup. That's settled elsewhere. It doesn't reach the LLM at the moment a specific instruction is being read. The traveling prompt does. It's where a session's instructions arrive, turn by turn. That's what makes it able to catch a narrowly named step about to be executed as a broadly named one. That's why the ceiling is carried here as a direct instruction, read a granted instruction narrowly, instead of a reference to the anti-deference boundary. A direct instruction acts at the point of reading one instruction. A reference to a principle requires the LLM to recall the principle, then apply it.
+
+**Why honest answering fires without being asked**
+
+Several behaviours asking the LLM to answer honestly, instead of with a performed non-answer, exist only as assumptions inside the human prompt. The human prompt asks the human to probe for them one at a time: ask what's still unsure, ask what's still unresolved, ask the AI to show its work, ask the AI to steel-man an option. No carrier tells the LLM to do any of this on its own. That leaves the human as the only check. The traveling prompt reaches the LLM directly, at the moment any of these four requests arrives. Without it, none of the four fires unless the human happens to ask.
+
+**Why a missed rule is corrected on the spot**
+
+An LLM co-author notices when something is off and says so without being asked. That's the role, defined elsewhere, but its own examples are about weak reasoning and drift in the shared work, not about the LLM catching its own missed instruction. Reading a missed rule as a case of something being off extends that definition rather than restating it. Nothing rules the extension out, but nothing states it either. Extended this way, it still doesn't say what the LLM should do at the moment a miss is noticed, mid-session, with reasoning already built past it. The traveling prompt is the carrier present at that moment. It's why the instruction here is concrete: apply the rule now, and say so.
+
+**Why refusal fires before the review, not at it**
+
+Refusal has to be the default: a rule set that grows without refusing most candidates buys each new rule by weakening all of them. Most candidates at a review are refused because of that. The refusal is what does the work, not the rules that get written. That's settled elsewhere. What's not settled there is who has to hold the line at the moment a rule is proposed. The joint reasoning sequence does: convergence, not just proposal, has to precede execution before a real decision proceeds. Reading "add only on an explicit ruling" as that requirement applied to standing rules extends the sequence to this specific artifact. The sequence doesn't name standing rules directly, and it draws no exception for them either. The traveling prompt is the carrier present at the moment a candidate rule is being considered, mid-session. Without it, a rule can take hold over several turns and meet refusal only once, at the review that comes after.
+
+**Why version history is never rewritten**
+
+Version history holds the record. A document that keeps what history already preserves is hoarding, not curating. That's settled elsewhere. What's missing is something that acts at the moment an entry is actually being curated, when duplicating history into the live document is easy to do without noticing. The traveling prompt is the carrier present at that moment. Carrying the instruction here, know which records are append-only and never rewrite those in place, gives the LLM that check at exactly the point of graduating or expiring an entry. Without it, a session can copy history back into the document while curating, undoing the thing curation exists to prevent.
 
 ---
 

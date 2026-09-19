@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.7.0` // `module_reasoning` // [living]
+`v0.8.0` // `module_reasoning` // [living]
 
 ---
 
@@ -140,6 +140,14 @@ The three existing sweeps check a document against itself or against a sibling d
 **[OQ-ARTCV] Whether the relational sweep's reach should extend from reasoning-to-operational derivation to reasoning-to-artifact derivation.**
 
 The relational sweep already checks whether a derivative covers what its source announced, and whether the derivative contains anything ungrounded in the source. `[AS-OPNS]` excludes operational documents from the structural sweep's reach because they have no fixed structure to check architecture against, but a boundary check doesn't need fixed structure on the derivative side, only a source to compare it against, so that same reasoning doesn't obviously justify excluding prompt artifacts from the relational sweep. A correction-script failure already recorded as a Hard Lesson in `RFM_human_prompt_reasoning.md` is exactly the shape of defect a boundary check would catch: the reasoning behind it was sound, and the specific wording chosen during derivation was not, a derivation-boundary failure rather than a reasoning failure. Whether the relational sweep's current restriction to `module_operational` derivatives is a deliberate scope decision or an accident of the map's type taxonomy is open. If the latter, extending the relational sweep is not a type-filter change: the sweep's one-to-one protocol would need to handle the sweep prompts' own one-reasoning-to-three-artifacts shape first.
+
+**[OQ-LANGOP] Whether the language sweep should run on operational documents, and what it would ask there.**
+
+The entry titled "Why the language catalog transfers across document types but the architecture jobs do not share one" says language failures appear in reasoning and operational documents for the same reason, and that one catalog catches them all. The language sweep prompt and its catalog in `RFM_sweep_operational.md` are both scoped to a reasoning document. The catalog's per-section questions are keyed to the eight reasoning sections. An operational document has no such sections (`[AS-OPNS]`), so no current artifact says how the language sweep would run on one. No current sweep checks an operational document for language failures.
+
+The chosen-direction entry supports two readings. Under the first, it claims only that the failure types apply to any document, and the current scope is correct. Under the second, it claims the sweep should cover operational documents, and the artifacts do not yet deliver that. The record does not say which was meant.
+
+If the second reading holds, the open design question is what the sweep asks of a document with no section spine: the language failure types alone, or a question set keyed to whatever structure that document's type carries.
 
 ---
 
