@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.8.0` // `module_reasoning` // [living]
+`v0.9.0` // `module_reasoning` // [living]
 
 ---
 
@@ -21,29 +21,11 @@ The sweep prompts are the corrective arm of the prompt system. Their existence a
 
 ## The Landscape
 
-| Approach | What it does | Why it's insufficient for the sweep prompts |
-|---|---|---|
-| **LLM-as-judge with rubrics** | A second LLM evaluates output against structured criteria. Rubric-based judging (Prometheus, G-Eval, RRD, 2025-2026) improves reliability over holistic judgment. | Rubrics are static and output-focused. Cannot detect hierarchy failures, session residue, or ownership drift in a living document. Criteria do not distinguish structural from language failures. |
-| **Multi-agent critique** | Multiple LLM agents critique each other's outputs, simulating peer review. | Designed for discrete outputs, not living documents with history and derivative chains. Research shows LLMs systematically underperform at identifying weaknesses and raising substantive questions, the core sweep function. |
-| **Structured critique prompts** | Chain-of-thought evaluation steps generated from task introduction and explicit criteria (G-Eval pattern). | Closest prior art. Criteria are task-specific and static: no section-sequence awareness, no hierarchy ownership check, no structural/language mode distinction. |
-
 **The gap:** no existing approach applies mode-distinct corrective passes, organized by cognitive job rather than document type, to a living reasoning document hierarchy, with findings produced for human ruling rather than automated scoring. The sweep prompts occupy this gap specifically.
 
 ---
 
 ## The Options Considered
-
-**1. Holistic review vs. section-by-section protocol**
-
-Ask the LLM to identify failures across the whole document at once vs. work through section by section in sequence. Holistic review is faster but misses gradual drift. Failures that only become visible under sequential attention fall through. Section-by-section protocol chosen because the failure modes the sweep targets are cumulative and positional: session residue accumulates across sections, hierarchy drift is visible only when sections are compared against each other in sequence.
-
-**2. Fixed criteria vs. document-adaptive criteria**
-
-Apply the same checklist to every document vs. allow the sweep to adapt its attention to the specific document's type, age, and state. Fixed criteria are auditable and consistent but miss document-specific strain signals. Adaptive criteria require the LLM to reason about what matters here, which is the correct cognitive mode for a living document. Document-adaptive criteria chosen, with the section-by-section protocol as the structural anchor that prevents adaptation from becoming drift.
-
-**4. Broad derivation readiness vs. textual handoff audit**
-
-Test whether the reasoning-plus-operational pair can produce the derivative, vs. scan the reasoning document for announced needs and verify each is specified in the operational document. The broad reading was rejected because it runs the derivation to find the sweep's own failures. That makes the sweep indistinguishable from the thing it is meant to precede, and eliminates the independent corrective pass that produces findings before the human commits to derivation.
 
 **3. Scoring output vs. findings-for-ruling output**
 
@@ -53,41 +35,17 @@ Produce a quality score vs. produce named findings with proposed resolutions for
 
 ## The Chosen Direction and Why
 
-**Why section-by-section protocol with document-adaptive criteria**
-
-The section sequence is fixed. It is the structural anchor. The criteria adapt to the document's state: early development has different failure modes than a mature curated document. Fixed sequence prevents adaptation from becoming drift. Adaptive criteria prevent the protocol from becoming a checklist that misses what actually matters here.
-
 **Why the sweeps have different entry conditions**
 
 The structural sweep requires section sequence to be honored because it reviews architecture, and architecture requires something to be built. The language sweep can run on partial content because wording failures are local. Entry conditions differ by design, not convention.
-
-**Why the relational sweep output uses a two-field location rather than a single location field**
-
-A finding in the structural or language sweep has one location: a section, and optionally an entry, within a single document. A finding in the relational sweep names a gap between two documents: an announced need on the reasoning side with no coverage on the operational side, or a specification on the operational side with no announced need on the reasoning side. A single location field cannot represent both sides of that gap without requiring the reviewer to parse a prefix convention at the moment of ruling. Two fields, one per document, make the directionality of the finding visible directly. Either field may be blank when the finding is one-sided.
-
-**Why findings are surfaced one per exchange**
-
-The exchange itself is the tracking mechanism. When findings arrive as a list, the human cannot hold them all. Some get ruled on, the rest disappear without explicit closure. One finding per exchange eliminates that failure mode: nothing can slip through because the next finding does not appear until the current one has been ruled on. The LLM holds the queue.
-
-This is consistent with the living document principle: ruling quality does not need to be perfect in any single sweep. Corrections surface in the next. The cost of an imperfect ruling is low. The cost of findings disappearing unruled is not recoverable in the same session.
-
-When a finding is entangled with another, where the ruling on one affects the right ruling on the other, the LLM flags that before the human rules, not after. The LLM holds the structural map across the session. The human does not need to.
 
 **Why the structural sweep owns hierarchy and the language sweep owns expression**
 
 Hierarchy failures require holding the full document structure in view and reasoning across it. Expression failures require close reading of individual sentences. Assigning each to its own sweep ensures neither cognitive mode is diluted by the other's presence.
 
-**Why the structural sweep owns positional grey zones**
-
-Some failures are both positional and about wording. The primary failure type determines ownership. Positional failures go to the structural sweep regardless of whether wording failures are also present. Wording failures go to the language sweep. When both are present in equal weight, the structural sweep flags it as a grey zone, names both failure types, and the language sweep does not run on that entry until the human has ruled.
-
 **Why the mode-contamination test applies to the question, not the finding's content**
 
 When an LLM running the structural sweep evaluates whether a finding belongs, the test is the cognitive mode that generated the question, not what the finding happens to touch. A structural question can surface an expression symptom incidentally and remain correctly placed: the question arose from architectural judgment. A question framed in expression-review mode does not belong in the structural sweep regardless of whether it also identifies a positional problem. The behavioral instruction must specify the register test: is this question an act of architectural judgment, or of close reading? If close reading generated the question, it belongs in the language sweep, not here. Framing the test as "does this finding touch expression failures?" produces false positives: legitimate structural findings that name expression symptoms get suppressed.
-
-**Why absence checks name what qualifies rather than inviting inference**
-
-A sweep question that asks what is missing has no natural stopping point. Any commitment in a document can be described as the one that survived an alternative nobody wrote down. So a check that asks the reviewer to infer from silence lets the reviewer invent findings. The invented finding looks like a real one: both name something the document does not contain, and the reviewer cannot test either against the document. An absence check must therefore say what would have to be true for the missing thing to belong in that section. For Options Considered, the missing alternative must have been pursued as a competing way to resolve the Problem. A supporting commitment inside the Chosen Direction does not qualify, because it was never a path the work took and rejected. Stating the test keeps the finding the check exists to catch, an option that was considered and dropped without record, and stops the reviewer inferring the rest.
 
 **Why the relational sweep checks both directions across the reasoning-to-operational boundary**
 
@@ -96,10 +54,6 @@ Reasoning documents announce needs without specifying them: a concrete value, th
 **Why the reasoning-to-operational check is relational, not inward-reading**
 
 The structural sweep asks whether a document coheres with itself. The language sweep asks whether its expression is clean. Both read inward. The reasoning-to-operational check asks whether two documents together are sufficient to produce the derivative without the LLM inventing content. That question cannot be answered by reading either document alone. It requires holding both simultaneously and checking what passes between them. This is a different cognitive job, which is why it cannot be folded into either existing sweep without losing the check that only the relational pass performs.
-
-**Why the reasoning-to-operational check is textual and bounded, not a trial derivation**
-
-Scanning for announced needs and verifying each is covered in the operational document keeps the check independent of the derivation it precedes. Running a trial derivation to find gaps would work in principle, but it collapses the corrective pass into the thing it is meant to come before. The practitioner loses the independent findings-for-ruling step. The textual check is also auditable: each gap it surfaces names a specific announced need with no corresponding specification, which the human can rule on directly. A trial derivation surfaces gaps only as derivation failures, which are harder to locate and harder to rule on before the full derivation is committed.
 
 **Why the corrective arm organizes by cognitive mode, not document type**
 
@@ -117,8 +71,6 @@ When a module branches from a parent document, the parent is expected to remove 
 
 The corrective arm splits by cognitive mode. Judging whether planned work will falsify a claim requires knowing what the project has committed to elsewhere, which is the same knowledge the structural sweep already uses to judge whether an entry is ready to graduate. Close reading of the sentence does not answer it, so the language sweep would have to acquire that knowledge to run the check, and it would then be doing architectural judgment under a language label.
 
-A third sweep was rejected on cost rather than on principle. It would add an invocation the practitioner has to remember, for a family with two entries, and each sweep dilutes the others by existing. The strain signal governs the reversal: if the family grows to the point where the structural sweep's protocol carries it awkwardly, that is when the split earns its cost.
-
 ---
 
 ## The Boundaries
@@ -132,10 +84,6 @@ A third sweep was rejected on cost rather than on principle. It would add an inv
 ---
 
 ## The Open Questions
-
-**[OQ-GRND] The grounding sweep.**
-
-The three existing sweeps check a document against itself or against a sibling document: structure against structure, language against language, reasoning against its operational derivative. None checks a claim against what has changed outside the document since it was written: a model generation shifting, a prompt-engineering practice advancing, a piece of grounding aging. Two candidate inputs for such a check have been named: verifying publication dates and model generations before applying a finding, and deriving search terms from what would falsify a claim rather than from the claim's own wording. Whether this becomes a fourth sweep, folds into an existing sweep's remit, or stays a periodic manual check outside the sweep system entirely, is open.
 
 **[OQ-ARTCV] Whether the relational sweep's reach should extend from reasoning-to-operational derivation to reasoning-to-artifact derivation.**
 
@@ -153,10 +101,6 @@ If the second reading holds, the open design question is what the sweep asks of 
 
 ## Hard Lessons
 
-**[HL-SAFT] A sweep prompt that is too ambient fails silently.**
-
-The sweep fails not by producing wrong findings but by producing shallow ones. The LLM runs through sections without concentrating, flags nothing, and the document appears clean. Ambient character is the traveling prompt's strength and the sweep prompt's primary failure mode. The sweep must feel like deliberate critique, not background discipline.
-
 **[HL-RPSI] Repetition across sections is invisible from inside the session that produced it.**
 
 The same argument restated in different styles across Options Considered and Chosen Direction looks like thoroughness from inside the drafting session. It is only visible under the concentrated attention of a structural sweep. This is a primary target for the structural sweep: not duplication of content, but duplication of reasoning dressed as distinct entries.
@@ -166,10 +110,6 @@ The same argument restated in different styles across Options Considered and Cho
 The confirmation gate verifies fidelity to source. The coverage check verifies nothing from a prior version was lost without tracing back to source. Neither check is built to catch a question that is faithfully derived from source, and still wrong for the artifact it ends up in: a structural-mode question rendered into the language sweep prompt, or the reverse. The error passed both checks cleanly in practice, because both checks ask whether content is grounded, not whether it is grounded in the right artifact's mode.
 
 This is `[AS-SDCM]` failing silently rather than loudly. The assumption states that each sweep's mode requires concentration the other's presence would dilute. A single misplaced question does not look like a foreign sweep prompt has appeared inside the current one. It looks like one clean sentence, sourced correctly, sitting where it does not belong. The dilution `[AS-SDCM]` warns against does not require modes to be merged wholesale: one sentence in the wrong register is sufficient to reintroduce the failure the mode-separation design exists to prevent.
-
-**[HL-PROBPULL] The Problem gets pulled toward the session's own material.**
-
-When a session adds new reasoning to a document, the new content feels like the point and the Problem feels like it should reflect that. It should not. The Problem states why the document exists. That question does not change when the answer grows. Rewriting the Problem to absorb session content loses the original gap statement and makes the document harder to re-derive from. The fix is simple: leave the Problem alone unless the gap itself has changed, not just the reasoning that fills it.
 
 ---
 

@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.5.1` // `module_reasoning` // [living]
+`v0.6.0` // `module_reasoning` // [living]
 
 ---
 
@@ -160,6 +160,10 @@ Compression can arrive dressed as legitimate moves: curation ("this is wordy"), 
 The coverage check exists to catch attention failures: items present in the source documents that the derivation missed. Framing it as a quality comparison against the prior version introduces prior-version pull toward its phrasing, structure, and emphasis regardless of whether those choices were correct. That pull is the derivation loop failure named in `[HL-PDLR]` arriving one step earlier.
 
 The mitigation is traceability. Any item found in the prior version that is absent from the fresh derivation must trace back to the source documents before it can be added. If it traces cleanly, add it. If it does not trace, do not add it. Flag it as a source document gap and return to phase one. The prior version is never the authority. The source documents are.
+
+**Why the coverage check follows derivation rather than preceding it**
+
+LLM derivation is probabilistic: the same source documents will produce slightly different output each time. A derivation that begins by reading the previous version anchors on prior expression and narrows that variance toward refinement rather than fresh reasoning. The coverage check after derivation exploits the variance productively: derive clean to get the best reasoning from source, then check coverage to catch what the probabilistic process missed.
 
 ---
 
