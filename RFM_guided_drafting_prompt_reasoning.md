@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Guided Drafting Prompt Reasoning Document
-`v0.2.0` // `module_reasoning` // [living]
+`v0.2.1` // `module_reasoning` // [living]
 
 ---
 
@@ -25,9 +25,14 @@ The guided drafting prompt is a deliberate response to a specific risk: that RFM
 
 ## The Landscape
 
+The question this landscape must answer is: what approaches exist for guiding a newcomer through their first structured reasoning artifact, section by section, with the intention behind each section taught rather than its definition?
+
 | Approach | What it does | Why it's insufficient for the guided drafting prompt |
 |---|---|---|
+| **Scaffolded writing pedagogy** (SFL genre-based pedagogy, Teaching and Learning Cycle) | Makes the stages of a structured artifact explicit (their goals, their language, their sequence) and supports learners through modelling and guided practice. The strongest evidence base for structured first-document production | Designed for text types with stable social purposes (academic argument, report, narrative). Does not address artifacts whose primary value is reasoning integrity rather than communicative form. No mechanism for teaching the intention behind a section, only its definition and linguistic features |
 | **Socratic LLM facilitation** | Uses questioning rather than answering to guide a learner toward their own reasoning. Research shows LLMs that give answers rather than ask clarifying questions produce weaker learning and weaker artifacts | Designed for discrete problem-solving tasks (debugging, case-based clinical reasoning). Not designed for a multi-section artifact where section sequence matters and where the learner must stay in a section long enough to reason through it before moving forward |
+| **ADR onboarding and LLM-assisted ADR generation** | Captures architectural decisions in lightweight structured form; recent work uses LLMs to assist drafting from code context or prior decisions | ADRs document conclusions: context, decision, consequences. They do not teach the reasoning discipline that precedes a decision. LLM-assisted ADR generation automates the artifact, which is the opposite of what the guided drafting prompt must do. The adoption barrier for ADRs is well-documented: the cost is paid immediately by the author, the benefit accrues to future readers; RFM faces the same barrier, and no existing approach addresses it through guided first-document production |
+| **Facilitation frameworks** (ToP, ORID Focused Conversation, workshop facilitation methodology) | Guides groups through structured processes (from observation to reflection to interpretation to decision) with a facilitator holding the sequence | Designed for group decision-making in real time. The facilitator role is human. The artifact produced is a decision or action plan, not a living reasoning document. No mechanism for the non-linear revision loop that the Landscape section requires |
 
 **The gap:** no existing approach combines section-by-section guidance with reasoning intention (not definition), a facilitator that questions rather than answers, and a built-in revision loop after the Landscape, where research can sharpen what was written before it. The guided drafting prompt occupies that gap specifically.
 

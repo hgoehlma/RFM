@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Reasoning Document
-`v0.6.0` // `module_reasoning` // [living]
+`v0.6.1` // `module_reasoning` // [living]
 
 ---
 
@@ -25,12 +25,16 @@ Phase two is different. The reasoning documents have been completed through coll
 
 ## The Landscape
 
+The question this landscape must answer: what prior approaches exist for governing autonomous LLM execution from a specification, and why is each insufficient?
+
 | Approach | What it does | Why it is insufficient |
 |---|---|---|
 | **No governing prompt** | LLM applies its general defaults to the execution task | No behavioral posture is established for gap-flagging or deviation reporting. The LLM fills silences by inference and produces a derivative that may diverge from its source in ways neither party can trace. |
 | **Traveling prompt in derivation session** | Co-authorship behavioral frame applied to execution task | The co-author posture actively interferes with executing faithfully from the source. The failure is invisible: an LLM pausing to surface alternatives or challenge closed decisions can look thorough. |
 | **Memory files / persistent context** | Carries selected prior context into a new session to reduce re-explanation overhead | Manages what the LLM remembers, not whether the source is complete. The LLM still interprets and fills gaps where memory is silent or ambiguous. |
 | **Soul files / persona files** | Establishes identity and behavioral framing for the LLM across sessions | Governs posture, not execution fidelity. A well-framed LLM operating from an incomplete source still guesses where the source does not specify. |
+| **Context compression / summarization** | Reduces source material to fit within a context window | Introduces its own interpretation layer: what is compressed and what is preserved reflects the compressor's judgment, not the source's intent. |
+| **Structured output prompts** | Specifies the format the derivative must conform to | Addresses output structure, not source fidelity. A derivative can comply fully with a format specification while diverging materially from the source reasoning. |
 
 **The gap:** none of these approaches establish a confirmation gate where the LLM actively verifies it does not need to interpret or fill gaps before derivation begins. The derivation prompt addresses that gap directly.
 

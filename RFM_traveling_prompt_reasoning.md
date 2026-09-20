@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.4.0` // `module_reasoning` // [living]
+`v0.4.1` // `module_reasoning` // [living]
 
 ---
 
@@ -16,6 +16,12 @@ The traveling prompt is the mechanism by which the methodology travels. Its desi
 ---
 
 ## The Landscape
+
+| Approach | What it does | Why it's insufficient for the traveling prompt |
+|---|---|---|
+| **Constitutional AI / Model Specs** | Principles embedded at inference time to create judgment rather than rule-following: Anthropic's model spec and OpenAI's Model Spec (2025) are the primary examples | Designed for model-level alignment across all users and contexts. Not designed for a specific methodology traveling with a specific practitioner. No human verifiability or curation mechanism. |
+| **Persona / role prompting** | Assigns the LLM a role or identity to shape reasoning and behavior | Establishes identity, not methodology. High behavioral variance: persona assignment can shift output quality significantly in either direction. Does not carry reasoning discipline or make it auditable. |
+| **Promptware engineering** | Treats prompts as versioned, maintained software artifacts with lifecycle discipline | Addresses engineering and versioning, not what the prompt must activate. Does not address co-authorship, drift detection, or the ambient/concentrated mode distinction. |
 
 **The gap:** no existing approach combines methodology-specific behavioral activation with human verifiability, curation as a living derivative, and the co-author role frame. Constitutional AI is the closest prior art; the traveling prompt extends it by scoping to a specific collaborative methodology, making the prompt auditable by its human maintainer, and treating it as a derivative with a reasoning source rather than a standalone artifact.
 

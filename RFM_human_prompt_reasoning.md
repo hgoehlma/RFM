@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.3.1` // `module_reasoning` // [living]
+`v0.3.2` // `module_reasoning` // [living]
 
 ---
 
@@ -18,6 +18,13 @@ The asymmetry is real and consequential: one practitioner has a behavioral artif
 ---
 
 ## The Landscape
+
+| Approach | What it does | Why it's insufficient for the human prompt |
+|---|---|---|
+| **Reflective practice frameworks** | Structured approaches to professional reflection: Schön's reflective practitioner, Kolb's experiential learning cycle, Kember et al.'s four-level reflection framework. Establish the value of deliberate self-examination as a professional discipline | Designed for post-hoc reflection, not real-time collaborative sessions. They address how to think about practice after it has happened, not how to sustain a collaborative reasoning posture while it is happening. No mechanism for mid-session recalibration. |
+| **Prompt engineering and AI interaction guides** | Practical guidance on how to phrase requests, structure context, and elicit better AI output, evolved by 2025-2026 into context engineering, covering what fills the context window at each step | Focused entirely on improving AI output quality through better input construction. Address the transactional layer, what the human sends, not the collaborative posture the human holds throughout a session. The human remains a prompt author, not a thinking partner. |
+| **AI literacy and onboarding programs** | Structured training on AI governance, interaction techniques, and responsible use, increasingly mandatory in large organizations (Forrester 2026: 30% of large companies requiring formal AI training). Accenture's tiered model (governance → interaction techniques → peer teaching) is a representative example | Address knowledge and compliance, not internalized practice. Designed to bring users to a baseline of functional competence. Do not address drift, friction, or the cultivation of a sustained collaborative reasoning posture over time. |
+| **Collaborative AI metacognition frameworks** | Emerging research strand (Sidra and Mason 2025; validated scales published 2025) defining "collaborative AI metacognition" as the ability to monitor and regulate one's own thinking when working with AI: planning, monitoring, reflection. Identifies four characteristics that distinguish human-AI from human-human interaction and require specific metacognitive skills | Closest prior art. Describes the capability the human prompt is designed to cultivate. Remains a measurement and research construct, not an actionable artifact a practitioner can use. No guidance on how to build or sustain the metacognitive posture in practice, and not designed for a specific collaborative methodology. |
 
 **The gap:** the cognitive risk is well-evidenced: Gerlich (2025), studying 666 participants across age groups and educational backgrounds, found a significant negative correlation between frequent AI tool usage and critical thinking abilities, mediated by increased cognitive offloading. What does not exist is a practitioner artifact that addresses this risk from the inside: something that cultivates the human's collaborative reasoning posture through repeated exposure, designed for a specific methodology, actionable mid-session, and honest about what it cannot enforce. The human prompt occupies that gap.
 

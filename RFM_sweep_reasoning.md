@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Sweep Prompts Reasoning Document
-`v0.9.0` // `module_reasoning` // [living]
+`v0.9.1` // `module_reasoning` // [living]
 
 ---
 
@@ -20,6 +20,12 @@ The sweep prompts are the corrective arm of the prompt system. Their existence a
 ---
 
 ## The Landscape
+
+| Approach | What it does | Why it's insufficient for the sweep prompts |
+|---|---|---|
+| **LLM-as-judge with rubrics** | A second LLM evaluates output against structured criteria. Rubric-based judging (Prometheus, G-Eval, RRD, 2025-2026) improves reliability over holistic judgment. | Rubrics are static and output-focused. Cannot detect hierarchy failures, session residue, or ownership drift in a living document. Criteria do not distinguish structural from language failures. |
+| **Multi-agent critique** | Multiple LLM agents critique each other's outputs, simulating peer review. | Designed for discrete outputs, not living documents with history and derivative chains. Research shows LLMs systematically underperform at identifying weaknesses and raising substantive questions, the core sweep function. |
+| **Structured critique prompts** | Chain-of-thought evaluation steps generated from task introduction and explicit criteria (G-Eval pattern). | Closest prior art. Criteria are task-specific and static: no section-sequence awareness, no hierarchy ownership check, no structural/language mode distinction. |
 
 **The gap:** no existing approach applies mode-distinct corrective passes, organized by cognitive job rather than document type, to a living reasoning document hierarchy, with findings produced for human ruling rather than automated scoring. The sweep prompts occupy this gap specifically.
 
