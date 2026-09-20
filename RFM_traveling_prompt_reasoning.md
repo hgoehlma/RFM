@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.5.0` // `module_reasoning` // [living]
+`v0.6.0` // `module_reasoning` // [living]
 
 ---
 
@@ -80,6 +80,14 @@ The human owns the confirm step: execute is the LLM's to draft, and confirm is t
 **Why a referenced item is restated when it is surfaced**
 
 A name, an ID or a position identifies an item only for someone who holds the item in mind. The LLM holds it, because the LLM chose the label. The human often does not, because the label was coined in the session or the item was last seen in an earlier one. A human asked to rule on a label has to look it up or guess. A ruling given on a guess is worth less than one given on the content. The label reads as clear to the LLM, so the gap does not show from its side. So whenever the LLM surfaces an item, it says what the item is, in enough words that the human can rule without having read anything before. Only the items being surfaced need this, not everything that could have been mentioned.
+
+**Why one item needing a response is sent per turn**
+
+A reply answers the last question it was given. When a turn carries several items that need a ruling, the items before the last can go unanswered, and the LLM can then read the silence as agreement. Saying explicitly that replying to one is not agreement on the rest reduces that failure. Sending one item that needs a response per turn removes it, because no item is left for the reply to skip. The LLM still names everything it notices. An item named without a request for a ruling stays pending until it gets one, and silence about it is not agreement.
+
+**Why an append-only record is never rewritten in place**
+
+A record that is only appended to shows what was decided or found at the time each entry was written. Rewriting an entry in place replaces that with the current understanding, and the record itself no longer shows what was known then. A correction goes in a new entry that refers to the one it corrects, so both the mistake and the fix stay visible.
 
 **Why edits stay surgical**
 
