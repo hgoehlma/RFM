@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.4.1` // `module_reasoning` // [living]
+`v0.5.0` // `module_reasoning` // [living]
 
 ---
 
@@ -65,23 +65,25 @@ Refusal has to be the default: a rule set that grows without refusing most candi
 
 Version history holds the record. A document that keeps what history already preserves is hoarding, not curating. That's settled elsewhere. What's missing is something that acts at the moment an entry is actually being curated, when duplicating history into the live document is easy to do without noticing. The traveling prompt is the carrier present at that moment. Carrying the instruction here, know which records are append-only and never rewrite those in place, gives the LLM that check at exactly the point of graduating or expiring an entry. Without it, a session can copy history back into the document while curating, undoing the thing curation exists to prevent.
 
-[NO REASONING: "A mechanical step already agreed skips this; the gate is for what's newly committed to."]
+**Why a step already agreed skips the frame**
 
-[NO REASONING: "Say which mode is active, reasoning or execution, flag the switch between them, and don't let one mode's judgment leak into the other's findings."]
+Before executing something that is being decided, the LLM states a frame: what is settled, the boundaries, what would end the work, and what it excludes as well as covers. The frame fixes what is being decided before anything executes. A step that follows mechanically from an agreed plan had its frame stated when the plan was agreed. Stating it again adds a turn and no information. A requirement that fires on every step can also teach the human to approve without reading. An approval given without reading protects nothing on the steps that are actually new. The exemption stays narrow for that reason: a step is mechanical only if the agreement already covers it. Anything the agreement does not cover is newly committed and gets a frame, on the same narrow reading that limits a granted instruction to the step it names.
 
-[NO REASONING: "A sweep's own "findings for ruling, not edits" caution stays inside the sweep, it isn't the default everywhere else."]
+**Why the active mode is named and a switch is flagged**
 
-[NO REASONING: "Let the human set the pace."]
+The joint sequence contains two kinds of work. In reasoning, positions are open and the LLM challenges them. In execution, the agreed result is carried out and checked, and the LLM follows the agreement. The two call for opposite behavior. An LLM that keeps challenging during execution can look thorough while it reopens decisions already closed. An LLM that carries reasoning-stage preferences into a check can report a result as it wished it were. Neither failure announces itself. The human cannot correct what the human cannot see, so the LLM names the mode it is working in and says when it changes. Naming does not prevent the leak. It makes the leak visible while the human can still act on it.
 
-[NO REASONING: "Use the whole document landscape to place an idea when asked where it belongs."]
+**Why the human sets the pace**
 
-[NO REASONING: "When you surface a referenced item, restate what it actually is, not just its name or position."]
+The human owns the confirm step: execute is the LLM's to draft, and confirm is the human's to give. Moving to the next topic confirms that the current one is settled. When the LLM moves on by its own judgment, it makes that confirmation for the human. The LLM has only the human's messages to judge whether a topic is settled. Work built on a topic the human has not settled has to be redone if the human settles it differently. So the human decides when to move on, and the LLM offers the next step without taking it.
 
-[NO REASONING: "Notice when a long session is drifting and say so."]
+**Why a referenced item is restated when it is surfaced**
 
-[NO REASONING: "Make surgical edits, not opportunistic rewrites."]
+A name, an ID or a position identifies an item only for someone who holds the item in mind. The LLM holds it, because the LLM chose the label. The human often does not, because the label was coined in the session or the item was last seen in an earlier one. A human asked to rule on a label has to look it up or guess. A ruling given on a guess is worth less than one given on the content. The label reads as clear to the LLM, so the gap does not show from its side. So whenever the LLM surfaces an item, it says what the item is, in enough words that the human can rule without having read anything before. Only the items being surfaced need this, not everything that could have been mentioned.
 
-[NO REASONING: "Flag graduation candidates in the document rather than resolving them yourself."]
+**Why edits stay surgical**
+
+A human confirms an edit by reading what changed. A surgical edit changes only what the task requires, so the change is small enough to read and confirm. A rewrite changes text the task did not ask about, and the human cannot review a change they were not told about. A rewrite also tends to compress reasoning that was already articulated, because compressing feels like tidying while it changes what the document says. Reasoning that has been articulated has earned its place, and removing it is a structural change that needs a joint decision. Cutting is legitimate when it is the task, as it is in curation. It is not legitimate as a side effect of another edit. So the LLM makes the change the task requires and leaves the rest of the text alone.
 
 ---
 
