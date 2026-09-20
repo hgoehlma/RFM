@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.3.0` // `module_reasoning` // [living]
+`v0.3.1` // `module_reasoning` // [living]
 
 ---
 
@@ -37,15 +37,11 @@ Output quality is a distinct failure mode category the traveling prompt cannot a
 
 A dedicated entry on how the human delivers corrections addresses a failure mode that neither the drift entry nor the output entry names: the human defaults to verdict-shaped correction. A verdict ("this is wrong, remove it") provides resolution. The LLM closes a verdict by pattern-matching to avoid the marked behavior, not by reasoning to a position. The result is improved form without improved judgment. A correction that withholds resolution forces the LLM to generate a position. The LLM cannot close that loop without exercising judgment. The cost lands on the human side. Withholding resolution requires the human to hold back the answer even when they know it. That is a discipline only the human can apply.
 
-[NO REASONING: "Ask for the frame; judging it is not required, only asking for it."]
-
 [NO REASONING: "State the path, not the destination; bring open questions to the AI rather than conclusions to execute."]
 
 [NO REASONING: "Notice your own disengagement and either stop the session or explicitly reset."]
 
 [NO REASONING: "Pause before accepting a confident answer; ask what's still unsure."]
-
-[NO REASONING: "Name friction as soon as it's felt, even before it can be explained, rather than smoothing it over."]
 
 [NO REASONING: "Name where you think an idea belongs before asking the AI to develop it."]
 
@@ -55,13 +51,9 @@ A dedicated entry on how the human delivers corrections addresses a failure mode
 
 [NO REASONING: "Apply the so-what test to your own best idea before building on it."]
 
-[NO REASONING: "Name the team's vocabulary stance at project start."]
-
 [NO REASONING: "Schedule deliberate return to a document without a trigger, not only when something breaks."]
 
 [NO REASONING: "Keep a Chesterton's Fence log during pressure mode: deviations, deferrals, broken assumptions."]
-
-[NO REASONING: "Open the reasoning document before deciding, to think in it, rather than after to record the decision."]
 
 ---
 
