@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.3.2` // `module_reasoning` // [living]
+`v0.4.0` // `module_reasoning` // [living]
 
 ---
 
@@ -44,21 +44,33 @@ Output quality is a distinct failure mode category the traveling prompt cannot a
 
 A dedicated entry on how the human delivers corrections addresses a failure mode that neither the drift entry nor the output entry names: the human defaults to verdict-shaped correction. A verdict ("this is wrong, remove it") provides resolution. The LLM closes a verdict by pattern-matching to avoid the marked behavior, not by reasoning to a position. The result is improved form without improved judgment. A correction that withholds resolution forces the LLM to generate a position. The LLM cannot close that loop without exercising judgment. The cost lands on the human side. Withholding resolution requires the human to hold back the answer even when they know it. That is a discipline only the human can apply.
 
-[NO REASONING: "State the path, not the destination; bring open questions to the AI rather than conclusions to execute."]
+**Why the human states the path, not the destination**
 
-[NO REASONING: "Notice your own disengagement and either stop the session or explicitly reset."]
+An LLM works on the request it is given. A conclusion handed to it as the goal tends to get elaborated: the LLM works out how to reach it, and the conclusion itself goes untested. A question or a half-formed idea gets examined. The LLM can see where the thinking is solid and where it is loose, and can push back on an assumption before it hardens into a direction. That is the co-author role the methodology asks of the LLM, and it only happens when the human shares the thinking as it unfolds. A human who arrives with the answer already chosen is delegating, and the LLM's judgment goes unused. So the human starts with what they are trying to figure out, uncertainty included.
 
-[NO REASONING: "Pause before accepting a confident answer; ask what's still unsure."]
+**Why the human notices their own disengagement**
 
-[NO REASONING: "Name where you think an idea belongs before asking the AI to develop it."]
+Joint reasoning takes effort throughout a session, and effort drops as the session goes on. The usual result is not a decision to stop. Active reasoning slides into accepting what the LLM produces, because evaluating it feels like more work than moving on. From then on the LLM keeps producing and the reasoning keeps accumulating, and the document that results reflects what the LLM thought, not what the two worked out together. The LLM can only infer this state from outside. The human has direct signals: no longer being surprised, no longer wanting to push back, no longer caring whether the next paragraph lands. So the sentence belongs to the human, who either stops the session or resets explicitly. Continuing without doing either is the failure it names.
 
-[NO REASONING: "Ask the AI to steel-man an option before rejecting it, rather than asking it to help reject it."]
+**Why the human pauses before accepting a confident answer**
 
-[NO REASONING: "Ask the AI to show its work when an answer arrives too cleanly, rather than accepting fluency as evidence of soundness."]
+An LLM produces confident, well-structured answers whether or not the question has been resolved, so the confidence of an answer says little about whether the thinking behind it is finished. A clean answer that arrives quickly is often an untested one. The human is the one under pressure to close: an unresolved conversation is uncomfortable, and a satisfying answer relieves that. So the human first asks themselves whether the answer resolves the question or only sounds as if it does, and then asks the LLM what is still unsure. The LLM answers that question honestly when it is asked, so the human's part is to ask it.
 
-[NO REASONING: "Apply the so-what test to your own best idea before building on it."]
+**Why the human names where an idea belongs before asking for it to be developed**
 
-[NO REASONING: "Schedule deliberate return to a document without a trigger, not only when something breaks."]
+Not every idea that surfaces belongs in the document being worked on. Some belong at another level of the hierarchy, some in a different kind of artifact, and some are not ready to be written anywhere. A draft creates its own momentum: once an idea has been developed into a paragraph, questioning whether it belongs there is harder than it was before the paragraph existed. The cheap moment to ask is before the draft. The human states where they think the idea belongs, and the LLM confirms it, redirects it, or offers a better home. When the reasoning documents are loaded into the session, the LLM can answer this because it can see what each document carries.
+
+**Why the human asks for a steel-man before rejecting an option**
+
+Reasoning fails in two directions: building on weak ideas, and rejecting strong ones too easily. The second is harder to see. An option dismissed without real engagement looks like a considered rejection once it is written into Options Considered, and nothing in the document shows it was not one. The motivation also runs the wrong way. A human who already doubts an option looks for confirmation that the doubt was right, and asking the LLM to help reject it supplies that confirmation. Asking first for the strongest version of the option makes the case against the doubt get heard. If the option still fails against its best case, the rejection is earned. If it holds, a premature closure has been avoided that would otherwise have stayed invisible.
+
+**Why the human asks the LLM to show its work when an answer arrives cleanly**
+
+Fluency and correctness are independent, so a clean answer does not show that the reasoning behind it is sound. The reasoning may be solid, or it may have been skipped in favor of a plausible conclusion, and the answer alone does not tell the human which. Asking what is still unsure surfaces the uncertainty the LLM is aware of. Asking for the reasoning path surfaces the steps, the assumptions, and the places where a different input would have produced a different output. The human can then evaluate the path instead of receiving the conclusion. Thin spots and skipped steps are where the answer is most likely to be wrong.
+
+**Why the human asks "so what?" of their own best idea before building on it**
+
+An idea that feels right invites development: adding detail, thinking forward, looking for agreement. Each step of development makes the idea harder to question, so a plausible but flawed idea gets elaborated instead of examined, and the correction costs more the further the work goes. The question "so what? why does this actually matter?" has to be asked before that point, and asked of the human's own thinking, not the LLM's. The reasoning document records why a decision was made, so a decision built on an unquestioned idea yields a document that looks complete and is not: the assumption doing the most work is the one that was never named.
 
 [NO REASONING: "Keep a Chesterton's Fence log during pressure mode: deviations, deferrals, broken assumptions."]
 
