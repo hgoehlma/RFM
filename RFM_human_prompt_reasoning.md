@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.4.0` // `module_reasoning` // [living]
+`v0.5.0` // `module_reasoning` // [living]
 
 ---
 
@@ -72,7 +72,9 @@ Fluency and correctness are independent, so a clean answer does not show that th
 
 An idea that feels right invites development: adding detail, thinking forward, looking for agreement. Each step of development makes the idea harder to question, so a plausible but flawed idea gets elaborated instead of examined, and the correction costs more the further the work goes. The question "so what? why does this actually matter?" has to be asked before that point, and asked of the human's own thinking, not the LLM's. The reasoning document records why a decision was made, so a decision built on an unquestioned idea yields a document that looks complete and is not: the assumption doing the most work is the one that was never named.
 
-[NO REASONING: "Keep a Chesterton's Fence log during pressure mode: deviations, deferrals, broken assumptions."]
+**Why the LLM keeps the Chesterton's Fence log and the human reads it**
+
+In pressure mode the LLM does the executing, so it is the one who deviates from the established reasoning, defers a question, or finds an assumption broken, and it can record each as it happens. The human's part is the return: reading the log when pressure lifts and deciding what goes back into the reasoning. A log that is kept and never read does not make the return honest, so the reading stays with the human. The LLM will miss deviations it does not recognize as deviations. This split is untested, because the log has not yet been used in practice.
 
 ---
 
