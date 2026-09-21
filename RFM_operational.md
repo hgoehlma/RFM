@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Operational Document
-`v0.14.0` // `top_level_operational` // [living]
+`v0.15.0` // `top_level_operational` // [living]
 
 ---
 
@@ -81,8 +81,7 @@ Report the check as done only after showing its output.
 Assumptions, Hard Lessons, and Open Questions use content-derived IDs rather than positional numbers. Format: `[AS-XXXX]` for Assumptions, `[HL-XXXX]` for Hard Lessons, `[OQ-XXXX]` for Open Questions, where XXXX is a short abbreviation derived from the entry content.
 
 Rules:
-- ID is assigned once at capture and never re-derived
-- Abbreviation must be recoverable on cold read without session context
+- Abbreviation must be recoverable on cold read without session context. When a retitle breaks that, the ID is changed, and every reference to the old ID in the same document is updated in the same edit
 - Cross-references use the ID, never the position number
 - IDs are unique within their section type within a single document; they do not form a shared registry across documents
 

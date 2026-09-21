@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.8.1` // `module_reasoning` // [living]
+`v0.8.2` // `module_reasoning` // [living]
 
 ---
 
@@ -11,7 +11,7 @@ The methodology's discipline lives in reasoning documents, and a document is rea
 
 ## The Assumptions
 
-**[AS-ACCT] - The prompt must work in the background of ordinary work.** The traveling prompt must not feel like a review the human is sitting through; if it does, it has failed at its primary job regardless of whether its content is correct. Background discipline that runs through every turn and a deliberate audit of the documents are different kinds of work, and the prompt is designed for the first, unconditionally.
+**[AS-BKGD] - The prompt must work in the background of ordinary work.** The traveling prompt must not feel like a review the human is sitting through; if it does, it has failed at its primary job regardless of whether its content is correct. Background discipline that runs through every turn and a deliberate audit of the documents are different kinds of work, and the prompt is designed for the first, unconditionally.
 
 ---
 
@@ -125,11 +125,11 @@ A sentence that states how many entries exist is true only until one is added or
 
 The temptation to write the traveling prompt directly from the findings the review passes keep producing and from the lessons already recorded is real: the material is all there, the prompt practically writes itself. The reasoning document is written first. The prompt follows.
 
-**[HL-DTCD] Why claim discipline is carried by the traveling prompt**
+**[HL-CLAIM] Why claim discipline is carried by the traveling prompt**
 
 How claims are formed, how observation is separated from interpretation, and how the question being decided stays visible, with the case for and against it, across all artifacts is a reasoning discipline principle, not a house style concern. A principle with that scope belongs in the traveling prompt. The operational document may carry project-local reminders, but it should not be the primary source for a principle that governs the quality of reasoning itself.
 
-**[HL-TQAB] A turn that closes on a single question silently absorbs everything else the turn carried.**
+**[HL-ONEQ] A turn that closes on a single question silently absorbs everything else the turn carried.**
 
 When a response contains several observations and ends with one forward-pointing question, the human's reply naturally answers the question. The observations that came before received no explicit ruling. Their presence in a turn that did get a reply can be read, on the LLM side, as implicit agreement, when it was actually silence. The failure compounds quietly: the LLM proceeds as though the unaddressed items were accepted, while the human may not have registered them as needing a decision at all.
 
