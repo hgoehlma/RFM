@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Operational Document
-`v0.3.0` // `module_operational` // [living]
+`v0.3.1` // `module_operational` // [living]
 
 ---
 
@@ -34,7 +34,7 @@ Both constraints are non-negotiable. When a clause exists to reassure rather tha
 
 Do not explain your derivation. Do not summarize what you read. Produce the artifact.
 
-The prompt must include a version header in the format: `vX.X.X` // `traveling_prompt` // `[living]`
+The prompt must include a version header in the format: `vX.X.X` // `module_artifact` // `[living]`
 
 ---
 
