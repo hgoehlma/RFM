@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Operational Document
-`v0.2.1` // `module_operational` // [living]
+`v0.3.0` // `module_operational` // [living]
 
 ---
 
@@ -11,9 +11,9 @@ This module produces one derivative artifact:
 
 ---
 
-## Derivation procedure
+## Independent derivation
 
-The traveling prompt is derived from its source reasoning documents in a dedicated session. The session must be clean, with no existing version of the traveling prompt in context. Derivation anchors on the reasoning, not on prior expression.
+Occasionally, a dedicated session derives the prompt from the reasoning documents alone, with no existing version in context. The result is compared with the current prompt. A sentence in the current prompt that the derivation lacks must trace to the reasoning documents. If it does not, the reasoning documents get an addition. A sentence the derivation has and the prompt lacks is either a gap in the prompt or reasoning that belongs to a different carrier. One pass, one comparison, one reconciliation.
 
 **Load this document's sources before drafting.** They are its branch of the hierarchy in `RFM_map.md`, read upward.
 
@@ -38,17 +38,19 @@ The prompt must include a version header in the format: `vX.X.X` // `traveling_p
 
 ---
 
-## Coverage check: after derivation
+## Checks after a change
 
-Once the derivation is complete, compare against the previous version of the traveling prompt. The derivation is accepted if it is structurally better or equivalent and loses no load-bearing behavioral instructions. If the previous version carried something the derivation missed, assess whether it was present in the source reasoning documents. If yes: the derivation missed it, add it to the derived version. If no: the previous version carried reasoning its source did not hold; that is a source document gap requiring a reasoning document addition before the next derivation cycle.
+Run each of these after any change to the prompt. The reader check uses a session with no other context.
 
-Do not loop the derivation. One pass, one coverage check, one reconciliation. `RFM_prompts_reasoning.md` names the failure: derivation loops optimize expression instead of converging.
+Trace both ways. Every sentence of the prompt traces to reasoning in its reasoning document or the documents above it, and every piece of reasoning the prompt should carry traces to a sentence. A sentence with no reasoning is cut, or its reasoning is written first. Reasoning with no sentence is a gap in the prompt or belongs to a different carrier.
+
+Reader check. Give the prompt alone to a reader with no other context. Have it list every phrase it would have to guess and what it takes each phrase to mean. Define in plain words, or reword, any phrase it cannot decode or reads differently from what is intended.
 
 ---
 
 ## Version discipline
 
-The version number is assigned by the human at acceptance, not by the derivation session. A clean re-derivation that improves on the previous version increments the minor digit. A patch-level fix to an accepted version increments the patch digit. The header of `RFM_traveling_prompt.md` is the single source of version truth.
+The version number is assigned by the human at acceptance, not by the derivation session. A change to what the prompt asks increments the minor digit. A patch-level fix to an accepted version increments the patch digit. The header of `RFM_traveling_prompt.md` is the single source of version truth.
 
 ---
 

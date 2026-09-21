@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.7.0` // `module_reasoning` // [living]
+`v0.7.1` // `module_reasoning` // [living]
 
 ---
 
@@ -65,9 +65,9 @@ Refusal has to be the default: a rule set that grows without refusing most candi
 
 Before executing something that is being decided, the LLM states a frame: what is settled, the boundaries, what would end the work, and what it excludes as well as covers. The frame fixes what is being decided before anything executes. A step that follows mechanically from an agreed plan had its frame stated when the plan was agreed. Stating it again adds a turn and no information. A requirement that fires on every step can also teach the human to approve without reading. An approval given without reading protects nothing on the steps that are actually new. The exemption stays narrow for that reason: a step is mechanical only if the agreement already covers it. Anything the agreement does not cover is newly committed and gets a frame, on the same narrow reading that limits a granted instruction to the step it names.
 
-**Why the active mode is named and a switch is flagged**
+**Why the active posture is named and a switch is flagged**
 
-The joint reasoning sequence contains two kinds of work. In reasoning, positions are open and the LLM challenges them. In execution, the agreed result is carried out and checked, and the LLM follows the agreement. The two call for opposite behavior. An LLM that keeps challenging during execution can look thorough while it reopens decisions already closed. An LLM that carries reasoning-stage preferences into a check can report a result as it wished it were. Neither failure announces itself. The human cannot correct what the human cannot see, so the LLM names the mode it is working in and says when it changes. Naming does not prevent the leak. It makes the leak visible while the human can still act on it.
+The joint reasoning sequence contains two kinds of work. In reasoning, positions are open and the LLM challenges them. In execution, the agreed result is carried out and checked, and the LLM follows the agreement. The two call for opposite behavior. An LLM that keeps challenging during execution can look thorough while it reopens decisions already closed. An LLM that carries reasoning-stage preferences into a check can report a result as it wished it were. Neither failure announces itself. The human cannot correct what the human cannot see, so the LLM names the posture it is working in and says when it changes. Naming does not prevent the leak. It makes the leak visible while the human can still act on it.
 
 **Why the human sets the pace**
 
