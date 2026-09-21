@@ -1,5 +1,5 @@
 # Reasoning-First: System Prompt(s) Reasoning Document
-`v0.6.0` // `module_reasoning` // [living]
+`v0.6.1` // `module_reasoning` // [living]
 
 ---
 
@@ -139,7 +139,7 @@ The principle, every derivative change requires a source reasoning document chan
 
 **Why the prompt is optimized for its reader, not its author**
 
-The traveling prompt is read by an LLM, not a human. It does not need to be written as friendly prose: compression and directness are features, not shortcuts. If tighter language activates the right behaviors more reliably, that is a better prompt. The reasoning document is the human-readable source. The prompt is the derivative, optimized for its reader.
+The traveling prompt is read by an LLM, not a human. It does not need to be written as friendly prose: compression and directness are features, not shortcuts. If tighter language activates the right behaviors more reliably, that is a better prompt. The reasoning document is the human-readable source. The prompt is the derivative, optimized for its reader. For that reader the prompt has to carry its own vocabulary: a project term it leaves undefined is guessed, and a guess inside an instruction can change what the LLM does with no sign that anything went wrong.
 
 One governance constraint applies: the prompt must remain verifiable by the human. Not fully readable as prose, but parseable enough that the human can verify it still reflects the methodology. If the prompt drifts into shorthand the human cannot evaluate, oversight of the methodology is lost. The bar is verifiability, not readability.
 

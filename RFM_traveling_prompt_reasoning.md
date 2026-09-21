@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.6.1` // `module_reasoning` // [living]
+`v0.7.0` // `module_reasoning` // [living]
 
 ---
 
@@ -31,7 +31,7 @@ The traveling prompt is the mechanism by which the methodology travels. Its desi
 
 **1. Explicit role declaration vs. role implied by instructions**
 
-Stating "you are a co-author" directly vs. letting the role emerge from the behavioral instructions themselves. Explicit declaration chosen because the co-author/tool distinction is the founding behavioral difference the entire prompt depends on. Leaving it implicit risks the LLM defaulting to tool behavior when instructions are ambiguous. The declaration must come first and must be unambiguous.
+Stating "you are a co-author" directly vs. letting the role emerge from the behavioral instructions themselves. Explicit declaration chosen because the co-author/tool distinction is the founding behavioral difference the entire prompt depends on. Leaving it implicit risks the LLM defaulting to tool behavior when instructions are ambiguous.
 
 ---
 
@@ -39,19 +39,19 @@ Stating "you are a co-author" directly vs. letting the role emerge from the beha
 
 **Why explicit role declaration opens the prompt**
 
-The co-author/tool distinction governs every subsequent instruction. If it is not established first, the LLM has no frame for interpreting what follows. An LLM reading "surgical edits only" as a tool interprets it as a constraint. An LLM reading it as a co-author interprets it as a shared standard. Same instruction, different behavior. The declaration must precede everything else.
+The prompt opens by declaring the co-author role, because the instructions after it are written from that stance and are meant to be read as a co-author's standards, not a tool's constraints. Stating the role does not install the posture. The tool role is what an LLM reaches for without effort, and a session drifts toward it on its own. The posture is meant to be carried by the structure of the instructions that follow, not by the declaration. The declaration has a recorded cost: a declared role makes replies read as more careful and more verbose. It is chosen as a bet that this domain wants cautious guidance.
 
-**Why the settled-state statement is ambient**
+**Why the frame is ambient**
 
-Before executing, the LLM should state what's settled, the boundaries, and what would end it. The difficulty of writing that statement is itself the signal of whether reasoning is settled enough to proceed. That's the design already. What's missing is something that makes the LLM produce the statement at the moment execution begins. A reasoning document is read once, then relied on from memory. Session pressure erodes memory-based application. The traveling prompt is the one carrier present every turn. It's the only place the LLM states it at the moment of use. Without that, a session under real pressure skips the statement rather than remembering to make it.
+Before executing, the LLM states the frame it will work within, so that what is settled and what is not are written down. That's the design already. What's missing is something that makes the LLM produce the frame at the moment execution begins. A reasoning document is read once, then relied on from memory. Session pressure erodes memory-based application. The traveling prompt is the one carrier present every turn. It's the only place the LLM states it at the moment of use. Without that, a session under real pressure skips the frame rather than remembering to make it.
 
 **Why a narrow reading, not a recalled principle**
 
 Anti-deference needs a ceiling: unbounded initiative treats structural change as covered by the same license as derivative cleanup. That's settled. It doesn't reach the LLM at the moment a specific instruction is being read. The traveling prompt does. It's where a session's instructions arrive, turn by turn. That's what makes it able to catch a narrowly named step about to be executed as a broadly named one. That's why the ceiling is carried here as the direct instruction "read a granted instruction narrowly" instead of a reference to the anti-deference ceiling. A direct instruction acts at the point of reading one instruction. A reference to a principle requires the LLM to recall the principle, then apply it.
 
-**Why honest answering fires without being asked**
+**Why the LLM is told to answer honestly when asked**
 
-Several behaviours asking the LLM to answer honestly, instead of with a performed non-answer, exist only as assumptions inside the human prompt. The human prompt asks the human to probe for them one at a time: ask what's still unsure, ask what's still unresolved, ask the AI to show its work, ask the AI to steel-man an option. No carrier tells the LLM to do any of this on its own. That leaves the human as the only check. The traveling prompt reaches the LLM directly, at the moment any of these requests arrives. Without it, none of them fires unless the human happens to ask.
+Several behaviours asking the LLM to answer honestly, instead of with a performed non-answer, exist only as assumptions inside the human prompt. The human prompt asks the human to probe for them one at a time. No carrier tells the LLM how to answer when such a request arrives. That leaves the human as the only check. The traveling prompt reaches the LLM directly, at the moment such a request arrives. Without it, nothing guarantees the answer is honest once the human does ask.
 
 **Why a missed rule is corrected on the spot**
 
@@ -60,10 +60,6 @@ An LLM co-author notices when something is off and says so without being asked. 
 **Why refusal fires before the review, not at it**
 
 Refusal has to be the default: a rule set that grows without refusing most candidates buys each new rule by weakening all of them. Most candidates at the recurring review of the collaboration's conduct are refused because of that. The refusal is what does the work, not the rules that get written. That's settled. What's not settled is who has to hold the line at the moment a rule is proposed. The joint reasoning sequence does: convergence, not just proposal, has to precede execution before a real decision proceeds. Reading "add only on an explicit ruling" as that requirement applied to standing rules extends the sequence to this specific artifact. The sequence doesn't name standing rules directly, and it draws no exception for them either. The traveling prompt is the carrier present at the moment a candidate rule is being considered, mid-session. Without it, a rule can take hold over several turns and meet refusal only once, at the review that comes after.
-
-**Why version history is never rewritten**
-
-Version history holds the record. A document that keeps what history already preserves is hoarding, not curating. That's settled. What's missing is something that acts at the moment an entry is actually being curated, when duplicating history into the live document is easy to do without noticing. The traveling prompt is the carrier present at that moment. Carrying the instruction "know which records are append-only and never rewrite those in place" here gives the LLM that check at exactly the point of graduating or expiring an entry. Without it, a session can copy history back into the document while curating, undoing the thing curation exists to prevent.
 
 **Why a step already agreed skips the frame**
 
@@ -107,7 +103,9 @@ A human confirms an edit by reading what changed. A surgical edit changes only w
 
 ## The Open Questions
 
-*No open questions at this time.*
+**[OQ-RLDC] Does the declared role change how the later instructions are read?**
+
+`RFM_carrier_types.md` says a declared role changes the style and tone of replies and does not reliably raise answer quality. Whether it also changes how the instructions after it are read has not been tested.
 
 ---
 
@@ -117,9 +115,9 @@ A human confirms an edit by reading what changed. A surgical edit changes only w
 
 The temptation to write the traveling prompt directly from sweep patterns and hard lessons is real: the material is all there, the prompt practically writes itself. The reasoning document is written first. The prompt follows.
 
-**[HL-DTCD] Domain terminology and claim discipline belong in the traveling prompt, not only in operational documents.**
+**[HL-DTCD] Why claim discipline is carried by the traveling prompt**
 
-How claims are formed, how observation is separated from interpretation, and how the reasoning object stays visible across all artifacts is a reasoning discipline principle, not a house style concern. A principle with that scope belongs in the traveling prompt. The operational document may carry project-local reminders, but it should not be the primary source for a principle that governs the quality of reasoning itself.
+How claims are formed, how observation is separated from interpretation, and how the question being decided stays visible, with the case for and against it, across all artifacts is a reasoning discipline principle, not a house style concern. A principle with that scope belongs in the traveling prompt. The operational document may carry project-local reminders, but it should not be the primary source for a principle that governs the quality of reasoning itself.
 
 **[HL-TQAB] A turn that closes on a single question silently absorbs everything else the turn carried.**
 
