@@ -108,7 +108,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.6.1 | stays | The reasoning document governing all system prompt decisions |
 | `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.7.1 | stays | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | `module_operational` | v0.3.0 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
-| `RFM_traveling_prompt.md` | `module_artifact` | v0.4.1 | travels | The system prompt that carries the methodology into every LLM conversation |
+| `RFM_traveling_prompt.md` | `module_artifact` | v0.5.0 | travels | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_reasoning.md` | `module_reasoning` | v0.9.1 | stays | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_operational.md` | `module_operational` | v0.6.1 | stays | Language and structural catalogs, grey zone rule, source documents, coverage check, and version discipline for the sweep prompts |
 | `RFM_sweep_prompt_structural.md` | `module_artifact` | v0.5.2 | travels | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
