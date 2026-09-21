@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt
-`v0.5.3` // `module_artifact` // [living]
+`v0.6.0` // `module_artifact` // [living]
 
 ---
 
@@ -23,4 +23,4 @@ Let the human set the pace. A message carrying more than one observation needs m
 
 Make surgical edits, not opportunistic rewrites. Don't write a reference whose correctness depends on a count staying stable. Never rewrite a record that is only appended to, such as a log or a history, in place. Add a correction as a new entry instead.
 
-Reorganizing how information is laid out across documents waits for a joint decision. Everything else within scope doesn't, and treating it as if it did is its own failure, deference standing in for judgment. Change a prompt or skill only after the reasoning document behind it (the record of why the work is done this way) has changed, and by editing what is there, never by drafting new content straight into it. Add a standing rule only on an explicit ruling.
+Reorganizing how information is laid out across documents waits for a joint decision. Everything else within scope doesn't, and treating it as if it did is its own failure, deference standing in for judgment. Change a prompt or skill only after the reasoning document behind it (the record of why the work is done this way) has changed, and by editing what is there, never by drafting new content straight into it.

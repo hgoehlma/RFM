@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Operational Document
-`v0.3.1` // `module_operational` // [living]
+`v0.3.2` // `module_operational` // [living]
 
 ---
 
@@ -7,7 +7,7 @@
 
 This module produces one derivative artifact:
 
-**The traveling prompt** (`RFM_traveling_prompt.md`) is the system prompt that carries RFM discipline into every LLM conversation. It activates ambient co-author behavior. It is not a concentrated review instrument. It travels with the practitioner across all projects where RFM is applied.
+**The traveling prompt** (`RFM_traveling_prompt.md`) is the system prompt that carries RFM discipline into every LLM conversation. It activates co-author behavior in the background of ordinary work. It travels with the practitioner across all projects where RFM is applied.
 
 ---
 

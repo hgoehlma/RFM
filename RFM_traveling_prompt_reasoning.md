@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.8.0` // `module_reasoning` // [living]
+`v0.8.1` // `module_reasoning` // [living]
 
 ---
 
@@ -11,7 +11,7 @@ The methodology's discipline lives in reasoning documents, and a document is rea
 
 ## The Assumptions
 
-**[AS-ACCT] - The ambient character is constitutive.** The traveling prompt must not feel like concentrated review; if it does, it has failed at its primary job regardless of whether its content is correct. Ambient discipline and deliberate critique are incompatible modes. The prompt is designed for the former unconditionally.
+**[AS-ACCT] - The prompt must work in the background of ordinary work.** The traveling prompt must not feel like a review the human is sitting through; if it does, it has failed at its primary job regardless of whether its content is correct. Background discipline that runs through every turn and a deliberate audit of the documents are different kinds of work, and the prompt is designed for the first, unconditionally.
 
 ---
 
@@ -19,9 +19,9 @@ The methodology's discipline lives in reasoning documents, and a document is rea
 
 | Approach | What it does | Why it's insufficient for the traveling prompt |
 |---|---|---|
-| **Constitutional AI / Model Specs** | Principles embedded at inference time to create judgment rather than rule-following: Anthropic's model spec and OpenAI's Model Spec (2025) are the primary examples | Designed for model-level alignment across all users and contexts. Not designed for a specific methodology traveling with a specific practitioner. No human verifiability or curation mechanism. |
+| **Constitutional AI / Model Specs** | Principles embedded at inference time to create judgment rather than rule-following: Anthropic's model spec and OpenAI's Model Spec (2025) are the primary examples | Designed for model-level alignment across all users and contexts. Not designed for a specific methodology traveling with a specific practitioner. The publisher curates it, so the practitioner cannot keep it in line with their own project's reasoning. |
 | **Persona / role prompting** | Assigns the LLM a role or identity to shape reasoning and behavior | Establishes identity, not methodology. The measured effect falls on how replies read, not on answer quality, and no measurement scores the posture the collaborator holds. Does not carry reasoning discipline or make it auditable. |
-| **Promptware engineering** | Treats prompts as versioned, maintained software artifacts with lifecycle discipline | Addresses engineering and versioning, not what the prompt must activate. Does not address co-authorship, drift detection, or the ambient/concentrated mode distinction. |
+| **Promptware engineering** | Treats prompts as versioned, maintained software artifacts with lifecycle discipline | Addresses engineering and versioning, not what the prompt must activate. Does not address co-authorship, drift detection, or the difference between background discipline and a deliberate review. |
 
 **The gap:** no approach surveyed here combines methodology-specific behavioral activation with human verifiability, curation as a living derivative, and the co-author role frame. Constitutional AI is the closest prior art; the traveling prompt extends it by scoping to a specific collaborative methodology, making the prompt auditable by its human maintainer, and treating it as a derivative with a reasoning source rather than a standalone artifact.
 
@@ -45,7 +45,7 @@ The prompt opens by declaring the co-author role, because the instructions after
 
 Red-teaming here means attacking a position to find where it fails. Pushing back answers weakness the LLM happens to notice in what the human says; red-teaming looks for weakness in positions the human holds with confidence. If the LLM does it only on request, it fires when the human already suspects a weakness, which is the case that needs it least. A position the human is confident in is the one the human is least likely to challenge, so it is the one most in need of a challenge from the LLM. A co-author who challenges only on request is a tool with an optional feature. The role declaration does not carry this, because stating a role does not install a posture. So the instruction is stated directly. Unrequested challenge adds turns and can read as adversarial, and that price is paid because a weakness found while the reasoning is open costs less than the same weakness found after execution.
 
-**Why the frame is ambient**
+**Why the prompt asks for the frame at the moment of execution**
 
 Before executing, the LLM states the frame it will work within, so that what is settled and what is not are written down. That's the design already. What's missing is something that makes the LLM produce the frame at the moment execution begins. A reasoning document is read once, then relied on from memory. Session pressure erodes memory-based application. The traveling prompt is the one carrier present every turn. It's the only place the LLM states it at the moment of use. Without that, a session under real pressure skips the frame rather than remembering to make it.
 
@@ -68,10 +68,6 @@ Several behaviours asking the LLM to answer honestly, instead of with a performe
 **Why a missed rule is corrected on the spot**
 
 An LLM co-author notices when something is off and says so without being asked. That's the role, but its own examples are about weak reasoning and drift in the shared work, not about the LLM catching its own missed instruction. Reading a missed rule as a case of something being off extends that definition rather than restating it. Nothing rules the extension out, but nothing states it either. Extended this way, it still doesn't say what the LLM should do at the moment a miss is noticed, mid-session, with reasoning already built past it. The traveling prompt is the carrier present at that moment. It's why the instruction here is concrete: apply the rule now, and say so.
-
-**Why refusal fires before the review, not at it**
-
-Refusal has to be the default: a rule set that grows without refusing most candidates buys each new rule by weakening all of them. Most candidates at the recurring review of the collaboration's conduct are refused because of that. The refusal is what does the work, not the rules that get written. That's settled. What's not settled is who has to hold the line at the moment a rule is proposed. The joint reasoning sequence does: convergence, not just proposal, has to precede execution before a real decision proceeds. Reading "add only on an explicit ruling" as that requirement applied to standing rules extends the sequence to this specific artifact. The sequence doesn't name standing rules directly, and it draws no exception for them either. The traveling prompt is the carrier present at the moment a candidate rule is being considered, mid-session. Without it, a rule can take hold over several turns and meet refusal only once, at the review that comes after.
 
 **Why a step already agreed skips the frame**
 
@@ -109,11 +105,9 @@ A sentence that states how many entries exist is true only until one is added or
 
 ## The Boundaries
 
-**Not sufficient without the reasoning documents.** The traveling prompt carries the discipline. The reasoning documents carry the content the discipline protects. An LLM operating with the prompt but without the relevant documents holds the right posture toward the wrong or missing material. Both are required. The prompt does not substitute for the documents it travels with.
+**Not sufficient without the reasoning documents.** The traveling prompt carries the discipline. The reasoning documents carry the content the discipline protects. An LLM operating with the prompt but without the relevant documents holds the right posture toward the wrong or missing material. Both are required. The prompt does not substitute for the documents it travels with. The documents also have to be complete enough before the prompt arrives, since a standard enforced against material that does not yet exist is empty.
 
 **Not specific to any project, including RFM itself.** The traveling prompt carries methodology discipline into any project where complex reasoning precedes execution. It must not contain instructions that only make sense when working on the RFM methodology itself. When session history is dominated by RFM development work, fresh derivations face a specific risk: RFM-specific framings harden into the prompt as if they were generic methodology instructions. The genericity constraint must be held explicitly: if an instruction would not apply to a practitioner using RFM on an unrelated project, it does not belong in the traveling prompt.
-
-**Not a Commander's Intent anchor until reasoning documents are established.** In pressure mode the prompt functions as the ambient discipline layer while reasoning documents serve as Commander's Intent, the direction, boundaries and assumptions established in advance so that execution can adapt within them. This only holds when those documents are sufficiently complete before delivery pressure arrives. A traveling prompt deployed ahead of established reasoning documents provides discipline without substance: it enforces a standard against material that does not yet exist.
 
 ---
 
@@ -129,7 +123,7 @@ A sentence that states how many entries exist is true only until one is added or
 
 **[HL-TPDR] The traveling prompt is a derivative of a reasoning document, not the other way around.**
 
-The temptation to write the traveling prompt directly from sweep patterns and hard lessons is real: the material is all there, the prompt practically writes itself. The reasoning document is written first. The prompt follows.
+The temptation to write the traveling prompt directly from the findings the review passes keep producing and from the lessons already recorded is real: the material is all there, the prompt practically writes itself. The reasoning document is written first. The prompt follows.
 
 **[HL-DTCD] Why claim discipline is carried by the traveling prompt**
 
@@ -139,7 +133,7 @@ How claims are formed, how observation is separated from interpretation, and how
 
 When a response contains several observations and ends with one forward-pointing question, the human's reply naturally answers the question. The observations that came before received no explicit ruling. Their presence in a turn that did get a reply can be read, on the LLM side, as implicit agreement, when it was actually silence. The failure compounds quietly: the LLM proceeds as though the unaddressed items were accepted, while the human may not have registered them as needing a decision at all.
 
-This is not solved by surfacing fewer observations per turn. The co-author floor, the minimum a co-author does, is still to notice and name what it notices. The fix is closing discipline: a turn carrying more than one item that needs a ruling must say so explicitly, rather than relying on an answer to the final question to stand in for everything that came before it.
+This is not solved by surfacing fewer observations per turn. Noticing and naming what it notices is the least a co-author does. The fix is closing discipline: a turn carrying more than one item that needs a ruling must say so explicitly, rather than relying on an answer to the final question to stand in for everything that came before it.
 
 This failure is difficult to self-correct from inside the turn that produces it. A turn that ends on a clean, well-formed question reads as complete. There is no internal signal that something earlier in the same turn was left hanging, because the question satisfies the turn's own sense of closure. Instruction reduces the failure. It does not guarantee against it, for the same reason a prompt that names co-author drift in both directions does not guarantee against it: an instruction can name a failure mode without controlling it, and the failure is least visible exactly when it is happening.
 
