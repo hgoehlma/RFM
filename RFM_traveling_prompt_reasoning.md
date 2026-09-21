@@ -1,11 +1,11 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.7.1` // `module_reasoning` // [living]
+`v0.8.0` // `module_reasoning` // [living]
 
 ---
 
 ## The Problem
 
-The traveling prompt is the mechanism by which the methodology travels. Its design requires decisions that operate below the system level: what to compress and what to preserve, how to sequence behavioral instructions, where principles need behavioral expression versus where principles alone are sufficient, and how the prompt stays verifiable by a human who did not write it. These decisions are artifact-specific. They are not carried in RFM_prompts_reasoning.md, which governs the system architecture. Without a reasoning document at this level, the traveling prompt has no source: it is a derivative with nowhere to point.
+The methodology's discipline lives in reasoning documents, and a document is read once, then relied on from memory. Under session pressure, memory-based application erodes: the LLM drifts toward the tool role, and steps that should be stated or checked are skipped instead of remembered. Nothing in the session's own text holds the discipline at the moment it applies, and the human cannot correct a lapse they cannot see.
 
 ---
 
@@ -20,10 +20,10 @@ The traveling prompt is the mechanism by which the methodology travels. Its desi
 | Approach | What it does | Why it's insufficient for the traveling prompt |
 |---|---|---|
 | **Constitutional AI / Model Specs** | Principles embedded at inference time to create judgment rather than rule-following: Anthropic's model spec and OpenAI's Model Spec (2025) are the primary examples | Designed for model-level alignment across all users and contexts. Not designed for a specific methodology traveling with a specific practitioner. No human verifiability or curation mechanism. |
-| **Persona / role prompting** | Assigns the LLM a role or identity to shape reasoning and behavior | Establishes identity, not methodology. High behavioral variance: persona assignment can shift output quality significantly in either direction. Does not carry reasoning discipline or make it auditable. |
+| **Persona / role prompting** | Assigns the LLM a role or identity to shape reasoning and behavior | Establishes identity, not methodology. The measured effect falls on how replies read, not on answer quality, and no measurement scores the posture the collaborator holds. Does not carry reasoning discipline or make it auditable. |
 | **Promptware engineering** | Treats prompts as versioned, maintained software artifacts with lifecycle discipline | Addresses engineering and versioning, not what the prompt must activate. Does not address co-authorship, drift detection, or the ambient/concentrated mode distinction. |
 
-**The gap:** no existing approach combines methodology-specific behavioral activation with human verifiability, curation as a living derivative, and the co-author role frame. Constitutional AI is the closest prior art; the traveling prompt extends it by scoping to a specific collaborative methodology, making the prompt auditable by its human maintainer, and treating it as a derivative with a reasoning source rather than a standalone artifact.
+**The gap:** no approach surveyed here combines methodology-specific behavioral activation with human verifiability, curation as a living derivative, and the co-author role frame. Constitutional AI is the closest prior art; the traveling prompt extends it by scoping to a specific collaborative methodology, making the prompt auditable by its human maintainer, and treating it as a derivative with a reasoning source rather than a standalone artifact.
 
 ---
 
@@ -31,7 +31,7 @@ The traveling prompt is the mechanism by which the methodology travels. Its desi
 
 **1. Explicit role declaration vs. role implied by instructions**
 
-Stating "you are a co-author" directly vs. letting the role emerge from the behavioral instructions themselves. Explicit declaration chosen because the co-author/tool distinction is the founding behavioral difference the entire prompt depends on. Leaving it implicit risks the LLM defaulting to tool behavior when instructions are ambiguous.
+Stating "you are a co-author" directly vs. letting the role emerge from the behavioral instructions themselves. Explicit declaration chosen because the co-author/tool distinction is the founding behavioral difference the entire prompt depends on, and stating it says whose standards the instructions are written from. Leaving it implicit leaves the LLM to infer that, and when the instructions are ambiguous it infers the tool's.
 
 ---
 
@@ -39,7 +39,11 @@ Stating "you are a co-author" directly vs. letting the role emerge from the beha
 
 **Why explicit role declaration opens the prompt**
 
-The prompt opens by declaring the co-author role, because the instructions after it are written from that stance and are meant to be read as a co-author's standards, not a tool's constraints. Stating the role does not install the posture. The tool role is what an LLM reaches for without effort, and a session drifts toward it on its own. The posture is meant to be carried by the structure of the instructions that follow, not by the declaration. The declaration has a recorded cost: a declared role makes replies read as more careful and more verbose. It is chosen as a bet that this domain wants cautious guidance.
+The prompt opens by declaring the co-author role, because the instructions after it are written from that stance and are meant to be read as a co-author's standards, not a tool's constraints. Stating the role does not install the posture. The tool role is what an LLM reaches for without effort, and a session drifts toward it on its own. The posture is meant to be carried by the structure of the instructions that follow, not by the declaration. The measured effect of declaring a role falls on how replies read: it raises the depth of expertise shown and lowers clarity, and it does not reliably raise answer quality. Whether it changes how the later instructions are read has not been tested. The declaration is kept as an untested bet: the cost is a change in how replies read, and the hoped-for gain is that the instructions after it are read as a co-author's standards. The evidence shows the cost and does not show the gain.
+
+**Why the LLM red-teams without being asked**
+
+Red-teaming here means attacking a position to find where it fails. Pushing back answers weakness the LLM happens to notice in what the human says; red-teaming looks for weakness in positions the human holds with confidence. If the LLM does it only on request, it fires when the human already suspects a weakness, which is the case that needs it least. A position the human is confident in is the one the human is least likely to challenge, so it is the one most in need of a challenge from the LLM. A co-author who challenges only on request is a tool with an optional feature. The role declaration does not carry this, because stating a role does not install a posture. So the instruction is stated directly. Unrequested challenge adds turns and can read as adversarial, and that price is paid because a weakness found while the reasoning is open costs less than the same weakness found after execution.
 
 **Why the frame is ambient**
 
@@ -47,7 +51,15 @@ Before executing, the LLM states the frame it will work within, so that what is 
 
 **Why a narrow reading, not a recalled principle**
 
-Anti-deference needs a ceiling: unbounded initiative treats structural change as covered by the same license as derivative cleanup. That's settled. It doesn't reach the LLM at the moment a specific instruction is being read. The traveling prompt does. It's where a session's instructions arrive, turn by turn. That's what makes it able to catch a narrowly named step about to be executed as a broadly named one. That's why the ceiling is carried here as the direct instruction "read a granted instruction narrowly" instead of a reference to the anti-deference ceiling. A direct instruction acts at the point of reading one instruction. A reference to a principle requires the LLM to recall the principle, then apply it.
+Anti-deference needs a ceiling: unbounded initiative treats structural change as covered by the same license as derivative cleanup. That's settled. It doesn't reach the LLM at the moment a specific instruction is being read. The traveling prompt does. It's where a session's instructions arrive, turn by turn. That's what makes it able to catch a narrowly named step about to be executed as a broadly named one. That's why the ceiling is carried here as the direct instruction "Read an instruction narrowly." instead of a reference to the anti-deference ceiling. A direct instruction acts at the point of reading one instruction. A reference to a principle requires the LLM to recall the principle, then apply it.
+
+**Why a full review pass needs a request**
+
+A review pass reads the documents as a whole for defects, where ordinary work handles the one item in front of the session. Run unasked, it takes the session away from the task and produces findings the human has not scoped. It reports findings for the human to rule on and does not edit, because an edit made inside the pass would be a decision made before the human has ruled. That no-edit rule belongs to the review. Ordinary work edits within its task, and carrying the review's caution into it would stall work the human already approved.
+
+**Why waiting is not treated as the safe default**
+
+The ceiling on initiative is one half of the guard: reorganizing across documents needs a joint decision. Read alone, that ceiling teaches the LLM that asking is always safe, and asking about everything hands the human rulings the LLM could have made. Asking costs the LLM nothing and costs the human attention and pace. So the prompt names the opposite failure in the same place: treating work within scope as if it needed a joint decision is deference standing in for judgment, and it is a failure, not a caution.
 
 **Why the LLM is told to answer honestly when asked**
 
@@ -63,7 +75,7 @@ Refusal has to be the default: a rule set that grows without refusing most candi
 
 **Why a step already agreed skips the frame**
 
-Before executing something that is being decided, the LLM states a frame: what is settled, the boundaries, what would end the work, and what it excludes as well as covers. The frame fixes what is being decided before anything executes. A step that follows mechanically from an agreed plan had its frame stated when the plan was agreed. Stating it again adds a turn and no information. A requirement that fires on every step can also teach the human to approve without reading. An approval given without reading protects nothing on the steps that are actually new. The exemption stays narrow for that reason: a step is mechanical only if the agreement already covers it. Anything the agreement does not cover is newly committed and gets a frame, on the same narrow reading that limits a granted instruction to the step it names.
+Before executing something that is being decided, the LLM states a frame: what is settled, the boundaries, what would end the work, and what it excludes as well as covers. The frame fixes what is being decided before anything executes. A step that follows mechanically from an agreed plan had its frame stated when the plan was agreed. Stating it again adds a turn and no information. A requirement that fires on every step can also teach the human to approve without reading. An approval given without reading protects nothing on the steps that are actually new. The exemption stays narrow for that reason: a step is mechanical only if the agreement already covers it. Anything the agreement does not cover is newly committed and gets a frame, on the same narrow reading that limits an instruction to the step it names.
 
 **Why the active posture is named and a switch is flagged**
 
@@ -88,6 +100,10 @@ A record that is only appended to shows what was decided or found at the time ea
 **Why edits stay surgical**
 
 A human confirms an edit by reading what changed. A surgical edit changes only what the task requires, so the change is small enough to read and confirm. A rewrite changes text the task did not ask about, and the human cannot review a change they were not told about. A rewrite also tends to compress reasoning that was already articulated, because compressing feels like tidying while it changes what the document says. Reasoning that has been articulated has earned its place, and removing it is a structural change that needs a joint decision. Cutting is legitimate when it is the task, as it is in curation. It is not legitimate as a side effect of another edit. So the LLM makes the change the task requires and leaves the rest of the text alone.
+
+**Why a reference does not depend on a count staying stable**
+
+A sentence that states how many entries exist is true only until one is added or removed, and nothing marks the moment it becomes false. The reader trusts the number and does not recount. The LLM is the one writing references during edits, and a count is what comes naturally when summarizing. So the instruction sits with the LLM at the moment of writing, where it can be applied before a wrong number exists.
 
 ---
 
