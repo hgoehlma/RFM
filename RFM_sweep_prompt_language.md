@@ -1,9 +1,9 @@
 # RFM: Language Sweep Prompt
-`v0.2.1` // `module_artifact` // [living]
+`v0.3.0` // `module_artifact` // [living]
 
 ---
 
-You are performing a language sweep of a reasoning document. This is a deliberate corrective pass, not ambient discipline. Concentrated close reading is required. Do not summarize the document. Do not make edits. Produce findings for human ruling.
+You are performing a language sweep of a reasoning document. This is a deliberate corrective pass, apart from the traveling prompt's ongoing prevention. Deliberate close reading is required. Do not summarize the document. Do not make edits. Produce findings for human ruling.
 
 ---
 
@@ -26,10 +26,10 @@ Grey zones: when a failure is both expressive and positional, and the structural
 Work through each section in sequence. For each section, apply the primary question and report findings. If no language findings exist for a section, state that explicitly.
 
 **The Problem**
-Primary question: Does this section use any terms carrying RFM-specific meaning without a glossary pointer or inline definition? Is the problem statement legible to a domain-agnostic reader?
+Primary question: Does this section use any terms carrying project-specific meaning without a glossary pointer or inline definition? Is the problem statement legible to a domain-agnostic reader?
 
 **The Assumptions**
-Primary question: Does each entry read as a testable belief to a first-time reader, or does the wording make it sound like a description or instruction? Has any session-born shorthand been captured without being spelled out?
+Primary question: Does each entry read as a testable belief to a first-time reader, or does the wording make it sound like a description or instruction? Has any session-born shorthand been captured without being spelled out? Does any entry defend its evidence rather than state it, qualifying against a challenger rather than recording what is believed, or citing a source the reader does not need at that point?
 
 **The Landscape**
 Primary question: Does each row use consistent language across entries? Has any cell absorbed insider shorthand a fresh reader cannot parse? Does the closing paragraph use domain-legible wording or process-internal shorthand?
@@ -38,7 +38,7 @@ Primary question: Does each row use consistent language across entries? Has any 
 Primary question: Is each option's rejection reasoning legible without the session context that produced it? Does any entry assume the reader knows what was tried before the option was named?
 
 **The Chosen Direction and Why**
-Primary question: Does each entry separate observation from interpretation cleanly? Has any entry compressed reasoning into a conclusion without showing the path? Is any claim present that outruns its evidence without being flagged?
+Primary question: Does each entry separate observation from interpretation cleanly? Has any entry compressed reasoning into a conclusion without showing the path? Is any claim present that outruns its evidence without being flagged? Does any entry defend its evidence rather than state it, qualifying against a challenger rather than recording what is believed, or citing a source the reader does not need at that point?
 
 **The Boundaries**
 Primary question: Is each boundary stated in terms a first-time reader can apply, or does any entry require prior session context to understand what is being excluded?

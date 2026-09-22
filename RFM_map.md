@@ -112,8 +112,8 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_sweep_reasoning.md` | `module_reasoning` | v0.10.0 | stays | The reasoning document governing sweep prompt design decisions |
 | `RFM_sweep_operational.md` | `module_operational` | v0.7.0 | stays | Language and structural catalogs, grey zone rule, source documents, and the relational sweep specification |
 | `RFM_sweep_prompt_structural.md` | `module_artifact` | v0.5.3 | travels | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
-| `RFM_sweep_prompt_language.md` | `module_artifact` | v0.2.1 | travels | The prompt artifact that activates the language sweep: findings for ruling, not edits |
-| `RFM_sweep_prompt_relational.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact that activates the relational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
+| `RFM_sweep_prompt_language.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact that activates the language sweep: findings for ruling, not edits |
+| `RFM_sweep_prompt_relational.md` | `module_artifact` | v0.4.0 | travels | The prompt artifact that activates the relational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | `module_reasoning` | v0.5.0 | stays | Reasoning document governing human prompt design decisions |
 | `RFM_human_prompt.md` | `module_artifact` | v0.2.2 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | Reasoning document governing guided drafting prompt design decisions |
