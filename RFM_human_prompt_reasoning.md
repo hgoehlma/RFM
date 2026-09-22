@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt Reasoning Document
-`v0.6.0` // `module_reasoning` // [living]
+`v0.7.0` // `module_reasoning` // [living]
 
 ---
 
@@ -13,7 +13,7 @@ The asymmetry is real and consequential: one practitioner has a behavioral artif
 
 ## The Assumptions
 
-**[AS-ACWN] - The artifact calibrates willingness; it does not create it.** The practices described here assume a reader with a natural affinity for deliberate reflection. That affinity is a people constraint, not a process gap. A reader who arrives without genuine willingness to reason carefully will find the entries obvious or irritating rather than actionable, and the artifact cannot change that.
+**[AS-ACWN] - The artifact calibrates willingness; it does not create it.** The practices described here assume a reader with a natural affinity for deliberate reflection. That affinity is a people constraint, not a process gap. A reader who arrives without genuine willingness to reason carefully will find the entries obvious or irritating rather than actionable, and the artifact cannot change that. This assumption breaks if a reader who begins without that willingness comes to value the practice anyway, through exposure to the artifact itself. If genuine willingness can be built rather than only calibrated, the people constraint claimed here is actually a process gap. The artifact would then under-serve exactly the readers who need it most.
 
 **[AS-REBI] - Repeated exposure builds internalization.** The reference card is built to be returned to across many sessions, not absorbed once. That design bets on repetition itself doing the work: a phrase encountered again and again, at the moment it becomes relevant, becomes something the reader recognizes without consulting the card. If a single careful reading were enough, or if repetition without that reinforcement changed nothing, the card's whole shape, short, phrase-based, meant to be reopened, would be doing work for no reason.
 
@@ -60,9 +60,9 @@ The reference card and the explanation entries share one order. That order has t
 
 Numbers imply a sequence to complete: item one before item two, a checklist a reader works through once and closes. The reference card is not that. Each phrase is a standalone trigger meant to fire on its own, in whatever order the moment calls for it, not steps in an order. A plain list carries no such implication.
 
-**Why these entries and not others**
+**Why the output-quality and correction-delivery entries needed their own place**
 
-Output quality is a distinct failure mode category the traveling prompt cannot address: the LLM producing text that looks polished but is verbose, journaling, or repetitive. It requires a separate entry because the human's corrective move is different: not recalibrating the collaboration but reading the output critically before accepting it.
+Output quality is a distinct failure mode category the traveling prompt cannot address: the LLM producing text that looks polished but is verbose, journaling (language written for the session that produced it, not for a later reader), or repetitive. It requires a separate entry because the human's corrective move is different: not recalibrating the collaboration but reading the output critically before accepting it.
 
 A dedicated entry on how the human delivers corrections addresses a failure mode that neither the drift entry nor the output entry names: the human defaults to verdict-shaped correction. A verdict ("this is wrong, remove it") provides resolution. The LLM closes a verdict by pattern-matching to avoid the marked behavior, not by reasoning to a position. The result is improved form without improved judgment. A correction that withholds resolution forces the LLM to generate a position. The LLM cannot close that loop without exercising judgment. The cost lands on the human side. Withholding resolution requires the human to hold back the answer even when they know it. That is a discipline only the human can apply.
 
@@ -98,6 +98,10 @@ Joint reasoning takes effort throughout a session, and effort drops as the sessi
 
 An LLM produces confident, well-structured answers whether or not the question has been resolved, so the confidence of an answer says little about whether the thinking behind it is finished. A clean answer that arrives quickly is often an untested one. The human is the one under pressure to close: an unresolved conversation is uncomfortable, and a satisfying answer relieves that. So the human first asks themselves whether the answer resolves the question or only sounds as if it does, and then asks the LLM what is still unsure. The LLM answers that question honestly when it is asked, so the human's part is to ask it.
 
+**Why the human names friction before it gets smoothed over**
+
+Friction is a different signal from its two nearest neighbors in this document. It isn't disengagement, the human is still actively evaluating. It isn't the pull toward a confident answer either, nothing has resolved yet to accept or reject. Friction is defined in the glossary; what belongs here is why it earns its own entry: left unnamed, it has nowhere to go. The human moves on, and the session smooths over exactly the place where the reasoning was weakest.
+
 **Why the human names where an idea belongs before asking for it to be developed**
 
 Not every idea that surfaces belongs in the document being worked on. Some belong at another level of the hierarchy, some in a different kind of artifact, and some are not ready to be written anywhere. A draft creates its own momentum: once an idea has been developed into a paragraph, questioning whether it belongs there is harder than it was before the paragraph existed. The cheap moment to ask is before the draft. The human states where they think the idea belongs, and the LLM confirms it, redirects it, or offers a better home. When the reasoning documents are loaded into the session, the LLM can answer this because it can see what each document carries.
@@ -116,11 +120,11 @@ An idea that feels right invites development: adding detail, thinking forward, l
 
 **Why the LLM keeps the Chesterton's Fence log and the human reads it**
 
-In pressure mode the LLM does the executing, so it is the one who deviates from the established reasoning, defers a question, or finds an assumption broken, and it can record each as it happens. The human's part is the return: reading the log when pressure lifts and deciding what goes back into the reasoning. A log that is kept and never read does not make the return honest, so the reading stays with the human. The LLM will miss deviations it does not recognize as deviations. This split is untested, because the log has not yet been used in practice.
+In pressure mode, the LLM does the executing, so it is the one who deviates from the established reasoning, defers a question, or finds an assumption broken, and it can record each as it happens in the Chesterton's Fence log. Both terms are defined in the glossary. The human's part is the return: reading the log when pressure lifts and deciding what goes back into the reasoning. A log that is kept and never read does not make the return honest, so the reading stays with the human. The LLM will miss deviations it does not recognize as deviations. This split is untested, because the log has not yet been used in practice.
 
 **Why artifact-before-reasoning-document was acceptable here, and what it requires**
 
-Every other artifact in the RFM document landscape was preceded by its reasoning document: the reasoning settles the design, and the artifact derives from it. The human prompt was written first, from its authors' own practice, before this reasoning document existed. That is acceptable only if the reasoning is written afterward and checked against the artifact that already exists, not against a blank page. This document is that check.
+Every other artifact in the RFM document landscape was preceded by its reasoning document: the reasoning settles the design, and the artifact derives from it. The human prompt was written first, from its authors' own practice, before this reasoning document existed. That is acceptable only if the reasoning is written afterward and checked against the artifact that already exists, not against a blank page. This document is that check. Gaps found this way are gaps already shipped, not gaps caught before anyone relied on them.
 
 ---
 
@@ -157,10 +161,6 @@ In the session that produced this reasoning document, methodology-specific termi
 The same entry named drift in one direction only: presenting options instead of proposing, softening under pushback, waiting for permission. Its in-practice line told the human to push the AI to act more. Applied to the opposite direction, treating a narrow delegation as authorization for everything downstream of it and moving straight to unconfirmed execution, that corrective is not neutral. Pushing an AI that has already over-extended one authorization adds pressure in the wrong direction. An entry that names drift in a single direction cannot catch the other, and its corrective can actively worsen the direction it does not name.
 
 The corrective this suggests: a light, default check that asks for a deliverable scoped to the immediate output, "what's weak here?", escalating, when the answer comes back thin, to the same question scoped across several exchanges rather than switching to a different phrase. The escalation widens what has to be accounted for. It does not introduce a second script standing as an equal alternative to the first, the same design error the two co-equal scripts at the start of this entry already made once.
-
-**[HL-ABRR] The right order is reasoning document first, artifact second.**
-
-The human prompt broke that order: it was written from its authors' practice before its reasoning document existed. Writing the reasoning afterward means checking it against a finished artifact, not shaping the artifact from a reasoning document still being settled. Gaps found this way are gaps already shipped, not gaps caught before anyone relied on them.
 
 ---
 

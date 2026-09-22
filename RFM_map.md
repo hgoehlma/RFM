@@ -101,7 +101,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 |---|---|---|---|---|
 | `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.25.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
 | `RFM_operational.md` | `top_level_operational` | v0.15.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
-| `RFM_glossary.md` | `top_level_artifact` | v0.7.0 | travels | Disambiguation of terms that carry different meanings across reader contexts |
+| `RFM_glossary.md` | `top_level_artifact` | v0.7.1 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_carrier_types.md` | `top_level_artifact` | v0.1.0 | stays | The carrier taxonomy: what each carrier type can and cannot hold, how to size a carrier, and how gating and dilution apply across types |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
 | `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.20.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
@@ -114,7 +114,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_sweep_prompt_structural.md` | `module_artifact` | v0.5.3 | travels | The prompt artifact that activates the structural sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_language.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact that activates the language sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_relational.md` | `module_artifact` | v0.4.0 | travels | The prompt artifact that activates the relational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
-| `RFM_human_prompt_reasoning.md` | `module_reasoning` | v0.6.0 | stays | Reasoning document governing human prompt design decisions |
+| `RFM_human_prompt_reasoning.md` | `module_reasoning` | v0.7.0 | stays | Reasoning document governing human prompt design decisions |
 | `RFM_human_prompt.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | Reasoning document governing guided drafting prompt design decisions |
 | `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.1.3 | stays | Deployment and artifact inventory for the guided drafting prompt module |
