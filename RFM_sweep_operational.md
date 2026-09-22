@@ -1,19 +1,18 @@
 # Reasoning-First Methodology: Sweep Prompts Operational Document
-`v0.6.1` // `module_operational` // [living]
+`v0.7.0` // `module_operational` // [living]
 
 ---
 
 ## What this module produces
 
-This module produces sweep prompt artifacts, one per mode.
+This module produces sweep prompt artifacts, one per job.
 
-**The structural sweep prompt** (`RFM_sweep_prompt_structural.md`) activates a concentrated architectural review pass over a reasoning document. Findings for human ruling, not edits. Invoked deliberately, not ambient.
+**The structural sweep prompt** (`RFM_sweep_prompt_structural.md`) activates a deliberate architectural review pass over a reasoning document. Findings for human ruling, not edits. Invoked deliberately, apart from the traveling prompt's ongoing prevention.
 
-**The language sweep prompt** (`RFM_sweep_prompt_language.md`) activates a concentrated language review pass over a reasoning document. Findings for human ruling, not edits. Invoked deliberately, not ambient.
+**The language sweep prompt** (`RFM_sweep_prompt_language.md`) activates a deliberate language review pass over a reasoning document. Findings for human ruling, not edits. Invoked deliberately, apart from the traveling prompt's ongoing prevention.
 
-**The relational sweep prompt** (`RFM_sweep_prompt_relational.md`) activates a boundary check between a reasoning document and its operational derivative. Findings for human ruling, not edits. Invoked deliberately, not ambient.
+**The relational sweep prompt** (`RFM_sweep_prompt_relational.md`) activates a boundary check between a reasoning document and its operational derivative. Findings for human ruling, not edits. Invoked deliberately, apart from the traveling prompt's ongoing prevention.
 
-No two sweep prompts are invoked simultaneously. Each requires a cognitive mode the other's presence would dilute.
 
 ---
 
@@ -122,21 +121,7 @@ Load the sweep prompt as the system prompt for a fresh conversation. Provide the
 
 Do not invoke a sweep inside a co-authorship session. The traveling prompt and a sweep prompt require incompatible postures. A sweep run inside a co-authorship session is not a sweep. It is the traveling prompt applied to one document, which is what the traveling prompt already does. The separation is the point.
 
-Run one sweep per session. Running two simultaneously dilutes the cognitive mode each requires.
-
----
-
-## Coverage check: after derivation
-
-Compare against the previous version of the sweep prompt. The derivation is accepted if it is structurally better or equivalent and loses no load-bearing behavioral instructions. If the previous version carried something the derivation missed, assess whether it was present in the source reasoning documents. If yes: the derivation missed it, add it. If no: the previous version carried reasoning its source did not hold; that is a source document gap requiring a reasoning document addition before the next derivation cycle.
-
-Do not loop the derivation. One pass, one coverage check, one reconciliation.
-
----
-
-## Version discipline
-
-The version number is assigned by the human at acceptance. A clean re-derivation increments the minor digit. A patch-level fix increments the patch digit. The header of each sweep prompt file is the single source of version truth for that artifact.
+Run one sweep per session.
 
 ---
 
