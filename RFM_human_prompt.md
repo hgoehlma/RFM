@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Human Prompt
-`v0.2.2` // `module_artifact` // [living]
+`v0.3.0` // `module_artifact` // [living]
 
 ---
 
@@ -254,6 +254,16 @@ Every productive reasoning session generates its own language. Terms that feel p
 This failure is easy to miss because the human introduces shorthands too, not only the AI. A term you coined feels obvious to you in a way that masks how opaque it is to anyone else. The discipline is to test it at the moment of capture, before it enters the document, not after.
 
 In practice: when a term or phrase has emerged in the session and feels worth capturing, pause before writing it into the document. Ask the AI: "does this travel?" If the answer is yes, ask it to explain the term back to you as if it had never seen the session. A vague or circular explanation is the real answer, not the claim that it travels. If it doesn't travel, either define it inline, find a more self-contained phrase, or add it to the glossary. A term that requires explanation every time it is encountered is not a term; it is a private language.
+
+---
+
+## Not Yet Practiced
+
+**Read the Chesterton's Fence log when pressure mode ends**
+
+RFM has a second mode, pressure mode, for when delivery pressure makes the full reasoning discipline locally unacceptable. Inside it, the AI executes within established reasoning rather than extending it, and keeps a minimal log of deviations, deferrals, and broken assumptions. Your part is the return: reading that log when the pressure lifts and deciding what belongs back in the reasoning.
+
+This was designed because the need seemed real, not because it was tested. No project behind this artifact has run under delivery pressure severe enough to force the log into use. What it asks of you is stated here as a commitment, not as a practice that has been tried.
 
 ---
 

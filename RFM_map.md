@@ -115,7 +115,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_sweep_prompt_language.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact that activates the language sweep: findings for ruling, not edits |
 | `RFM_sweep_prompt_relational.md` | `module_artifact` | v0.4.0 | travels | The prompt artifact that activates the relational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | `module_reasoning` | v0.6.0 | stays | Reasoning document governing human prompt design decisions |
-| `RFM_human_prompt.md` | `module_artifact` | v0.2.2 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
+| `RFM_human_prompt.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
 | `RFM_guided_drafting_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | Reasoning document governing guided drafting prompt design decisions |
 | `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.1.3 | stays | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | `module_artifact` | v0.1.1 | travels | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
