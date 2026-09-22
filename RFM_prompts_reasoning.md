@@ -71,7 +71,7 @@ Write the prompt directly from accumulated observations and the methodology hard
 
 **4. One sweep prompt covering both failure classes**
 
-A single sweep prompt targeting both structural failures (wrong hierarchy level, module strain, open questions ready to graduate) and language failures (session residue, insider shorthand, disambiguation gaps). Simpler to maintain and invoke. Rejected because the two failure classes require different kinds of reading: structural review requires architectural judgment across the document hierarchy, language review requires close reading of individual sentences. Conflating them produces shallow work in both directions. Two prompts, each focused on its specific failure class, is the design that follows from keeping the two jobs distinct.
+A single sweep prompt targeting both structural failures (wrong hierarchy level, module strain, open questions ready to graduate) and language failures (session residue, insider shorthand, disambiguation gaps). Simpler to maintain and invoke. Rejected because a single prompt covering both failure classes does shallow work on both. Two prompts, one per class, is the design that follows.
 
 **5. Sweep as a switch inside the traveling prompt**
 
