@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Guided Drafting Prompt Reasoning Document
-`v0.2.1` // `module_reasoning` // [living]
+`v0.3.0` // `module_reasoning` // [living]
 
 ---
 
@@ -17,9 +17,17 @@ The guided drafting prompt is a deliberate response to a specific risk: that RFM
 
 ## The Assumptions
 
-**[AS-CBID] - Checklist behavior is the default failure mode for a first-time author.** Without active guidance on intention, a newcomer will treat the eight sections as boxes to fill, producing content that satisfies the section definition without reasoning through it. The prompt must actively resist this tendency, not assume the newcomer will resist it themselves.
+**[AS-CBID] - Checklist behavior is the default failure mode for a first-time author.** Without active guidance on intention, a newcomer will treat the eight sections as boxes to fill, producing content that satisfies the section definition without reasoning through it. The prompt must actively resist this tendency, not assume the newcomer will resist it themselves. This assumption breaks if newcomers left without active guidance reason through sections anyway, for instance if section definitions alone are enough to prompt genuine reasoning rather than box-filling. If that's the case, Socratic mode's central justification would be weaker than the design assumes.
 
-**[AS-CBTM] - Understanding the methodology does not resolve the cost/benefit timing mismatch of the first document.** A newcomer who knows what a reasoning document is may still stall when the first section proves harder than expected and the benefit feels distant.
+**[AS-CBTM] - Understanding the methodology does not resolve the cost/benefit timing mismatch of the first document.** A newcomer who knows what a reasoning document is may still stall when the first section proves harder than expected and the benefit feels distant. This assumption breaks if newcomers reliably push through a hard first section without needing the livingness commitment or Socratic mode's support. In that case those mitigations would be solving a problem understanding alone already handles.
+
+**[AS-LLNB] - The "livingness" of RFM documents substantially lowers the barrier for a newcomer, if it is made explicit.** A newcomer who believes their first document must be complete, correct, or authoritative faces a much higher bar than one who understands it is a starting point meant to be revised. The barrier only lowers if the newcomer actually holds this belief at the moment the first section proves hard, not because they read it once beforehand. This assumption breaks if stating livingness explicitly turns out not to change newcomer behavior, for instance if a newcomer still treats the document as high-stakes despite being told otherwise. If that's the case, the mitigation is decorative rather than functional.
+
+**[AS-LREG] - A newcomer may not recognize on their own that the Landscape needs external research.** They may assume familiarity with their problem substitutes for familiarity with the solution space. The knowledge gap itself is unremarkable. It applies to everyone, expert and newcomer alike. What's specific to a first session is whether the newcomer notices the gap without being asked. This assumption breaks if newcomers reliably raise the need for research themselves. In that case the prompt's active check is unnecessary; the newcomer's own judgment would have caught it.
+
+**[AS-PSRQ] - A guided drafting session requires specific practical conditions to succeed.** The session runs roughly two hours, cognitively demanding throughout. It produces a document the newcomer must be able to save as it's built, section by section. Starting without protected time, an engaged mind, or a plan for capturing output puts the session at risk regardless of how well the prompt itself is designed. This assumption breaks if the session degrades gracefully under interruption or fatigue, in which case naming these conditions in advance would be unnecessary caution rather than a real precondition.
+
+**[AS-PCWN] - The guided drafting prompt calibrates a newcomer's readiness for the session; it does not create their willingness to try RFM.** A newcomer arriving at a guided drafting session has already chosen to attempt RFM. That prior willingness is a precondition the prompt assumes, not something it manufactures. This assumption breaks if the prompt turns out to work for a newcomer who arrives skeptical of RFM or pushed into trying it. If that's the case, the prompt would be doing work this assumption says it cannot do. The design would then need to account for building willingness, not just calibrating it.
 
 ---
 
@@ -42,7 +50,7 @@ The question this landscape must answer is: what approaches exist for guiding a 
 
 **1. Directive vs. Socratic facilitation mode**
 
-Tell the newcomer what belongs in each section (definitions, examples, what good looks like) vs. ask questions that draw the reasoning out. Directive mode is faster and feels safer to a newcomer who doesn't know what to write. Rejected because directive mode produces the failure the prompt exists to prevent: a newcomer who fills sections correctly without reasoning through them. A section definition handed to the newcomer becomes a template. A question the newcomer must answer from their own thinking becomes reasoning. The Socratic mode is slower and requires the newcomer to tolerate uncertainty, which Assumption 4 names as a genuine risk. That risk is managed by making the "livingness" commitment explicit early (Assumption 5), not by retreating to directive mode.
+Tell the newcomer what belongs in each section (definitions, examples, what good looks like) vs. ask questions that draw the reasoning out. Directive mode is faster and feels safer to a newcomer who doesn't know what to write. Rejected because directive mode produces the failure the prompt exists to prevent: a newcomer who fills sections correctly without reasoning through them. A section definition handed to the newcomer becomes a template. A question the newcomer must answer from their own thinking becomes reasoning. The Socratic mode is slower and requires the newcomer to tolerate uncertainty, which [AS-CBTM] names as a genuine risk. That risk is managed by making the "livingness" commitment explicit early ([AS-LLNB]), not by retreating to directive mode.
 
 **2. Linear vs. non-linear session structure**
 
@@ -66,7 +74,7 @@ The constraint is narrow and must be held as such: Socratic mode governs section
 
 **Why the LLM names the pressure explicitly rather than yielding to it**
 
-When a newcomer pushes for directive answers (asking what to write, requesting definitions, or expressing frustration with questions), the path of least resistance is to yield. Yielding feels like care. It is the failure mode. The LLM's counter-move is to name what is happening rather than either yielding or simply repeating the question: "you are asking me to fill this section; my job is to draw your reasoning out." Naming the pressure makes it visible to the newcomer without making it adversarial. After naming it, the LLM returns to questions from a different angle, not the same question repeated, which compounds frustration, but a different entry point into the same reasoning gap. This move is the Socratic mode held under pressure, expressed as co-author behavior rather than rule-following.
+When a newcomer pushes for directive answers (asking what to write, requesting definitions, or expressing frustration with questions), the path of least resistance is to yield. Yielding feels like care. It is the failure mode. The LLM's counter-move is to name what is happening rather than either yielding or simply repeating the question. Naming the pressure makes it visible to the newcomer without making it adversarial. After naming it, the LLM returns to questions from a different angle, not the same question repeated, which compounds frustration, but a different entry point into the same reasoning gap. This move is the Socratic mode held under pressure, expressed as co-author behavior rather than rule-following.
 
 **Why the revision loop after the Landscape is non-negotiable**
 
@@ -79,6 +87,22 @@ If the Landscape research reveals that a solution to the newcomer's problem alre
 **Why a single prompt over a multi-turn scaffold**
 
 The newcomer must own the decision to move from one section to the next. A multi-turn scaffold that manages pacing collapses that ownership into the LLM's judgment: the LLM decides when the section is complete, when to move forward, when to loop back. That is the wrong division of labor at the execution step of the joint reasoning sequence. A single prompt that governs the LLM's behavior throughout the session preserves the newcomer's ownership of that decision. The LLM contributes through questions and pushback. The newcomer decides when a section has been reasoned through honestly enough to move forward.
+
+**Why formatting conventions are introduced progressively, section by section, rather than referenced once**
+
+`RFM_operational.md` specifies the formatting conventions for all RFM reasoning documents; the guided drafting prompt could simply point there. It doesn't. Each section's format is introduced when the newcomer reaches that section, not upfront. A newcomer handed every convention before drafting anything is holding information with nowhere to attach it yet; the same convention introduced at the moment it's needed attaches to something concrete. This is the same reasoning that puts the livingness commitment before section work begins, not as a reference document to consult, but as guidance delivered at the point it does its job.
+
+**Why the LLM is the prompt's primary reader, though the newcomer reads it too**
+
+The guided drafting prompt has two readers, unlike the derivation prompt and the traveling prompt, which are read only by the LLM executing from them. The newcomer opens the same document the LLM does. That doesn't make the newcomer a co-primary reader. The newcomer's participation in the session happens through the Socratic questions the LLM asks, not through instructions the newcomer follows off the page themselves. The prompt stays optimized for reliable behavioral activation in the LLM. The newcomer's read of it is a byproduct: a description of how the session will work, not a set of directions addressed to them.
+
+**Why output is consolidated at each section boundary, not at session end**
+
+[AS-PSRQ] already names the risk: a session can end before it's meant to, and the newcomer must be able to save their work as it's built. Waiting until session end to assemble the document would leave early sections as nothing more than answered questions in a conversation. Consolidation at each boundary makes every completed section something the newcomer actually holds, immediately, regardless of how the rest of the session goes.
+
+**Why the livingness commitment is stated before section work begins**
+
+The barrier [AS-LLNB] describes is active from the newcomer's first sentence in The Problem, not from some later section. A commitment introduced only when the newcomer stalls, or reinforced section by section the way formatting conventions are, would arrive after the newcomer has already begun treating the document as something that must be complete, correct, or authoritative. Stating the commitment before section work begins puts it in place before the newcomer produces anything, so it governs the newcomer's stance from the first section onward rather than correcting it partway through.
 
 ---
 
@@ -102,6 +126,10 @@ The newcomer must own the decision to move from one section to the next. A multi
 
 A newcomer who stalls may push the LLM toward directive mode, asking directly for definitions, examples, or what to write. Whether the prompt can be designed to hold the Socratic mode under that pressure without losing the newcomer entirely is untested. The livingness commitment ([AS-LLNB]) is the primary mitigation, but whether it is sufficient to sustain engagement when the first section proves genuinely hard is an open question.
 
+**[OQ-GDNP] Whether the guided drafting prompt is useful beyond its primary scope.**
+
+The prompt was designed for a newcomer's first reasoning document. A first reasoning document for a new project, written by an experienced RFM practitioner, shares many of the same characteristics: the problem is not yet sharp, the assumptions are untested, the landscape is unmapped. Whether the guided drafting prompt serves that case as well as the newcomer case, or whether a separate artifact is warranted, is undesigned.
+
 **[OQ-CPFD] Whether context pressure degrades Socratic mode before the session completes.**
 
 A single prompt governing the full session may lose behavioral fidelity as the session lengthens, not because the LLM forgets the instructions, but because co-author posture drifts under accumulated context. Whether this degradation is significant enough to warrant per-section prompt recalibration, or whether the human's drift-correction practices from the human prompt are sufficient mitigation, requires trial. The first version assumes a single prompt is sufficient. This assumption should be tested explicitly in early use.
@@ -116,7 +144,7 @@ When should the LLM shift from drawing out the newcomer's reasoning through ques
 
 **[HL-LRRL] The section sequence is not strictly linear; the Landscape can require revising what came before it.**
 
-Drafting The Problem and The Assumptions first, then conducting Landscape research, then returning to ask whether the research sharpens or adjusts the first two sections produced better documents than treating the sequence as a one-way pass. The Landscape can reveal that an assumption was imprecise or that the problem statement was narrower than the domain warrants. The guided drafting prompt must build this revision loop in explicitly, and the newcomer must be told why, not just instructed to do it.
+Across several projects using RFM, Landscape research regularly, not always, surfaces information that sharpens the problem statement or an assumption written before that research happened. The Landscape can reveal that an assumption was imprecise or that the problem statement was narrower than the domain warrants. The guided drafting prompt must build this revision loop in explicitly, and the newcomer must be told why, not just instructed to do it.
 
 **[HL-SRST] Socratic mode and the red team function operate on different objects: conflating them is the primary behavioral failure of the guided drafting session.**
 

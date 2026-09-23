@@ -1,11 +1,13 @@
 # Reasoning-First Methodology: First Session Guidance
-`v0.1.4` // `module_artifact` // [living]
+`v0.2.0` // `module_artifact` // [living]
 
 ---
 
 ## Before you begin
 
 You are about to produce your first RFM reasoning document. A few things to hold before you start.
+
+**Have your orientation.** You should have read the README and the top-level reasoning document before this session. The guided drafting prompt does not explain what RFM is or why it exists; it assumes you already know.
 
 **Bring the right problem.** Choose something genuine: a decision or practice where the reasoning actually matters to you. Not too large; a problem you already know something about is better than one you are still discovering. The session sharpens the problem. It cannot manufacture one.
 

@@ -116,10 +116,10 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_sweep_prompt_relational.md` | `module_artifact` | v0.4.0 | travels | The prompt artifact that activates the relational sweep: boundary check between a reasoning document and its operational derivative, findings for ruling, not edits |
 | `RFM_human_prompt_reasoning.md` | `module_reasoning` | v0.7.0 | stays | Reasoning document governing human prompt design decisions |
 | `RFM_human_prompt.md` | `module_artifact` | v0.3.0 | travels | The prompt artifact for the human collaborator: practices that keep the co-author role alive across sessions |
-| `RFM_guided_drafting_prompt_reasoning.md` | `module_reasoning` | v0.2.1 | stays | Reasoning document governing guided drafting prompt design decisions |
-| `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.1.3 | stays | Deployment and artifact inventory for the guided drafting prompt module |
+| `RFM_guided_drafting_prompt_reasoning.md` | `module_reasoning` | v0.3.0 | stays | Reasoning document governing guided drafting prompt design decisions |
+| `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.2.0 | stays | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | `module_artifact` | v0.1.1 | travels | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
-| `RFM_first_session_guidance.md` | `module_artifact` | v0.1.4 | travels | Practical preparation for a newcomer's first guided drafting session: what to bring, what to expect, what to watch for |
+| `RFM_first_session_guidance.md` | `module_artifact` | v0.2.0 | travels | Practical preparation for a newcomer's first guided drafting session: what to bring, what to expect, what to watch for |
 | `RFM_derivation_prompt_reasoning.md` | `module_reasoning` | v0.7.0 | stays | The reasoning document governing derivation prompt design decisions |
 | `RFM_derivation_prompt_operational.md` | `module_operational` | v0.5.0 | stays | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
 | `RFM_derivation_prompt.md` | `module_artifact` | v0.3.0 | travels | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
