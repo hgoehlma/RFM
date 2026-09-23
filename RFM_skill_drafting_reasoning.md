@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: RFM Drafting Skill Reasoning Document
-`v0.8.0` // `skill_reasoning` // [living]
+`v0.9.0` // `skill_reasoning` // [living]
 
 ---
 
@@ -51,7 +51,10 @@ These concerns arise at the same moment, when a practitioner is about to write c
 `rfm-unslop` is already always-on for all RFM session output. Duplicating its coverage in this skill creates two sources of truth for language rules. Delegation keeps language rules in one place and makes this skill's scope structurally distinct.
 
 **Why glossary entries are in scope.**
-Glossary entries are drafted at the same moment as other document content. The failure mode is specific: a term enters a document before it has been tested for standalone readability. The shorthand test and the reasoning requirement are the correct corrective at the drafting moment, not after the fact.
+Glossary entries are drafted at the same moment as other document content. The failure mode is specific: a term enters a document before it has been tested for standalone readability. The shorthand test and the reasoning requirement are the correct corrective at the drafting moment, not after the fact. The same timing applies before the entry exists at all: settling an unsettled term first avoids a specific cost, drafting content that uses it throughout, then discovering the term needs to change, then rewriting every sentence that used it.
+
+**Why the Landscape section's format and option-selection rules fire at drafting time, not at sweep time.**
+Loose prose and early option selection are both drift specific to the Landscape section: a paragraph that never actually says why each prior approach fell short, or a section that names a preferred option before every approach has been surveyed. Table format forces the "why insufficient" column to exist for every row; skipping it isn't possible without an empty cell. Prohibiting option selection here keeps the choice with the Chosen Direction section, where it has to be argued, not smuggled in early as an aside. Both failures are easiest to prevent while the section is being written. Before the table exists, choosing a row-based format instead of a paragraph is still a live decision. Once written as prose, converting it later is a rewrite, not a catch.
 
 ---
 

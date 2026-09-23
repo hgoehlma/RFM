@@ -100,7 +100,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | Document | Type | Version | Travels | What it carries |
 |---|---|---|---|---|
 | `RFM_top_level_reasoning.md` | `top_level_reasoning` | v0.25.0 | travels | The problem, assumptions, landscape, chosen direction, boundaries, open questions and hard lessons governing the methodology as a whole |
-| `RFM_operational.md` | `top_level_operational` | v0.15.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
+| `RFM_operational.md` | `top_level_operational` | v0.16.0 | travels | File naming conventions, document map maintenance and the map check, the header convention, version discipline, and the failure taxonomy both sweep arms and the drafting pre-check retrieve from |
 | `RFM_glossary.md` | `top_level_artifact` | v0.7.1 | travels | Disambiguation of terms that carry different meanings across reader contexts |
 | `RFM_carrier_types.md` | `top_level_artifact` | v0.1.0 | stays | The carrier taxonomy: what each carrier type can and cannot hold, how to size a carrier, and how gating and dilution apply across types |
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
@@ -130,8 +130,8 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_skill_ripple_check_reasoning.md` | `skill_reasoning` | v0.1.4 | stays | Reasoning document governing the rfm-ripple-check skill: why RFM-specific, why graduation is a trigger condition, why the general ripple-check skill is retired |
 | `RFM_skill_ripple_check_operational.md` | `skill_operational` | v0.3.2 | stays | Derivation procedure and retirement steps for the rfm-ripple-check skill |
 | `rfm-ripple-check.skill` | `skill_artifact` | unversioned | travels | The packaged skill: the grep-then-read procedure for checking whether a rename, retirement, or graduation ripples into other documents |
-| `RFM_skill_drafting_reasoning.md` | `skill_reasoning` | v0.8.0 | stays | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
-| `RFM_skill_drafting_operational.md` | `skill_operational` | v0.8.1 | stays | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
+| `RFM_skill_drafting_reasoning.md` | `skill_reasoning` | v0.9.0 | stays | Reasoning document governing the rfm-drafting skill: why a skill rather than operational doc guidance, why glossary entries are in scope |
+| `RFM_skill_drafting_operational.md` | `skill_operational` | v0.9.0 | stays | Derivation procedure, pre-check specification, and skill body maintenance for the rfm-drafting skill |
 | `rfm-drafting.skill` | `skill_artifact` | unversioned | travels | The packaged skill: section placement, language discipline, and the pre-check run before a reasoning-document draft is shown |
 | `RFM_skill_design_reasoning.md` | `module_reasoning` | v0.7.0 | stays | The reasoning document governing skill design decisions across skills |
 | `RFM_skill_design_operational.md` | `module_operational` | v0.2.0 | stays | Shared derivation rules for all RFM skills: delivery, skill structure, frontmatter rules, and shared coverage check |
