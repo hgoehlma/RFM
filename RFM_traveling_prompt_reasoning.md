@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Traveling Prompt Reasoning Document
-`v0.8.2` // `module_reasoning` // [living]
+`v0.9.0` // `module_reasoning` // [living]
 
 ---
 
@@ -61,6 +61,10 @@ A review pass reads the documents as a whole for defects, where ordinary work ha
 
 The ceiling on initiative is one half of the guard: reorganizing across documents needs a joint decision. Read alone, that ceiling teaches the LLM that asking is always safe, and asking about everything hands the human rulings the LLM could have made. Asking costs the LLM nothing and costs the human attention and pace. So the prompt names the opposite failure in the same place: treating work within scope as if it needed a joint decision is deference standing in for judgment, and it is a failure, not a caution.
 
+**Why the deference corrective names its own scope inline**
+
+An instruction to stop deferring and act, stated as "act more" without qualification, would license over-reach the same way any unscoped instruction does: the LLM cannot act more only where it should without being told where that is. The two failures are not independent. The fix for deference, taken past its own boundary, becomes the fix for the opposite problem. So the corrective is never separated from its scope: it names what is in scope in the same breath, "everything else within scope doesn't," rather than leaving scope to be inferred or recalled from a separate rule stated elsewhere.
+
 **Why the LLM is told to answer honestly when asked**
 
 Several behaviours asking the LLM to answer honestly, instead of with a performed non-answer, exist only as assumptions inside the human prompt. The human prompt asks the human to probe for them one at a time. No carrier tells the LLM how to answer when such a request arrives. That leaves the human as the only check. The traveling prompt reaches the LLM directly, at the moment such a request arrives. Without it, nothing guarantees the answer is honest once the human does ask.
@@ -68,6 +72,10 @@ Several behaviours asking the LLM to answer honestly, instead of with a performe
 **Why a missed rule is corrected on the spot**
 
 An LLM co-author notices when something is off and says so without being asked. That's the role, but its own examples are about weak reasoning and drift in the shared work, not about the LLM catching its own missed instruction. Reading a missed rule as a case of something being off extends that definition rather than restating it. Nothing rules the extension out, but nothing states it either. Extended this way, it still doesn't say what the LLM should do at the moment a miss is noticed, mid-session, with reasoning already built past it. The traveling prompt is the carrier present at that moment. It's why the instruction here is concrete: apply the rule now, and say so.
+
+**Why a claimed rule is checked against the documents by the human, not the LLM**
+
+An LLM can state that a check exists, a trigger fires, or a failure mode applies, when no document actually holds it. The invented rule takes the same form as every real one, a section, a trigger, a failure mode, so it reads as recall rather than invention to the LLM producing it. A prohibition on inventing rules would not catch this failure, because the LLM stating the rule does not experience itself as inventing one. That is why this check stays with the human. The LLM producing the claim has no signal telling it to verify this one, since nothing about producing it feels like invention. The human, reading the claim from outside, can compare it against the documents and see whether it is actually there.
 
 **Why a step already agreed skips the frame**
 
@@ -116,6 +124,10 @@ A sentence that states how many entries exist is true only until one is added or
 **[OQ-RLDC] Does the declared role change how the later instructions are read?**
 
 `RFM_carrier_types.md` says a declared role changes the style and tone of replies and does not reliably raise answer quality. Whether it also changes how the instructions after it are read has not been tested.
+
+**[OQ-TRIG] Whether behavioral instructions alone keep the LLM in the co-author role under pressure, or whether structural mechanisms are also needed.**
+
+The traveling prompt's instructions are behavioral: they tell the LLM how to act, not how the session itself is built. Under real pressure, such as a direct code request, a skipped reasoning document, or urgency to ship, whether those instructions alone are enough to hold the co-author role is untested. Whether something structural, such as session design, a protocol step, or an artifact-level constraint, would also be needed remains open.
 
 ---
 

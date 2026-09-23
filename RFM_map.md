@@ -106,7 +106,7 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_curation_reasoning.md` | `module_reasoning` | v0.1.0 | stays | The reasoning document governing curation: what keeps a document true after the session that wrote it, and why its failures are invisible from inside that session |
 | `RFM_instruction_design_reasoning.md` | `module_reasoning` | v0.20.0 | stays | The reasoning document governing how an instruction is shaped, where it is placed, and whether anything checks it |
 | `RFM_prompts_reasoning.md` | `module_reasoning` | v0.7.0 | stays | The reasoning document governing all system prompt decisions |
-| `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.8.2 | stays | The reasoning document governing traveling prompt design decisions |
+| `RFM_traveling_prompt_reasoning.md` | `module_reasoning` | v0.9.0 | stays | The reasoning document governing traveling prompt design decisions |
 | `RFM_traveling_prompt_operational.md` | `module_operational` | v0.3.2 | stays | Derivation procedure and coverage check discipline for the traveling prompt |
 | `RFM_traveling_prompt.md` | `module_artifact` | v0.6.0 | travels | The system prompt that carries the methodology into every LLM conversation |
 | `RFM_sweep_reasoning.md` | `module_reasoning` | v0.10.0 | stays | The reasoning document governing sweep prompt design decisions |
