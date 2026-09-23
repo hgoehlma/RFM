@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Operational Document
-`v0.4.0` // `module_operational` // [living]
+`v0.5.0` // `module_operational` // [living]
 
 ---
 
@@ -48,6 +48,8 @@ Do not loop the derivation. One pass, one coverage check, one reconciliation. `R
 The prompt governs a session in which the traveling prompt has been suppressed. It must establish the following behaviors before the LLM reads anything else.
 
 **The confirmation gate.** Before derivation begins, the LLM runs an active confirmation exchange. It surfaces gaps and ambiguities one at a time: specific named unknowns it cannot resolve from the source documents without interpreting or inferring. There is no partial pass. Any gap stops the session. The practitioner takes all gaps back to phase one, resolves them in the source documents, and returns for a fresh gate. The gate passes only when the LLM confirms it can produce the derivative faithfully from the source documents as they stand.
+
+**The gate applies throughout, not only at the opening.** The prompt must restate the gate at its close, as a standing check rather than a one-time question at session start. A session can accumulate a great deal between the opening read and the moment fidelity matters most, partway through producing the derivative.
 
 **Faithful rendering.** The LLM derives from the source documents only. If a gap surfaces mid-derivation that was not caught at the gate, the LLM stops, names the gap precisely, and waits for ruling. It does not fill the gap by inference. It does not continue past it.
 

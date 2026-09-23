@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Reasoning Document
-`v0.6.1` // `module_reasoning` // [living]
+`v0.7.0` // `module_reasoning` // [living]
 
 ---
 
@@ -13,13 +13,13 @@ Phase two is different. The reasoning documents have been completed through coll
 
 ## The Assumptions
 
-**[AS-DPCL] - Autonomous derivation is only reliable when the source documents are complete, clear, and unambiguous.** When the LLM can confirm it does not need to interpret or fill gaps to produce the derivative, derivation can proceed. When it cannot, the source requires further work before the session begins.
+**[AS-DPCL] - Autonomous derivation is only reliable when the source documents are complete, clear, and unambiguous.** When the LLM can confirm it does not need to interpret or fill gaps to produce the derivative, derivation can proceed. When it cannot, the source requires further work before the session begins. This assumption breaks if reliable derivation turns out to be possible from incomplete or ambiguous source documents, for instance if an LLM could resolve genuine gaps correctly without inference risk. Nothing in current practice suggests this: the confirmation gate exists because unresolved gaps have consistently meant either invented content or a stalled session, not successful derivation.
 
-**[AS-DPCP] - The traveling prompt and the derivation prompt establish incompatible behavioral postures.** The traveling prompt instates co-author judgment: hold genuine positions, challenge weak reasoning, surface alternatives. The derivation prompt requires faithful execution from the source documents. Both cannot govern the same session reliably because the behaviors they call for directly conflict.
+**[AS-DPCP] - The traveling prompt and the derivation prompt establish incompatible behavioral postures.** The traveling prompt instates co-author judgment: hold genuine positions, challenge weak reasoning, surface alternatives. The derivation prompt requires faithful execution from the source documents. Both cannot govern the same session reliably because the behaviors they call for directly conflict. This assumption breaks if a single governing artifact could hold both postures reliably within one session, for example if instruction-following became precise enough to switch registers on command without drift. Nothing observed so far supports this. The suppression-and-separate-artifact design in `RFM_derivation_session_guidance.md` exists precisely because a same-level instruction cannot make the switch cleanly.
 
 **[AS-DPSA] - When an instruction is ambiguous about scope, the LLM default is to proceed rather than confirm.** Scope ambiguity is not treated as a signal to pause; it is treated as a gap to fill by inference. This assumption breaks if the prompt explicitly establishes confirmation as the default response to ambiguity, which is precisely what the confirmation gate is designed to do.
 
-**[AS-DPIF] - Instruction adherence in derivation sessions cannot be assumed.** LLMs do not apply instructions uniformly: the same prompt may produce faithful execution in one session and inference-driven deviation in another, depending on factors neither party can fully observe or control. A derivation prompt that correctly specifies the posture does not guarantee the posture holds throughout the session. The confirmation gate is the only mechanism that surfaces deviation before it produces an unfaithful derivative.
+**[AS-DPIF] - Instruction adherence in derivation sessions cannot be assumed.** LLMs do not apply instructions uniformly: the same prompt may produce faithful execution in one session and inference-driven deviation in another, depending on factors neither party can fully observe or control. A derivation prompt that correctly specifies the posture does not guarantee the posture holds throughout the session. The confirmation gate is the only mechanism that surfaces deviation before it produces an unfaithful derivative. This assumption breaks if instruction adherence becomes reliably predictable, for instance if a mechanism is found that guarantees a session holds its posture throughout rather than only surfacing deviation after it has already occurred. The confirmation gate reduces the risk; it does not eliminate the uncertainty this assumption describes.
 
 ---
 
@@ -42,7 +42,9 @@ The question this landscape must answer: what prior approaches exist for governi
 
 ## The Options Considered
 
-*No options considered at this time.*
+**1. Rely on the operational documents to govern derivation**
+
+Derivation procedures for specific artifacts already exist in operational documents: the constants, interfaces, and procedures a derivation session needs. Rejected because operational documents specify what to derive, not the behavioral posture during derivation. An LLM reading operational content with no governing prompt still defaults to inference when that content is ambiguous. The operational document and the prompt solve different problems.
 
 ---
 
@@ -60,9 +62,31 @@ What is being derived, code, text, a presentation, a document, is domain and pro
 
 The confirmation gate, gap-flagging, and the faithful rendering frame are what the prompt must establish. These behaviors cannot be sourced from the reasoning or operational documents at session start, they must be active before the LLM reads anything. Everything else follows from the documents. A prompt that tries to do more than establish posture and behavior conflates its role with the documents it is designed to activate.
 
+**Why mid-session drift monitoring is the human's responsibility**
+
+The derivation prompt establishes the posture at session start, through the confirmation gate. It cannot supervise the session as it runs. If the LLM drifts from that posture partway through, back toward inference or the co-author habits the traveling prompt trained, nothing internal to the prompt catches it. The LLM cannot reliably self-report a state it has already drifted out of. The human present during the session is the only party positioned to notice, so mid-session monitoring falls to them by elimination, not by design choice.
+
+**Why the suppression instruction belongs in practitioner guidance, not the prompt**
+
+The structural conflict named in [AS-DPCP] does not resolve by instruction alone inside the prompt artifact. A suppression instruction in the derivation prompt cannot cleanly override a co-author posture established at the same system level. What works is a practitioner ruling in the human turn before derivation begins. The design consequence is settled: the suppression instruction belongs in practitioner guidance, not baked into the derivation prompt. Repeated sessions confirm the approach holds without drift, observed across more than one LLM, Sonnet 5 and GPT-5.5, with no conflict seen between the derivation posture and the traveling prompt's reasoning habits in either.
+
 **Why the prompt carries no domain knowledge or output specification**
 
-A prompt that encodes domain knowledge or specifies output form is no longer generic. It must be rewritten for every new project and every new derivative type. The derivation prompt is intentionally minimal: posture and behavior only. Everything substantive comes from the reasoning and operational documents. What is not in those documents will not be built. That constraint is a feature, not a limitation, it enforces the discipline that the documents are the source.
+The derivation prompt is intentionally minimal: posture and behavior only. Everything substantive comes from the reasoning and operational documents. What is not in those documents will not be built. That constraint is a feature, not a limitation, it enforces the discipline that the documents are the source.
+
+**Why the derivation prompt optimizes for LLM activation with a verifiability floor**
+
+The derivation prompt has one primary reader: the LLM executing from it. It does not need to read as friendly prose. Compression and directness that activate the right behavior reliably are what matter. One constraint applies regardless: the prompt must stay verifiable by the human maintaining it, parseable enough to confirm it still reflects the methodology, even if not fully readable as prose. The floor is verifiability, not readability.
+
+**Why the confirmation gate appears at both the opening and closing of the prompt**
+
+What governs whether an instruction still holds is not where it sits in the prompt, but how much has accumulated between the instruction being given and the moment it needs to apply. The gate at the opening establishes the posture before any source material is read, but a full derivation session can accumulate a great deal between that first read and the moment fidelity matters most: partway through producing the derivative. Restating the gate at the closing, as a standing check rather than a one-time question, keeps it close to the moment it's needed rather than relying on an instruction read once and never revisited.
+
+**Why a second, conditional gate governs derivation of mode-distinct siblings**
+
+The standard confirmation gate verifies fidelity to source. It does not verify fidelity to scope when the document being derived is one of two or more sibling derivatives whose source reasoning assigns each a deliberately distinct, mutually exclusive mode. A sentence can be faithfully sourced and still belong to a sibling's mode rather than the artifact being derived. The confirmation gate has no mechanism to catch this, because its questions ask whether content is grounded, not whether it is grounded in the right artifact.
+
+This does not weaken the confirmation gate's binary character. The gate's questions are universal: every derivation answers them, no exceptions. A sibling-scope check is not universal in that sense, it only has content when siblings with assigned modes exist. Folding it into the same gate would either dilute the gate's binary clarity or apply a check with nothing to test against in the common case where no such siblings exist. The check is therefore sequential and conditional rather than parallel: it activates only after the confirmation gate passes, and only when mode-distinct siblings exist. The mechanics of how the check runs belong with the derivation prompt's procedural design, not here.
 
 ---
 
@@ -82,15 +106,25 @@ A prompt that encodes domain knowledge or specifies output form is no longer gen
 
 The Chosen Direction places mid-session drift monitoring with the human. In an agentic setup the human is not present during execution and only sees the result. Whether the derivation prompt as designed provides sufficient governance without a human monitor, or whether agentic derivation requires additional mechanisms, is an open question.
 
+**[OQ-DPTP] Whether the practitioner-ruling approach generalizes beyond the LLMs and conditions it has been observed on.**
+
+The observation behind the Chosen Direction is the practitioner's own, across repeated use, not systematic testing: it has not been checked across a broader model set, under adversarial conditions, or by anyone other than the practitioner who designed the approach. Whether it holds that way more generally remains open.
+
 **[OQ-DPGV] Whether the confirmation gate reliably stabilizes derivation behavior.**
 
-The confirmation gate is designed to anchor the LLM in the instruction-faithful regime before derivation begins. Whether a successful confirmation actually prevents drift toward prior-dominant behavior during the session, or whether regime shifts occur regardless, has not been empirically tested in RFM derivation sessions. The gate is the right design. Its reliability under real conditions remains unverified.
+The confirmation gate is designed to anchor the LLM in the instruction-faithful regime before derivation begins. Whether a successful confirmation actually prevents drift toward prior-dominant behavior during the session, or whether regime shifts occur regardless, has not been empirically tested in RFM derivation sessions. Its reliability under real conditions remains unverified.
+
+**[OQ-DPSC] Whether the sequential sibling-scope gate reliably catches mode contamination in practice.**
+
+The gate is designed to activate after the confirmation gate passes, and only when mode-distinct sibling derivatives exist. Its design follows directly from the contamination it was created to catch. Whether it actually catches that contamination reliably, across repeated derivation sessions and across different sibling sets, has not been tested. The original confirmation gate carries the same open question in `[OQ-DPGV]`, earned through actual use across multiple sessions. The sibling-scope gate carries it from design alone, with no use yet behind it.
 
 ---
 
 ## Hard Lessons
 
-*No hard lessons at this time.*
+**[HL-DPEX] A handover instruction is not a derivation license.**
+
+At the opening of the session that produced this document, the LLM interpreted "open the derivation prompt module reasoning document" as license to draft the entire document unilaterally. The instruction named the next step. The LLM executed all steps. The failure is precisely what this document is designed to prevent: gap-filling by inference where joint reasoning was the correct act.
 
 ---
 
