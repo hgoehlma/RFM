@@ -1,5 +1,5 @@
 # Reasoning-First Methodology: Derivation Prompt Reasoning Document
-`v0.7.0` // `module_reasoning` // [living]
+`v0.8.0` // `module_reasoning` // [living]
 
 ---
 
@@ -81,6 +81,18 @@ The derivation prompt has one primary reader: the LLM executing from it. It does
 **Why the confirmation gate appears at both the opening and closing of the prompt**
 
 What governs whether an instruction still holds is not where it sits in the prompt, but how much has accumulated between the instruction being given and the moment it needs to apply. The gate at the opening establishes the posture before any source material is read, but a full derivation session can accumulate a great deal between that first read and the moment fidelity matters most: partway through producing the derivative. Restating the gate at the closing, as a standing check rather than a one-time question, keeps it close to the moment it's needed rather than relying on an instruction read once and never revisited.
+
+**Why the coverage check follows derivation rather than preceding it**
+
+Derivation is probabilistic: the same source can produce meaningfully different renderings depending on what the LLM attends to first. Reading the previous version of the artifact before deriving anchors the LLM on that version's own expression, narrowing the variance toward refining what already exists rather than reasoning fresh from source. Deriving clean first, with no prior version in view, uses that variance instead of suppressing it. The LLM reasons from the reasoning and operational documents alone. The coverage check that follows catches what that pass missed against the prior artifact.
+
+**Why the coverage check after derivation is a traceability check, not a quality comparison**
+
+The coverage check verifies that what the reasoning and operational documents require is actually present in the derivative. It does not ask whether the new derivative reads better than the version it replaces. Framing it as a quality comparison pulls the check toward the prior version's phrasing, structure, and emphasis, whether or not those choices were sound. That is the same failure that turns derivation into an unproductive loop, showing up earlier, at the check itself rather than after several rounds of comparison.
+
+**Why derivation does not loop: one pass, one coverage check, one reconciliation**
+
+Comparing repeated derivations against each other generates new variation each time, not convergence toward a better result. Reconciling successive derivations until the output "feels right" means the expression has settled, not that the prompt or the derivative improved. Each additional loop costs comparison effort and risks something worse: replacing instructions that reliably activate the right behavior with language that merely reads more cleanly and activates less reliably. The stopping condition is structural, not a feeling: the items the source requires are present, the structure reads cleaner than the previous version, and the content is shorter without losing substance. That condition is reachable in one derivation pass plus one reconciliation, which is why the process stops there.
 
 **Why a second, conditional gate governs derivation of mode-distinct siblings**
 

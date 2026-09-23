@@ -120,8 +120,8 @@ A travel value is a ruling, not a judgment a session makes while adding a row. A
 | `RFM_guided_drafting_prompt_operational.md` | `module_operational` | v0.2.0 | stays | Deployment and artifact inventory for the guided drafting prompt module |
 | `RFM_guided_drafting_prompt.md` | `module_artifact` | v0.1.1 | travels | The prompt artifact that activates the guided drafting session: behavioral specification for the LLM, section intentions for the newcomer |
 | `RFM_first_session_guidance.md` | `module_artifact` | v0.2.0 | travels | Practical preparation for a newcomer's first guided drafting session: what to bring, what to expect, what to watch for |
-| `RFM_derivation_prompt_reasoning.md` | `module_reasoning` | v0.7.0 | stays | The reasoning document governing derivation prompt design decisions |
-| `RFM_derivation_prompt_operational.md` | `module_operational` | v0.5.0 | stays | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
+| `RFM_derivation_prompt_reasoning.md` | `module_reasoning` | v0.8.0 | stays | The reasoning document governing derivation prompt design decisions |
+| `RFM_derivation_prompt_operational.md` | `module_operational` | v0.5.1 | stays | Invocation procedure, confirmation gate, and versioning discipline for the derivation prompt |
 | `RFM_derivation_prompt.md` | `module_artifact` | v0.3.0 | travels | The system prompt that governs autonomous LLM execution from completed RFM reasoning documents |
 | `RFM_derivation_session_guidance.md` | `module_artifact` | v0.1.3 | travels | Practical preparation for a phase two derivation session: what to confirm, what to expect, the one step that must not be skipped |
 | `RFM_skill_unslop_reasoning.md` | `skill_reasoning` | v0.3.2 | stays | Reasoning document governing the rfm-unslop skill: why always-on, why one skill with register awareness, why the session is the entry point |
