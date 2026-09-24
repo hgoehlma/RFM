@@ -14,3 +14,6 @@ _handover/
 
 # Private, never published
 _private/
+
+# Carrier rebuild: local snapshot copies of inputs, never committed
+rebuild/inputs/
