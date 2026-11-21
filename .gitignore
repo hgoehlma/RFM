@@ -15,9 +15,3 @@ RFM_working_agreements.md
 
 # Private, never published
 _private/
-
-# Carrier rebuild: local snapshot copies of inputs, never committed
-rebuild/inputs/
-
-# Carrier rebuild: working folder, until it is deleted
-rebuild/
