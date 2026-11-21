@@ -1,0 +1,16 @@
+{
+  "autoMemoryEnabled": false,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.rfm/hooks/rfm_write_hook.py\""
+          }
+        ]
+      }
+    ]
+  }
+}

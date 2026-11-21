@@ -1,0 +1,12 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|apply_patch",
+        "hooks": [
+          { "type": "command", "command": "d=\"$PWD\"; while [ ! -f \"$d/.rfm/hooks/rfm_write_hook.py\" ] && [ \"$d\" != / ]; do d=$(dirname \"$d\"); done; python3 \"$d/.rfm/hooks/rfm_write_hook.py\"" }
+        ]
+      }
+    ]
+  }
+}
