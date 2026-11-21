@@ -1,5 +1,4 @@
 # RFM: Carrier Types
-`v0.1.0` // `top_level_artifact` // [living]
 
 ---
 

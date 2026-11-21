@@ -1,5 +1,5 @@
 # RFM: Carriers
-`v0.1.0` // `module_reasoning` // [living]
+`v1.0.0` // `module_reasoning` // [living]
 
 ---
 

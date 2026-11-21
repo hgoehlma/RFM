@@ -1,5 +1,7 @@
 # PiMem — Pi Memory Discipline
 
+*Written in an earlier form of RFM; its documents and terms differ from the current ones.*
+
 A worked example of the Reasoning-First Methodology applied to a non-software problem: giving a Pi coding agent deliberate memory discipline.
 
 ## The problem

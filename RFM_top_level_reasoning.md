@@ -1,5 +1,5 @@
 # Reasoning-First Methodology
-`v0.25.0` // `top_level_reasoning` // [living]
+`v1.0.0` // `top_level_reasoning` // [living]
 
 ---
 

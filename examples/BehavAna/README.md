@@ -1,5 +1,7 @@
 # BehavAna — RFM Field Example
 
+*Written in an earlier form of RFM; its documents and terms differ from the current ones.*
+
 ## What this is
 
 A real deployment of RFM under time pressure, in a translated environment.
