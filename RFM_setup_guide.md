@@ -34,6 +34,8 @@ If you would rather do it by hand, these are the steps.
 | `hooks.json` | `.codex/` | Tells Codex to run the hook |
 | `RFM_human_guide.md`, `RFM_glossary.md`, `RFM_top_level_reasoning.md`, `RFM_top_level_operational.md` | `docs/RFM/` | Reference. The human guide is for you to read. |
 
+In the download, the skills are in `.claude/skills/`, the hook in `.rfm/hooks/`, and the two settings files in `.claude/` and `.codex/`; the other files are at the top.
+
 **3. Let Codex find the skills.** In a terminal, in the project's top folder:
 
     mkdir -p .agents
