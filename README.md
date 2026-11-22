@@ -30,7 +30,9 @@ Creating the result of the thinking is the second role of the LLM. The LLM hands
 
 ## Background
 
-Simon Wardley emphasized that assumptions about position, movement and relationships need to be made visible. Peter Naur highlighted in 1985 that a program's theory only lives in the heads of the people who built it. When they leave the project, this knowledge will leave with them. He also believed that this theory cannot be fully written down. RFM tries to tackle this problem by making sure that the different sections are written down for others to explore and argue with.
+Looking at recent developments people start to understand the importance of retaining the why because an LLM can only invent it. Several approaches have been developed whereby the LLM questions you to understand what you are working on. Some start out by writing the specs first and others record the decisions they have taken. The components are there, but they are not together ([`RFM_top_level_reasoning.md`](https://github.com/hgoehlma/RFM/blob/main/RFM_top_level_reasoning.md) shows how RFM brings them together). RFM tackles this problem by focusing on the source documents first. These reasoning documents bring the different sections together and are continuously updated. And they are the sources from which the results are derived. Furthermore, RFM aims to establish a partnership where you and the LLM both contribute and push back during the creation and curation of the source documents.
+
+Simon Wardley emphasized that assumptions about position, movement and relationships need to be made visible. That is why RFM captures assumptions. RFM goes one step further and also captures what would break them. Peter Naur highlighted in 1985 that a program's theory only lives in the heads of the people who built it. When they leave the project, this knowledge will leave with them. He also believed that this theory cannot be fully written down. I think enough of the knowledge can be written down so that work can be created from it. And successful derivation shows it.
 
 ## Who it's for, and who it isn't
 
