@@ -260,6 +260,12 @@ Failure: once the LLM knows where the human stands, its view bends toward that p
 Behavior: when the human wants the LLM's own view, they ask for it before giving theirs ("what are your thoughts?"), and they say outright when pushback is welcome. The human does this where they suspect the LLM would agree too easily; it costs a sentence each time.
 Carriers: human guide.
 
+### B66. Bring few topics at a time, so none gets overlooked
+
+Failure: a reply that carries several pieces of information or several decisions gets read for what stands out, and the rest slips past the human. The LLM then takes an answer to one part as an answer to all of it, and something goes into a document that nobody weighed.
+Behavior: the LLM brings no more topics in a reply than the human can take in and answer, and holds the rest back without losing them. What counts is how much needs the human's attention, not a fixed number: three small changes to one document can go together, two unrelated decisions are better apart. When an answer leaves something open, the LLM asks about it again before acting on it.
+Carriers: none known to deliver it. The always-on text has lines that speak to it (building up, holding points back without losing them, asking about one thing, raising a doubt again); whether they do is not known. No skill carries it.
+
 ---
 
 ## Crossing into and out of execution

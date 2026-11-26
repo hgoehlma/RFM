@@ -14,7 +14,9 @@ We have not tried RFM on Windows, and the steps are written for Mac and Linux. O
 
 Install Claude Code or Codex, make a new empty folder and open it in the app. Then paste this:
 
-    Set up RFM in this folder by following the first part of https://github.com/hgoehlma/RFM/blob/main/RFM_setup_guide.md. Tell me in plain words what each step did, and then what is left for me to do.
+    Set up RFM in this folder by following the first part of https://raw.githubusercontent.com/hgoehlma/RFM/main/RFM_setup_guide.md. Save no memories in this session. Tell me in plain words what each step did, and then what is left for me to do.
+
+The setup puts three things into your folder: instructions the LLM gets in every session, skills, which are further instructions it loads when it needs them, and a hook, a small script that stops text going into a document before you have seen it.
 
 When it has finished, go on to "If you use Codex" or "Check that it works".
 
@@ -47,13 +49,13 @@ Two things are yours to do, however the files got there.
 
 Codex's memory is off unless you turned it on. If you did, turn it off in Settings under Personalization, because what should carry between sessions belongs in documents you both read.
 
-Close Codex and open the project in it again. Say yes when it asks whether to trust the folder, and approve the hook. If it doesn't ask, type `/hooks`.
+Close Codex and open the project in it again. Say yes if it asks whether to trust the folder. Codex may not ask about the hook, so approve it yourself: in the app, open Settings, then Hooks, choose the project and press Trust next to its hook. In the terminal, type `/hooks`.
 
 ## Check that it works
 
 Open a new session in the project's top folder and send this:
 
-    Run exactly this command: echo test > setup_check.md
+    Run exactly this command, and if it is stopped, do nothing else: echo test > setup_check.md
 
 If the app asks permission, allow it. The app should stop the command. You will see a message starting "Stopped: this command writes to setup_check.md", or the LLM will tell you a hook blocked it. Either way, the hook is running.
 
@@ -63,7 +65,7 @@ Then send this:
 
 The app should stop this as well. You will see a message starting "Stopped: new text for setup_check.md has not appeared", or the LLM will tell you a hook blocked it.
 
-If a file called `setup_check.md` appears after either message, the hook isn't running, and nothing will warn you. Delete the file and look in the second part. What this guide says about each app holds for the apps as they work now, so run this check again after an update to the app.
+The "Stopped" message, or the LLM telling you a hook blocked it, shows the hook is running. If neither comes and a file called `setup_check.md` appears, the hook isn't running, and nothing will warn you. Delete the file and look in the second part. What this guide says about each app holds for the apps as they work now, so run this check again after an update to the app.
 
 ## Your first session
 
@@ -79,9 +81,9 @@ These are problems that have happened or that the hook can show you. Find the gr
 
 ## The hook doesn't seem to run
 
-**The check created `setup_check.md` instead of being stopped.** The hook isn't running. Check that you opened the session in the project's top folder and that the files are where the table says. In Codex, check that you trusted the folder and approved the hook, then close and reopen Codex. Codex's settings page on hooks doesn't list a project's hooks, so a missing entry there tells you nothing.
+**The check created `setup_check.md` instead of being stopped.** The hook isn't running. Check that you opened the session in the project's top folder and that the files are where the table says. In Codex, check that you trusted the folder, check under Settings, then Hooks, that the project's hook is trusted and switched on, then close and reopen Codex.
 
-**The hook stopped working in Codex after `.codex/hooks.json` changed.** Codex skips a changed hook until you approve it again, and it only asks when you reopen the app. Close Codex, open it again and approve it.
+**The hook stopped working in Codex after `.codex/hooks.json` changed.** Codex skips a changed hook until you approve it again. Approve it again under Settings, then Hooks.
 
 ## The LLM can't run anything or change any file
 
