@@ -1,5 +1,5 @@
 # RFM: Carriers
-`v1.1.0` // `module_reasoning` // [living]
+`v1.2.0` // `module_reasoning` // [living]
 
 ---
 
@@ -106,6 +106,10 @@ The LLM loads a skill only for a task it cannot easily do alone, and most RFM sk
 The descriptions sit in context for the whole session, beside always-on, so their wording is part of what shows the LLM how we work. Descriptions written as rules and bans show an executor under supervision. Where a description can say its moment, or what goes wrong, as something between the two of us, it does. Where that costs any clarity about when the skill applies, clarity wins, because a skill that does not load carries nothing.
 
 A skill that loads at the right moment can still make the work worse. The LLM follows the procedure it is given, so one that prescribes more than the case in hand needs bloats the output, and a reader sees only that the skill ran.
+
+**Why a skill is a single prompt**
+
+A skill can hold more than its prompt: reference files the LLM reads when it needs them, templates, and scripts it runs. Claude Code also lets a skill run as a subagent or register hooks. RFM's skills carry judgment at a moment, such as what to check before drafting or how to weigh what a subagent brings back. A prompt is what carries judgment. The checks that must run every time sit in the hook, which runs on every write whether or not a skill was loaded. Beyond the prompt and the files beside it, Claude Code and Codex support different features, and one copy of each skill serves both apps. A skill that relied on such a feature would work fully in one app and carry less in the other, with nothing to show the difference.
 
 **Why an addition is weighed against what is already there**
 

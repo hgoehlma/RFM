@@ -1,5 +1,5 @@
 # RFM: Carriers, Operational
-`v1.0.0` // `module_operational` // [living]
+`v1.1.0` // `module_operational` // [living]
 
 ---
 
@@ -52,6 +52,7 @@ Where no carrier reaches a behavior's moment, the behavior's entry says so.
 - Before adding to a carrier that every session reads, such as an always-on line, a working agreement, an item carried in the handover or a skill description, name the item it replaces, or say why every item already there still earns its place beside it.
 - Say what to do. Where a prohibition is the only way to say what is meant, give alongside it the act that replaces the forbidden one. Where the behavior is a judgment, the act is the judgment itself.
 - Give a skill the least procedure its moment needs.
+- Write a skill as its prompt alone: no files beside it, and no setting that only one app acts on.
 
 ## Write hook
 
