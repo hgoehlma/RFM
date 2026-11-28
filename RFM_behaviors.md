@@ -1930,6 +1930,12 @@ Note (from the incubating file): the compression half of this entry is covered b
 From the rebuild session start (`rebuild_session_start.md`, earlier rebuild attempt, 2026-09-23, "Parked", cadence spike):
 > - Cadence spike: 11 sessions in 2 days near the end of the previous attempt, next to a recorded confident-but-wrong diagnosis in the handover log. A hard-lesson candidate about session pressure. Address once hard lessons are addressed.
 
+### B67. Don't take a finished piece of work for the end of the session
+
+Failure: the LLM is pulled to finish, most of all once a piece of agreed work is done, and takes that moment for the end. It proposes closing, it proposes the close's own steps while the session goes on (a commit as soon as a change is made, then a push), and it calls work finished by putting a small fix off to a later sweep. To the LLM each of these looks like tidiness, so it doesn't see them as finishing. What was still open then waits for a session that doesn't know about it, or is lost.
+Behavior: when a piece of agreed work is done, the LLM turns to what is still open in the session. A small fix it notices, it makes or brings up now. It says so when a decision has waited long to be written down. It leaves commits and pushes to the close, which starts when the human says so.
+Carriers: always-on text, which names the end of a piece of agreed work as the pull's moment, with the commit as its example and turning to what is still open as its remedy. Saying when a decision has waited long to be written down has no carrier while the session is under way.
+
 ### B30. Leave carried-over items open for the next session
 
 Failures: a parked item rots at the session boundary because a fresh task pulls harder than a paragraph from another session; a deferred item that names its owner is read as ruled; a stated dependency between open questions is read as an order of work; contraction work removes waiting items (on a second occurrence, a dependency, a trigger) together with resolved ones, because both read as nothing to do now; a deferred item carries its topic but not its context, and the next session reopens it cold, which recurred after the lesson was written; content the next session needs sits where a fresh instance skims past it (stated by session-closeout, no incident recorded).

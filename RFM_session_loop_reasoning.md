@@ -1,5 +1,5 @@
 # RFM: Session Loop, Reasoning
-`v1.0.0` // `module_reasoning` // [living]
+`v1.1.0` // `module_reasoning` // [living]
 
 ---
 
@@ -50,7 +50,7 @@ How is work usually carried from one sitting to the next?
 
 **Why decisions go into the documents before the note is written**
 
-The documents are where the thinking is meant to survive. Putting each decision there at the close, while it is still clear, leaves the note pointing to it rather than carrying it, so there is less for a summary to wear down.
+The documents are where the thinking is meant to survive. Putting each decision there at the close, while it is still clear, leaves the note pointing to it rather than carrying it, so there is less for a summary to wear down. With decisions in the documents, the note says where things stand and points to them, and holds no rules of its own, so it needs no check of its own.
 
 The same pass looks for an assumption we started relying on, a question we left open, or a failure that happened and can still happen, that came up in the conversation and did not reach its document. It asks what came up, not what could be added, because an LLM asked for new entries produces them. Most sessions have none, since such things are usually written while we work on what they concern.
 
@@ -104,7 +104,9 @@ The LLM reads the note and the working agreements and says in a few plain senten
 
 **Why the close starts when the human says so**
 
-Finishing the agreed work does not end a session. Each of us sees a different reason to stop. The human knows their time: the end of a day, a weekend ahead. The LLM sees the conversation grow long. In a long session, what was said early gets less of its attention, and a decision made there can slip before it reaches a document. So the LLM proposes a close when the session has grown long or a decision has waited a long time to be written down. The LLM is also pulled to finish, most of all once the agreed work is done, and would take that moment for the end. So the close starts when the human says so.
+Finishing the agreed work does not end a session. The LLM is pulled to finish, most of all once the agreed work is done, and would take that moment for the end. The human knows their time, the end of a day or a weekend ahead, and senses when a session has run long. The LLM cannot judge that. It does not see how much of the conversation it holds, and its hold on what was said early weakens gradually, with no length that marks the point. Much of the loss comes from its own earlier replies, which pull its later ones toward them, and that pull does not show from inside. What the LLM can see is a decision that has waited a long time to be written down, so it says so when one has. The close starts when the human says so.
+
+A session ends before the app compacts it. Compaction replaces the earlier conversation with a summary. What a summary keeps leans toward what is being built, and what it drops leans toward how the two parties work together, which is what this project depends on.
 
 **Why versions and the commit stay, lightly**
 

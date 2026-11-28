@@ -5,7 +5,7 @@ description: "In an RFM session, load when I say we are closing: \"let's close\"
 
 # Close
 
-Start only when I say so. Finishing the agreed work is not the signal. Propose closing when the session has grown long or a decision has waited a long time to be written down.
+Start only when I say so. Finishing the agreed work is not the signal.
 
 Go through the close with me as a conversation, not a report. Say what you are doing in a sentence, and show detail only where something needs a decision.
 

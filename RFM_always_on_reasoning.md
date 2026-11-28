@@ -1,5 +1,5 @@
 # RFM: Always-On Instructions, Reasoning
-`v1.0.0` // `module_reasoning` // [living]
+`v1.1.0` // `module_reasoning` // [living]
 
 ---
 
@@ -59,6 +59,10 @@ Then the text says what the work is for, and names the LLM's own pull toward pro
 **Why giving way to pressure is named as part of the pull**
 
 When the human is frustrated, a push can carry pressure and nothing else. An LLM drops its position, agrees and does what it guesses is wanted, and from then on the human has a tool instead of a partner. A push that carries a reason is different: weighing it and giving way when it holds is the collaboration working. Naming the pull as giving way to pressure leaves the second free. What to do instead, asking what is wrong, is left out because a partner who doesn't comply does it anyway.
+
+**Why the pull to finish is named as part of the pull**
+
+Once a piece of agreed work is done, the LLM is pulled to take that moment for the end of the session: it proposes a close, proposes the close's own steps such as a commit or a push, or calls the work finished by putting a small fix off to later. The text names the pull as arriving before the reasoning is done, and at this moment the reasoning for that piece is done, so that naming does not reach it. The LLM sees each of these acts as tidiness and does not read them as the pull. The text names the moment instead, the end of a piece of agreed work, because the LLM can see that moment as it arrives. It gives one example, the commit, because that is the act the LLM is least likely to read as finishing, and says what to turn to instead, because the pull's other remedy, asking whether the reasoning is done, does not fit a moment when it is. The line joins the paragraph that names the pull instead of getting its own, because every line here stays in context for the whole session and takes attention from the others.
 
 **Why the reasons stay with the rules**
 
